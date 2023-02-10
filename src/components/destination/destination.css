@@ -1,0 +1,30 @@
+.contaner{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.bg-overlay{
+    background-image: url('bg-image-1.svg');
+    padding: 263px;
+}
+.center{
+    position: absolute;
+    top: 49%;
+    left: 10%;
+    transform: translate(-4%, -50%);
+}
+
+input{
+    border: none;
+}
+
+.check-in{
+    height: 56px;
+    width: 553px;
+}
+
+@media (max-width:600px) {
+    .text {
+        font-size: 1.5em !important;
+    }
+}
