@@ -1,0 +1,58 @@
+.headerfilter {
+    /* justify-content: center; */
+    /* width: 338px; */
+    /* height: 50px; */
+    left: 284px;
+    top: 35px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 50px;
+    color: #000000;
+    text-align: center;
+}
+.refineline{
+    color: black;
+    border: 0;
+    border-top: 1px solid;
+    opacity: 1.25;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: -10px;
+}
+.ml-3 {
+    margin-left: 3%;
+}
+.Filtertxt {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 41px;
+    color: #000000;
+    margin-left: 2%;
+}
+i.bi.bi-house-door-fill {
+    border: 1px solid;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+    padding-left: 6px;
+}
+form {
+    padding-left: 3rem;
+}
+.bi.bi-cash-coin{
+    border: 1px solid;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+    padding-left: 6px;
+}
+.Ranger {
+    margin-left: 13%;
+    margin-right: 10%;
+}

@@ -12,7 +12,7 @@ const Destination = () => {
                         <div className='col'>
                             <div className="input-group mb-3">
                                 <span className="input-group-text text-black" style={{fontSize: '2vw'}}><i className="bi bi-geo-alt-fill"></i></span>
-                                <input type="text" className='form-control' style={{fontSize: '2vw'}} placeholder='Where to?'  aria-label="Username" aria-describedby="basic-addon1"/>
+                                <input  type="text" className='form-control' style={{fontSize: '2vw'}} placeholder='Where to?'  aria-label="Username" aria-describedby="basic-addon1"/>
                             </div>
                         </div>
                     </div>
