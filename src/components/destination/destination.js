@@ -4,48 +4,88 @@ import './destination.css'
 const Destination = () => {
     return ( 
     <>
-    <div>
-    <div className='contaner bg-overlay'>
-        
-        <div className='center'>
-            <h1 className='fw-bold text' style={{fontSize:'82px' }}><span >Let's Find Your Desired Place Together</span></h1>
-            <div className='container'>
-                <div className='row'>
-                    <div className='col'>
-                        <div className="input-group">
-                            <div className="input-group-prepend">
-                                <span className="input-group-text" id="basic-addon1"><img src='/images/whereto.svg' alt='location' /></span>
+        <div className='bg-overlay text-light z-0'>
+            <div className='center'>
+                <div className='container position-relative' >
+                    <h1 className='fw-bold text' style={{fontSize: '4.3vw'}}><span >Let's Find Your Desired Place Together</span></h1>
+                    <div className='row'>
+                        <div className='col'>
+                            <div className="input-group mb-3">
+                                <span className="input-group-text text-black" style={{fontSize: '2vw'}}><i className="bi bi-geo-alt-fill"></i></span>
+                                <input type="text" className='form-control' style={{fontSize: '2vw'}} placeholder='Where to?'  aria-label="Username" aria-describedby="basic-addon1"/>
                             </div>
-                            <input type="text" className='form-control rounded-right mb-3 fs-3' placeholder='Where to?' style={{height: 56}} aria-label="Username" aria-describedby="basic-addon1"/>
                         </div>
                     </div>
-                    <div className='d-flex justify-content-between mb-3'>
-                    <div className='row '>
+                    <div className='row mb-3'>
                         <div className='col search-col'>
-
-                            <input className='form-control-lg' />
+                            <div className="input-group ">
+                                <span className="input-group-text" style={{fontSize: '2vw'}}><i class="bi bi-calendar-date" ></i></span>
+                                <input className='form-control' type="text" placeholder='Check In' style={{fontSize: '2vw'}}/>
+                            </div>
                         </div>
                         <div className='col search-col'>
-
-                            <input className='form-control-lg' />
+                            <div className="input-group ">
+                                <span className="input-group-text" style={{fontSize: '2vw'}}><i class="bi bi-calendar-week "></i></span>
+                                <input className='form-control' type="text" placeholder='Check Out' style={{fontSize: '2vw'}}/>
+                            </div>
                         </div>
                         <div className='col search-col'>
-
-                            <input className='form-control-lg' />
+                            <div className="input-group">
+                                <span className="input-group-text" style={{fontSize: '2vw'}}><i class="bi bi-person-circle"></i></span>
+                                <input className='form-control' type="text" placeholder='Guest' style={{fontSize: '2vw'}} />
+                            </div>
                         </div>
-                    </div>
                     </div>
                     <div className='row'>
                         <div className='col'>
-
-                        <input className='w-100 rounded' style={{height: 60}}/>
+                            <div className="input-group">
+                                <span className="input-group-text" style={{fontSize: '2vw'}}><i class="bi bi-search"></i></span>
+                                <input type="text" className='form-control' placeholder='Search' style={{fontSize: '2vw'}}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='z-3 position-absolute bottom-1 w-100' style={{paddingTop: 115}} >
+                        <div className='row align-items-center no-gutters '>
+                            <div className='col'>
+                            <div style={{backgroundColor: '#0D7BC4'}}>
+                                <span>
+                                <a href='#' className='btn'>Hotels</a>
+                                </span>
+                            </div>
+                            </div>
+                            <div className='col'>
+                            <div style={{backgroundColor: '#0D7BC4'}}>
+                                <span>
+                                <a href='#' className='btn'>Things to do</a>
+                                </span>
+                            </div>
+                            </div>
+                            <div className='col'>
+                            <div className='' style={{backgroundColor: '#0D7BC4'}}>
+                                <span>
+                                <a href='#' className='btn'>Vacations Rental</a>
+                                </span>
+                            </div>
+                            </div>
+                            <div className='col '>
+                            <div >
+                                <span className='rounded' style={{backgroundColor: '#0D7BC4'}}>
+                                <a href='#' className='btn'>Low fares</a>
+                                </span>
+                            </div>
+                            </div>
+                            <div className='col'>
+                            <div style={{backgroundColor: '#0D7BC4'}}>
+                                <span>
+                                <a href='#' className='btn'>more</a>
+                                </span>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
     </> 
     );
 }
