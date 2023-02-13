@@ -29,6 +29,10 @@ input{
     width: 553px;
 }
 
+.scroll{
+    overflow-x: scroll;
+}
+
 @media (max-width:600px) {
     .text {
         font-size: 1.5em !important;

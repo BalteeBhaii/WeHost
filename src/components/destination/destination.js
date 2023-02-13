@@ -6,7 +6,7 @@ const Destination = () => {
     <>
         <div className='bg-overlay text-light z-0'>
             <div className='center'>
-                <div className='container position-relative' >
+                <div className='container-xxl container-xl container-lg position-relative' >
                     <h1 className='fw-bold text' style={{fontSize: '4.3vw'}}><span >Let's Find Your Desired Place Together</span></h1>
                     <div className='row'>
                         <div className='col'>
@@ -19,19 +19,19 @@ const Destination = () => {
                     <div className='row mb-3'>
                         <div className='col search-col'>
                             <div className="input-group ">
-                                <span className="input-group-text" style={{fontSize: '2vw'}}><i class="bi bi-calendar-date" ></i></span>
+                                <span className="input-group-text" style={{fontSize: '2vw'}}><i className="bi bi-calendar-date" ></i></span>
                                 <input className='form-control' type="text" placeholder='Check In' style={{fontSize: '2vw'}}/>
                             </div>
                         </div>
                         <div className='col search-col'>
                             <div className="input-group ">
-                                <span className="input-group-text" style={{fontSize: '2vw'}}><i class="bi bi-calendar-week "></i></span>
+                                <span className="input-group-text" style={{fontSize: '2vw'}}><i className="bi bi-calendar-week "></i></span>
                                 <input className='form-control' type="text" placeholder='Check Out' style={{fontSize: '2vw'}}/>
                             </div>
                         </div>
                         <div className='col search-col'>
                             <div className="input-group">
-                                <span className="input-group-text" style={{fontSize: '2vw'}}><i class="bi bi-person-circle"></i></span>
+                                <span className="input-group-text" style={{fontSize: '2vw'}}><i className="bi bi-person-circle"></i></span>
                                 <input className='form-control' type="text" placeholder='Guest' style={{fontSize: '2vw'}} />
                             </div>
                         </div>
@@ -39,50 +39,22 @@ const Destination = () => {
                     <div className='row'>
                         <div className='col'>
                             <div className="input-group">
-                                <span className="input-group-text" style={{fontSize: '2vw'}}><i class="bi bi-search"></i></span>
+                                <span className="input-group-text" style={{fontSize: '2vw'}}><i className="bi bi-search"></i></span>
                                 <input type="text" className='form-control' placeholder='Search' style={{fontSize: '2vw'}}/>
                             </div>
                         </div>
                     </div>
-                    <div className='z-3 position-absolute bottom-1 w-100' style={{paddingTop: 115}} >
-                        <div className='row align-items-center no-gutters '>
-                            <div className='col'>
-                            <div style={{backgroundColor: '#0D7BC4'}}>
-                                <span>
-                                <a href='#' className='btn'>Hotels</a>
-                                </span>
-                            </div>
-                            </div>
-                            <div className='col'>
-                            <div style={{backgroundColor: '#0D7BC4'}}>
-                                <span>
-                                <a href='#' className='btn'>Things to do</a>
-                                </span>
-                            </div>
-                            </div>
-                            <div className='col'>
-                            <div className='' style={{backgroundColor: '#0D7BC4'}}>
-                                <span>
-                                <a href='#' className='btn'>Vacations Rental</a>
-                                </span>
-                            </div>
-                            </div>
-                            <div className='col '>
-                            <div >
-                                <span className='rounded' style={{backgroundColor: '#0D7BC4'}}>
-                                <a href='#' className='btn'>Low fares</a>
-                                </span>
-                            </div>
-                            </div>
-                            <div className='col'>
-                            <div style={{backgroundColor: '#0D7BC4'}}>
-                                <span>
-                                <a href='#' className='btn'>more</a>
-                                </span>
-                            </div>
-                            </div>
+                    {/* <div className='z-3 position-absolute bottom-1 w-100 pe-5' style={{paddingTop: 115}} >
+                        <div className=' w-100 '>
+                            <ul className='nav nav-pills d-flex justify-content-between bg-error'>
+                                <li><a href='#' className=' btn text-light px-2 ' style={{backgroundColor: '#0D7BC4'}}><i className="bi bi-building me-2"></i>Hotels</a></li>
+                                <li><a href='#'  className=' btn text-light px-2' style={{backgroundColor: '#0D7BC4'}}><i className="bi bi-list-check me-2"></i>Things to do</a></li>
+                                <li><a href='#' className='btn text-light px-2' style={{backgroundColor: '#0D7BC4'}}><i className="bi bi-house-door-fill me-2"></i>Vacations Rental</a></li>
+                                <li><a href='#' className='btn text-light px-2' style={{backgroundColor: '#0D7BC4'}}><i className="bi bi-cash me-2"></i>Low fares</a></li>
+                                <li ><a href='#' className='btn text-light px-2' style={{backgroundColor: '#0D7BC4', width: 110}}>more</a></li>
+                            </ul>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
