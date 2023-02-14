@@ -1,0 +1,25 @@
+button{
+    padding: 10px !important;
+    font-size: 1.2rem !important;
+}
+
+.image-div{
+    height: 275px;
+    background-position: center;
+    background-size: contain;
+}
+
+@media screen and (max-width: 775px){
+    button{
+        padding: 4px !important;
+    }
+    .image-div{
+        height: 200px;
+    }
+ }
+
+@media screen and (max-width: 475px){
+   button{
+    padding: 2px !important;
+   }
+}

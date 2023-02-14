@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from '../components/header/header';
-import Destination from '../components/destination/destination';
-import Explore from '../components/explore/explore';
-import Services from '../components/services/services';
-import BestPlace from '../components/bestPlace/bestPlace';
-import RentalIncome from '../components/rentalIncome/rentalIncome';
+import Header from '../components/Navigation/header/header'
+import Destination from '../components/homePageComponents/destination/destination';
+import Explore from '../components/homePageComponents/explore/explore';
+import Services from '../components/homePageComponents/services/services';
+import BestPlace from '../components/homePageComponents/bestPlace/bestPlace';
+import RentalIncome from '../components/homePageComponents/rentalIncome/rentalIncome';
 const HomePage = () => {
     return ( 
         <>

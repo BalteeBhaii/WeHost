@@ -32,13 +32,13 @@ const Header = () => {
                 {/* </div> */}
                 {/* <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav d-flex align-items-center justify-content-end w-100" >
-                            <li className="pe-3 "><a className="text-dark fw-semibold" href="#">Stays</a></li>
-                            <li className="pe-3 "><a className="text-dark fw-semibold" href="#">List your property</a></li>
-                            <li className="pe-3 "><a className="text-dark fw-semibold" href="#">Services</a></li>
-                            <li className="pe-3 "><a className="text-dark fw-semibold" href="#">Packages</a></li>
-                            <li className="pe-3 "><a className="text-dark fw-semibold" href="#">Manage property</a></li>
-                            <li className="pe-5 "><a className="text-dark fw-semibold" href="#">Review</a></li>
-                            <li className="pe-5">
+                            <li className="pe-2 "><a className="fw-semibold" href="#">Stays</a></li>
+                            <li className="pe-2 "><a className="fw-semibold" href="#">List your property</a></li>
+                            <li className="pe-2 "><a className="fw-semibold" href="#">Services</a></li>
+                            <li className="pe-2 "><a className="fw-semibold" href="#">Packages</a></li>
+                            <li className="pe-2 "><a className="fw-semibold" href="#">Manage property</a></li>
+                            <li className="pe-3 "><a className="fw-semibold" href="#">Review</a></li>
+                            <li className="pe-3">
                                 <img src="/images/user.svg" alt="user"/>
                                 <a href="#" className="stretched-link">Login/SignUp</a>
                             </li>
