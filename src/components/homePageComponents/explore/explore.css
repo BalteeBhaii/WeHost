@@ -43,7 +43,8 @@
     width: 70%;
    }
    button{
-    width: 100px;
+    width: 75px;
+    font-size: 1rem !important;
     padding: 1px
    }
 }

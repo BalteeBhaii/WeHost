@@ -6,7 +6,7 @@ import HotelsPage from './pages/hotelsPage';
 function App() {
   return (
     <div >
-      <HomePage/>
+      <HotelsPage/>
     </div>
   );
 }

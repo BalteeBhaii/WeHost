@@ -1,0 +1,14 @@
+.googlemapImage{
+    background-size: cover;
+    background-position: center;
+}
+
+.paragraphWidth{
+    width: 25%;
+}
+
+@media screen and (max-width: 500px){
+    .paragraphWidth{
+        width: 50%;
+    }
+}
