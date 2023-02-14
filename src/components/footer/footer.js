@@ -10,7 +10,7 @@ const Footer = () => {
     <>
       <footer>
         <div
-          class="container prefooter mt-4 pb-3"
+          class="container prefooter mt-4 pb-0 px-0"
           style={{ backgroundColor: "#D1EFF6" }}
         >
           <p class="inquirysection text-center p-2">
@@ -43,7 +43,7 @@ const Footer = () => {
           </button>
         </div> */}
         <div
-          class="container-fluid mt-2 p-3"
+          class="container-fluid mt-2 pt-2"
           style={{ backgroundColor: "#D1EFF6" }}
         >
           <div class="row">
