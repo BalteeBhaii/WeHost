@@ -3,7 +3,22 @@ import './explore.css';
 const Explore = () => {
     return ( 
         <div>
-            <div className='container-fluid my-5 '>
+
+            <div className='container'>
+                <h2 className='explore-title mb-0'>Where to explore, right now</h2>
+                <span className='explore-description'>Rent houses with amenities, spaciousness, and comfort.</span>
+                <div className='row mt-4'>
+                    <div className='col-6'>
+                        <img src='/images/top10hotels.svg' className='explore-imgs explore-img-1'/>
+                    </div>
+                    <div className='col-6'>
+                        <img src='/images/beachHouse.svg' className='explore-imgs explore-img-2 mb-2'/>
+                        <img src='/images/swimingPool.svg' className='explore-imgs explore-img-3'/>
+                    </div>
+                </div>
+            </div>
+
+            {/* <div className='container-fluid my-5 '>
                 <div className='w-100 d-flex justify-content-between'>
                     <div >
                         <h1 style={{fontSize: '3.7vw'}}>Where to explore, right now</h1>
@@ -44,7 +59,7 @@ const Explore = () => {
                         <a className='btn btn-lg text-light' style={{backgroundColor: '#0579C1', width: '20%'}}>Explore more <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
      );
 }
