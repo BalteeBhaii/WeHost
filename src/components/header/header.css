@@ -4,7 +4,11 @@ li{
 
 a{
     text-decoration: none;
+    color: black;
 }
-.navbar-brand{
-    /* margin-left: 106px; */
+
+@media  screen and (max-width: 350px) {
+    .logoWidth{
+        width: 200px;
+    }
 }

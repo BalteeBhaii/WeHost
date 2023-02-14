@@ -3,16 +3,15 @@ import './rentalincome.css'
 const RentalIncome = () => {
     return ( 
     <div className='container'>
-        <div className='position-relative text-center'>
-            <img src='/images/furniture.svg' width={'100%'}/>
-            <div className='carousel-caption text-white fw-bold fs-3' style={{bottom: 225}}>
-
+        <figure className='position-relative'>
+            <img src='/images/furniture.svg' alt='furniture' className='img-fluid'/>
+            <figcaption>
                 <p >Want to gain some rental income?</p>
                 <div className='backcolor'>
-                    <p className=''>Post your property now</p>
+                    <p>Post your property now</p>
                 </div>
-            </div>
-        </div>
+            </figcaption>
+        </figure>
     </div>
      );
 }

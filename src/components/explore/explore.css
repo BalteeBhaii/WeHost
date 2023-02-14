@@ -9,10 +9,37 @@
     background-size: contain;
     background-position: center;
 }
+/* .imageTextColor:hover{
+    background: #0d7bc411;
 
-img.imagecolor:after{
-    background-color: rgba(13, 123, 196, 0.36);
-    height: 100%;
-    width: 100%;
-    content: '';
+} */
+
+.img-overlay:hover{
+    background: #0d7bc411;
+
+}
+
+.imageTextColor{
+    color: white
+}
+
+.img-overlay{
+    background: #0D7BC45c;
+}
+
+.explore{
+    background-color: #0579C1;
+    width: 200px;
+}
+
+@media screen and (max-width: 775px){
+    .explore{
+     width: 35%;
+    }
+ }
+
+@media screen and (max-width: 475px){
+   .explore{
+    width: 70%;
+   }
 }
