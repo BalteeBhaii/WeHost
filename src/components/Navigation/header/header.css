@@ -89,6 +89,13 @@ a{
     }
 }
 
+@media(max-width:617px) {
+    .header {
+        padding-right: 0.5rem!important;
+        padding-left: 0.5rem!important;
+    }
+}
+
 @keyframes dropdownActive {
     0% {
         max-height: 0px;
