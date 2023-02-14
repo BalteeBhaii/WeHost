@@ -13,7 +13,7 @@ const Header = () => {
                     <div className="logoWidth">
                         <a className="navbar-brand p-0 m-1" href="#"><img className="w-100" src="/images/logo.svg" alt="logo"/></a>
                     </div>
-                    <button className="navbar-toggler" type="button" onClick={handleToggleClick} data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded={toggle} aria-label="Toggle navigation">
+                    <button className="navbar-toggler p-1" type="button" onClick={handleToggleClick} data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded={toggle} aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     {/* <div className="container-fluid"> */}

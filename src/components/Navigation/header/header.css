@@ -1,0 +1,20 @@
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media  screen and (max-width: 550px) {
+    .logoWidth{
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .logoWidth{
+        width: 100px;
+    }
+}

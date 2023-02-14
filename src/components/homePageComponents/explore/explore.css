@@ -42,4 +42,8 @@
    .explore{
     width: 70%;
    }
+   button{
+    width: 100px;
+    padding: 1px
+   }
 }

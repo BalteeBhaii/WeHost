@@ -14,7 +14,7 @@ const Services = () => {
                             <div class="card-body">
                                 <h5 class="card-title">Rent House</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -24,7 +24,7 @@ const Services = () => {
                                 <div class="card-body">
                                     <h5 class="card-title">Hotel Booking</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@ const Services = () => {
                             <div class="card-body">
                                 <h5 class="card-title">Tour Plan</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ const Services = () => {
                             <div class="card-body">
                                 <h5 class="card-title">Privacy of your home</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                
                             </div>
                         </div>
                     </div>
