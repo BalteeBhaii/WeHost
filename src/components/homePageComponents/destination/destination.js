@@ -126,7 +126,9 @@ const Destination = () => {
                             <tr className='border-0'>
                                 <th className="border-0">
                                     <div className='button-column'>
-                                        <button className='btn btn-primary bottom-button bi' id='hotels'>Hotels</button>
+                                        <a href='/hotel'>
+                                            <button className='btn btn-primary bottom-button bi' id='hotels'>Hotels</button>
+                                        </a>
                                     </div>
                                 </th>
                                 <th className="border-0">

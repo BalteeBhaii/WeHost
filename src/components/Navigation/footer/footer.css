@@ -1,0 +1,49 @@
+.footer-title.ftitle {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 124.5%;
+    color: #080809;
+  }
+  .nav-des {
+    display: block;
+    /* padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x); */
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    /* color: var(--bs-nav-link-color); */
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+    color: #5e6282;
+    /* padding: 1rem; */
+    padding-left: 6px;
+    padding: 3px;
+    margin-left: 2px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 124.5%;
+  }
+  .copyright {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #ffffff;
+  }
+  
+  .text-center.fcopyright {
+    background-color: #0579c1;
+  }
+  
+  .container.prefooter {
+    background-color: #b4ebf9;
+  }
+  .inquirysection {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }

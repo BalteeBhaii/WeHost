@@ -9,6 +9,10 @@ button{
     background-size: contain;
 }
 
+.multipleImages{
+    height: 115px;
+}
+
 @media screen and (max-width: 775px){
     button{
         padding: 4px !important;

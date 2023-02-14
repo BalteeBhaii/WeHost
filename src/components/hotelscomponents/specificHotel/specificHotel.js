@@ -28,15 +28,78 @@ const SpecificHotel = () => {
                     <p><i className="bi bi-heart me-1"></i>Save</p>
                 </div>
             </div>
-            <div>
-                <h2>About</h2>
-                <p className='mb-1'>
-                Set in a bustling area near shops and restaurants, 
-                this  laid-back hostel is 2 km from both Makaha Beach 
-                and  the Museo de Arte Contemporáneo, and 4 km from  Ayacucho subway station.
-                </p>
-                <p><ins>Show more</ins></p>
+            <div className='row'>
+                <div className='col-12 col-md-8'>
+                    <div>
+                        <div className='mainImagesize mb-1'>
+                            <img className='img-fluid'  src='/images/hotelmainImage.svg'/>
+                        </div>
+                        <div className='d-flex multipleImages'>
+                            <img className='img-fluid' src='/images/image1.svg'/>
+                            <img className='img-fluid' src='/images/image2.svg'/>
+                            <img className='img-fluid' src='/images/image3.svg'/>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>About</h2>
+                        <p className='mb-1'>
+                        Set in a bustling area near shops and restaurants, 
+                        this  laid-back hostel is 2 km from both Makaha Beach 
+                        and  the Museo de Arte Contemporáneo, and 4 km from  Ayacucho subway station.
+                        </p>
+                        <p><ins>Show more</ins></p>
+                    </div>
+                </div>
+                <div className='col-12 col-md-4'>
+                    <div className="card">
+                        <div className="card-body">
+                            <div className='d-flex justify-content-between'>
+                                <h5 className="card-title">$157/Night</h5>
+                                <h5 className="card-title">34 reviews</h5>
+                            </div>
+                            <div className='d-flex mb-1'>
+                                <div className="input-group me-2">
+                                    <span className="input-group-text p-1" ><i className="bi bi-calendar-week "></i></span>
+                                    <input className='form-control p-1' type="text" placeholder='Check Out' />
+                                </div>
+                                <div className="input-group ">
+                                    <span className="input-group-text p-1" ><i className="bi bi-calendar-week "></i></span>
+                                    <input className='form-control p-1' type="text" placeholder='Check Out' />
+                                </div>
+                            </div>
+                            <div className="input-group ">
+                                <span className="input-group-text p-1" ><i className="bi bi-calendar-week "></i></span>
+                                <input className='form-control p-1' type="text" placeholder='Check Out' />
+                            </div>
+                            <div className='my-3'>
+                                <button className='btn btn-primary btn-sm w-100 p-0'>Reserve</button>
+                            </div>
+                            <div className='d-flex justify-content-between '>
+                                <p className='m-0'>$160 x 7 night</p>
+                                <p className='m-0'>$1,142</p>
+                            </div>
+                            <div className='d-flex justify-content-between '>
+                                <p className='m-0'>Weekly Discount</p>
+                                <p className='m-0'>-$80</p>
+                            </div>
+                            <div className='d-flex justify-content-between '>
+                                <p className='m-0'>Cleaning Fee</p>
+                                <p className='m-0'>$49</p>
+                            </div>
+                            <div className='d-flex justify-content-between '>
+                                <p className='m-0'>Service Fee</p>
+                                <p className='m-0'>$20</p>
+                            </div>
+                            <hr></hr>
+                            <div className='d-flex justify-content-between '>
+                                <p className='m-0'>Total Fee</p>
+                                <p className='m-0'>$1,278</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
             <div>
                 <h2>Want To See What This Hotel Offers?</h2>
                 <div className='d-flex jsu w-50 justify-content-between'>
