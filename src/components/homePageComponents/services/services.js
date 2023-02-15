@@ -1,8 +1,9 @@
 import React from 'react';
+import './services.css';
 const Services = () => {
     return ( 
     <>
-        <div className='container mb-5'>
+        <div className='container mb-5 mt-5'>
             <div className='text-center mb-5'>
                 <h1>services</h1>
             </div>

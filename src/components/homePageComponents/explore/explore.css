@@ -121,6 +121,17 @@
     background-color: #0579C1;
     color: white;
     font-size: 17px !important;
+    min-width: 160px;
+    min-height: 45px;
+    transition: all 0.3s ease-in;
+}
+
+.explore-button:hover {
+    background-color: #03568a;
+}
+
+.button-icon {
+    margin-left: 4px;
 }
 
 @media(max-width:981px) {
