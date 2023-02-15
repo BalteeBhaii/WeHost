@@ -13,28 +13,34 @@ const Footer = () => {
           class="container prefooter mt-4 pb-0 px-0"
           style={{ backgroundColor: "#D1EFF6" }}
         >
+          <div class="p-2">
           <p class="inquirysection text-center p-2">
             For inquires and queries do send us mail or any other issue. Feel
             Free to contact us
           </p>
 
-          <div className="d-block">
-            <form className="d-flex mb-4 w-75 mx-auto justify-content-between">
+         
+            <form className="d-flex mb-4 w-75 mx-auto justify-content-between mailsm">
               <div className="input-group border border-2 border-dark px-3 py-2 rounded-1 bg-white">
                 <i className="bi bi-envelope input-group-text bg-transparent border-0 text-mute"></i>
                 <input
                   type="email"
                   id="form5Exam"
-                  className="form-control border-0"
+                  className="form-control border-0 "
                   placeholder="Your Mail"
                 />
               </div>
-
+             
               <button type="submit" className="btn btn-primary ms-2 px-4">
-                Subscribe
+                Send 
               </button>
             </form>
           </div>
+            {/* <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"> <i className="bi bi-envelope"></i></span>           
+           <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Your Mail" aria-describedby="basic-addon2"/>
+         <span class="input-group-text" id="basic-addon2">Send Mail </span>
+          </div> */}
         </div>
 
         {/* <div>
@@ -46,6 +52,7 @@ const Footer = () => {
           class="container-fluid mt-2 pt-2"
           style={{ backgroundColor: "#D1EFF6" }}
         >
+          <div class="container">
           <div class="row">
             <div class="col-md-3 footer-column">
               <span>
@@ -118,6 +125,8 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+          </div>
+
           </div>
 
           <div class="text-center">

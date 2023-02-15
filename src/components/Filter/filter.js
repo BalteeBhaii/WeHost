@@ -374,8 +374,8 @@ const FilterModal = () => {
                             </div>
 
                         </section>
-                        <footer className="modal-footer">
-                        
+                        <footer className="modal-footer justify-content-between">
+                                     <div><a className='clearallbtn'>Clear All</a></div>   
                             <button className="modal-footer-button" onClick={() => setShowModal(false)}>
                                 Apply
                             </button>
