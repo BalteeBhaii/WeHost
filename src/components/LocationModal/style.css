@@ -103,14 +103,14 @@
 .Nearbytxt{
   margin-left:2%;
 }
-.bi.bi-geo-alt-fill {
+/* .bi.bi-geo-alt-fill {
   border: 1px solid;
   border-radius: 20px;
   height: 30px;
   width: 30px;
   padding: 2px;
   padding-left: 6px;
-}
+} */
 .destinationtxt {
   font-family: 'Open Sans';
 font-style: normal;

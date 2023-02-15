@@ -11,7 +11,7 @@
     margin: 0;
 }
 
-figcaption{
+.figCaptionDisplay{
     position: absolute;
     bottom: 15rem;
     width: 100%;
@@ -22,21 +22,21 @@ figcaption{
 }
 
 @media screen and (max-width: 1024px){
-    figcaption{
+    .figCaptionDisplay{
         font-size: 1.5rem;
         bottom: 10rem;
     }
 }
 
 @media screen and (max-width: 768px){
-    figcaption{
+    .figCaptionDisplay{
         font-size: 1rem;
         bottom: 5rem;
     }
 }
 
 @media screen and (max-width: 475px){
-    figcaption{
+    .figCaptionDisplay{
         font-size: 0.8rem;
         bottom: 2.5rem;
     }
@@ -47,7 +47,7 @@ figcaption{
 }
 
 @media screen and (max-width: 375px){
-    figcaption{
+    .figCaptionDisplay{
         font-size: 0.8rem;
         bottom: 2rem;
     }

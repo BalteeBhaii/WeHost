@@ -10,7 +10,6 @@ const HotelsPage = () => {
             <Header/>
             <Hotel/>
             <DesiredHotels/>
-            <SpecificHotel/>
             <Footer/>
         </> 
     );

@@ -1,0 +1,35 @@
+.figure-text-sizing h2{
+    font-size: 20px;
+}
+
+.figure-text-sizing p{
+    font-size: 15px;
+    color: #656565;
+}
+
+.figure-image{
+    border-radius: 15px !important;
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1025px) {
+    .figure-text-sizing h2{
+        font-size: 18px;
+    }
+    
+    .figure-text-sizing p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .figure-text-sizing h2{
+        font-size: 15px;
+    }
+    
+    .figure-text-sizing p{
+        font-size: 10px;
+    }
+}
