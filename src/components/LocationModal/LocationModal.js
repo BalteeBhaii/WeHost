@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './style.css'
 
-const LocationModal = () => {
-    const [showModal, setShowModal] = useState(false);
+const LocationModal = ({show}) => {
+    // const modalButton = useRef()
+    const [showModal, setShowModal] = useState(null);
+  
+    // if (show && modalButton.current){
+    //     console.log(modalButton)
+    //     modalButton.current.click()
+    // }
+
+    if (showModal !== null) show = false;
 
     return (
         <>
-            <button className="modal-button" onClick={() => setShowModal(true)}>Location Modal</button>
-            {showModal && (
-                <div className="modal-background">
+    
+            {(show) && (
+                <div className="modal-background " style=
+              {{  zIndex: "2000"}}            >
                     <div className="modal-card">
                         <div className="search-container">
                             <i class="bi bi-search"></i>

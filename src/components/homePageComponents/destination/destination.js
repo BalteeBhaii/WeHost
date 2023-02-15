@@ -1,9 +1,14 @@
 import React from 'react';
+import LocationModal from '../../LocationModal/LocationModal';
+import { useState } from 'react';
+
 import { Link } from "react-router-dom";
 import './destination.css'
 const Destination = () => {
+    const [showModal, setShowModal] = useState(false);
     return (
         <>
+
             <div className='bg-overlay text-light z-0'>
                 <div className='center'>
                     <div className='container-xxl container-xl container-lg position-relative' >
@@ -15,7 +20,8 @@ const Destination = () => {
                                         <span className="input-group-text border-0" id="basic-addon1">
                                             <i class="bi bi-geo-alt-fill"></i>
                                         </span>
-                                        <input type="text" className="form-control border-0 shadow-none" placeholder="Where to?" aria-label="Username" aria-describedby="basic-addon1" />
+                                        <input type="text" className="form-control border-0 shadow-none" placeholder="Where to?" aria-label="Username" aria-describedby="basic-addon1" onClick={()=>setShowModal(!showModal)}/>
+                                        <LocationModal show={showModal}/>
                                     </div>
                                 </div>
                                 <div className='col-lg-3 col-md-6'>
