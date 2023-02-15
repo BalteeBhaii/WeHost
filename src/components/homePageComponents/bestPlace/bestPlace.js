@@ -28,7 +28,6 @@ function SamplePrevArrow(props) {
 }
 
 const BestPlace = () => {
-<<<<<<< HEAD
     // const [slidesToShow, setSlidesToShow] = useState(3)
     // let screenWidth = window.screen.width;
     // var settings = {
@@ -40,7 +39,6 @@ const BestPlace = () => {
     //     nextArrow: <SampleNextArrow />,
     //     prevArrow: <SamplePrevArrow />
     //   };
-=======
     const [slidesToShow, setSlidesToShow] = useState(3)
     let screenWidth = window.screen.width;
     var settings = {
@@ -50,7 +48,6 @@ const BestPlace = () => {
         slidesToShow: slidesToShow,
         slidesToScroll: 1
       };
->>>>>>> 942ddc5759a3ed20a9f4e7e8141253ef84392d8e
 
     //   const resize = ()=>{
     //     if(window.innerWidth <= 500){
@@ -63,7 +60,6 @@ const BestPlace = () => {
     //     }
     //   }
 
-<<<<<<< HEAD
     //   window.onresize = resize;
     //   useEffect(()=>{
     //     if(screenWidth <= 767){
@@ -114,7 +110,6 @@ const BestPlace = () => {
                 </div>
             </OwlCarousel>
             {/* <h2 className='fw-semibold mb-3'>Find best place according to your comfort</h2>
-=======
       window.onresize = resize;
       useEffect(()=>{
         if(screenWidth <= 767){
@@ -127,7 +122,6 @@ const BestPlace = () => {
       return (
         <div className='container my-5'>
         <h2 className='fw-semibold mb-3'>Find best place according to your comfort</h2>
->>>>>>> 942ddc5759a3ed20a9f4e7e8141253ef84392d8e
             <Slider {...settings}>
                 <div className=''>
                     <div className='card mx-1'>
