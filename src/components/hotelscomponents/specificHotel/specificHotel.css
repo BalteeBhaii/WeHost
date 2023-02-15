@@ -1,0 +1,36 @@
+.googlemapImage{
+    background-size: cover;
+    background-position: center;
+}
+
+.paragraphWidth{
+    width: 35%;
+    text-align: justify;
+}
+
+/* .mainImagesize{
+    width: 823px;
+    height: 493px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainImagesize img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+} */
+
+@media screen and (max-width: 770px){
+    .paragraphWidth{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 500px){
+    .paragraphWidth{
+        width: 80%;
+    }
+}
