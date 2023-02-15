@@ -28,12 +28,11 @@ const BestPlace = () => {
     const [slidesToShow, setSlidesToShow] = useState(3)
     let screenWidth = window.screen.width;
     var settings = {
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: slidesToShow,
-        slidesToScroll: 1,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        slidesToScroll: 1
       };
 
       const resize = ()=>{
@@ -57,7 +56,7 @@ const BestPlace = () => {
         }
       },[])
       return (
-        <div className='container px-5 my-5'>
+        <div className='container my-5'>
         <h2 className='fw-semibold mb-3'>Find best place according to your comfort</h2>
             <Slider {...settings}>
                 <div className=''>

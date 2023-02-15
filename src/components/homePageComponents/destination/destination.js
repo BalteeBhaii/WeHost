@@ -7,7 +7,7 @@ const Destination = () => {
             <div className='bg-overlay text-light z-0'>
                 <div className='center'>
                     <div className='container-xxl container-xl container-lg position-relative' >
-                        <h1 className='fw-bold text destination-main-title' style={{ fontSize: '4.3vw' }}><span >Let's Find Your Desired Place Together</span></h1>
+                        <h1 className='fw-bold text destination-main-title'><span >Let's Find Your Desired Place Together</span></h1>
                         <div className="container mt-5">
                             <div className='row'>
                                 <div className='col-lg-5 col-md-6'>
@@ -45,7 +45,7 @@ const Destination = () => {
                                 <div className='col-lg-7 col-md-12'>
                                     <div class="input-group mb-3 destination-input">
                                         <span class="input-group-text border-0" id="basic-addon1">
-                                            <i class="bi bi-search"></i>
+                                            <i class="bi bi-search bi-searchIcon"></i>
                                         </span>
                                         <input type="text" className="form-control border-0 shadow-none text-center" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" />
                                     </div>
