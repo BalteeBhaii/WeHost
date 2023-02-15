@@ -13,13 +13,14 @@ const HomePage = () => {
     return ( 
         <>
         <Header/>
+        <LocationModal/>
         <Destination/>
+      
         <Explore/>
+    
         <Services/>
         <BestPlace/>
-        <LocationModal />
-      <GuestModal />
-      <FilterModal />
+        
         <RentalIncome/>
         <Footer/>
         </>

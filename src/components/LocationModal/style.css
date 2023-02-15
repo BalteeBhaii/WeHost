@@ -117,5 +117,8 @@ font-style: normal;
 font-weight: 600;
 font-size: 15px;
 line-height: 41px;
+color: black;
 }
-
+.modalview{
+  z-index: 10px;
+}
