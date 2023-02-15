@@ -10,7 +10,7 @@ import BestPlace from '../components/homePageComponents/bestPlace/bestPlace';
 import RentalIncome from '../components/homePageComponents/rentalIncome/rentalIncome';
 import ThingsToExplore from '../components/homePageComponents/thingsToExplore/thingsToExplore';
 import WhatYouWant from '../components/homePageComponents/WhatYouWantTodo/whatYouWant';
-import Footer from '../components/Navigation/footer/footer';
+import Footer from '../components/footer/footer'
 const HomePage = () => {
     return ( 
         <>
