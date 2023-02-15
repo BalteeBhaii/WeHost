@@ -2,8 +2,35 @@ import React from 'react';
 import './explore.css';
 const Explore = () => {
     return ( 
-        <div>
-            <div className='container-fluid my-5 '>
+        <>
+
+            <div className='container mt-5'>
+                <div className='explore-section'>
+                    <h1 className='explore-title mb-0'>Where to explore, right now</h1>
+                    <span className='explore-description'>Rent houses with amenities, spaciousness, and comfort.</span>
+                    <div className='explore-images mt-4'>
+                        <div className='images-section-1 position-relative px-0'>
+                            <img className='explore-images explore-image-1' src="/images/explore-1.jpg" alt="" />
+                            <div className='overly-1'>Fascinating View</div>
+                        </div>
+                        <div className='images-section-2 position-relative px-0 overflow-hidden'>
+                            <div className='inner-section-1 overflow-hidden h-50 mb-2'>
+                                <img className='explore-images explore-image-2 h-100' src="/images/explore-2.jpg" alt="" />
+                                <div className='overly-2'>Beach House</div>
+                            </div>
+                            <div className='inner-section-3 overflow-hidden h-50 mt-2'>
+                                <img className='explore-images explore-image-3 h-100' src="/images/explore-3.jpg" alt="" />
+                                <div className='overly-3'>Swiming Pool</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='d-flex justify-content-center mt-4'>
+                        <button className='explore-button'>Explore More</button>
+                    </div>
+                </div>
+            </div>
+
+            {/* <div className='container-fluid my-5 '>
                 <div className='w-100 d-flex justify-content-between'>
                     <div >
                         <h1 style={{fontSize: '3.7vw'}}>Where to explore, right now</h1>
@@ -47,8 +74,8 @@ const Explore = () => {
                         <a className='btn btn-lg text-light explore'>Explore more <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> */}
+        </>
      );
 }
  

@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './destination.css'
-
 const Destination = () => {
     return (
         <>
@@ -126,9 +126,9 @@ const Destination = () => {
                             <tr className='border-0'>
                                 <th className="border-0">
                                     <div className='button-column'>
-                                        <a href='/hotel'>
+                                        <Link to='/hotel'>
                                             <button className='btn btn-primary bottom-button bi' id='hotels'>Hotels</button>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </th>
                                 <th className="border-0">
