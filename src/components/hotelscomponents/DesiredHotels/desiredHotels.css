@@ -13,6 +13,20 @@ button{
     height: 115px;
 }
 
+.imgSizeStyle{
+    object-fit: cover;
+    /* border-radius: 6px !important; */
+}
+
+.card{
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+
+.main-text-size-style h1{
+    font-size: 36px !important;
+}
+
 @media screen and (max-width: 775px){
     button{
         padding: 4px !important;
@@ -25,5 +39,9 @@ button{
 @media screen and (max-width: 475px){
    button{
     padding: 2px !important;
+    font-size: 1rem !important;
    }
+   .main-text-size-style h1{
+    font-size: 20px !important;
+}
 }

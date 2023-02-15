@@ -8,7 +8,11 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
+<<<<<<< HEAD
     "jquery": "^3.6.3",
+=======
+    "bootstrap-switch-button-react": "^1.2.0",
+>>>>>>> 942ddc5759a3ed20a9f4e7e8141253ef84392d8e
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
