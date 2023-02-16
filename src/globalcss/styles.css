@@ -110,3 +110,376 @@
   }
 
   /* Footer style ended */
+
+  /* Location Modal Style */
+  .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    width: 500px;
+    max-width: 90%;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+  }
+  
+  .close-button {
+    background-color: transparent;
+    border: 0;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-top: 1px solid lightgray;
+    
+  }
+  
+  .modal-footer-button {
+    background-color: #0D7BC4;
+    border: 0;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .modal-footer-button:hover {
+    background-color: #B4EBF9;
+    color: white;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  .search-input {
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .search-icon {
+    font-size: 1.5rem;
+    color: gray;
+    margin-left: 0.5rem;
+  }
+  
+ 
+  .modaldes{
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .locationimg {
+    border: 1px solid;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+    padding-left: 5px;
+}  
+.searchimg{
+  border: 1px solid;
+  border-radius: 18px;
+  height: 29px;
+  width: 30px;
+  padding: 2px;
+  padding-left: 6px;
+  color: #080809;
+}
+.geoimg{
+  border: 1px solid;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  padding-left: 6px;
+}
+.Nearbytxt{
+  margin-left:2%;
+}
+/* .bi.bi-geo-alt-fill {
+  border: 1px solid;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  padding-left: 6px;
+} */
+.destinationtxt {
+  font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 41px;
+color: black;
+}
+.modalview{
+  z-index: 10px;
+}
+
+/* Location Modal Style Ended*/
+
+/* 
+guestModal style start */
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: start;
+}
+
+.counter-header-count {
+  color: #8C8C8C;
+}
+.counter-text{
+margin-top: -3%;
+}
+.counter-header {
+  display: flex;
+  width: 100%;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 37px;
+  line-height: 50px;
+  color: #000000;
+
+}
+
+.counter-header-text {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.counter-header-count {
+  font-size: 25px;
+
+}
+
+.counter-buttons {
+  display: flex;
+}
+
+.counter-button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+/* Filter style  start */
+
+.headerfilter {
+  /* justify-content: center; */
+  /* width: 338px; */
+  /* height: 50px; */
+  left: 284px;
+  top: 35px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 50px;
+  color: #000000;
+  text-align: center;
+}
+.refineline{
+  color: black;
+  border: 0;
+  border-top: 1px solid;
+  opacity: 1.25;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: -10px;
+}
+.spaceleft{
+  margin-left: 3%;
+}
+.\.spaceleft10 {
+  margin-left: 10%;
+}
+.Filtertxt {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 41px;
+  color: #000000;
+  margin-left: 2%;
+}
+.housedoorimg {
+  border: 1px solid;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  padding-left: 6px;
+}
+.formfilter {
+  padding-left: 3rem;
+}
+.cashimg{
+  border: 1px solid;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  padding-left: 6px;
+}
+.Ranger {
+  margin-left: 13%;
+  margin-right: 10%;
+}
+.searchmodal{
+  z-index: 1000;
+}
+.convenience {
+  border: 1px solid;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  padding-left: 3px;
+}
+span.riceranger{
+  padding: 10px 20px 10px 20px;
+}
+.buildingimg{
+  border: 1px solid;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  padding-left: 6px;
+}
+.typebtn{
+  border: 1px solid;
+  display: block;
+  height: 42px;
+}
+.property-type-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.property-type-list .list-group-item{
+  border: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color)!important;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 0% !important;
+}
+.property-type-list li button{
+background: transparent;
+border: 0;
+display: flex;
+}
+.coveniencehead{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 41px;
+  color: #000000;
+  margin-bottom: 0;
+  margin-left: 46px;
+
+}
+.bed {
+  border: 1px solid;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  padding-left: 3px;
+}
+.filtermodal{
+      max-height: 642px;
+      overflow-y: auto;
+ 
+}
+.Roomandbedstxt{
+  padding-left: 45px;
+  font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 37px;
+
+}
+.Roomandbedtype {
+  cursor: pointer;
+  background-color: #B4EBF9;
+  width: 40px;
+  /* padding-left: 5px; */
+  /* padding: 5px; */
+  border-radius: 10px;
+  padding-top: 4px;
+  height: 35px;
+  justify-content: center;
+  text-align: center;
+}
+.instantbooktxt{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 26px;
+  padding-left: 46px;
+}
+.switchbtn{
+  height: fit-content;
+}
+.clearallbtn{
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media only screen and (max-width:768px) {
+  .mailsm{
+      width:100% !important;
+  }
+}

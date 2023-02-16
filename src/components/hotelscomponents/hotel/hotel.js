@@ -1,6 +1,8 @@
 import React from 'react';
 import './hotel.css';
+
 const Hotel = () => {
+   
     return ( 
         <div className='divBackgroundImage text-light z-0'>
             <div className='center'>

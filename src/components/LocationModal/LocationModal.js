@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './style.css'
+import '../../globalcss/styles.css'
 
 const LocationModal = ({show, setShowModal}) => {
     // const modalButton = useRef()
@@ -20,28 +20,28 @@ const LocationModal = ({show, setShowModal}) => {
               {{  zIndex: "2000"}}            >
                     <div className="modal-card">
                         <div className="search-container">
-                            <i class="bi bi-search"></i>
+                            <i class="bi bi-search searchimg"></i>
                             <input type="text" placeholder="Where you want to go?" className="search-input" />
 
                         </div>
                         <section className="modal-body">
                             <div>
-                            <a href="#">
-                            <i class="bi bi-send-fill"></i>
+                            <a className='modaldes' href="#">
+                            <i class="bi bi-send-fill locationimg"></i>
                                 <span class="Nearbytxt">Nearby Location</span>
                             </a>
                             </div>                            
                             <div class="mt-3">
-                                <a href="#">
-                            <i class="bi bi-geo-alt-fill"></i>
+                                <a className='modaldes' href="#">
+                            <i class="bi bi-geo-alt-fill geoimg"></i>
                                 <span class="Nearbytxt">Most Visted</span>
                             </a></div>
 
                             <div class="mt-4">
                                 <p class="destinationtxt">Popular Destination</p>
                                 <hr/>
-                                <a href="#">
-                            <i class="bi bi-geo-alt-fill"></i>
+                                <a className='modaldes' href="#">
+                            <i class="bi bi-geo-alt-fill geoimg"></i>
                                 <span class="Nearbytxt">Dha Karachi</span>
                             </a>
 

@@ -1,13 +1,20 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './desiredHotels.css'
+import FilterModal from '../../Filter/filter';
+import { useState } from 'react';
 const DesiredHotels = () => {
+    const [showModal, setShowModal] = useState(false);
+    const abc =()=>{
+        setShowModal(!showModal)
+    }
     return (
         <>
             <div className='container mt-5 mb-3'>
                 <div className='w-100 d-flex justify-content-between align-items-center main-text-size-style'>
                     <h1 className='mb-0'>Here are the desired hotels for you</h1>
-                    <button className='btn btn-primary btn-md m-1' ><i class="bi bi-funnel me-1"></i>Filters</button>
+                    <button className='btn btn-primary btn-md m-1' onClick ={(ev) =>setShowModal(!showModal) } ><i class="bi bi-funnel me-1"></i>Filters </button>
+                    <FilterModal show={showModal} setShowModal={setShowModal} />
                 </div>
             </div>
             <div className='container mb-5'>
