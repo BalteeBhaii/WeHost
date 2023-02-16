@@ -76,6 +76,9 @@
     width: 49%;
 }
 
+.card-border-radius{
+    border: 2px solid #393053 !important;
+}
 
 @media screen and (max-width: 1025px) {
     .figure-text-sizing h2{
@@ -813,11 +816,6 @@ input{
     }
 }
 
-.card {
-    border: 0 !important;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
 .things-to-explore-text{
     text-align: left !important;
 }
@@ -917,8 +915,9 @@ button{
 }
 
 .card{
-    border-radius: 10px !important;
+    border-radius: 15px !important;
     overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .main-text-size-style h1{

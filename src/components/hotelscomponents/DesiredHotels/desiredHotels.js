@@ -59,7 +59,7 @@ const DesiredHotels = () => {
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
                                         <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                                        <p><a href='/hotel'><ins>Know More</ins></a></p>
+                                        <p><Link to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@ const DesiredHotels = () => {
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
                                         <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                                        <p><a href='/hotel'><ins>Know More</ins></a></p>
+                                        <p><Link to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@ const DesiredHotels = () => {
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
                                         <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                                        <p><a href='/hotel'><ins>Know More</ins></a></p>
+                                        <p><Link to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@ const DesiredHotels = () => {
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
                                         <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                                        <p><a href='/hotel'><ins>Know More</ins></a></p>
+                                        <p><Link to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>
                             </div>
@@ -167,7 +167,7 @@ const DesiredHotels = () => {
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
                                         <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                                        <p><a href='/hotel'><ins>Know More</ins></a></p>
+                                        <p><Link to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>
                             </div>
