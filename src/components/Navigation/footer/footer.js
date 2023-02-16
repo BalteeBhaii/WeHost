@@ -1,122 +1,146 @@
 import React, { useEffect } from "react";
+<<<<<<< HEAD
+import { Button } from "bootstrap";
+import "../../../globalcss/styles.css";
+//import Button from 'react-bootstrap/Button';
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+import logo from "../../../Assets/logo.png";
+=======
 // import "./footer.css";
 import Button from 'react-bootstrap/Button';
+>>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
 const Footer = () => {
   return (
     <>
       <footer>
         <div
-          className="container prefooter mt-4 pb-0 px-0"
+          class="container prefooter mt-4 pb-0 px-0"
           style={{ backgroundColor: "#D1EFF6" }}
         >
-          <p className="inquirysection text-center p-2">
+          <div class="p-2">
+          <p class="inquirysection text-center p-2">
             For inquires and queries do send us mail or any other issue. Feel
             Free to contact us
           </p>
 
-          <div className="d-block">
-            <form className="d-flex mb-4 w-75 mx-auto justify-content-between">
+         
+            <form className="d-flex mb-4 w-75 mx-auto justify-content-between mailsm">
               <div className="input-group border border-2 border-dark px-3 py-2 rounded-1 bg-white">
                 <i className="bi bi-envelope input-group-text bg-transparent border-0 text-mute"></i>
                 <input
                   type="email"
                   id="form5Exam"
-                  className="form-control border-0"
+                  className="form-control border-0 "
                   placeholder="Your Mail"
                 />
               </div>
-
+             
               <button type="submit" className="btn btn-primary ms-2 px-4">
-                Subscribe
+                Send 
               </button>
             </form>
           </div>
+            {/* <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"> <i className="bi bi-envelope"></i></span>           
+           <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Your Mail" aria-describedby="basic-addon2"/>
+         <span class="input-group-text" id="basic-addon2">Send Mail </span>
+          </div> */}
         </div>
+
+        {/* <div>
+          <button className="modal-footer-button ml-3" onClick={(Home) => Home}>
+            Send Mail
+          </button>
+        </div> */}
         <div
-          className="container-fluid mt-2 pt-2"
+          class="container-fluid mt-2 pt-2"
           style={{ backgroundColor: "#D1EFF6" }}
         >
-          <div className="row">
-            <div className="col-md-3 footer-column">
+          <div class="container">
+          <div class="row">
+            <div class="col-md-3 footer-column">
               <span>
-                <img src='/images/logo.svg' alt="" />
+                <img src={logo} alt="" />
               </span>
             </div>
-            <div className="col-md-3 footer-column">
-              <ul className="nav flex-column">
-                <li className="nav-item">
-                  <span className="footer-title ftitle ">Company</span>
+            <div class="col-md-3 footer-column">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <span class="footer-title ftitle ">Company</span>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-des" href="#">
+                <li class="nav-item">
+                  <a class="nav-des" href="#">
                     About
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-des" href="#">
+                <li class="nav-item">
+                  <a class="nav-des" href="#">
                     Packages
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-des" href="#">
+                <li class="nav-item">
+                  <a class="nav-des" href="#">
                     Services
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-md-3 footer-column">
-              <ul className="nav flex-column">
-                <li className="nav-des">
-                  <span className="footer-title ftitle">Contact</span>
+            <div class="col-md-3 footer-column">
+              <ul class="nav flex-column">
+                <li class="nav-des">
+                  <span class="footer-title ftitle">Contact</span>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-des" href="#">
+                <li class="nav-item">
+                  <a class="nav-des" href="#">
                     Help/FAQs
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-des" href="#">
+                <li class="nav-item">
+                  <a class="nav-des" href="#">
                     Mail
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-des" href="#">
+                <li class="nav-item">
+                  <a class="nav-des" href="#">
                     Affilates
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-md-3 footer-column">
-              <ul className="nav flex-column">
-                <li className="nav-item">
-                  <span className="footer-title ftitle">More</span>
+            <div class="col-md-3 footer-column">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <span class="footer-title ftitle">More</span>
                 </li>
-                <li className="nav-item">
-                  <span className="nav-des">
-                    <i className="fas fa-phone"></i>Hot Deals
+                <li class="nav-item">
+                  <span class="nav-des">
+                    <i class="fas fa-phone"></i>Hot Deals
                   </span>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-des" href="#">
-                    <i className="fas fa-comments"></i>Houses
+                <li class="nav-item">
+                  <a class="nav-des" href="#">
+                    <i class="fas fa-comments"></i>Houses
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-des" href="#">
-                    <i className="fas fa-envelope"></i>Mansions
+                <li class="nav-item">
+                  <a class="nav-des" href="#">
+                    <i class="fas fa-envelope"></i>Mansions
                   </a>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="text-center">
-            <i className="fas fa-ellipsis-h"></i>
           </div>
 
-          <div className="row text-center fcopyright">
-            <div className="jutify-content-center">
-              <span className="copyright">Copyright 2023 &copy; WebHost</span>
+          <div class="text-center">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+
+          <div class="row text-center fcopyright">
+            <div class="jutify-content-center">
+              <span class="copyright">Copyright 2023 &copy; WebHost</span>
             </div>
           </div>
         </div>

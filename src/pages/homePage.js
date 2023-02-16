@@ -18,10 +18,8 @@ const HomePage = () => {
         <>
         <Header/>
         <LocationModal/>
-        <Destination/>
-      
-        <Explore/>
-    
+        <Destination/>      
+        <Explore/>    
         <Services/>
         <BestPlace/>
         
