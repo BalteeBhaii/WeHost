@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+// import './desiredHotels.css'
+import FilterModal from '../../Filter/filter';
+import { useState } from 'react';
 const DesiredHotels = () => {
+    const [showModal, setShowModal] = useState(false);
+    const abc =()=>{
+        setShowModal(!showModal)
+    }
     return (
         <>
             <div className='container mt-5 mb-3'>
