@@ -1,15 +1,8 @@
 import React from 'react';
 import LocationModal from '../../LocationModal/LocationModal';
 import GuestModal from '../../GuestModal/GuestModal';
-import './destination.css';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-
-=======
-import '../../../globalcss/styles.css'
-// import './destination.css'
->>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
 const Destination = () => {
     const [showModal, setShowModal] = useState(false);
     const [guestModal, setguestModal] = useState(false);
