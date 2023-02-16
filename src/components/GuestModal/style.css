@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .counter-header-count {
