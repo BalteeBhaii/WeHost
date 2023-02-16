@@ -2,7 +2,7 @@ import React from 'react';
 const SpecificHotel = () => {
     return ( 
         <>
-        <div className='container'>
+        <div className='container specific-hotel-container'>
             <div className='w-100 d-flex justify-content-between'>
                 <div >
                     <h2 style={{fontSize: '3.3vw'}}>Hotel of Lima City</h2>
@@ -56,20 +56,20 @@ const SpecificHotel = () => {
                                 <h5 className="card-title">$157/Night</h5>
                                 <h5 className="card-title">34 reviews</h5>
                             </div>
-                            <div>
-                                <div className='d-flex flex-wrap justify-content-between mb-1'>
-                                    <div className="input-group inputgroup mb-1 destination-input border rounded shadow">
-                                        <span className="input-group-text p-1 border-0" ><i class="bi bi-calendar-event"></i></span>
-                                        <input className='form-control p-1 border-0 shadow-none' type="text" placeholder='Check In' />
+                            <div className='input-group-design'>
+                                <div className='d-flex flex-wrap input-bottom-border'>
+                                    <div className="input-group inputgroup destination-input input-group-boder-check-in">
+                                        <span className="input-group-text  border-0" ><i class="bi bi-calendar-event"></i></span>
+                                        <input className='form-control  border-0 shadow-none' type="text" placeholder='Check In' />
                                     </div>
-                                    <div className="input-group inputgroup destination-input border rounded shadow">
-                                        <span className="input-group-text p-1 border-0" ><i class="bi bi-calendar-event"></i></span>
-                                        <input className='form-control p-1 border-0 shadow-none' type="text" placeholder='Check Out' />
+                                    <div className="input-group inputgroup destination-input input-group-boder-check-out">
+                                        <span className="input-group-text  border-0" ><i class="bi bi-calendar-event"></i></span>
+                                        <input className='form-control  border-0 shadow-none' type="text" placeholder='Check Out' />
                                     </div>
                                 </div>
-                                <div className="input-group border rounded shadow" >
-                                    <span className="input-group-text p-1 border-0" style={{backgroundColor: 'white'}}><i className="bi bi-search"></i></span>
-                                    <input className='form-control p-1 border-0 shadow-none' type="text" placeholder='Guest' />
+                                <div className="input-group " >
+                                    <span className="input-group-text  border-0" style={{backgroundColor: 'white'}}><i className="bi bi-search"></i></span>
+                                    <input className='form-control  border-0 shadow-none' type="text" placeholder='Guest' />
                                 </div>
                             </div>
                             <div className='my-3'>

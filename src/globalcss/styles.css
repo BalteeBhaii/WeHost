@@ -80,6 +80,27 @@
     border: 2px solid #393053 !important;
 }
 
+.input-group-design{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.input-group-boder-check-in{
+    border-right: 1px solid;
+}
+
+.input-group-boder-check-out{
+    border-left: 1px solid;
+}
+
+.input-bottom-border{
+    border-bottom: 1px solid;
+}
+
+.specific-hotel-container{
+    margin-top: 44px !important;
+}
+
 @media screen and (max-width: 1025px) {
     .figure-text-sizing h2{
         font-size: 18px;
@@ -109,6 +130,10 @@
     }
     .paragraphWidth{
         width: 60%;
+    }
+
+    .input-group-boder-check-in{
+        border-bottom: 1px solid;
     }
 
     .inputgroup{
@@ -311,7 +336,7 @@ a{
 }
 
 .container {
-    margin-top: 90px !important;
+    /* margin-top: 90px !important; */
 }
 
 .owl-dots {

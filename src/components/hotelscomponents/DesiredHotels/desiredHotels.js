@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import LocationModal from '../../LocationModal/LocationModal';
+// import LocationModal from '../../LocationModal/LocationModal';
 // import './desiredHotels.css'
 import FilterModal from '../../Filter/filter';
 import { useState } from 'react';
@@ -15,7 +15,7 @@ const DesiredHotels = () => {
                 <div className='w-100 d-flex justify-content-between align-items-center main-text-size-style'>
                     <h1 className='mb-0'>Here are the desired hotels for you</h1>
                     <button className='btn btn-primary filter-button-size-style btn-md m-1' onClick ={(ev) =>setShowModal(!showModal) } ><i class="bi bi-funnel me-1"></i>Filters</button>
-                    <LocationModal show={showModal} setShowModal={setShowModal}/>
+                    <FilterModal show={showModal} setShowModal={setShowModal}/>
                 </div>
             </div>
             <div className='container mb-5'>
