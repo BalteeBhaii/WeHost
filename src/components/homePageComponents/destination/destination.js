@@ -3,6 +3,7 @@ import LocationModal from '../../LocationModal/LocationModal';
 import { useState } from 'react';
 
 import { Link } from "react-router-dom";
+import '../../../globalcss/styles.css'
 // import './destination.css'
 const Destination = () => {
     const [showModal, setShowModal] = useState(false);

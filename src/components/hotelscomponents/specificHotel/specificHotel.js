@@ -1,5 +1,4 @@
 import React from 'react';
-// import './specificHotel.css'
 const SpecificHotel = () => {
     return ( 
         <>
@@ -32,12 +31,12 @@ const SpecificHotel = () => {
                 <div className='col-12 col-md-8'>
                     <div>
                         <div className='mainImagesize mb-1'>
-                            <img className='img-fluid'  src='/images/hotelmainImage.svg'/>
+                            <img className='img-fluid'  src='/images/hotelmainImage.svg' alt='hotelImages'/>
                         </div>
                         <div className='d-flex multipleImages'>
-                            <img className='img-fluid' src='/images/image1.svg'/>
-                            <img className='img-fluid' src='/images/image2.svg'/>
-                            <img className='img-fluid' src='/images/image3.svg'/>
+                            <img className='img-fluid' src='/images/image1.svg' alt='hotelImages'/>
+                            <img className='img-fluid' src='/images/image2.svg' alt='hotelImages'/>
+                            <img className='img-fluid' src='/images/image3.svg' alt='hotelImages'/>
                         </div>
                     </div>
                     <div>
@@ -51,7 +50,7 @@ const SpecificHotel = () => {
                     </div>
                 </div>
                 <div className='col-12 col-md-4'>
-                    <div className="card">
+                    <div className="card ">
                         <div className="card-body">
                             <div className='d-flex justify-content-between'>
                                 <h5 className="card-title">$157/Night</h5>
@@ -119,7 +118,7 @@ const SpecificHotel = () => {
                 <h2>Where you'll be</h2>
                 <p>Calle Alcanfores 465, Mira 15074, Peru</p>
                 <div className='googlemapImage'>
-                    <img src='/images/googlemap.svg' className='img-fluid'/>
+                    <img src='/images/googlemap.svg' className='img-fluid' alt='hotelImages'/>
                 </div>
             </div>
             <div>
@@ -127,7 +126,7 @@ const SpecificHotel = () => {
                 <p>1 review</p>
                 <div className='d-flex '>
                     <div className='rounded-circle me-3'>
-                        <img src='/images/profile.svg' className='img-fluid'/>
+                        <img src='/images/profile.svg' className='img-fluid' alt='hotelImages'/>
                     </div>
                     <div>
                         <p className='m-0'>Ramos</p>
