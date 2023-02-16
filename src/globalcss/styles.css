@@ -130,131 +130,8 @@
     }
 }
 
-<<<<<<< HEAD
 
 /* Footer Style start */
-=======
-/* Header */
-li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-.navbar-brand{
-    /* margin-left: 106px; */
-}
-
-.header-logo {
-    width: auto;
-    height: 11vh !important;
-}
-
-.menu-profile-icon {
-    cursor: pointer;
-}
-
-.header-main-menu a {
-    color: rgb(17, 16, 16);
-}
-
-.header-main-menu {
-    margin-right: 32px;
-}
-
-.menu-item {
-    font-size: 17px;
-    font-weight: 600;
-}
-
-.header {
-    padding-right: 3rem!important;
-    padding-left: 3rem!important;
-}
-
-.auth-item {
-    margin-left: 4px;
-}
-
-.menu-dropdown {
-    width: -webkit-fill-available;
-    display: none;
-    justify-content: end;
-    align-items: center;
-}
-
-.menu-dropdown i {
-    transform: scale(2.3);
-}
-
-.menu-toggle {
-    cursor: pointer;
-}
-
-.menu-mbl-item {
-    font-size: 19px !important;
-}
-
-.menu-collapse {
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.3s ease-in !important;
-}
-
-.menu-active {
-    animation: dropdownActive 0.8s ease-in forwards;
-}
-
-.menu-inactive {
-    animation: dropdownInActive 0.5s ease-out forwards;
-}
-
-@media(max-width:1122px) {
-    .header-logo {
-        height: 9vh !important;
-    }
-}
-
-@media(max-width:1071px) {
-    .items-section {
-        display: none !important;
-    }
-
-    .menu-dropdown {
-        display: flex !important;
-    }
-}
-
-@media(max-width:617px) {
-    .header {
-        padding-right: 0.5rem!important;
-        padding-left: 0.5rem!important;
-    }
-}
-
-@keyframes dropdownActive {
-    0% {
-        max-height: 0px;
-    }
-
-    100% {
-        max-height: 1000px;
-    }
-}
-
-@keyframes dropdownInActive {
-    0% {
-        max-height: 1000px;
-    }
-
-    100% {
-        max-height: 0px;
-    }
-}
-
-/* Footer */
->>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
 .footer-title.ftitle {
     font-family: "Open Sans";
     font-style: normal;
@@ -295,32 +172,6 @@ a{
   .text-center.fcopyright {
     background-color: #0579c1;
   }
-<<<<<<< HEAD
-  /* .inquirysection {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 54px;
-    text-align: center;
-    color: #000000;
-  } */
-  /* .search-container-prefooter.jusitify-content-center.align-item-center {
-    display: flex;
-    align-items: center;
-    /* background-color: lightgray; */
-  /* border-radius: 5px;
-    padding: 0.5rem;
-    box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
-    justify-content: center;
-    max-width: 70%;
-    /* padding: 1rem; */
-  /* padding-left: 1rem;
-    margin-left: 4%; */
-  */
-  /* }  */
-=======
->>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
   
   .container.prefooter {
     background-color: #b4ebf9;
@@ -331,13 +182,9 @@ a{
     margin-bottom: 20px;
   }
 
-<<<<<<< HEAD
   /* Footer style ended */
 
   /* Location Modal Style */
-  .modal-background {
-=======
-  /* Main */
   .section-title {
     font-size: 28px;
 }
@@ -1091,7 +938,6 @@ input{
 }
 
 .modal-background {
->>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
     position: fixed;
     top: 0;
     left: 0;
@@ -1178,23 +1024,15 @@ input{
     margin-left: 0.5rem;
   }
   
-<<<<<<< HEAD
  
   .modaldes{
-=======
-  a {
->>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
     display: flex;
     align-items: center;
     color: #333;
     text-decoration: none;
   }
   
-<<<<<<< HEAD
   .locationimg {
-=======
-  .bi.bi-send-fill {
->>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
     border: 1px solid;
     border-radius: 20px;
     height: 30px;
@@ -1202,7 +1040,6 @@ input{
     padding: 2px;
     padding-left: 5px;
 }  
-<<<<<<< HEAD
 .searchimg{
   border: 1px solid;
   border-radius: 18px;
@@ -1220,8 +1057,6 @@ input{
   padding: 2px;
   padding-left: 6px;
 }
-=======
->>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
 .Nearbytxt{
   margin-left:2%;
 }
@@ -1244,7 +1079,6 @@ color: black;
 .modalview{
   z-index: 10px;
 }
-<<<<<<< HEAD
 
 /* Location Modal Style Ended*/
 
@@ -1474,9 +1308,3 @@ line-height: 37px;
       width:100% !important;
   }
 }
-=======
-    .paragraphWidth{
-        width: 80%;
-    }
-
->>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
