@@ -8,6 +8,10 @@
     text-align: justify;
 }
 
+.inputgroup{
+    width: 49%;
+}
+
 /* .mainImagesize{
     width: 823px;
     height: 493px;
@@ -27,6 +31,10 @@
 @media screen and (max-width: 770px){
     .paragraphWidth{
         width: 60%;
+    }
+
+    .inputgroup{
+        width: 100%;
     }
 }
 @media screen and (max-width: 500px){

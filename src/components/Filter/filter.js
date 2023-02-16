@@ -5,7 +5,7 @@ import img1 from '../../Assets/img1.png'
 import img2 from '../../Assets/img2.png'
 import img3 from '../../Assets/img3.png'
 import img4 from '../../Assets/img4.png'
-import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+// import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 const FilterModal = () => {
     const [showModal, setShowModal] = useState(false);
@@ -354,7 +354,7 @@ const FilterModal = () => {
                                     <div >
                                         <div className="d-flex justify-content-between">
                                             <p class="Roomandbedstxt mb-0">Instant Book</p>
-                                            <BootstrapSwitchButton checked={true} onstyle="outline-secondary" offstyle="outline-success" class="switchbtn"  size="xs" />
+                                            {/* <BootstrapSwitchButton checked={true} onstyle="outline-secondary" offstyle="outline-success" class="switchbtn"  size="xs" /> */}
                                         </div>
                                         <p class="instantbooktxt">Book without waiting of approval get your booking now</p>
                                        
@@ -362,7 +362,7 @@ const FilterModal = () => {
                                     <div >
                                         <div className="d-flex justify-content-between">
                                             <p class="Roomandbedstxt mb-0">Self check-in</p>
-                                            <BootstrapSwitchButton checked={true} onstyle="outline-secondary" offstyle="outline-success" class="switchbtn"  size="xs" />
+                                            {/* <BootstrapSwitchButton checked={true} onstyle="outline-secondary" offstyle="outline-success" class="switchbtn"  size="xs" /> */}
                                         </div>
                                         <p class="instantbooktxt">Once you arrive, the property is straightforward to access</p>
                                        
