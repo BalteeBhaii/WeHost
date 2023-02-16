@@ -11,6 +11,8 @@ import RentalIncome from '../components/homePageComponents/rentalIncome/rentalIn
 import ThingsToExplore from '../components/homePageComponents/thingsToExplore/thingsToExplore';
 import WhatYouWant from '../components/homePageComponents/WhatYouWantTodo/whatYouWant';
 import Footer from '../components/footer/footer';
+import Worldwide from '../components/homePageComponents/worldWide/Worldwide';
+import Reviews from '../components/homePageComponents/reviews/Reviews';
 import '../globalcss/styles.css';
 
 const HomePage = () => {
@@ -22,14 +24,16 @@ const HomePage = () => {
         <Explore/>    
         <Services/>
         <BestPlace/>
+        <Worldwide/>
         
         {/* <LocationModal /> */}
         {/* <GuestModal /> */}
         {/* <FilterModal /> */}
-        <RentalIncome/>
-        <ThingsToExplore/>
-        <WhatYouWant/>
-        <Footer/>
+        <RentalIncome />
+        <ThingsToExplore />
+        <WhatYouWant />
+        <Reviews />
+        <Footer />
         </>
      );
 }

@@ -5,7 +5,10 @@ const Services = () => {
     <>
         <div className='container mb-5 mt-5'>
             <div className='text-center mb-5'>
-                <h1>services</h1>
+                <h1 className='services-section-title position-relative section-titles'>Services</h1>
+                <span className='service-section-title-border position-relative d-flex justify-content-center'>
+                    <span></span>
+                </span>
             </div>
             <div>
                 <div className='row g-3'>
