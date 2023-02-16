@@ -9,7 +9,7 @@
 
 .figure-image{
     border-radius: 15px !important;
-    height: 50vh;
+    height: 100%;
     width: 100%;
     object-fit: cover;
 }
@@ -17,6 +17,9 @@
 .filter-button-size-style{
     padding: 10px !important;
     font-size: 1.2rem !important;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1;
 }
 
 .image-div{
@@ -61,6 +64,11 @@
     padding-right: 150px;
 }
 
+.link-text-color{
+    color: #6B728E;
+    font-weight: bold;
+}
+
 /* ******************** SPECIFIC HOTEL CSS **************** */
 .googlemapImage{
     background-size: cover;
@@ -68,12 +76,31 @@
 }
 
 .paragraphWidth{
-    width: 35%;
     text-align: justify;
 }
 
-.inputgroup{
-    width: 49%;
+
+.signin-input-container input{
+    background-color: #B4EBF9;
+    margin-bottom: 25px;
+}
+
+.signin-input-width{
+    width: 75%;
+}
+
+.sign-in-checkbox{
+    width: 75%
+}
+
+.sign-in-text-size h1{
+    font-size: 40px;
+}
+.sign-in-text-size p{
+    font-size: 20px;
+}
+.sign-in-text-size span{
+    font-size: 48px;
 }
 
 .card-border-radius{
@@ -88,9 +115,15 @@
 .input-group-boder-check-in{
     border-right: 1px solid;
 }
+.input-group-boder-check-in span{
+    background-color: white !important;
+}
 
 .input-group-boder-check-out{
     border-left: 1px solid;
+}
+.input-group-boder-check-out span{
+    background-color: white !important;
 }
 
 .input-bottom-border{
@@ -108,6 +141,9 @@
     
     .figure-text-sizing p{
         font-size: 14px;
+    }
+    .destination-input{
+        font-size: 15px !important;
     }
 }
 
@@ -127,18 +163,7 @@
     .rowPaddingStyle{
         padding-left: 70px;
         padding-right: 70px;
-    }
-    .paragraphWidth{
-        width: 60%;
-    }
-
-    .input-group-boder-check-in{
-        border-bottom: 1px solid;
-    }
-
-    .inputgroup{
-        width: 100%;
-    }
+    }   
  }
 
 @media screen and (max-width: 425px) {
@@ -156,6 +181,34 @@
     .figure-text-sizing p{
         font-size: 10px;
     }
+
+    .signin-input-container input{
+        margin-bottom: 15px;
+    }
+
+    .signin-input-container label{
+        font-size: 12px;
+    }
+    .signin-input-container p{
+        font-size: 12px;
+    }
+
+    .sign-in-checkbox{
+        width: 90%;
+    }
+    .signin-input-width{
+        width: 85%;
+    }
+    
+    .sign-in-text-size h1{
+        font-size: 30px;
+    }
+    .sign-in-text-size p{
+        font-size: 15px;
+    }
+    .sign-in-text-size span{
+        font-size: 38px;
+    }
 }
 
 
@@ -167,9 +220,6 @@ li{
 
 a{
     text-decoration: none;
-}
-.navbar-brand{
-    /* margin-left: 106px; */
 }
 
 .header-logo {
@@ -335,9 +385,7 @@ a{
     font-size: 28px;
 }
 
-.container {
-    /* margin-top: 90px !important; */
-}
+
 
 .owl-dots {
     display: none;
@@ -581,6 +629,7 @@ input{
 @media(max-width: 767px) {
     .destination-input input {
         text-align: start !important;
+        font-size: 14px !important;
     }
 
     .destination-input span .bi-search {
@@ -807,6 +856,10 @@ input{
     color: white;
 }
 
+.figCaptionDisplay p{
+    text-shadow: 1px 3px 4px #FFFBEB;
+}
+
 @media screen and (max-width: 1024px){
     .figCaptionDisplay{
         font-size: 1.5rem;
@@ -961,13 +1014,16 @@ button{
  }
 
 @media screen and (max-width: 475px){
-   button{
-    padding: 2px !important;
-    font-size: 1rem !important;
-   }
-   .main-text-size-style h1{
-    font-size: 20px !important;
-}
+    button{
+        padding: 2px !important;
+        font-size: 1rem !important;
+    }
+    .main-text-size-style h1{
+        font-size: 20px !important;
+    }
+    .multipleImages{
+        height: 65px;
+    }
 }
 
 .destination-main-title {
@@ -1034,49 +1090,12 @@ input{
 
 }
 
-.googlemapImage{
-    background-size: cover;
-    background-position: center;
-}
-
-.paragraphWidth{
-    width: 35%;
-    text-align: justify;
-}
-
-.inputgroup{
-    width: 49%;
-}
-
-/* .mainImagesize{
-    width: 823px;
-    height: 493px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mainImagesize img{
-    width: 100%;
-    height: auto;
-    position: absolute;
-} */
-
 @media screen and (max-width: 770px){
-    .paragraphWidth{
-        width: 60%;
-    }
 
-    .inputgroup{
-        width: 100%;
-    }
+
 }
 @media screen and (max-width: 500px){
-    .paragraphWidth{
-        width: 80%;
-    }
+
 }
 
 .modal-background {
@@ -1450,7 +1469,5 @@ line-height: 37px;
       width:100% !important;
   }
 }
-    .paragraphWidth{
-        width: 80%;
-    }
+   
 

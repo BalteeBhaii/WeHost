@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from "react";
+import SignIn from "../../signIn/signin";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [display, setDisplay] = useState('none');
     const handleToggleClick = () => {
         setToggle(!toggle)
     }
 
+    const handleDisplayClick = () => {
+        if(display =='none'){
+            setDisplay('block');
+        } else{
+            setDisplay('none')
+        }
+    }
     const menuHandler = () => {
         let dorpdownMenu = document.getElementsByClassName("menu-collapse")[0];
         
@@ -113,7 +123,13 @@ const Header = () => {
                         </ul>
                         <div className="menu-profile">
                             <img className="menu-profile-icon" src="/images/user.svg" alt="user"/>
+                            <button style={{border:'none', background: 'none'}} onClick={()=>handleDisplayClick()}>
                             <span className="menu-item auth-item">Login/SignUp</span>
+                            </button>
+                            <div className="position-absolute p-2 text-center" style={{display: display, backgroundColor: 'white', width: '-webkit-fill-available'}}>
+                                <p className="mb-0 fw-semibold border-bottom border-top"><button className="btn" onClick={()=> setShowModal(!showModal)}>Log In</button></p>
+                                <p className="mb-0 fw-semibold border-bottom"><button className="btn">Sign Up</button></p>
+                            </div>
                         </div>
                     </div>
                     <div className="menu-dropdown">
@@ -141,11 +157,12 @@ const Header = () => {
                                 <li className="mx-2 menu-item menu-mbl-item mb-3">Review</li>
                             </a>
                             <div className="menu-profile">
-                            <img className="menu-profile-icon" src="/images/user.svg" alt="user"/>
-                            <span className="menu-item auth-item">Login/SignUp</span>
-                        </div>
+                                <img className="menu-profile-icon" src="/images/user.svg" alt="user"/>
+                                <span className="menu-item auth-item">Login/SignUp</span>
+                            </div>
                         </ul>
                 </div>
+                <SignIn showModal={showModal} setShowModal={setShowModal}/>
             </div>
         </>
     );

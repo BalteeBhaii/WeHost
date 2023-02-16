@@ -2,7 +2,7 @@ import React from 'react';
 // import './rentalincome.css'
 const RentalIncome = () => {
     return ( 
-    <div className='container'>
+    <div className='container '>
         <figure className='position-relative'>
             <img src='/images/furniture.svg' alt='furniture' className='img-fluid'/>
             <figcaption className='figCaptionDisplay'>
