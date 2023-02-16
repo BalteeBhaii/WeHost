@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
-import './header.css'
+
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);

@@ -1,5 +1,5 @@
 import React from 'react';
-import './rentalincome.css'
+// import './rentalincome.css'
 const RentalIncome = () => {
     return ( 
     <div className='container'>

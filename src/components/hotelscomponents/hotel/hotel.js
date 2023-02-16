@@ -1,6 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import './hotel.css';
 
+=======
+>>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
 const Hotel = () => {
    
     return ( 
@@ -15,7 +18,7 @@ const Hotel = () => {
                                     <span className="input-group-text border-0" >
                                         <i className="bi bi-calendar-date" ></i>
                                     </span>
-                                    <input className='form-control border-0 shadow-none' type="text" placeholder='Check In' style={{fontSize: '2vw'}}/>
+                                    <input className='form-control border-0 shadow-none' type="text" placeholder='Check In'/>
                                 </div>
                             </div>
                             <div className='col-12 col-md-3 search-col p-0 m-1'>
@@ -23,7 +26,7 @@ const Hotel = () => {
                                     <span className="input-group-text border-0" >
                                         <i className="bi bi-calendar-week "></i>
                                     </span>
-                                    <input className='form-control border-0 shadow-none' type="text" placeholder='Check Out' style={{fontSize: '2vw'}}/>
+                                    <input className='form-control border-0 shadow-none' type="text" placeholder='Check Out'/>
                                 </div>
                             </div>
                             <div className='col-12 col-md-4 search-col p-0 m-1'>
@@ -31,7 +34,7 @@ const Hotel = () => {
                                     <span className="input-group-text border-0">
                                         <i className="bi bi-person-circle"></i>
                                     </span>
-                                    <input className='form-control border-0 shadow-none' type="text" placeholder='Guest' style={{fontSize: '2vw'}} />
+                                    <input className='form-control border-0 shadow-none' type="text" placeholder='Guest'/>
                                 </div>
                             </div>
                         </div>

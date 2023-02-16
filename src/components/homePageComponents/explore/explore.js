@@ -1,5 +1,4 @@
 import React from 'react';
-import './explore.css';
 const Explore = () => {
     return ( 
         <>
@@ -24,8 +23,8 @@ const Explore = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='d-flex justify-content-center mt-4'>
-                        <button className='explore-button'>Explore More</button>
+                    <div className='d-flex justify-content-center mt-4 px-3'>
+                        <button className='explore-button bi'>Explore More  <i class="bi bi-arrow-right button-icon"></i></button>
                     </div>
                 </div>
             </div>

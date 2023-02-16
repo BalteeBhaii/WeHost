@@ -1,15 +1,10 @@
 import React, { useEffect } from "react";
-<<<<<<< HEAD
 import { Button } from "bootstrap";
-import "../../../globalcss/styles.css";
+// import "./style.css";
 //import Button from 'react-bootstrap/Button';
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import logo from "../../../Assets/logo.png";
-=======
-// import "./footer.css";
-import Button from 'react-bootstrap/Button';
->>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
+import logo from "../../Assets/logo.png";
 const Footer = () => {
   return (
     <>
