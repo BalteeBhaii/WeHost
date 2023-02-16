@@ -1,16 +1,16 @@
 import React, { useRef, useState } from 'react';
 import './style.css'
 
-const LocationModal = ({show}) => {
+const LocationModal = ({show, setShowModal}) => {
     // const modalButton = useRef()
-    const [showModal, setShowModal] = useState(null);
+    // const [showModal, setShowModal] = useState(null);
   
     // if (show && modalButton.current){
     //     console.log(modalButton)
     //     modalButton.current.click()
     // }
 
-    if (showModal !== null) show = false;
+    // if (showModal !== null) show = false;
 
     return (
         <>
@@ -48,7 +48,7 @@ const LocationModal = ({show}) => {
                             </div>
                         </section>
                         <footer className="modal-footer">
-                            <button className="modal-footer-button" onClick={() => setShowModal(false)}>
+                            <button className="modal-footer-button" onClick={() => setShowModal(!show)}>
                                 Apply
                             </button>
                         </footer>

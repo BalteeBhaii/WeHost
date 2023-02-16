@@ -1,10 +1,13 @@
 import React from 'react';
 import LocationModal from '../../LocationModal/LocationModal';
-import './destination.css'
+import './destination.css';
 import { useState } from 'react';
 
 const Destination = () => {
     const [showModal, setShowModal] = useState(false);
+    const abc =()=>{
+        setShowModal(!showModal)
+    }
     return (
         <>
 
@@ -19,8 +22,9 @@ const Destination = () => {
                                         <span className="input-group-text border-0" id="basic-addon1">
                                             <i class="bi bi-geo-alt-fill"></i>
                                         </span>
-                                        <input type="text" className="form-control border-0 shadow-none" placeholder="Where to?" aria-label="Username" aria-describedby="basic-addon1" onClick={()=>setShowModal(!showModal)}/>
-                                        <LocationModal show={showModal}/>
+                                        <input type="text" className="form-control border-0 shadow-none" placeholder="Where to?" aria-label="Username" aria-describedby="basic-addon1" onClick ={(ev) =>setShowModal(!showModal) }></input>
+                                        
+                                        <LocationModal show={showModal} setShowModal={setShowModal}/>
                                     </div>
                                 </div>
                                 <div className='col-lg-3 col-md-6'>
@@ -161,6 +165,7 @@ const Destination = () => {
                     </table>
                 </div>
             </div>
+
         </>
     );
 }
