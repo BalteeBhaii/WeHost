@@ -69,10 +69,37 @@ const BestPlace = () => {
     //         setSlidesToShow(1)
     //     }
     //   },[])
+
+    const options = {
+        margin: 30,
+        responsiveClass: true,
+        nav: true,
+        dots: true,
+        autoplay: false,
+        smartSpeed: 1000,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            400: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            700: {
+                items: 2,
+            },
+            1000: {
+                items: 3,
+            }
+        },
+    };
+
     return (
         <div className='container my-5'>
-            <h1 className='section-title mb-0'>Find best place according to your comfort</h1>
-            <OwlCarousel className='owl-theme' margin={10} nav responsive={true}>
+            <h1 className='section-title mb-0 section-titles'>Find best place according to your comfort</h1>
+            <OwlCarousel className="slider-items owl-carousel" {...options}>
                 <div class='item'>
                     <img className='owl-image' src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
                     <h3 className='owl-title mb-0 mt-2'>Houses</h3>
