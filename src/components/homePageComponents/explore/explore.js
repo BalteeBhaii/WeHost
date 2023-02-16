@@ -1,5 +1,5 @@
 import React from 'react';
-import './explore.css';
+// import './explore.css';
 const Explore = () => {
     return ( 
         <>
@@ -43,8 +43,8 @@ const Explore = () => {
                 <div className='row justify-content-center h-100 px-0' >
                     <div className='col-sm-11 col-md-6 col-lg-6 px-0' >
                         <div className='imageTextColor w-100 h-100 position-relative bg-warning z-1'>
-                                <img className='imageTextColor' src='/images/top10hotels.svg' width={'100%'} height={'auto'}/>
-                                <div className='img-overlay h-100 w-100 position-absolute top-0'></div>
+                            <img className='imageTextColor' src='/images/top10hotels.svg' width={'100%'} height={'auto'}/>
+                            <div className='img-overlay h-100 w-100 position-absolute top-0'></div>
                             <p className='carousel-caption fw-semibold fs-5 ' style={{bottom: '-25px'}}>Fascinating View</p>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './specificHotel.css'
+// import './specificHotel.css'
 const SpecificHotel = () => {
     return ( 
         <>
@@ -57,19 +57,19 @@ const SpecificHotel = () => {
                                 <h5 className="card-title">$157/Night</h5>
                                 <h5 className="card-title">34 reviews</h5>
                             </div>
-                            <div className='d-flex mb-1'>
-                                <div className="input-group me-2">
-                                    <span className="input-group-text p-1" ><i className="bi bi-calendar-week "></i></span>
-                                    <input className='form-control p-1' type="text" placeholder='Check Out' />
+                            <div className='d-flex flex-wrap justify-content-between mb-1'>
+                                <div className="input-group inputgroup mb-1 destination-input border rounded shadow">
+                                    <span className="input-group-text p-1 border-0" ><i class="bi bi-calendar-event"></i></span>
+                                    <input className='form-control p-1 border-0 shadow-none' type="text" placeholder='Check In' />
                                 </div>
-                                <div className="input-group ">
-                                    <span className="input-group-text p-1" ><i className="bi bi-calendar-week "></i></span>
-                                    <input className='form-control p-1' type="text" placeholder='Check Out' />
+                                <div className="input-group inputgroup destination-input border rounded shadow">
+                                    <span className="input-group-text p-1 border-0" ><i class="bi bi-calendar-event"></i></span>
+                                    <input className='form-control p-1 border-0 shadow-none' type="text" placeholder='Check Out' />
                                 </div>
                             </div>
-                            <div className="input-group ">
-                                <span className="input-group-text p-1" ><i className="bi bi-calendar-week "></i></span>
-                                <input className='form-control p-1' type="text" placeholder='Check Out' />
+                            <div className="input-group border rounded shadow" >
+                                <span className="input-group-text p-1 border-0" style={{backgroundColor: 'white'}}><i className="bi bi-search"></i></span>
+                                <input className='form-control p-1 border-0 shadow-none' type="text" placeholder='Guest' />
                             </div>
                             <div className='my-3'>
                                 <button className='btn btn-primary btn-sm w-100 p-0'>Reserve</button>

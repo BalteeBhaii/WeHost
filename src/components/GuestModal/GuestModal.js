@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.css'
+// import './style.css'
 
 const GuestModal = () => {
     const [showModal, setShowModal] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Button } from "bootstrap";
-import "./style.css";
+// import "./style.css";
 //import Button from 'react-bootstrap/Button';
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";

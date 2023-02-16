@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import "./footer.css";
-//import Button from 'react-bootstrap/Button';
+// import "./footer.css";
+import Button from 'react-bootstrap/Button';
 const Footer = () => {
   return (
     <>

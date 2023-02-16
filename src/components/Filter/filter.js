@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.css'
+// import './style.css'
 import { Form, FormCheck } from 'react-bootstrap';
 import img1 from '../../Assets/img1.png'
 import img2 from '../../Assets/img2.png'

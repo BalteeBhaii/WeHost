@@ -8,19 +8,29 @@ import Explore from '../components/homePageComponents/explore/explore';
 import Services from '../components/homePageComponents/services/services';
 import BestPlace from '../components/homePageComponents/bestPlace/bestPlace';
 import RentalIncome from '../components/homePageComponents/rentalIncome/rentalIncome';
-import Footer from '../components/Navigation/footer/footer';
+import ThingsToExplore from '../components/homePageComponents/thingsToExplore/thingsToExplore';
+import WhatYouWant from '../components/homePageComponents/WhatYouWantTodo/whatYouWant';
+import Footer from '../components/footer/footer';
+import '../globalcss/styles.css';
+
 const HomePage = () => {
     return ( 
         <>
         <Header/>
+        <LocationModal/>
         <Destination/>
+      
         <Explore/>
+    
         <Services/>
         <BestPlace/>
-        <LocationModal />
-      <GuestModal />
-      <FilterModal />
+        
+        {/* <LocationModal /> */}
+        {/* <GuestModal /> */}
+        {/* <FilterModal /> */}
         <RentalIncome/>
+        <ThingsToExplore/>
+        <WhatYouWant/>
         <Footer/>
         </>
      );

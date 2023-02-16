@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
 import 'owl.carousel/dist/assets/owl.theme.default.min.css';
-import './bestPlace.css';
+// import './bestPlace.css';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -39,6 +39,15 @@ const BestPlace = () => {
     //     nextArrow: <SampleNextArrow />,
     //     prevArrow: <SamplePrevArrow />
     //   };
+    const [slidesToShow, setSlidesToShow] = useState(3)
+    let screenWidth = window.screen.width;
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: slidesToShow,
+        slidesToScroll: 1
+      };
 
     //   const resize = ()=>{
     //     if(window.innerWidth <= 500){
@@ -101,6 +110,18 @@ const BestPlace = () => {
                 </div>
             </OwlCarousel>
             {/* <h2 className='fw-semibold mb-3'>Find best place according to your comfort</h2>
+      window.onresize = resize;
+      useEffect(()=>{
+        if(screenWidth <= 767){
+            setSlidesToShow(2)
+        } 
+        if(screenWidth<= 425){
+            setSlidesToShow(1)
+        }
+      },[])
+      return (
+        <div className='container my-5'>
+        <h2 className='fw-semibold mb-3'>Find best place according to your comfort</h2>
             <Slider {...settings}>
                 <div className=''>
                     <div className='card mx-1'>
