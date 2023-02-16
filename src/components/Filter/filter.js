@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import './style.css'
+import '../../globalcss/styles.css';
 import { Form, FormCheck } from 'react-bootstrap';
 import img1 from '../../Assets/img1.png'
 import img2 from '../../Assets/img2.png'
@@ -7,16 +7,16 @@ import img3 from '../../Assets/img3.png'
 import img4 from '../../Assets/img4.png'
 // import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
-const FilterModal = () => {
-    const [showModal, setShowModal] = useState(false);
+const FilterModal = ({show, setShowModal}) => {
+    // const [showModal, setShowModal] = useState(false);
     const [count, setCount] = useState(0);
 
     return (
         <>
-            <button className="modal-button" onClick={() => setShowModal(true)}>Filter</button>
-            {showModal && (
+           
+            {(show) && (
                 <div className="modal-background searchmodal">
-                    <div className="modal-card filtermodal ">
+                    <div className="modal-card filtermodal">
                         <header>
                             <p class="headerfilter">Refine Your Search</p>
                             <div className='refineline'>
@@ -24,17 +24,17 @@ const FilterModal = () => {
 
                         </header>
                         <section className="modal-body">
-                            <div class="ml-3">
-                                <a href="#">
-                                    <i class="bi bi-geo-alt-fill"></i>
+                            <div className='spaceleft'>
+                                <a className='modaldes' href="#">
+                                    <i class="bi bi-geo-alt-fill geoimg "></i>
                                     <span class="Filtertxt">Location</span>
                                 </a></div>
-                            <div class="ml-3">
-                                <a href="#">
-                                    <i class="bi bi-house-door-fill"></i>
+                            <div class="spaceleft">
+                                <a className='modaldes' href="#">
+                                    <i class="bi bi-house-door-fill housedoorimg"></i>
                                     <span class="Filtertxt">Type of Place</span>
                                 </a>
-                                <Form>
+                                <Form className='formfilter'>
                                     {['checkbox'].map((type) => (
                                         <div key={`inline-${type}`} className="mb-3">
                                             <Form.Check
@@ -62,9 +62,9 @@ const FilterModal = () => {
                                 </Form>
 
                             </div>
-                            <div class="ml-3">
-                                <a href="#">
-                                    <i class="bi bi-cash-coin"></i>
+                            <div class="spaceleft">
+                                <a className='modaldes' href="#">
+                                    <i class="bi bi-cash-coin cashimg"></i>
                                     <span class="Filtertxt">Price Range</span>
                                 </a></div>
                             <div class="Ranger">
@@ -77,10 +77,10 @@ const FilterModal = () => {
                                 </div>
                             </div>
 
-                            <div class="ml-3">
+                            <div class="spaceleft">
 
-                                <a href="#">
-                                    <i class="bi bi-buildings"></i>
+                                <a className='modaldes' href="#">
+                                    <i class="bi bi-buildings buildingimg"></i>
                                     <span class="Filtertxt">Property Type</span>
                                 </a>
                                 <ul class="list-group list-group-horizontal property-type-list">
@@ -111,8 +111,8 @@ const FilterModal = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div class="ml-3">
-                                <a href="#">
+                            <div class="spaceleft">
+                                <a className='modaldes' href="#">
                                     <img class="convenience" src={img2} />
                                     <span class="Filtertxt">Convenience</span>
                                 </a>
@@ -121,7 +121,7 @@ const FilterModal = () => {
 
                                         <>
                                             <div class="coveniencehead ">Essentails</div>
-                                            <div key={`inline-${type}`} className="row ">
+                                            <div key={`inline-${type}`} className="row .spaceleft10">
 
                                                 <div className='col-6'>
                                                     <Form.Check
@@ -234,7 +234,7 @@ const FilterModal = () => {
 
                                         <>
                                             <div class="coveniencehead ">Features</div>
-                                            <div key={`inline-${type}`} className="row ">
+                                            <div key={`inline-${type}`} className="row .spaceleft10 ">
 
                                                 <div className='col-6'>
                                                     <Form.Check
@@ -304,14 +304,14 @@ const FilterModal = () => {
                                     ))}
                                 </Form>
                             </div>
-                            <div class="ml-3">
-                                <a href="#">
+                            <div class="spaceleft">
+                                <a className='modaldes' href="#">
                                     <img class="bed" src={img3} />
                                     <span class="Filtertxt">Rooms and Beds</span>
                                 </a>
                                 <p class="Roomandbedstxt">Bedrooms</p>
 
-                                <ul class="d-flex gap-2 ml-3">
+                                <ul class="d-flex gap-2 spaceleft">
                                     <li class="Roomandbedtype">Any</li>
                                     <li class="Roomandbedtype">1</li>
                                     <li class="Roomandbedtype">2</li>
@@ -322,7 +322,7 @@ const FilterModal = () => {
                                 </ul>
                                 <p class="Roomandbedstxt">Beds</p>
 
-                                <ul class="d-flex gap-2 ml-3">
+                                <ul class="d-flex gap-2 ml-3 spaceleft">
                                     <li class="Roomandbedtype">Any</li>
                                     <li class="Roomandbedtype">1</li>
                                     <li class="Roomandbedtype">2</li>
@@ -333,7 +333,7 @@ const FilterModal = () => {
                                 </ul>
                                 <p class="Roomandbedstxt">Bathrooms</p>
 
-                                <ul class="d-flex gap-2 ml-3">
+                                <ul class="d-flex gap-2 ml-3 spaceleft">
                                     <li class="Roomandbedtype">Any</li>
                                     <li class="Roomandbedtype">1</li>
                                     <li class="Roomandbedtype">2</li>
@@ -345,8 +345,8 @@ const FilterModal = () => {
 
 
                             </div>
-                            <div class="ml-3">
-                                <a href="#">
+                            <div class="spaceleft">
+                                <a className='modaldes' href="#">
                                     <img class="bed" src={img4} />
                                     <span class="Filtertxt">Booking Options</span>
                                 </a>
@@ -375,7 +375,7 @@ const FilterModal = () => {
 
                         </section>
                         <footer className="modal-footer justify-content-between">
-                                     <div><a className='clearallbtn'>Clear All</a></div>   
+                                     <div><a className='clearallbtn modaldes'>Clear All</a></div>   
                             <button className="modal-footer-button" onClick={() => setShowModal(false)}>
                                 Apply
                             </button>

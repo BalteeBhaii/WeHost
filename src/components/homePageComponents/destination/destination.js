@@ -1,11 +1,15 @@
 import React from 'react';
 import LocationModal from '../../LocationModal/LocationModal';
+import GuestModal from '../../GuestModal/GuestModal';
 import { useState } from 'react';
-
 import { Link } from "react-router-dom";
-// import './destination.css'
 const Destination = () => {
     const [showModal, setShowModal] = useState(false);
+    const [guestModal, setguestModal] = useState(false);
+
+    const abc =()=>{
+        setShowModal(!showModal)
+    }
     return (
         <>
 
@@ -20,8 +24,9 @@ const Destination = () => {
                                         <span className="input-group-text border-0" id="basic-addon1">
                                             <i class="bi bi-geo-alt-fill"></i>
                                         </span>
-                                        <input type="text" className="form-control border-0 shadow-none" placeholder="Where to?" aria-label="Username" aria-describedby="basic-addon1" onClick={()=>setShowModal(!showModal)}/>
-                                        <LocationModal show={showModal}/>
+                                        <input type="text" className="form-control border-0 shadow-none" placeholder="Where to?" aria-label="Username" aria-describedby="basic-addon1" onClick ={(ev) =>setShowModal(!showModal) }></input>
+                                        
+                                        <LocationModal show={showModal} setShowModal={setShowModal}/>
                                     </div>
                                 </div>
                                 <div className='col-lg-3 col-md-6'>
@@ -38,6 +43,7 @@ const Destination = () => {
                                             <i class="bi bi-calendar-check"></i>
                                         </span>
                                         <input type="text" className="form-control border-0 shadow-none" placeholder="Check-Out" aria-label="Username" aria-describedby="basic-addon1" />
+                                       
                                     </div>
                                 </div>
                                 <div className='col-lg-4 col-md-6'>
@@ -45,7 +51,8 @@ const Destination = () => {
                                         <span class="input-group-text border-0" id="basic-addon1">
                                             <i class="bi bi-person-circle"></i>
                                         </span>
-                                        <input type="text" className="form-control border-0 shadow-none" placeholder="Guests" aria-label="Username" aria-describedby="basic-addon1" />
+                                        <input type="text" className="form-control border-0 shadow-none" placeholder="Guests" aria-label="Username" aria-describedby="basic-addon1" onClick ={(ev) =>setguestModal(!guestModal)}/>
+                                        <GuestModal show={guestModal} setShowModal={setguestModal}/>
                                     </div>
                                 </div>
                                 <div className='col-lg-7 col-md-12'>
@@ -162,6 +169,7 @@ const Destination = () => {
                     </table>
                 </div>
             </div>
+
         </>
     );
 }
