@@ -12,7 +12,7 @@ const SignIn = ({showModal, setShowModal}) => {
                             <button type="button" className="btn-close" onClick={()=>setShowModal(!showModal)}></button>
                         </div>
                             <div className='text-center mb-4 sign-in-text-size'>
-                                <h1 className='mb-4'><span >S</span>ign in</h1>
+                                <h1 className='mb-2'><span >S</span>ign in</h1>
                                 <p className='fw-semibold '>Sign in and start managing your candidates!</p>
                             </div>
                             <div className='d-flex flex-column justify-content-center align-items-center signin-input-container'>
