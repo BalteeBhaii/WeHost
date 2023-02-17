@@ -12,10 +12,20 @@ const Header = () => {
     const handleToggleClick = () => {
         setToggle(!toggle)
     }
-
+console.log(toggle)
     const handleDisplayClick = () => {
         if(display =='none'){
             setDisplay('block');
+        } else{
+            setDisplay('none')
+        }
+    }
+
+    const handleMobiledisplayclick = () => {
+        setToggle(!toggle);
+        if(display =='none'){
+            setDisplay('block');
+
         } else{
             setDisplay('none')
         }
@@ -126,7 +136,13 @@ const Header = () => {
                             </a>
                             <div className="menu-profile">
                                 <img className="menu-profile-icon" src="/images/user.svg" alt="user"/>
-                                <span className="menu-item auth-item">Login/SignUp</span>
+                                <button className="border-0 bg-white" onClick={()=>handleMobiledisplayclick()}>
+                                    <span className="menu-item auth-item">Login/SignUp</span>
+                                </button>
+                                {(toggle)&&(<div className="position-relative p-2 text-center" style={{width: 150}}>
+                                    <p className="mb-1 border rounded bg-white shadow"><button className="btn fw-semibold" onClick={()=> setshowSigninModal(!showSigninModal)}>Log In</button></p>
+                                    <p className="mb-0 border rounded bg-white  shadow"><button className="btn fw-semibold" onClick={()=> setShowSignupModal(!showSignupModal)}>Sign Up</button></p>
+                                </div>)}
                             </div>
                         </ul>
                 </div>
