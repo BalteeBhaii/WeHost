@@ -18,13 +18,13 @@ import '../globalcss/styles.css';
 const HomePage = () => {
     return ( 
         <>
-        <Header/>
-        <LocationModal/>
-        <Destination/>      
-        <Explore/>    
-        <Services/>
-        <BestPlace/>
-        <Worldwide/>
+        <Header />
+        <LocationModal />
+        <Destination />      
+        <Explore />    
+        <Services />
+        <BestPlace />
+        <Worldwide />
         
         {/* <LocationModal /> */}
         {/* <GuestModal /> */}
