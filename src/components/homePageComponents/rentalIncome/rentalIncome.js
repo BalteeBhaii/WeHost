@@ -4,6 +4,8 @@ const RentalIncome = () => {
     return ( 
     <div className='container mt-5 section'>
         {/* <figure className='position-relative'>
+    <div className='container '>
+        <figure className='position-relative'>
             <img src='/images/furniture.svg' alt='furniture' className='img-fluid'/>
             <figcaption className='figCaptionDisplay'>
                 <p >Want to gain some rental income?</p>

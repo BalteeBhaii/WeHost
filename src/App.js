@@ -1,5 +1,4 @@
 import './App.css';
-
 import HomePage from './pages/homePage';
 import HotelsPage from './pages/hotelsPage';
 import SpecificHotelPage from './pages/specificHotelPage';
