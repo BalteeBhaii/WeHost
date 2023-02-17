@@ -1,18 +1,20 @@
 import React from 'react';
-const SignIn = ({showModal, setShowModal}) => {
+import { useState } from 'react';
+import SignUp from './signUp';
+const SignIn = ({showSigninModal, setshowSigninModal}) => {
+    const[showSignupModal, setShowSignupModal] = useState(false)
     return ( 
         <>
         {/* <button type='button' onClick={()=> setShowModal(!showModal)}> laundh</button> */}
-            {(showModal) && (
-                <div className="modal-background" style={{  zIndex: "2000"}}            >
+            {(showSigninModal) && (
+                <div className="modal-background" style={{zIndex: "500"}}>
                     <div className="modal-card">
                         <section className="modal-body my-5">
                         <div className='w-100 text-end'>
-
-                            <button type="button" className="btn-close" onClick={()=>setShowModal(!showModal)}></button>
+                            <button type="button" className="btn-close" onClick={()=>setshowSigninModal(!showSigninModal)}></button>
                         </div>
                             <div className='text-center mb-4 sign-in-text-size'>
-                                <h1 className='mb-4'><span >S</span>ign in</h1>
+                                <h1 className='mb-2'><span >S</span>ign in</h1>
                                 <p className='fw-semibold '>Sign in and start managing your candidates!</p>
                             </div>
                             <div className='d-flex flex-column justify-content-center align-items-center signin-input-container'>
@@ -27,10 +29,13 @@ const SignIn = ({showModal, setShowModal}) => {
                                     </div>
                                     <p className='fw-semibold'>Forgot Password</p>
                                 </div>
-                                <p><a href='/' style={{color: 'black'}}><ins>Don't have account?</ins></a></p>                      
+                                <button className='border-0 bg-white text-black' onClick={()=>{setShowSignupModal(!showSignupModal)}}>
+                                    <ins>Don't have account?</ins>
+                                </button>                      
                             </div>
                         </section>
                     </div>
+                    <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal}/>
                 </div>
             )}
         </>

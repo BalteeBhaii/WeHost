@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import SignIn from "../../signIn/signin";
+import SignUp from "../../signIn/signUp";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
-    const [showModal, setShowModal] = useState(false);
+    const [showSigninModal, setshowSigninModal] = useState(false);
+    const [showSignupModal, setShowSignupModal] = useState(false);
     const [display, setDisplay] = useState('none');
     const handleToggleClick = () => {
         setToggle(!toggle)
@@ -80,9 +82,9 @@ const Header = () => {
                             <button style={{border:'none', background: 'none'}} onClick={()=>handleDisplayClick()}>
                             <span className="menu-item auth-item">Login/SignUp</span>
                             </button>
-                            <div className="position-absolute p-2 text-center" style={{display: display, backgroundColor: 'white', width: '-webkit-fill-available'}}>
-                                <p className="mb-0 fw-semibold border-bottom border-top"><button className="btn" onClick={()=> setShowModal(!showModal)}>Log In</button></p>
-                                <p className="mb-0 fw-semibold border-bottom"><button className="btn">Sign Up</button></p>
+                            <div className="position-absolute p-2  text-center" style={{display: display, width: '-webkit-fill-available'}}>
+                                <p className="mb-1 w-75 bg-white shadow"><button className="btn fw-semibold" onClick={()=> setshowSigninModal(!showSigninModal)}>Log In</button></p>
+                                <p className="mb-0 w-75 bg-white  shadow"><button className="btn fw-semibold" onClick={()=> setShowSignupModal(!showSignupModal)}>Sign Up</button></p>
                             </div>
                         </div>
                     </div>
@@ -128,7 +130,8 @@ const Header = () => {
                             </div>
                         </ul>
                 </div>
-                <SignIn showModal={showModal} setShowModal={setShowModal}/>
+                <SignIn showSigninModal={showSigninModal} setshowSigninModal={setshowSigninModal}/>
+                <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal}/>
             </div>
         </>
     );

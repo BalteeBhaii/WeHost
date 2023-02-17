@@ -90,7 +90,40 @@
     margin-bottom: 25px;
 }
 
+.signin-input-container select{
+    background-color: #B4EBF9;
+    margin-bottom: 25px;
+}
+
+.signin-input-container .button-continue{
+    background-color: #0D7BC4;
+    margin-bottom: 15px;
+    padding: 5px !important;
+}
+
+.signin-input-container .button-continue:hover{
+    background-color: #0D7BC4a9 ;
+    color: rgba(34, 33, 33, 0.863) !important;
+}
+
+.signin-input-container .button-facebook{
+    background-color: #B4EBF9;
+    padding: 6px;
+}
+
+.signin-hr{
+    border-top: 2px solid black !important;
+    color: black !important;
+    opacity: 1 !important;
+}
+
 .signin-input-width{
+    width: 75%;
+}
+
+.login-input-width{
+    margin-bottom: 10px;
+    background-color: #B4EBF9;
     width: 75%;
 }
 
@@ -987,10 +1020,10 @@ input{
     }
 }
 
-button{
+/* button{
     padding: 10px !important;
     font-size: 1.2rem !important;
-}
+} */
 
 .image-div{
     height: 275px;
@@ -1793,7 +1826,6 @@ line-height: 37px;
     .rental-title {
         font-size: 26px !important;
     }
-   
 
     .rental-post-button-inner {
         font-size: 21px !important;
