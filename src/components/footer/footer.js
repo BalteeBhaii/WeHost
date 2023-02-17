@@ -22,7 +22,7 @@ const Footer = () => {
          
             <form className="d-flex mb-4 w-75 mx-auto justify-content-between mailsm">
               <div className="input-group px-3 py-2 rounded-1 bg-white">
-                <i className="bi bi-envelope input-group-text bg-transparent border-0 text-mute"></i>
+                <i className="bi bi-envelope input-group-text bg-transparent border-0 text-mute footer-mail-icon"></i>
                 <input
                   type="email"
                   id="form5Exam"
@@ -54,12 +54,12 @@ const Footer = () => {
         >
           <div class="container">
           <div class="row">
-            <div class="col-md-3 footer-column">
+            <div class="col-lg-3 col-sm-12 footer-column">
               <span>
                 <img src={logo} alt="" />
               </span>
             </div>
-            <div class="col-md-3 footer-column">
+            <div class="col-lg-3 col-md-4 col-4 footer-column">
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <span class="footer-title ftitle ">Company</span>
@@ -81,7 +81,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div class="col-md-3 footer-column">
+            <div class="col-lg-3 col-md-4 col-4 footer-column">
               <ul class="nav flex-column">
                 <li class="nav-des">
                   <span class="footer-title ftitle">Contact</span>
@@ -103,7 +103,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div class="col-md-3 footer-column">
+            <div class="col-lg-3 col-md-4 col-4 footer-column">
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <span class="footer-title ftitle">More</span>
@@ -133,7 +133,7 @@ const Footer = () => {
             <i class="fas fa-ellipsis-h"></i>
           </div>
 
-          <div class="row text-center fcopyright">
+          <div class="row text-center fcopyright py-2">
             <div class="jutify-content-center">
               <span class="copyright">Copyright 2023 &copy; WebHost</span>
             </div>

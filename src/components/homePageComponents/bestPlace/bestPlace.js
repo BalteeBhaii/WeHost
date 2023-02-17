@@ -82,36 +82,78 @@ const BestPlace = () => {
                     <img className='owl-image' src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
                     <h3 className='owl-title mb-0 mt-2'>Houses</h3>
                     <span className='owl-views'>340k+ views</span>
+                    <p className='bestplace-outline-child-1'></p>
+                    <p className='bestplace-outline-child-2'></p>
+                    <p className='bestplace-outline-child-3'></p>
+                    <p className='bestplace-outline-child-4'></p>
+                    <p className='bestplace-outline-child-5'></p>
+                    <p className='bestplace-outline-child-6'></p>
                 </div>
                 <div className='item'>
                     <img className='owl-image' src="https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
                     <h3 className='owl-title mb-0 mt-2'>Mansions</h3>
                     <span className='owl-views'>340k+ views</span>
+                    <p className='bestplace-outline-child-1'></p>
+                    <p className='bestplace-outline-child-2'></p>
+                    <p className='bestplace-outline-child-3'></p>
+                    <p className='bestplace-outline-child-4'></p>
+                    <p className='bestplace-outline-child-5'></p>
+                    <p className='bestplace-outline-child-6'></p>
                 </div>
                 <div className='item'>
                     <img className='owl-image' src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
                     <h3 className='owl-title mb-0 mt-2'>Lake View</h3>
                     <span className='owl-views'>340k+ views</span>
+                    <p className='bestplace-outline-child-1'></p>
+                    <p className='bestplace-outline-child-2'></p>
+                    <p className='bestplace-outline-child-3'></p>
+                    <p className='bestplace-outline-child-4'></p>
+                    <p className='bestplace-outline-child-5'></p>
+                    <p className='bestplace-outline-child-6'></p>
                 </div>
                 <div class='item'>
                     <img className='owl-image' src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
                     <h3 className='owl-title mb-0 mt-2'>Houses</h3>
                     <span className='owl-views'>340k+ views</span>
+                    <p className='bestplace-outline-child-1'></p>
+                    <p className='bestplace-outline-child-2'></p>
+                    <p className='bestplace-outline-child-3'></p>
+                    <p className='bestplace-outline-child-4'></p>
+                    <p className='bestplace-outline-child-5'></p>
+                    <p className='bestplace-outline-child-6'></p>
                 </div>
                 <div class='item'>
                     <img className='owl-image' src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
                     <h3 className='owl-title mb-0 mt-2'>Houses</h3>
                     <span className='owl-views'>340k+ views</span>
+                    <p className='bestplace-outline-child-1'></p>
+                    <p className='bestplace-outline-child-2'></p>
+                    <p className='bestplace-outline-child-3'></p>
+                    <p className='bestplace-outline-child-4'></p>
+                    <p className='bestplace-outline-child-5'></p>
+                    <p className='bestplace-outline-child-6'></p>
                 </div>
                 <div class='item'>
                     <img className='owl-image' src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
                     <h3 className='owl-title mb-0 mt-2'>Houses</h3>
                     <span className='owl-views'>340k+ views</span>
+                    <p className='bestplace-outline-child-1'></p>
+                    <p className='bestplace-outline-child-2'></p>
+                    <p className='bestplace-outline-child-3'></p>
+                    <p className='bestplace-outline-child-4'></p>
+                    <p className='bestplace-outline-child-5'></p>
+                    <p className='bestplace-outline-child-6'></p>
                 </div>
                 <div class='item'>
                     <img className='owl-image' src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
                     <h3 className='owl-title mb-0 mt-2'>Houses</h3>
                     <span className='owl-views'>340k+ views</span>
+                    <p className='bestplace-outline-child-1'></p>
+                    <p className='bestplace-outline-child-2'></p>
+                    <p className='bestplace-outline-child-3'></p>
+                    <p className='bestplace-outline-child-4'></p>
+                    <p className='bestplace-outline-child-5'></p>
+                    <p className='bestplace-outline-child-6'></p>
                 </div>
             </OwlCarousel>
         </div>

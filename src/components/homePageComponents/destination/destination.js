@@ -164,6 +164,11 @@ const Destination = () => {
                                         <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
                                     </div>
                                 </th>
+                                <th className="border-0">
+                                    <div className='button-column'>
+                                        <button className='btn btn-primary bottom-button bi px-5' id='more'>Filter</button>
+                                    </div>
+                                </th>
                             </tr>
                         </thead>
                     </table>

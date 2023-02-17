@@ -307,22 +307,53 @@ a{
 }
 
 .menu-mbl-item {
-    font-size: 19px !important;
+    font-size: 18px !important;
+    width: fit-content;
 }
 
 .menu-collapse {
-    max-height: 0px;
+    position: absolute;
+    background-color: #f8f9fa;
+    z-index: 1000;
+    height: 100vh;
+    width: fit-content;
+    margin-left: -12px; 
+    padding-top: 20px;
+    padding-right: 50px;
     overflow: hidden;
+    transform: translateX(-100%);
     transition: all 0.3s ease-in !important;
 }
 
 .menu-active {
-    animation: dropdownActive 0.8s ease-in forwards;
+    animation: dropdownActive 0.4s ease-in forwards;
 }
 
 .menu-inactive {
-    animation: dropdownInActive 0.5s ease-out forwards;
+    animation: dropdownInActive 0.4s ease-in forwards;
 }
+
+/* Header Animations */
+@keyframes dropdownActive {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes dropdownInActive {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* ------------- */
 
 @media(max-width:1122px) {
     .header-logo {
@@ -344,26 +375,6 @@ a{
     .header {
         padding-right: 0.5rem!important;
         padding-left: 0.5rem!important;
-    }
-}
-
-@keyframes dropdownActive {
-    0% {
-        max-height: 0px;
-    }
-
-    100% {
-        max-height: 1000px;
-    }
-}
-
-@keyframes dropdownInActive {
-    0% {
-        max-height: 1000px;
-    }
-
-    100% {
-        max-height: 0px;
     }
 }
 
@@ -397,12 +408,10 @@ a{
     line-height: 124.5%;
   }
   .copyright {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 33px;
     color: #ffffff;
+    text-shadow: 1px 2px 2px rgb(49, 48, 48)!important;
   }
   
   .text-center.fcopyright {
@@ -413,7 +422,7 @@ a{
     background-color: #b4ebf9;
   }
   .inquirysection {
-    font-size: 23px;
+    font-size: 22px;
     margin-bottom: 20px;
   }
 
@@ -1335,6 +1344,10 @@ color: black;
     width: 20px;
     height: 8px;
 }
+
+.worldwide-section-title {
+    text-shadow: 1px 2px 2px gray!important;
+}
   
 .worldwide-main::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey; 
@@ -1779,10 +1792,41 @@ line-height: 37px;
     background-color: var(--button-hover-color);
 }
 
+.footer-mail-icon {
+    transform: scale(1.7);
+}
+
+.menu-item {
+    position: relative;
+    transition: all 0.3s ease-in;
+}
+
+.menu-item:hover {
+    color: var(--theme-color);
+}
+
+.menu-item span:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--theme-color);
+    bottom: 0;
+    left: 0;
+    top: 25px;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in;
+}
+
+.menu-item:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transition: all 0.3 ease-in !important;
+}
+
 @media(max-width:750px) {
     .rental-title {
         font-size: 26px !important;
     }
+   
 
     .rental-post-button-inner {
         font-size: 21px !important;
@@ -1834,4 +1878,135 @@ line-height: 37px;
     .inquirysection {
         font-size: 18px !important;
     }
+}
+
+.owl-carousel .owl-item{
+    cursor: pointer;
+}
+
+.owl-carousel .owl-item p{
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+    cursor: pointer;
+}
+
+.owl-carousel .owl-item .owl-title {
+    transition: all 0.3s ease-in;
+}
+
+.owl-carousel .owl-item:hover .owl-title {
+    color: var(--theme-color);
+}
+
+/* Best Places Card Animation */
+.owl-carousel .owl-item .bestplace-outline-child-1{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 3px;
+    background-color: var(--theme-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all ease-in-out 0.3s;
+    transition-delay: 0.6s;
+}
+
+.owl-carousel .owl-item:hover .bestplace-outline-child-1{
+    transform: scaleX(1);
+    transform-origin: right;
+    transition-delay: 0s;
+}
+
+.owl-carousel .owl-item .bestplace-outline-child-2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 3px;
+    background-color: var(--theme-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all ease-in-out 0.3s;
+    transition-delay: 0.6s;
+}
+
+.owl-carousel .owl-item:hover .bestplace-outline-child-2{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition-delay: 0s;
+}
+
+.owl-carousel .owl-item .bestplace-outline-child-3{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--theme-color);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all ease-in-out 0.3s;
+    transition-delay: 0.3s;
+}
+
+.owl-carousel .owl-item:hover .bestplace-outline-child-3{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition-delay: 0.3s;
+}
+
+.owl-carousel .owl-item .bestplace-outline-child-4{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--theme-color);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all ease-in-out 0.3s;
+    transition-delay: 0.3s;
+}
+
+.owl-carousel .owl-item:hover .bestplace-outline-child-4{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition-delay: 0.3s;
+}
+
+.owl-carousel .owl-item .bestplace-outline-child-5{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 3px;
+    background-color: var(--theme-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all ease-in-out 0.3s;
+}
+
+.owl-carousel .owl-item:hover .bestplace-outline-child-5{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition-delay: 0.6s;
+}
+
+.owl-carousel .owl-item .bestplace-outline-child-6{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 3px;
+    background-color: var(--theme-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all ease-in-out 0.3s;
+}
+
+.owl-carousel .owl-item:hover .bestplace-outline-child-6{
+    transform: scaleX(1);
+    transform-origin: right;
+    transition-delay: 0.6s;
 }
