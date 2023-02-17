@@ -1,8 +1,8 @@
 import React from 'react';
-const FinishUpLoging = ({showLoginModel, setShowLoginModal, showModal, setShowModal, showCodeModel, setShowCodeModel}) => {
+const FinishUpLoging = ({showLoginModel, setShowLoginModal, showSignupModal, setShowSignupModal, showCodeModel, setShowCodeModel}) => {
     const handleAgreeAndContinue = ()=>{
         setShowLoginModal(!showLoginModel);
-        setShowModal(!showModal);
+        setShowSignupModal(!showSignupModal);
         setShowCodeModel(!showCodeModel);
     }
     return ( <>

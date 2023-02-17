@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import FinishUpLoging from './finishingUpLoging';
-const CodeModal = ({showCodeModel, setShowCodeModal, setShowModal, showModal}) => {
+const CodeModal = ({showCodeModel, setShowCodeModal, showSignupModal, setShowSignupModal}) => {
     const [showLoginModel, setShowLoginModal] = useState(false);
     return ( <>
         {(showCodeModel)&&(
@@ -27,8 +27,8 @@ const CodeModal = ({showCodeModel, setShowCodeModal, setShowModal, showModal}) =
                 <FinishUpLoging 
                     showLoginModel={showLoginModel} 
                     setShowLoginModal={setShowLoginModal}
-                    showModal={showModal} 
-                    setShowModal={setShowModal}
+                    showSignupModal={showSignupModal} 
+                    setShowSignupModal={setShowSignupModal}
                     showCodeModel={showCodeModel}
                     setShowCodeModal={setShowCodeModal}
                     />

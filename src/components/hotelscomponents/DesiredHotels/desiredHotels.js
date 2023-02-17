@@ -6,9 +6,6 @@ import FilterModal from '../../Filter/filter';
 import { useState } from 'react';
 const DesiredHotels = () => {
     const [showModal, setShowModal] = useState(false);
-    const abc =()=>{
-        setShowModal(!showModal)
-    }
     return (
         <>
             <div className='container mt-5 mb-3 position-relative'>

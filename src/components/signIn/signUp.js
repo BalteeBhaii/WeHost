@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import countries from 'i18n-iso-countries';
 import enLocate from 'i18n-iso-countries/langs/en.json';
 import CodeModal from './codeModel';
-const SignUp = ({showModal, setShowModal}) => {
+const SignUp = ({showSignupModal, setShowSignupModal}) => {
     const [selectedcountries, setSelectedCountries] = useState("");
     const [showCodeModel, setShowCodeModal] = useState(false);
     countries.registerLocale(enLocate);
@@ -19,13 +19,13 @@ const SignUp = ({showModal, setShowModal}) => {
     });
     return (
         <>
-            {(showModal) && (
+            {(showSignupModal) && (
                 <div className="modal-background" style={{  zIndex: "1000"}}>
                     <div className="modal-card">
                         <section className="modal-body my-3">
                         <div className='w-100 text-end'>
 
-                            <button type="button" className="btn-close" onClick={()=>setShowModal(!showModal)}></button>
+                            <button type="button" className="btn-close" onClick={()=>setShowSignupModal(!showSignupModal)}></button>
                         </div>
                             <div className='text-center mb-4 sign-in-text-size'>
                                 <h1 className='mb-2'><span >S</span>ign up</h1>
@@ -60,11 +60,11 @@ const SignUp = ({showModal, setShowModal}) => {
                                     </div>
                                     <p className='fw-semibold'>Forgot Password</p>
                                 </div> */}
-                                <p className='mt-5'><a href='/' style={{color: '#7B8FA1'}}><ins>Already have account?</ins></a></p>                      
+                                {/* <button className='mt-5 border-0 bg-white' onClick={()=>{setshowSigninModal(!showSigninModal)}}><a href='' style={{color: '#7B8FA1'}}><ins>Already have account?</ins></a></button>                       */}
                             </div>
                         </section>
                     </div>
-                    <CodeModal showCodeModel={showCodeModel} setShowCodeModal={setShowCodeModal} showModal={showModal} setShowModal={setShowModal}/>
+                    <CodeModal showCodeModel={showCodeModel} setShowCodeModal={setShowCodeModal} showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal}/>
                 </div>
             )}
         </>

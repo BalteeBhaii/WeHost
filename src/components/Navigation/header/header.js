@@ -6,8 +6,8 @@ import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-    const [showLoginModal, setShowLoginModal] = useState(false);
+    const [showSigninModal, setshowSigninModal] = useState(false);
+    const [showSignupModal, setShowSignupModal] = useState(false);
     const [display, setDisplay] = useState('none');
     const handleToggleClick = () => {
         setToggle(!toggle)
@@ -129,8 +129,8 @@ const Header = () => {
                             <span className="menu-item auth-item">Login/SignUp</span>
                             </button>
                             <div className="position-absolute p-2  text-center" style={{display: display, width: '-webkit-fill-available'}}>
-                                <p className="mb-1 w-75 bg-white shadow"><button className="btn fw-semibold" onClick={()=> setShowModal(!showModal)}>Log In</button></p>
-                                <p className="mb-0 w-75 bg-white  shadow"><button className="btn fw-semibold" onClick={()=> setShowLoginModal(!showLoginModal)}>Sign Up</button></p>
+                                <p className="mb-1 w-75 bg-white shadow"><button className="btn fw-semibold" onClick={()=> setshowSigninModal(!showSigninModal)}>Log In</button></p>
+                                <p className="mb-0 w-75 bg-white  shadow"><button className="btn fw-semibold" onClick={()=> setShowSignupModal(!showSignupModal)}>Sign Up</button></p>
                             </div>
                         </div>
                     </div>
@@ -164,8 +164,8 @@ const Header = () => {
                             </div>
                         </ul>
                 </div>
-                <SignIn showModal={showModal} setShowModal={setShowModal}/>
-                <SignUp showModal={showLoginModal} setShowModal={setShowLoginModal}/>
+                <SignIn showSigninModal={showSigninModal} setshowSigninModal={setshowSigninModal}/>
+                <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal}/>
             </div>
         </>
     );
