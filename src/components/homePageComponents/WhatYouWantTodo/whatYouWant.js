@@ -2,8 +2,8 @@ import React from 'react';
 const WhatYouWant = () => {
     return ( 
     <>
-        <div className='container'>
-            <div className='mb-3'>
+        <div className='container section'>
+            <div>
                 <h2>What you want to do?</h2>
             </div>
             <div className='row'>

@@ -3,7 +3,7 @@ import React from 'react';
 const Services = () => {
     return ( 
     <>
-        <div className='container mb-5 mt-5'>
+        <div className='container mb-5 mt-5 section'>
             <div className='text-center mb-5'>
                 <h1 className='services-section-title position-relative section-titles'>Services</h1>
                 <span className='service-section-title-border position-relative d-flex justify-content-center'>
@@ -13,7 +13,7 @@ const Services = () => {
             <div>
                 <div className='row g-3'>
                     <div className='col-sm-6 col-md-6 col-lg-3'>
-                        <div className='card mx-1'>
+                        <div className='card service-card mx-1'>
                         <div className='card-img-top'><i class="bi bi-ticket-perforated fs-1 p-3 " style={{color: '#32DF8F'}}></i></div>
                             <div class="card-body">
                                 <h5 class="card-title">Rent House</h5>
@@ -23,7 +23,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className='col-sm-6 col-md-6 col-lg-3'>
-                        <div className='card mx-1'>
+                        <div className='card service-card mx-1'>
                             <div className='card-img-top'><i class="bi bi-house fs-1 p-3 " style={{color: '#00B8E0'}}></i></div>
                                 <div class="card-body">
                                     <h5 class="card-title">Hotel Booking</h5>
@@ -33,7 +33,7 @@ const Services = () => {
                             </div>
                         </div>
                     <div className='col-sm-6 col-md-6 col-lg-3'>
-                    <div className='card mx-1'>
+                    <div className='card service-card mx-1'>
                     <div className='card-img-top'><i class="bi bi-send fs-1 p-3 " style={{color: '#E48B78'}}></i></div>
                             <div class="card-body">
                                 <h5 class="card-title">Tour Plan</h5>
@@ -43,7 +43,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className='col-sm-6 col-md-6 col-lg-3'>
-                    <div className='card mx-1'>
+                    <div className='card service-card mx-1'>
                     <div className='card-img-top'><i class="bi bi-house-lock fs-1 p-3 " style={{color: '#32DF8F'}}></i></div>
                             <div class="card-body">
                                 <h5 class="card-title">Privacy of your home</h5>

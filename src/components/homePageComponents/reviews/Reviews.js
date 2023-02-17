@@ -34,7 +34,7 @@ const Reviews = () => {
 
   return (
     <>
-        <div className='container'>
+        <div className='container section'>
             <div className='review-main-section overflow-hidden'>
                 <h1 className='worldwide-section-title section-titles text-center mb-3'>Reviews</h1>
                 <OwlCarousel className="slider-items owl-carousel review-owl px-4" {...options}>

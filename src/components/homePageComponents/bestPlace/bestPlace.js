@@ -75,7 +75,7 @@ const BestPlace = () => {
     };
 
     return (
-        <div className='container my-5'>
+        <div className='section container my-5'>
             <h1 className='section-title mb-0 section-titles'>Find best place according to your comfort</h1>
             <OwlCarousel className="slider-items owl-carousel" {...options}>
                 <div class='item'>

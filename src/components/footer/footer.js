@@ -10,29 +10,29 @@ const Footer = () => {
     <>
       <footer>
         <div
-          class="container prefooter mt-4 pb-0 px-0"
+          class="container section prefooter mt-4 pb-0 px-0"
           style={{ backgroundColor: "#D1EFF6" }}
         >
           <div class="p-2">
-          <p class="inquirysection text-center p-2">
+          <h3 class="inquirysection text-center p-2">
             For inquires and queries do send us mail or any other issue. Feel
             Free to contact us
-          </p>
+          </h3>
 
          
             <form className="d-flex mb-4 w-75 mx-auto justify-content-between mailsm">
-              <div className="input-group border border-2 border-dark px-3 py-2 rounded-1 bg-white">
+              <div className="input-group px-3 py-2 rounded-1 bg-white">
                 <i className="bi bi-envelope input-group-text bg-transparent border-0 text-mute"></i>
                 <input
                   type="email"
                   id="form5Exam"
-                  className="form-control border-0 "
+                  className="form-control border-0 shadow-none"
                   placeholder="Your Mail"
                 />
               </div>
              
-              <button type="submit" className="btn btn-primary ms-2 px-4">
-                Send 
+              <button type="submit" className="prefooter-submit-button btn text-white ms-2 px-4">
+                Send
               </button>
             </form>
           </div>

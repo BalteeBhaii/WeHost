@@ -26,7 +26,7 @@ const Worldwide = () => {
 
     return ( 
         <>
-            <div className='container worldwide-section overflow'>
+            <div className='container worldwide-section overflow section'>
                 <div className='worldwide-main py-5 px-3'>
                     <h1 className='worldwide-section-title section-titles'>Trending in Travel</h1>
                     <div className='worldwide-tabs row mt-4'>
