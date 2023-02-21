@@ -68,7 +68,7 @@ const Footer = () => {
           <div className="container">
             {/* Logo Section */}
             <div className="footer-logo-section">
-              <img className="footer-bottom-logo" src="/images/logo.svg" alt="logo" />
+              <img className="footer-bottom-logo" src="/images/logo.png" alt="logo" />
             </div>
             {/* Items Section */}
             <div className="footer-items-section mt-5">
