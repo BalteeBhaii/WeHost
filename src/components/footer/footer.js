@@ -236,7 +236,7 @@ const Footer = () => {
                     <i class="bi bi-linkedin footer-bottom-2nd-icon"></i>
                   </div>
                   <div className="mt-4 d-flex flex-column">
-                    <Link className="footer-bottom-item mb-3">© Evolve Vacation Rental. All Rights Reserved.</Link>
+                    <Link className="footer-bottom-item mb-3">© weHosttravel / © weHost. All Rights Reserved 2023.</Link>
                     <Link className="footer-bottom-item mb-3">Terms of Use</Link>
                     <Link className="footer-bottom-item mb-3">Privacy Policy</Link>
                     <Link className="footer-bottom-item mb-3">Do Not Sell my Personal Information</Link>
