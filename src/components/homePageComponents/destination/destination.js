@@ -82,7 +82,7 @@ const Destination = () => {
                     </span>
                     <input type="text" class="form-control border-0 shadow-none p-1" placeholder={checkinPlaceholder} readOnly onClick={ () => setOpen(open => !open) }/>
                       <i class="bi bi-chevron-compact-right bg-white text-black fs-3 position-relative"></i>
-                    <input type="text" class="form-control border-0 shadow-none p-1" placeholder={checkoutPlaceholder} readOnly onClick={ () => setOpen(open => !open)}/>
+                    <input type="text" class="form-control border-0 shadow-none ps-2" placeholder={checkoutPlaceholder} readOnly onClick={ () => setOpen(open => !open)}/>
                   </div>
                   <div className='datepicker-display'>
                     {open && 

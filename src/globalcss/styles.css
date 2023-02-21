@@ -194,6 +194,19 @@
     background-color: white;
 }
 
+
+/* ************************ Verify your property page css ****************** */
+.propertyHeaderWidth{
+    width: 200px;
+    height: 100px;
+}
+
+.header-section-padding{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+
 @media screen and (max-width: 1025px) {
     .figure-text-sizing h2{
         font-size: 18px;
@@ -274,6 +287,38 @@
     }
     .sign-in-text-size span{
         font-size: 38px;
+    }
+
+    .propertyHeaderWidth{
+        width:150px;
+        height: 80px;
+    }
+
+    .header-section-padding{
+        padding: 0 1em;
+    }
+    
+    .welcome-text h1{
+        font-size: larger;
+    }
+
+    .welcome-text h3{
+        font-size: medium;
+    }
+    .welcome-text p{
+        font-size: small;
+        width: 85%;
+    }
+
+    
+    .welcome-text h6{
+        font-size: medium;
+        font-weight: 400;
+    }
+
+    .welcome-images{
+        width: 70px;
+        height: 70px;
     }
 }
 

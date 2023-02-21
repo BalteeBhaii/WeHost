@@ -58,7 +58,7 @@ const Header = () => {
         <div className="header d-flex">
           <div className="logo-section">
             <a href="/">
-              <img className="header-logo" src="/images/logo.svg" alt="logo" />
+              <img className="header-logo" src="/images/logo.png" alt="logo" />
             </a>
           </div>
           <div className="items-section d-flex align-items-center justify-content-end w-100">
