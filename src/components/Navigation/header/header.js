@@ -57,38 +57,33 @@ const Header = () => {
                 <div className="header d-flex">
                     <div className="logo-section">
                     <a href="/">
-                        <img className="header-logo" src="/images/logo.svg" alt="logo" />
+                        <img className="header-logo" src="/images/logo.png" alt="logo" />
                     </a>
                     </div>
                     <div className="items-section d-flex align-items-center justify-content-end w-100">
                         <ul className="header-main-menu mb-0 d-flex align-items-center h-100 mb-0">
                             <a href="">
-                                <li className="mx-2 menu-item">Stays
+                                <li className="mx-2 menu-item">Vocational Rental Management
                                     <span></span>
                                 </li>
                             </a>
                             <a href="">
-                                <li className="mx-2 menu-item">List your property
+                                <li className="mx-2 menu-item">White Glove Concierge
                                     <span></span>
                                 </li>
                             </a>
                             <a href="">
-                                <li className="mx-2 menu-item">Services
+                                <li className="mx-2 menu-item">Language
                                     <span></span>
                                 </li>
                             </a>
                             <a href="">
-                                <li className="mx-2 menu-item">Packages
+                                <li className="mx-2 menu-item">Currency
                                     <span></span>
                                 </li>
                             </a>
                             <a href="">
-                                <li className="mx-2 menu-item">Manage property
-                                    <span></span>
-                                </li>
-                            </a>
-                            <a href="">
-                                <li className="mx-2 menu-item">Review
+                                <li className="mx-2 menu-item">Help
                                     <span></span>
                                 </li>
                             </a>
