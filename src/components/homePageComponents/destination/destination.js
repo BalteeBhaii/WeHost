@@ -257,46 +257,6 @@ const Destination = () => {
                 </div>
             </div>
 
-        <div className="table-responsive-lg">
-          <table className="table caption-top buttons-table">
-            <thead>
-              <tr className='border-0'>
-                <th className="border-0">
-                  <div className='button-column'>
-                    <Link to='/hotel'>
-                      <button className='btn btn-primary bottom-button bi' id='hotels'>Hotels</button>
-                    </Link>
-                  </div>
-                </th>
-                <th className="border-0">
-                  <div className='button-column'>
-                    <button className='btn btn-primary bottom-button bi' id='things'>Things to Do</button>
-                  </div>
-                </th>
-                <th className="border-0">
-                  <div className='button-column'>
-                    <button className='btn btn-primary bottom-button bi' id='vacations'>Vacations Rental</button>
-                  </div>
-                </th>
-                <th className="border-0">
-                  <div className='button-column'>
-                    <button className='btn btn-primary bottom-button bi' id='fares'>Low Fares</button>
-                  </div>
-                </th>
-                <th className="border-0">
-                  <div className='button-column'>
-                    <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
-                  </div>
-                </th>
-                <th className="border-0">
-                  <div className='button-column'>
-                    <button className='btn btn-primary bottom-button bi px-5' id='more'>Filter</button>
-                  </div>
-                </th>
-              </tr>
-            </thead>
-          </table>
-        </div>
     </>
   );
 }
