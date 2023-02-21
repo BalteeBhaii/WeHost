@@ -47,7 +47,7 @@ console.log(toggle)
 
     return (
         <>
-            <div className="container-fluid bg-light">
+            <div className="container-fluid bg-light header-main">
                 <div className="header d-flex">
                     <div className="logo-section">
                     <a href="/">
@@ -136,7 +136,7 @@ console.log(toggle)
                             </a>
                             <div className="menu-profile">
                                 <img className="menu-profile-icon" src="/images/user.svg" alt="user"/>
-                                <button className="border-0 bg-white" onClick={()=>handleMobiledisplayclick()}>
+                                <button className="border-0 bg-white mbl-auth-menu-main" onClick={()=>handleMobiledisplayclick()}>
                                     <span className="menu-item auth-item">Login/SignUp</span>
                                 </button>
                                 {(toggle)&&(<div className="position-relative p-2 text-center" style={{width: 150}}>

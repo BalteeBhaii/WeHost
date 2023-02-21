@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
-<<<<<<< HEAD
 import { Button } from "bootstrap";
 import "../../../globalcss/styles.css";
 //import Button from 'react-bootstrap/Button';
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import logo from "../../../Assets/logo.png";
-=======
 // import "./footer.css";
 import Button from 'react-bootstrap/Button';
->>>>>>> 9e9db9700275e876f56f33f22e96e8c48f7bfced
 const Footer = () => {
   return (
     <>
-      <footer>
+
+    
+
+      {/* <footer>
         <div
           class="container prefooter mt-4 pb-0 px-0"
           style={{ backgroundColor: "#D1EFF6" }}
@@ -40,20 +40,20 @@ const Footer = () => {
                 Send 
               </button>
             </form>
-          </div>
+          </div> */}
             {/* <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1"> <i className="bi bi-envelope"></i></span>           
            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Your Mail" aria-describedby="basic-addon2"/>
          <span class="input-group-text" id="basic-addon2">Send Mail </span>
           </div> */}
-        </div>
+        {/* </div> */}
 
         {/* <div>
           <button className="modal-footer-button ml-3" onClick={(Home) => Home}>
             Send Mail
           </button>
         </div> */}
-        <div
+        {/* <div
           class="container-fluid mt-2 pt-2"
           style={{ backgroundColor: "#D1EFF6" }}
         >
@@ -144,7 +144,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 };

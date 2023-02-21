@@ -133,7 +133,7 @@ const Destination = () => {
                         <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
                     </div>
                 </div> */}
-                <div className="table-responsive-lg">
+                <div className="table-responsive-xl">
                     <table className="table caption-top buttons-table">
                         <thead>
                             <tr className='border-0'>
