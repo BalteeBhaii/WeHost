@@ -2509,3 +2509,42 @@ line-height: 37px;
 .destination-searchbar-icon {
     margin-left: 6px;
 }
+
+.verify-2nd-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.verify-2nd-image {
+    width: 100%;
+    min-height: 40vh;
+    object-fit: cover;
+}
+
+.verify-2nd-list-item-main {
+    width: 100%;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.verify-2nd-list-item-main {
+    font-size: 16px;
+}
+
+.verify-2nd-list-items-1st-column {
+    height: fit-content;
+}
+
+.verify-2nd-list-item-main-icon::before {
+    transform: scale(1.2);
+    margin-right: 4px;
+}
+
+.verify-2nd-list-item {
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.verify-2nd-list-item:hover {
+    background-color: rgb(218, 217, 217);
+}

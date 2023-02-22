@@ -10,12 +10,12 @@ const VerifyPropertyPage = () => {
     return (
         <>
             <PropertyHeader/>
-            <div className='container'>
+            <div className=''>
                 <div>
                     {(page === 0) && <Welcome/>}
                     {(page === 1) && <FirstStep/>}
                     {(page === 2) && <SecondStep/>}
-                    <div className='position-relative'>
+                    <div className='position-relative container'>
                         <div className="progress my-5" style={{background: '#0079c2bf'}}>
                             <div className="progress-bar" style={{width: '5%', background: '#81E2F1'}}></div>
                         </div>
