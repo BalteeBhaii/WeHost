@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import LocationModal from '../../LocationModal/LocationModal';
 import GuestModal from '../../GuestModal/GuestModal';
 import { Link } from "react-router-dom";
@@ -23,7 +23,7 @@ const Destination = () => {
       key: 'selection'
     }
   ]);
-  
+
   const refOne = useRef(null);
 
   const abc = () => {
@@ -38,7 +38,7 @@ const Destination = () => {
 
   const hideOnEscape = (e) => {
     // console.log(e.key)
-    if( e.key === "Escape" ) {
+    if (e.key === "Escape") {
       setOpen(false)
     }
   }
@@ -63,29 +63,32 @@ const Destination = () => {
       <div className='bg-overlay text-light z-0'>
         <div className='center'>
           <div className='container-xxl container-xl container-lg position-relative' >
-            <h1 className='fw-bold text destination-main-title'><span >Let's Find Your Desired Place Together</span></h1>
-            <div className="container mt-5">
-              <div className='row pt-3 rounded-3' style={{background: '#ffffffde'}}>
+            <h1 className='fw-bold text destination-main-title text-center'><span >Welcome to <span style={{color:'#CBF2FC'}}>we<span style={{color:'#7B61FF'}}>H</span>ost</span> "the better BnB" - we are a community that is dedicated to making short-term vacation travel a better experience for everyone.<br/>
+            </span></h1>
+
+            <h3 className="text-center formulatxt">We are advocates for Lower Fees - Greater Exposure for Your Rental Property - And White Glove Customer Service.</h3>
+            <div className="container mt-3">
+              <div className='row pt-3 rounded-3' style={{ background: '#ffffffde' }}>
                 <div className='col-xl-3 col-lg-6 col-md-6'>
-                  <div className="input-group mb-3 border border border-secondary rounded destination-input">
+                  <div className="input-group mb-3 border border border-secondary rounded destination-input border-color">
                     <span className="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-geo-alt-fill"></i>
                     </span>
-                    <input type="text" className="form-control border-0 shadow-none" placeholder="Where to?" onClick={(ev) => setShowModal(!showModal)}></input>
+                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" onClick={(ev) => setShowModal(!showModal)}></input>
                     <LocationModal show={showModal} setShowModal={setShowModal} />
                   </div>
                 </div>
                 <div className='col-xl-3 col-lg-6 col-md-6'>
-                  <div className="input-group mb-3 border border border-secondary rounded destination-input">
+                  <div className="input-group mb-3 border border border-secondary rounded destination-input border-color ">
                     <span className="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-calendar-date"></i>
                     </span>
-                    <input type="text" class="form-control border-0 shadow-none p-1" placeholder={checkinPlaceholder} readOnly onClick={ () => setOpen(open => !open) }/>
-                      <i class="bi bi-chevron-compact-right bg-white text-black fs-3 position-relative"></i>
-                    <input type="text" class="form-control border-0 shadow-none ps-2" placeholder={checkoutPlaceholder} readOnly onClick={ () => setOpen(open => !open)}/>
+                    <input type="text" class="form-control border-0 shadow-none p-1 searchfeildtxt" placeholder={checkinPlaceholder} readOnly onClick={() => setOpen(open => !open)} />
+                    <i class="bi bi-chevron-compact-right bg-white text-black fs-3 position-relative"></i>
+                    <input type="text" class="form-control border-0 shadow-none ps-2 searchfeildtxt" placeholder={checkoutPlaceholder} readOnly onClick={() => setOpen(open => !open)} />
                   </div>
                   <div className='datepicker-display'>
-                    {open && 
+                    {open &&
                       <div className='position-absolute d-flex flex-column date-range-picker'>
                         <DateRangePicker
                           onChange={item => handleDateChange(item)}
@@ -95,12 +98,12 @@ const Destination = () => {
                           direction="horizontal"
                           ranges={range}
                         />
-                        <a className='btn date-range-btn my-1' onClick={ () => setOpen(open => !open)}>close</a>
+                        <a className='btn date-range-btn my-1' onClick={() => setOpen(open => !open)}>close</a>
                       </div>
                     }
                   </div>
                   <div className='daterange-display'>
-                    {open && 
+                    {open &&
                       <div className='position-absolute d-flex flex-column date-range-picker'>
                         <DateRange
                           onChange={item => handleDateChange(item)}
@@ -108,12 +111,12 @@ const Destination = () => {
                           moveRangeOnFirstSelection={false}
                           ranges={range}
                         />
-                        <a className='btn date-range-btn my-1' onClick={ () => setOpen(open => !open)}>close</a>
+                        <a className='btn date-range-btn my-1' onClick={() => setOpen(open => !open)}>close</a>
                       </div>
                     }
                   </div>
                 </div>
-                
+
                 {/* <div className='col-lg-3 col-md-6'>
                   <div class="input-group mb-3 destination-input">
                     <span class="input-group-text border-0" id="basic-addon1">
@@ -123,11 +126,11 @@ const Destination = () => {
                   </div>
                 </div> */}
                 <div className='col-xl-3 col-lg-6 col-md-6'>
-                  <div class="input-group mb-3 border border border-secondary rounded destination-input">
+                  <div class="input-group mb-3 border border border-secondary rounded destination-input border-color">
                     <span class="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-person-circle"></i>
                     </span>
-                    <input type="text" className="form-control border-0 shadow-none" placeholder="Guests" onClick={(ev) => setguestModal(!guestModal)} />
+                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" onClick={(ev) => setguestModal(!guestModal)} />
                     <GuestModal show={guestModal} setShowModal={setguestModal} />
                   </div>
                 </div>
@@ -136,16 +139,19 @@ const Destination = () => {
                     {/* <span class="input-group-text border-0 bg-white" id="basic-addon1">
                       <i class="bi bi-search bi-searchIcon"></i>
                     </span> */}
-                    <a type="text" className="btn text-white w-100 fw-semibold" style={{backgroundColor: '#0579C1'}}>
+                    <a type="text" className="btn text-white w-100 fw-semibold" style={{ backgroundColor: '#0579C1' }}>
                       <i class="bi bi-search bi-searchIcon me-1"></i>
-                        Search
-                     </a>
+                      Search
+                    </a>
                   </div>
                 </div>
-                
+
               </div>
+              <div className="mt-3"> <h3 className='fw-bold text destination-main-title text-center'><span >
+                Our Formula = More Money in Your Pocket and a Better Overall Experience for Everyone!
+              </span></h3></div>
             </div>
-              
+
             {/* <div className='row'>
                         <div className='col'>
                             <div className="input-group mb-3">
@@ -196,7 +202,7 @@ const Destination = () => {
           </div>
         </div>
       </div>
-      
+
       <div className='bottom-buttons container-xl'>
         {/* <div className='row d-flex justify-content-center table-responsive-lg'>
                     <div className='col-2 button-column'>
@@ -215,47 +221,47 @@ const Destination = () => {
                         <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
                     </div>
                 </div> */}
-                <div className="table-responsive-xl">
-                    <table className="table caption-top buttons-table">
-                        <thead>
-                            <tr className='border-0'>
-                                <th className="border-0">
-                                    <div className='button-column'>
-                                        <Link to='/hotel'>
-                                            <button className='btn btn-primary bottom-button bi' id='hotels'>Hotels</button>
-                                        </Link>
-                                    </div>
-                                </th>
-                                <th className="border-0">
-                                    <div className='button-column'>
-                                        <button className='btn btn-primary bottom-button bi' id='things'>Things to Do</button>
-                                    </div>
-                                </th>
-                                <th className="border-0">
-                                    <div className='button-column'>
-                                        <button className='btn btn-primary bottom-button bi' id='vacations'>Vacations Rental</button>
-                                    </div>
-                                </th>
-                                <th className="border-0">
-                                    <div className='button-column'>
-                                        <button className='btn btn-primary bottom-button bi' id='fares'>Low Fares</button>
-                                    </div>
-                                </th>
-                                <th className="border-0">
-                                    <div className='button-column'>
-                                        <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
-                                    </div>
-                                </th>
-                                <th className="border-0">
-                                    <div className='button-column'>
-                                        <button className='btn btn-primary bottom-button bi px-5' id='more'>Filter</button>
-                                    </div>
-                                </th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            </div>
+        <div className="table-responsive-xl">
+          <table className="table caption-top buttons-table">
+            <thead>
+              <tr className='border-0'>
+                <th className="border-0">
+                  <div className='button-column'>
+                    <Link to='/hotel'>
+                      <button className='btn btn-primary bottom-button bi' id='hotels'>Hotels</button>
+                    </Link>
+                  </div>
+                </th>
+                <th className="border-0">
+                  <div className='button-column'>
+                    <button className='btn btn-primary bottom-button bi' id='things'>Things to Do</button>
+                  </div>
+                </th>
+                <th className="border-0">
+                  <div className='button-column'>
+                    <button className='btn btn-primary bottom-button bi' id='vacations'>Vacations Rental</button>
+                  </div>
+                </th>
+                <th className="border-0">
+                  <div className='button-column'>
+                    <button className='btn btn-primary bottom-button bi' id='fares'>Low Fares</button>
+                  </div>
+                </th>
+                <th className="border-0">
+                  <div className='button-column'>
+                    <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
+                  </div>
+                </th>
+                <th className="border-0">
+                  <div className='button-column'>
+                    <button className='btn btn-primary bottom-button bi px-5' id='more'>Filter</button>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
 
     </>
   );
