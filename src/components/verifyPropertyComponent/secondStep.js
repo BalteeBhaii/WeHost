@@ -1,5 +1,4 @@
 import React from 'react';
-import mansion from '../../Assets/mansion.png'
 const SecondStep = () => {
     return (
         <>
@@ -17,55 +16,43 @@ const SecondStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                <i class="verify-2nd-list-item-main-icon bi bi-house"></i> House
+                                <i class="verify-2nd-list-item-main-icon bi bi-building"></i> Apartment
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                <i class="verify-2nd-list-item-main-icon bi bi-house"></i> House
+                                <i class="verify-2nd-list-item-main-icon bi bi-buildings"></i> Hotel
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                <i class="verify-2nd-list-item-main-icon bi bi-house"></i> House
+                                <img className="verify-2nd-list-item-main-icon"   src='/images/mansion.png' /> Guest House
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                <i class="verify-2nd-list-item-main-icon bi bi-house"></i> House
+                                <img className="verify-2nd-list-item-main-icon"  src='/images/tinyhouse.png' />  Tiny House
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                <i class="verify-2nd-list-item-main-icon bi bi-house"></i> House
+                                <img className="verify-2nd-list-item-main-icon"  src='/images/pool.png' /> Pool Home
                                 </span>
                             </div>
                         </div>
-                        <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
-                                <span className='verify-2nd-list-item-main'>
-                                <i class="verify-2nd-list-item-main-icon bi bi-house"></i> House
-                                </span>
-                            </div>
-                        </div>
-                        <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
-                                <span className='verify-2nd-list-item-main'>
-                                <i class="verify-2nd-list-item-main-icon bi bi-house"></i> House
-                                </span>
-                            </div>
-                        </div>
+                      
+                        
                     </div>
                     <div className='col-md-5 col-sm-12'>
-                        <img className='verify-2nd-image' src="https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
+                        <img className='verify-2nd-image' src='/images/propertyhouse.png' alt="" />
                     </div>
                 </div>
             </div>
