@@ -8,7 +8,7 @@ const SecondStep = () => {
                 <div className='verify-2nd-list-items row mt-4'>
                     <div className='verify-2nd-list-items-1st-column col-md-7 col-sm-12 row'>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div className='verify-2nd-list-item border px-2 text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                 <i class="verify-2nd-list-item-main-icon bi bi-house"></i> House
                                 </span>

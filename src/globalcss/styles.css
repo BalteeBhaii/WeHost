@@ -2548,3 +2548,10 @@ line-height: 37px;
 .verify-2nd-list-item:hover {
     background-color: rgb(218, 217, 217);
 }
+
+@media(max-width:767px) {
+    .verify-2nd-list-items {
+        display: flex;
+        justify-content: center;
+    }
+}
