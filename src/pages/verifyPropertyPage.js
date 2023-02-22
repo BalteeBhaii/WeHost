@@ -14,7 +14,11 @@ const VerifyPropertyPage = () => {
                 <div className="progress-bar" style={{width: '5%', background: '#81E2F1'}}></div>
             </div>
             <div className='text-end'>
-                <button className='btn fw-semibold fs-5' style={{background: '#CBF2FC', width: 180}}>Get Started</button>
+                <button className='btn fw-semibold property-footer-text'>Get Started</button>
+            </div>
+            <div className='d-flex justify-content-between'>
+                <button className='btn property-footer-text'><i class="bi bi-arrow-left"></i>Back</button>
+                <button className='btn property-footer-text'>Next<i class="bi bi-arrow-right"></i></button>
             </div>
         </div>
         

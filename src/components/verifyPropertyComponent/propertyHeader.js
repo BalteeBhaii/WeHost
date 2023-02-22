@@ -7,7 +7,7 @@ const PropertyHeader = () => {
                     <div className='propertyHeaderWidth'>
                         <img src='/images/logo.png' width={'100%'} height={'100%'}/>
                     </div>
-                    <div style={{fontFamily: 'Laila'}}>
+                    <div className='headerText'>
                         <h5>Save & exit</h5>
                     </div>
                 </div>
