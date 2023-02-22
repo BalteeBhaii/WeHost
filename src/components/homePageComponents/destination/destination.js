@@ -23,6 +23,8 @@ const Destination = () => {
       key: 'selection'
     }
   ]);
+  const [previousDropdown, setPreviousDropdown] = useState('');
+  const [currentDropdown, setCurrentDropdown] = useState('');
 
   const refOne = useRef(null);
 
@@ -37,26 +39,24 @@ const Destination = () => {
   }
 
   const hideOnEscape = (e) => {
-    // console.log(e.key)
     if (e.key === "Escape") {
       setOpen(false)
     }
   }
 
-  // Hide dropdown on outside click
-  // const hideOnClickOutside = (e) => {
-  //   // console.log(refOne.current)
-  //   // console.log(e.target)
-  //   if( refOne.current && !refOne.current.contains(e.target) ) {
-  //     setOpen(false)
-  //   }
-  // }
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape, true)
+  }, [])
 
   useEffect(() => {
-    // event listeners
-    document.addEventListener("keydown", hideOnEscape, true)
-    // document.addEventListener("click", hideOnClickOutside, true)
-  }, [])
+        let dropdowns = document.querySelectorAll(".search-dropdown");
+        if(currentDropdown !== ''){
+          dropdowns[currentDropdown].classList.add('dropdown-active');
+        }
+        if(previousDropdown !== ''){
+          dropdowns[previousDropdown].classList.remove('dropdown-active');
+        }
+  }, [currentDropdown]);
 
   return (
     <>
@@ -74,7 +74,7 @@ const Destination = () => {
                     <span className="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-geo-alt-fill"></i>
                     </span>
-                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" onClick={(ev) => setShowModal(!showModal)}></input>
+                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" data-count={0} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(0)}}></input>
                     {/* <LocationModal show={showModal} setShowModal={setShowModal} /> */}
                     <div className='search-dropdown'>
                       <div className='search-dropdown-main py-2'>
@@ -132,29 +132,53 @@ const Destination = () => {
                     }
                   </div>
                 </div>
-
-                {/* <div className='col-lg-3 col-md-6'>
-                  <div class="input-group mb-3 destination-input">
-                    <span class="input-group-text border-0" id="basic-addon1">
-                      <i class="bi bi-calendar-check"></i>
-                    </span>
-                    <input type="text" className="form-control border-0 shadow-none" placeholder="Check-Out" />
-                  </div>
-                </div> */}
                 <div className='col-xl-3 col-lg-6 col-md-6'>
                   <div class="input-group mb-3 border border border-secondary rounded destination-input border-color">
                     <span class="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-person-circle"></i>
                     </span>
-                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" onClick={(ev) => setguestModal(!guestModal)} />
-                    <GuestModal show={guestModal} setShowModal={setguestModal} />
+                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-count={1} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(1)}}/>
+                    <div className='search-dropdown'>
+                      <div className='search-dropdown-main pt-2 pb-3'>
+                        <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-2'>
+                          <span className='destination-main-search-item mt-2'>Adults</span>
+                          <div className='guest-dropdown-counter'>
+                            <i class="bi bi-dash-circle guest-dropdown-counter-minus"></i>
+                            <span className='guest-dropdown-counter-text'>0</span>
+                            <i class="bi bi-plus-circle guest-dropdown-counter-plus"></i>
+                          </div>
+                        </div>
+                        <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-3'>
+                          <span className='destination-main-search-item mt-2'>Children</span>
+                          <div className='guest-dropdown-counter'>
+                            <i class="bi bi-dash-circle guest-dropdown-counter-minus"></i>
+                            <span className='guest-dropdown-counter-text'>0</span>
+                            <i class="bi bi-plus-circle guest-dropdown-counter-plus"></i>
+                          </div>
+                        </div>
+                        <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-3'>
+                          <span className='destination-main-search-item mt-2'>Infants</span>
+                          <div className='guest-dropdown-counter'>
+                            <i class="bi bi-dash-circle guest-dropdown-counter-minus"></i>
+                            <span className='guest-dropdown-counter-text'>0</span>
+                            <i class="bi bi-plus-circle guest-dropdown-counter-plus"></i>
+                          </div>
+                        </div>
+                        <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-3'>
+                          <span className='destination-main-search-item mt-2'>Infants</span>
+                          <div className='guest-dropdown-counter'>
+                            <span className='guest-dropdown-counter-pets'>Yes</span>
+                            <input class="form-check-input shadow-none guest-dropdown-counter-radio guest-dropdown-counter-radio-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                            <span className='guest-dropdown-counter-pets'>No</span>
+                            <input class="form-check-input shadow-none guest-dropdown-counter-radio guest-dropdown-counter-radio-2" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className='col-xl-3 col-lg-6 col-md-6'>
                   <div class="destination-input mb-3">
-                    {/* <span class="input-group-text border-0 bg-white" id="basic-addon1">
-                      <i class="bi bi-search bi-searchIcon"></i>
-                    </span> */}
                     <a type="text" className="btn text-white w-100 fw-semibold" style={{ backgroundColor: '#0579C1' }}>
                       <i class="bi bi-search bi-searchIcon me-1"></i>
                       Search
@@ -167,76 +191,11 @@ const Destination = () => {
                 Our Formula = More Money in Your Pocket and a Better Overall Experience for Everyone!
               </span></h3></div>
             </div>
-
-            {/* <div className='row'>
-                        <div className='col'>
-                            <div className="input-group mb-3">
-                                <span className="input-group-text text-black" style={{fontSize: '2vw'}}><i className="bi bi-geo-alt-fill"></i></span>
-                                <input type="text" className='form-control' style={{fontSize: '2vw'}} placeholder='Where to?'  aria-label="Username" aria-describedby="basic-addon1"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='row mb-3'>
-                        <div className='col search-col'>
-                            <div className="input-group ">
-                                <span className="input-group-text" style={{fontSize: '2vw'}}><i className="bi bi-calendar-date" ></i></span>
-                                <input className='form-control' type="text" placeholder='Check In' style={{fontSize: '2vw'}}/>
-                            </div>
-                        </div>
-                        <div className='col search-col'>
-                            <div className="input-group ">
-                                <span className="input-group-text" style={{fontSize: '2vw'}}><i className="bi bi-calendar-week "></i></span>
-                                <input className='form-control' type="text" placeholder='Check Out' style={{fontSize: '2vw'}}/>
-                            </div>
-                        </div>
-                        <div className='col search-col'>
-                            <div className="input-group">
-                                <span className="input-group-text" style={{fontSize: '2vw'}}><i className="bi bi-person-circle"></i></span>
-                                <input className='form-control' type="text" placeholder='Guest' style={{fontSize: '2vw'}} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='row'>
-                        <div className='col'>
-                            <div className="input-group">
-                                <span className="input-group-text" style={{fontSize: '2vw'}}><i className="bi bi-search"></i></span>
-                                <input type="text" className='form-control' placeholder='Search' style={{fontSize: '2vw'}}/>
-                            </div>
-                        </div>
-                    </div> */}
-            {/* <div className='z-3 position-absolute bottom-1 w-100 pe-5' style={{paddingTop: 115}} >
-                        <div className=' w-100 '>
-                            <ul className='nav nav-pills d-flex justify-content-between bg-error'>
-                                <li><a href='#' className=' btn text-light px-2 ' style={{backgroundColor: '#0D7BC4'}}><i className="bi bi-building me-2"></i>Hotels</a></li>
-                                <li><a href='#'  className=' btn text-light px-2' style={{backgroundColor: '#0D7BC4'}}><i className="bi bi-list-check me-2"></i>Things to do</a></li>
-                                <li><a href='#' className='btn text-light px-2' style={{backgroundColor: '#0D7BC4'}}><i className="bi bi-house-door-fill me-2"></i>Vacations Rental</a></li>
-                                <li><a href='#' className='btn text-light px-2' style={{backgroundColor: '#0D7BC4'}}><i className="bi bi-cash me-2"></i>Low fares</a></li>
-                                <li ><a href='#' className='btn text-light px-2' style={{backgroundColor: '#0D7BC4', width: 110}}>more</a></li>
-                            </ul>
-                        </div>
-                    </div> */}
           </div>
         </div>
       </div>
 
       <div className='bottom-buttons container-xl'>
-        {/* <div className='row d-flex justify-content-center table-responsive-lg'>
-                    <div className='col-2 button-column'>
-                        <button className='btn btn-primary bottom-button bi' id='hotels'>Hotels</button>
-                    </div>
-                    <div className='col-2 button-column'>
-                        <button className='btn btn-primary bottom-button bi' id='things'>Things to Do</button>
-                    </div>
-                    <div className='col-2 button-column'>
-                        <button className='btn btn-primary bottom-button bi' id='vacations'>Vacations Rental</button>
-                    </div>
-                    <div className='col-2 button-column'>
-                        <button className='btn btn-primary bottom-button bi' id='fares'>Low Fares</button>
-                    </div>
-                    <div className='col-2 button-column'>
-                        <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
-                    </div>
-                </div> */}
         <div className="table-responsive-xl">
           <table className="table caption-top buttons-table">
             <thead>

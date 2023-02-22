@@ -2468,13 +2468,14 @@ line-height: 37px;
 .search-dropdown {
     position: absolute;
     width: 100%;
-    margin-top: 53px;
+    margin-top: 47px;
 }
 
 .search-dropdown-main {
     width: 100%;
     background-color: white;
     color: black;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -2493,8 +2494,10 @@ line-height: 37px;
 }
 
 .destination-main-search-item {
-    color: black;
+    color: #545454;
     font-size: 15px;
+    font-weight: 600;
+    font-family: unset !important;
 }
 
 .destination-main-search-item-icon {
@@ -2508,6 +2511,7 @@ line-height: 37px;
 
 .destination-searchbar-icon {
     margin-left: 6px;
+    cursor: pointer;
 }
 
 .verify-2nd-title {
@@ -2554,4 +2558,45 @@ line-height: 37px;
         display: flex;
         justify-content: center;
     }
+}
+
+.guest-dropdown-counter-minus, .guest-dropdown-counter-text {
+    font-size: 15px;
+    margin-right: 31px;
+}
+
+.guest-dropdown-counter-minus, .guest-dropdown-counter-plus {
+    color: #1AB2C5;
+    cursor: pointer;
+}
+
+.guest-dropdown-counter-minus::before, .guest-dropdown-counter-plus::before {
+    transform: scale(1.4);
+}
+
+.guest-dropdown-counter-radio-1 {
+    margin-right: 43px;
+}
+
+.form-check-input:checked {
+    background-color: #1AB2C5 !important;
+    border-color: #1AB2C5 !important;
+}
+
+.guest-dropdown-counter-radio {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.guest-dropdown-counter-pets {
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+.search-dropdown {
+    display: none;
+}
+
+.dropdown-active {
+    display: revert !important;
 }
