@@ -5,7 +5,9 @@ const PropertyHeader = () => {
             <div className='container-fluid py-3 header-section-padding' style={{backgroundColor: '#CBF2FC'}}>
                 <div className='d-flex justify-content-between align-items-center'>
                     <div className='propertyHeaderWidth'>
-                        <img src='/images/logo.png' width={'100%'} height={'100%'}/>
+                        <a href='/property'>
+                            <img src='/images/logo.png' width={'100%'} height={'100%'}/>
+                        </a>
                     </div>
                     <div className='headerText'>
                         <h5>Save & exit</h5>

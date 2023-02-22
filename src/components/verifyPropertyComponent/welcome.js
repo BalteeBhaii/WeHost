@@ -4,8 +4,8 @@ const Welcome = () => {
         <div className='row align-items-center mt-5'>
             <div className='col-12 col-lg-6 mb-5 welcome-text'>
                 <h1>Welcome to <span>We<span style={{color: '#7B61FF'}}>H</span>ost</span> !</h1>
-                <h2 className=''>Verify your Property Now</h2>
-                <h6 className='' style={{color: '#7B8FA1'}}>We are advocates for Lower Fees - Greater Exposure for Your Rental Property and White Glove Concierge </h6>
+                <h2>Verify your Property Now</h2>
+                <h6 style={{color: '#7B8FA1'}}>We are advocates for Lower Fees - Greater Exposure for Your Rental Property and White Glove Concierge </h6>
             </div>
             <div className='col-12 col-lg-6 mb-5 welcome-text'>
                 <div className='d-flex justify-content-between align-items-center w-100'>
