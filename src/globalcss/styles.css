@@ -196,6 +196,20 @@
 
 
 /* ************************ Verify your property page css ****************** */
+.property-footer-button{
+    background-color: #CBF2FC;
+    font-size: 15px;
+}
+.property-footer-button:hover{
+    background-color: #9ad9e9;
+    font-size: 15px;
+}
+.headerText h5{
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.09cm;
+}
+
 .propertyHeaderWidth{
     width: 200px;
     height: 100px;
@@ -206,6 +220,70 @@
     padding-right: 3rem;
 }
 
+.welcome-text h1{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.welcome-text span{
+    color: #B4EBF9;
+    font-size: 23px;
+}
+
+.welcome-text h3{
+    font-size: 15px;
+    font-weight: 600;
+}
+.welcome-text p{
+    font-size: small;
+    width: 85%;
+}
+
+.welcome-text h6{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.welcome-images{
+    width: 100px;
+    height: 100px;
+}
+
+.welcome-images img{
+    height: 100%;
+}
+
+/* ****************************** First Step CSS *********************** */
+.firstStep-text h1{
+    font-size: 20px;
+}
+
+.firstStep-text{
+    width: 90%;
+}
+
+.firstStep-text h6, h4{
+    font-size: 15px;
+    text-align: justify;
+}
+
+.firstStep-text h1{
+    font-weight: 900;
+}
+
+.firstStep-text h6, h4{
+    color: #7B8FA1
+}
+
+.firstStep-img{
+    width: 400px;
+
+}
+
+.firstStep-img img{
+    width: 100%;
+    height: 100%;
+}
 
 @media screen and (max-width: 1025px) {
     .figure-text-sizing h2{
@@ -299,11 +377,13 @@
     }
     
     .welcome-text h1{
-        font-size: larger;
+        font-size: 18px;
+        font-weight: 600;
     }
 
-    .welcome-text h3{
-        font-size: medium;
+    .welcome-text h3, h2{
+        font-size: 15px;
+        font-weight: 600;
     }
     .welcome-text p{
         font-size: small;
@@ -312,7 +392,7 @@
 
     
     .welcome-text h6{
-        font-size: medium;
+        font-size: 15px;
         font-weight: 400;
     }
 
@@ -320,6 +400,12 @@
         width: 70px;
         height: 70px;
     }
+
+    .firstStep-img{
+        width: 300px;
+    
+    }
+    
 }
 
 
@@ -837,7 +923,7 @@ input{
    }
    button{
     width: 75px;
-    font-size: 1rem !important;
+    font-size: 15px !important;
     padding: 1px
    }
 }
@@ -897,7 +983,13 @@ input{
 .explore-images {
     display: flex;
 }
-
+li.list-group-item.guesthouse {
+    width: 125px;
+    height: 53px;
+}
+.guestimg{
+    margin-top: 12px;
+}
 .overly-1, .overly-2, .overly-3 {
     color: white;
     font-size: 17px;
@@ -1165,7 +1257,7 @@ input{
 @media screen and (max-width: 475px){
     button{
         padding: 2px !important;
-        font-size: 1rem !important;
+        font-size: 15px !important;
     }
     .main-text-size-style h1{
         font-size: 20px !important;
