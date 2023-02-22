@@ -253,6 +253,80 @@
     height: 100%;
 }
 
+/* ****************************** WEHOST CSS *************************** */
+.wehost-main-container{
+    padding-left: 40px;
+}
+
+.wehost-main-container h1{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.wehost-main-container p {
+    font-size: 15px;
+    text-align: justify;
+    width: 90%;
+}
+
+.wehost-h6-div{
+    width: 75%;
+    background-color: #0D7BC4;
+}
+
+.wehost-h6-div h6{
+    font-size: 15px;
+}
+
+.wehost-card-position{
+    position: relative;
+    top: -118px;
+}
+
+.wehost-card-position-2{
+    position: relative;
+    top: -100px;
+}
+
+.wehost-input span{
+    background-color: white;
+}
+
+.wehost-input{
+    border: 1px solid #30a4ec;
+}
+
+.wehost-house-img{
+    width: 80%;
+    padding: 50px 0;
+}
+
+.wehost-img{
+    height: 300px;
+    object-fit: cover;
+}
+
+.wehost-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wehost-button button{
+    background-color: #007AC3;
+    color: white;
+    font-size: 15px;
+}
+
+.wehost-button i{
+    font-size: 18px;
+}
+
+.wehost-button button:hover{
+    background-color: #0771adbd;
+    color: white;
+}
+
 /* ****************************** First Step CSS *********************** */
 .firstStep-text h1{
     font-size: 20px;
@@ -296,6 +370,12 @@
     .destination-input{
         font-size: 15px !important;
     }
+    .wehost-card-position{
+        top: -155px;
+    }
+    .wehost-card-position-2{
+        top: -135px;
+    }
 }
 
 @media screen and (max-width: 775px){
@@ -321,6 +401,16 @@
     .daterange-display{
         display: block;
     }
+    .wehost-card-position{
+        top: 0;
+        margin-bottom: 19px;
+    }
+    .wehost-card-position-2{
+        top:0;
+    }
+    .wehost-h6-div{
+        width: 82%
+    }
  }
 
 @media screen and (max-width: 425px) {
@@ -334,29 +424,24 @@
     .figure-text-sizing h2{
         font-size: 15px;
     }
-    
     .figure-text-sizing p{
         font-size: 10px;
     }
-
     .signin-input-container input{
         margin-bottom: 15px;
     }
-
     .signin-input-container label{
         font-size: 12px;
     }
     .signin-input-container p{
         font-size: 12px;
     }
-
     .sign-in-checkbox{
         width: 85%;
     }
     .signin-input-width{
         width: 85%;
     }
-    
     .sign-in-text-size h1{
         font-size: 30px;
     }
@@ -366,21 +451,17 @@
     .sign-in-text-size span{
         font-size: 38px;
     }
-
     .propertyHeaderWidth{
         width:150px;
         height: 80px;
     }
-
     .header-section-padding{
         padding: 0 1em;
     }
-    
     .welcome-text h1{
         font-size: 18px;
         font-weight: 600;
     }
-
     .welcome-text h3, h2{
         font-size: 15px;
         font-weight: 600;
@@ -389,23 +470,33 @@
         font-size: small;
         width: 85%;
     }
-
-    
     .welcome-text h6{
         font-size: 15px;
         font-weight: 400;
     }
-
     .welcome-images{
         width: 70px;
         height: 70px;
     }
-
     .firstStep-img{
         width: 300px;
-    
     }
-    
+    .wehost-main-container{
+        padding-left: 8px;
+    }
+    .wehost-main-container h1{
+        font-size: 15px;
+    }
+    .wehost-main-container p{
+        font-size: 14px;
+        width: 100%;
+    }
+    .wehost-h6-div{
+        width: 100%
+    }
+    .wehost-button button{
+        width: 120px
+    }
 }
 
 
@@ -1095,6 +1186,7 @@ input{
         font-size: 1.5rem;
         bottom: 10rem;
     }
+
 }
 
 @media screen and (max-width: 768px){
