@@ -3,9 +3,10 @@ import { useState } from 'react';
 import Welcome from '../components/verifyPropertyComponent/welcome';
 import FirstStep from '../components/verifyPropertyComponent/firstStep';
 import PropertyHeader from '../components/verifyPropertyComponent/propertyHeader';
+import SecondStep from '../components/verifyPropertyComponent/secondStep';
 import '../globalcss/styles.css';
 const VerifyPropertyPage = () => {
-    const [page, setPage] = useState(0)
+    const [page, setPage] = useState(2)
     return (
         <>
             <PropertyHeader/>
@@ -13,6 +14,7 @@ const VerifyPropertyPage = () => {
                 <div>
                     {(page === 0) && <Welcome/>}
                     {(page === 1) && <FirstStep/>}
+                    {(page === 2) && <SecondStep/>}
                     <div className='position-relative'>
                         <div className="progress my-5" style={{background: '#0079c2bf'}}>
                             <div className="progress-bar" style={{width: '5%', background: '#81E2F1'}}></div>

@@ -976,7 +976,13 @@ input{
 .explore-images {
     display: flex;
 }
-
+li.list-group-item.guesthouse {
+    width: 125px;
+    height: 53px;
+}
+.guestimg{
+    margin-top: 12px;
+}
 .overly-1, .overly-2, .overly-3 {
     color: white;
     font-size: 23px;
