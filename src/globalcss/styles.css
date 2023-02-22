@@ -351,7 +351,7 @@ a{
 }
 
 .menu-item {
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .header {
@@ -597,11 +597,12 @@ input{
 }
 
 .destination-input input {
-    font-size: 19px !important;
+    font-size: 19px;
 }
 
 .destination-input a{
-    font-size: 19px;
+    font-size: 15px;
+    font-weight: 400 !important;
 }
 
 .destination-input span {
@@ -2291,7 +2292,8 @@ line-height: 37px;
 
 .footer-item-header-2nd {
     display: revert !important;
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 @media(max-width:991px) {
@@ -2333,4 +2335,75 @@ line-height: 37px;
 .whatyouwant-description, .whatyouwant-date, .whatyouwant-time {
     font-size: 15px;
     color: #717171;
+}
+
+.destination-main-title {
+    font-size: 15px !important;
+}
+
+.destination-arrow-icon {
+    position: relative;
+    right: 13px;
+}
+
+.destination-arrow-icon::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    width: 1px;
+    height: 61%;
+    background-color: #97C1C6;
+    z-index: 100;
+    transform: rotate(-35deg);
+}
+
+.destination-arrow-icon::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 1px;
+    height: 61%;
+    background-color: #97C1C6;
+    z-index: 100;
+    transform: rotate(35deg);
+}
+
+.footer-bottom-item-disclaimer:hover {
+    text-decoration: none !important;
+    color: #717171 !important;
+}
+
+.search-dropdown {
+    position: absolute;
+    width: 100%;
+    margin-top: 53px;
+}
+
+.search-dropdown-main {
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+.destination-input input {
+    font-size: 15px !important;
+}
+
+.destination-searchbar {
+    font-size: 15px !important;
+    outline: none !important;
+}
+
+.destination-main-search-item {
+    color: black;
+    font-size: 15px;
+}
+
+.destination-main-search-item-icon {
+    margin-right: 10px;
+}
+
+.destination-main-search-item-title {
+    font-size: 15px;
+    font-weight: 600;
 }

@@ -68,14 +68,28 @@ const Destination = () => {
 
             <h3 className="text-center formulatxt">We are advocates for Lower Fees - Greater Exposure for Your Rental Property - And White Glove Customer Service.</h3>
             <div className="container mt-3">
-              <div className='row pt-3 rounded-3' style={{ background: '#ffffffde' }}>
+              <div className='row pt-3 rounded-1' style={{ background: '#ffffffde' }}>
                 <div className='col-xl-3 col-lg-6 col-md-6'>
                   <div className="input-group mb-3 border border border-secondary rounded destination-input border-color">
                     <span className="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-geo-alt-fill"></i>
                     </span>
                     <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" onClick={(ev) => setShowModal(!showModal)}></input>
-                    <LocationModal show={showModal} setShowModal={setShowModal} />
+                    {/* <LocationModal show={showModal} setShowModal={setShowModal} /> */}
+                    <div className='search-dropdown'>
+                      <div className='search-dropdown-main py-2 mx-2'>
+                        <div className='destination-searchbar-holder mx-3'>
+                          <input type="text" className='destination-searchbar' placeholder='Search...' />
+                        </div>
+                        <hr className='my-1' />
+                        <div className='mx-3 d-flex flex-column mt-3 mb-2'>
+                          <Link className='destination-main-search-item mt-2'><i class="bi bi-send-fill destination-main-search-item-icon"></i>Nearby Locations</Link>
+                          <Link className='destination-main-search-item mt-2'><i class="bi-star-fill destination-main-search-item-icon"></i>Most Visited</Link>
+                          <span className='destination-main-search-item-title mt-3'>Popular Destinations</span>
+                          <Link className='destination-main-search-item mt-2'><i class="bi-star-fill destination-main-search-item-icon"></i>Most Visited</Link>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className='col-xl-3 col-lg-6 col-md-6'>
@@ -84,7 +98,7 @@ const Destination = () => {
                       <i class="bi bi-calendar-date"></i>
                     </span>
                     <input type="text" class="form-control border-0 shadow-none p-1 searchfeildtxt" placeholder={checkinPlaceholder} readOnly onClick={() => setOpen(open => !open)} />
-                    <i class="bi bi-chevron-compact-right bg-white text-black fs-3 position-relative"></i>
+                    <span className='destination-arrow-icon'></span>
                     <input type="text" class="form-control border-0 shadow-none ps-2 searchfeildtxt" placeholder={checkoutPlaceholder} readOnly onClick={() => setOpen(open => !open)} />
                   </div>
                   <div className='datepicker-display'>

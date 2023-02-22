@@ -95,12 +95,12 @@ const Header = () => {
               </button>
               <div className="position-absolute shadow border rounded-2 mt-1 ps-3 pe-5 py-2 overflow-hidden bg-white " style={{ display: display }}>
                 <p className="mb-0 bg-white">
-                  <button className="btn p-1 fw-semibold" value='Guest' onClick={(e) => handleLoginClick(e)}>
+                  <button className="menu-item btn p-1" value='Guest' onClick={(e) => handleLoginClick(e)}>
                     Guest Login
                   </button>
                 </p>
                 <p className="mb-0 bg-white">
-                  <button className="btn p-1 fw-semibold" value='Owner' onClick={(e) => handleLoginClick(e)}>
+                  <button className="menu-item btn p-1" value='Owner' onClick={(e) => handleLoginClick(e)}>
                     Owner Login
                   </button>
                 </p>

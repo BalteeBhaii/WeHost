@@ -5,7 +5,7 @@ import { Button } from "bootstrap";
 //import Button from 'react-bootstrap/Button';
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import logo from "../../Assets/logo.png";
+// import logo from "../../Assets/logo.png";
 
 const Footer = () => {
   useEffect(() => {
@@ -22,13 +22,13 @@ const Footer = () => {
   }, []);
 
   const mblDropdownHandler = (event) => {
-        let icon = event.target.getElementsByClassName("footer-item-header-mbl-icon")[0];
-        console.log(icon.style.transform);
-        if(icon.style.transform === "" || icon.style.transform === "rotate(0deg)"){
-          icon.style.transform = "rotate(-180deg)";
-        } else {
-          icon.style.transform = "rotate(0deg)";
-        }
+    let icon = event.target.getElementsByClassName("footer-item-header-mbl-icon")[0];
+    console.log(icon.style.transform);
+    if (icon.style.transform === "" || icon.style.transform === "rotate(0deg)") {
+      icon.style.transform = "rotate(-180deg)";
+    } else {
+      icon.style.transform = "rotate(0deg)";
+    }
   }
 
   return (
@@ -186,16 +186,16 @@ const Footer = () => {
                     <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#supportCollapse">SUPPORT<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                     <div class="collapse" id="supportCollapse">
                       <div className="d-flex flex-column mt-3">
-                      <Link className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
-                      <Link className="footer-bottom-item mb-3">Support and Contact</Link>
-                      <Link className="footer-bottom-item mb-3">Help Center</Link>
-                      <Link className="footer-bottom-item mb-3">weCover</Link>
-                      <Link className="footer-bottom-item mb-3">Safety Information</Link>
-                      <Link className="footer-bottom-item mb-3">Cancellation options</Link>
-                      <Link className="footer-bottom-item mb-3">Our COVID-19 Response</Link>
-                      <Link className="footer-bottom-item mb-3">Supporting people with disabilities</Link>
-                      <Link className="footer-bottom-item mb-3">Tips & Articles</Link>
-                      <Link className="footer-bottom-item mb-3">Report a neighborhood concern</Link>
+                        <Link className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
+                        <Link className="footer-bottom-item mb-3">Support and Contact</Link>
+                        <Link className="footer-bottom-item mb-3">Help Center</Link>
+                        <Link className="footer-bottom-item mb-3">weCover</Link>
+                        <Link className="footer-bottom-item mb-3">Safety Information</Link>
+                        <Link className="footer-bottom-item mb-3">Cancellation options</Link>
+                        <Link className="footer-bottom-item mb-3">Our COVID-19 Response</Link>
+                        <Link className="footer-bottom-item mb-3">Supporting people with disabilities</Link>
+                        <Link className="footer-bottom-item mb-3">Tips & Articles</Link>
+                        <Link className="footer-bottom-item mb-3">Report a neighborhood concern</Link>
                       </div>
                     </div>
                   </div>
@@ -207,14 +207,14 @@ const Footer = () => {
                     <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#aboutCollapse">ABOUT<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                     <div class="collapse" id="aboutCollapse">
                       <div className="d-flex flex-column mt-3">
-                      <Link className="footer-bottom-item mb-3">Our Story</Link>
-                      <Link className="footer-bottom-item mb-3">Social Responsibility</Link>
-                      <Link className="footer-bottom-item mb-3">Our People</Link>
-                      <Link className="footer-bottom-item mb-3">Newsroom</Link>
-                      <Link className="footer-bottom-item mb-3">Careers</Link>
-                      <Link className="footer-bottom-item mb-3">Partner With Us</Link>
-                      <Link className="footer-bottom-item mb-3">Partner Login</Link>
-                      <Link className="footer-bottom-item mb-3">New features</Link>
+                        <Link className="footer-bottom-item mb-3">Our Story</Link>
+                        <Link className="footer-bottom-item mb-3">Social Responsibility</Link>
+                        <Link className="footer-bottom-item mb-3">Our People</Link>
+                        <Link className="footer-bottom-item mb-3">Newsroom</Link>
+                        <Link className="footer-bottom-item mb-3">Careers</Link>
+                        <Link className="footer-bottom-item mb-3">Partner With Us</Link>
+                        <Link className="footer-bottom-item mb-3">Partner Login</Link>
+                        <Link className="footer-bottom-item mb-3">New features</Link>
                       </div>
                     </div>
                   </div>
@@ -229,14 +229,17 @@ const Footer = () => {
             <div className="container py-4">
               <div className="row">
                 <div className="footer-bottom-2nd-icons d-flex flex-column col-lg-4 col-md-12">
-                  <div className="d-flex">
+                <h3 className="footer-item-header-2nd mb-0">INVESTORS</h3>
+                  <div className="d-flex mt-4">
                     <i class="bi bi-facebook footer-bottom-2nd-icon"></i>
                     <i class="bi bi-instagram footer-bottom-2nd-icon"></i>
                     <i class="bi bi-twitter footer-bottom-2nd-icon"></i>
                     <i class="bi bi-linkedin footer-bottom-2nd-icon"></i>
                   </div>
                   <div className="mt-4 d-flex flex-column">
-                    <Link className="footer-bottom-item mb-3">© weHosttravel / © weHost. All Rights Reserved 2023.</Link>
+                    <span className="footer-bottom-item mb-2">© weHosttravel / © weHost. All Rights Reserved 2023.</span>
+                  <h3 className="footer-item-header-2nd mt-2">Disclaimer</h3>
+                    <span className="footer-bottom-item footer-bottom-item-disclaimer mb-3 ">All the weHost Homes and Travel Experiences referenced on the weHost Newsroom and weHost Platform are intended solely to encourage, inspire and illustrate. weHost doesn’t recommend or endorse any specific Home(s) and/or Experience(s) listings on the weHost platform.</span>
                     <Link className="footer-bottom-item mb-3">Terms of Use</Link>
                     <Link className="footer-bottom-item mb-3">Privacy Policy</Link>
                     <Link className="footer-bottom-item mb-3">Do Not Sell my Personal Information</Link>
@@ -259,7 +262,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="footer-bottom-2nd-icons d-flex flex-column col-md-4 footer-bottom-2nd-mbl-hide">
-                <h3 className="footer-item-header-2nd mb-0">ABOUT</h3>
+                  <h3 className="footer-item-header-2nd mb-0">ABOUT</h3>
                   <div className="footer-bottom-2nd-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Our Story</Link>
                     <Link className="footer-bottom-item mb-3">Social Responsibility</Link>
