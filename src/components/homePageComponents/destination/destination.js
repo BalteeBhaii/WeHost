@@ -3,6 +3,8 @@ import LocationModal from '../../LocationModal/LocationModal';
 import GuestModal from '../../GuestModal/GuestModal';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
+
+
 const Destination = () => {
     const [showModal, setShowModal] = useState(false);
     const [guestModal, setguestModal] = useState(false);
@@ -12,7 +14,7 @@ const Destination = () => {
     }
     return (
         <>
-
+         
             <div className='bg-overlay text-light z-0'>
                 <div className='center'>
                     <div className='container-xxl container-xl container-lg position-relative' >
@@ -27,6 +29,7 @@ const Destination = () => {
                                         <input type="text" className="form-control border-0 shadow-none" placeholder="Where to?" aria-label="Username" aria-describedby="basic-addon1" onClick ={(ev) =>setShowModal(!showModal) }></input>
                                         
                                         <LocationModal show={showModal} setShowModal={setShowModal}/>
+                                       
                                     </div>
                                 </div>
                                 <div className='col-lg-3 col-md-6'>
@@ -44,7 +47,7 @@ const Destination = () => {
                                         </span>
                                         <input type="text" className="form-control border-0 shadow-none" placeholder="Check-Out" aria-label="Username" aria-describedby="basic-addon1" />
                                        
-                                    </div>
+                                    </div>                                   
                                 </div>
                                 <div className='col-lg-4 col-md-6'>
                                     <div class="input-group mb-3 destination-input">
