@@ -2,7 +2,7 @@ import React from 'react';
 import Hotel from '../components/hotelscomponents/hotel/hotel';
 import Header from '../components/Navigation/header/header';
 import DesiredHotels from '../components/hotelscomponents/DesiredHotels/desiredHotels';
-import Footer from '../components/footer/footer'
+import Footer from '../components/Navigation/footer/footer';
 import '../globalcss/styles.css';
 
 const HotelsPage = () => {

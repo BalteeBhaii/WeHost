@@ -437,7 +437,7 @@ a{
 }
 
 .menu-item {
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .header {
@@ -581,8 +581,13 @@ a{
     background-color: #b4ebf9;
   }
   .inquirysection {
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  #form5Exam {
+    font-size: 15px;
   }
 
   /* Main */
@@ -613,7 +618,7 @@ a{
 
 .owl-views {
     color: #939393;
-    font-size: 13px;
+    font-size: 12px;
     margin-left: 15px;
 }
 
@@ -669,7 +674,7 @@ input{
 }
 
 .center {
-    background: rgba(0, 0, 0, 0.4) !important;
+    /* background: rgba(0, 0, 0, 0.4) !important; */
 }
 
 .destination-main-title {
@@ -678,11 +683,12 @@ input{
 }
 
 .destination-input input {
-    font-size: 19px !important;
+    font-size: 19px;
 }
 
 .destination-input a{
-    font-size: 19px;
+    font-size: 15px;
+    font-weight: 400 !important;
 }
 
 .destination-input span {
@@ -741,6 +747,7 @@ input{
 .button-column button {
     width: fit-content;
     box-shadow: 1px 1px 4px black;
+    font-size: 15px;
 }
 
 .buttons-table {
@@ -926,7 +933,7 @@ input{
 }
 
 .explore-description {
-    font-size: 18px !important;
+    font-size: 15px !important;
     color: #787777 !important;
 }
 
@@ -979,7 +986,7 @@ input{
 
 .overly-1, .overly-2, .overly-3 {
     color: white;
-    font-size: 23px;
+    font-size: 17px;
     font-weight: 600;
     text-shadow: 1px 2px 5px black !important;
     display: flex;
@@ -992,10 +999,20 @@ input{
     border: 0;
     background-color: #0579C1;
     color: white;
-    font-size: 17px !important;
+    font-size: 15px !important;
     min-width: 160px;
     min-height: 45px;
     transition: all 0.3s ease-in;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card-body .card-text {
+    font-size: 15px;
+    color: #717171;
 }
 
 .explore-button:hover {
@@ -1494,12 +1511,14 @@ color: black;
 }
 
 .section-titles {
-    font-size: 31px !important;
+    font-size: 20px !important;
     font-weight: 700;
 }
 
 .worldwide-tab-title {
     padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
     width: fit-content;
     cursor: pointer;
 }
@@ -1541,7 +1560,7 @@ color: black;
 }
 
 .worldwide-tab-option-title {
-    font-size: 17px !important;
+    font-size: 15px !important;
 }
 
 .worldwide-tab-options {
@@ -1574,12 +1593,17 @@ color: black;
 }
 
 .review-main-section .owl-carousel .owl-nav .owl-prev {
-    display: none !important;
+    /* display: none !important; */
+    margin-left: 9px;
+}
+
+.review-main-section .owl-carousel .owl-nav .owl-next {
+    margin-right: 8px;
 }
 
 .review-main-section .owl-carousel .owl-nav button {
     font-weight: 600;
-    transform: scale(6.5);
+    transform: scale(4.5);
     border: 0 !important;
     outline: 0 !important;
 }
@@ -1589,11 +1613,23 @@ color: black;
     outline: 0 !important;
 }
 
+@media(max-width:475px) {
+    .review-main-section .owl-carousel .owl-nav .owl-prev {
+        margin-left: -34px;
+    }
+    
+    .review-main-section .owl-carousel .owl-nav .owl-next {
+        margin-right: -13px;
+    }
+}
+
 .review-main-section .owl-carousel .owl-nav {
     position: absolute;
     right: 0;
+    width: 100%;
     bottom: 144px;
-    margin-right: 37px;
+    justify-content: space-between !important;
+    /* margin-right: 37px; */
 }
 
 .review-owl-info {
@@ -1605,7 +1641,7 @@ color: black;
 }
 
 .review-owl-info .review-owl-description {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -1941,7 +1977,7 @@ line-height: 37px;
 
 .thingstoexplore-description {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     text-shadow: 1px 2px 5px black !important;
 }
 
@@ -1962,6 +1998,7 @@ line-height: 37px;
 }
 
 .prefooter-submit-button {
+    font-size: 15px;
     background-color: var(--theme-color);
 }
 
@@ -1970,7 +2007,7 @@ line-height: 37px;
 }
 
 .footer-mail-icon {
-    transform: scale(1.7);
+    transform: scale(1.3);
 }
 
 .menu-item {
@@ -2050,12 +2087,6 @@ line-height: 37px;
     }
 }
 
-@media(max-width:991px) {
-    .inquirysection {
-        font-size: 18px !important;
-    }
-}
-
 .owl-carousel .owl-item{
     cursor: pointer;
 }
@@ -2067,6 +2098,8 @@ line-height: 37px;
 }
 
 .owl-carousel .owl-item .owl-title {
+    font-size: 15px;
+    font-weight: 600;
     transition: all 0.3s ease-in;
 }
 
@@ -2208,12 +2241,13 @@ line-height: 37px;
 }
 
 .footer-item-header {
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .footer-bottom-item {
     font-size: 15px !important;
-    color: black;
+    color: #717171;
     cursor: pointer;
 }
 
@@ -2248,7 +2282,6 @@ line-height: 37px;
         justify-content: space-between;
         border-bottom: solid 1px black;
         padding-bottom: 14px !important;
-        font-size: 18px !important;
         cursor: pointer;
     }
 
@@ -2313,7 +2346,8 @@ line-height: 37px;
 }
 
 .footer-item-header-mbl {
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -2331,7 +2365,7 @@ line-height: 37px;
 
 .footer-bottom-2nd-icon {
     margin-right: 32px;
-    transform: scale(1.5);
+    transform: scale(1.3);
     transition: all ease 0.3s;
     cursor: pointer;
     height: fit-content;
@@ -2339,16 +2373,123 @@ line-height: 37px;
 
 .footer-bottom-2nd-icon:hover {
     color: var(--theme-color);
-    transform: scale(1.7);
+    transform: scale(1.5);
 }
 
 .footer-item-header-2nd {
     display: revert !important;
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 @media(max-width:991px) {
     .footer-bottom-2nd-mbl-hide {
         display: none !important;
     }
+}
+
+.section-titles {
+    font-size: 20px !important;
+}
+
+.rental-post-button-inner {
+    font-size: 16px !important;
+}
+
+.thingstoexplore-description {
+    font-size: 15px !important;
+}
+
+.thingstoexplore-button {
+    font-size: 15px !important;
+}
+
+.whatyouwant-upper-text {
+    font-size: 15px !important;
+    color: #717171 !important;
+}
+
+.whatyouwant-location {
+    font-weight: 600;
+}
+
+.whatyouwant-location, .whatyouwant-price {
+    font-size: 15px;
+    color: black;
+}
+
+.whatyouwant-description, .whatyouwant-date, .whatyouwant-time {
+    font-size: 15px;
+    color: #717171;
+}
+
+.destination-main-title {
+    font-size: 15px !important;
+}
+
+.destination-arrow-icon {
+    position: relative;
+    right: 13px;
+}
+
+.destination-arrow-icon::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    width: 1px;
+    height: 61%;
+    background-color: #97C1C6;
+    z-index: 100;
+    transform: rotate(-35deg);
+}
+
+.destination-arrow-icon::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 1px;
+    height: 61%;
+    background-color: #97C1C6;
+    z-index: 100;
+    transform: rotate(35deg);
+}
+
+.footer-bottom-item-disclaimer:hover {
+    text-decoration: none !important;
+    color: #717171 !important;
+}
+
+.search-dropdown {
+    position: absolute;
+    width: 100%;
+    margin-top: 53px;
+}
+
+.search-dropdown-main {
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+.destination-input input {
+    font-size: 15px !important;
+}
+
+.destination-searchbar {
+    font-size: 15px !important;
+    outline: none !important;
+}
+
+.destination-main-search-item {
+    color: black;
+    font-size: 15px;
+}
+
+.destination-main-search-item-icon {
+    margin-right: 10px;
+}
+
+.destination-main-search-item-title {
+    font-size: 15px;
+    font-weight: 600;
 }

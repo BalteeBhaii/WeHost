@@ -8,7 +8,7 @@ import BestPlace from '../components/homePageComponents/bestPlace/bestPlace';
 import RentalIncome from '../components/homePageComponents/rentalIncome/rentalIncome';
 import ThingsToExplore from '../components/homePageComponents/thingsToExplore/thingsToExplore';
 import WhatYouWant from '../components/homePageComponents/WhatYouWantTodo/whatYouWant';
-import Footer from '../components/footer/footer';
+import Footer from '../components/Navigation/footer/footer';
 import Worldwide from '../components/homePageComponents/worldWide/Worldwide';
 import Reviews from '../components/homePageComponents/reviews/Reviews';
 import '../globalcss/styles.css';
