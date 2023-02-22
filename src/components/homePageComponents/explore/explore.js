@@ -3,9 +3,9 @@ const Explore = () => {
     return ( 
         <>
 
-            <div className='container mt-5'>
+            <div className='container mt-5 section'>
                 <div className='explore-section'>
-                    <h1 className='explore-title mb-0'>Where to explore, right now</h1>
+                    <h1 className='explore-title mb-0 section-titles'>Where to explore, right now</h1>
                     <span className='explore-description'>Rent houses with amenities, spaciousness, and comfort.</span>
                     <div className='explore-images mt-4'>
                         <div className='images-section-1 position-relative px-0'>
