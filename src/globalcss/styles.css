@@ -2383,6 +2383,11 @@ line-height: 37px;
     width: 100%;
     background-color: white;
     color: black;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.search-dropdown {
+    z-index: 101;
 }
 
 .destination-input input {
@@ -2390,6 +2395,7 @@ line-height: 37px;
 }
 
 .destination-searchbar {
+    width: 90%;
     font-size: 15px !important;
     outline: none !important;
 }
@@ -2406,4 +2412,8 @@ line-height: 37px;
 .destination-main-search-item-title {
     font-size: 15px;
     font-weight: 600;
+}
+
+.destination-searchbar-icon {
+    margin-left: 6px;
 }

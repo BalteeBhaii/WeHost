@@ -77,16 +77,18 @@ const Destination = () => {
                     <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" onClick={(ev) => setShowModal(!showModal)}></input>
                     {/* <LocationModal show={showModal} setShowModal={setShowModal} /> */}
                     <div className='search-dropdown'>
-                      <div className='search-dropdown-main py-2 mx-2'>
+                      <div className='search-dropdown-main py-2'>
                         <div className='destination-searchbar-holder mx-3'>
                           <input type="text" className='destination-searchbar' placeholder='Search...' />
+                          <i class="bi bi-search destination-searchbar-icon"></i>
                         </div>
                         <hr className='my-1' />
                         <div className='mx-3 d-flex flex-column mt-3 mb-2'>
                           <Link className='destination-main-search-item mt-2'><i class="bi bi-send-fill destination-main-search-item-icon"></i>Nearby Locations</Link>
                           <Link className='destination-main-search-item mt-2'><i class="bi-star-fill destination-main-search-item-icon"></i>Most Visited</Link>
                           <span className='destination-main-search-item-title mt-3'>Popular Destinations</span>
-                          <Link className='destination-main-search-item mt-2'><i class="bi-star-fill destination-main-search-item-icon"></i>Most Visited</Link>
+                          <Link className='destination-main-search-item mt-2'><i class="bi-geo-alt-fill destination-main-search-item-icon"></i>Hawai</Link>
+                          <Link className='destination-main-search-item mt-2'><i class="bi-geo-alt-fill destination-main-search-item-icon"></i>Paris</Link>
                         </div>
                       </div>
                     </div>
