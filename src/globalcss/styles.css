@@ -1165,6 +1165,9 @@ input{
 .formulatxt{
     font-size: 15px;
 }
+input.form-control.border-0.shadow-none.searchfeildtxt {
+    font-size: 15px !important;
+}
 .border-color{
     border-color: #97C1C6 !important;
 }
