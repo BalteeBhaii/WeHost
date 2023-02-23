@@ -2100,10 +2100,58 @@ line-height: 37px;
 .entire-place-text{
     color:#ADADAD;
 }
-
-
-
-
+ /* image upload section stared */
+.drag-files-wrapper{
+    max-width:500px;
+    margin:0 auto;
+    margin-top:40px;
+}
+.fileDropBox{
+    padding: 4rem 4rem;
+    border: 1px dashed gray;
+    text-align: center;
+    color: gray;
+    border-radius: 7px;
+}
+.drag-file-image{
+    font-size: 30px;
+    color: #000000;
+}
+.drag-file-header{
+    color:#000000;
+    font-size: 20px;
+}
+.drag-file-text{
+    font-size: 15px;
+}
+.drag-file-here{
+    font-size: 15px;
+    cursor: pointer;
+}
+.photos-drag-files-wrapper{
+    max-width:250px;
+    margin:0 auto;
+    margin-top:40px;
+    cursor: pointer;
+}
+.photoDropBox{
+    padding: 1rem 1rem;
+    border: 1px dashed gray;
+    text-align: center;
+    color: gray;
+    border-radius: 7px;
+}
+.upload-main-image{
+    max-width: 700px;
+}
+.uploaded-image{
+    max-width: 100%;
+}
+.uploaded-images{
+       max-width: 743px;
+       margin: auto;                
+}
+/* image upload section Ended */
 
 @media screen and (max-width: 1025px) {
     .figure-text-sizing h2{
