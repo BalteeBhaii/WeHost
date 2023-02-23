@@ -2687,11 +2687,18 @@ line-height: 37px;
 }
 
 .search-dropdown {
-    display: none;
+    transform: translateY(45px);
+    opacity: 0;
 }
 
 .dropdown-active {
-    display: revert !important;
+    animation: destinationActiveDropdown 0.4s ease forwards;
+    transition: all 0.4s ease;
+}
+
+.dropdown-inactive {
+    animation: destinationInactiveDropdown 0.4s ease forwards;
+    transition: all 0.4s ease;
 }
 
 .verify-3rd-list-item-main-icon{
@@ -2700,8 +2707,32 @@ line-height: 37px;
     margin-left: 15px;
     width: 40px;
     height: 40px;
-    margin-top: 7px;;
+    margin-top: 7px;
 }
 .entire-place-text{
     color:#ADADAD;
+}
+
+@keyframes destinationActiveDropdown {
+    0% {
+        transform: translateY(45px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes destinationInactiveDropdown {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(45px);
+        opacity: 0;
+    }
 }
