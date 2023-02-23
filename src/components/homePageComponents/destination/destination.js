@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import LocationModal from '../../LocationModal/LocationModal';
 import GuestModal from '../../GuestModal/GuestModal';
 import { Link } from "react-router-dom";
@@ -9,6 +9,7 @@ import { addDays } from 'date-fns'
 // React Date Range import
 import { DateRangePicker } from 'react-date-range';
 import { DateRange } from 'react-date-range';
+import { event } from 'jquery';
 
 const Destination = () => {
   const [showModal, setShowModal] = useState(false);
@@ -50,17 +51,38 @@ const Destination = () => {
 
   useEffect(() => {
         let dropdowns = document.querySelectorAll(".search-dropdown");
-        if(currentDropdown !== ''){
+        console.log(currentDropdown);
+        if(currentDropdown !== '' && typeof(currentDropdown) !== "undefined"){
           dropdowns[currentDropdown].classList.add('dropdown-active');
+          if(dropdowns[currentDropdown].classList.contains('dropdown-inactive')){
+            dropdowns[currentDropdown].classList.remove('dropdown-inactive');
+          }
         }
-        if(previousDropdown !== ''){
+        if(previousDropdown !== '' && typeof(previousDropdown) !== "undefined" && dropdowns[previousDropdown].classList.contains("dropdown-active")){
+          dropdowns[previousDropdown].classList.add('dropdown-inactive');
           dropdowns[previousDropdown].classList.remove('dropdown-active');
         }
   }, [currentDropdown]);
 
+  
   return (
     <>
-      <div className='bg-overlay text-light z-0'>
+      <div className='bg-overlay text-light z-0' onClick={(event) => {
+        if(!event.target.closest(".search-dropdown") && currentDropdown !== ''){
+          setPreviousDropdown(currentDropdown);
+
+          if(event.target.closest(".form-control")){
+            let element = event.target.closest(".form-control");
+            setCurrentDropdown(element.dataset.count);
+          } else {
+            setCurrentDropdown('');
+          }
+        }
+
+        if(!event.target.closest(".datapicker-input-field") && !event.target.closest(".datepicker-display") && open === true){
+          setOpen(false)
+        }
+      }}>
         <div className='center'>
           <div className='container-xxl container-xl container-lg position-relative' >
             <h1 className='fw-bold text destination-main-title text-center'><span >Welcome to <span style={{color:'#CBF2FC'}}>we<span style={{color:'#7B61FF'}}>H</span>ost</span> "the better BnB" - we are a community that is dedicated to making short-term vacation travel a better experience for everyone.<br/>
@@ -99,9 +121,9 @@ const Destination = () => {
                     <span className="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-calendar-date"></i>
                     </span>
-                    <input type="text" class="form-control border-0 shadow-none p-1 searchfeildtxt" placeholder={checkinPlaceholder} readOnly onClick={() => setOpen(open => !open)} />
+                    <input type="text" class="form-control border-0 shadow-none p-1 searchfeildtxt datapicker-input-field" placeholder={checkinPlaceholder} readOnly onClick={() => setOpen(open => !open)} />
                     <span className='destination-arrow-icon'></span>
-                    <input type="text" class="form-control border-0 shadow-none ps-2 searchfeildtxt" placeholder={checkoutPlaceholder} readOnly onClick={() => setOpen(open => !open)} />
+                    <input type="text" class="form-control border-0 shadow-none ps-2 searchfeildtxt datapicker-input-field" placeholder={checkoutPlaceholder} readOnly onClick={() => setOpen(open => !open)} />
                   </div>
                   <div className='datepicker-display'>
                     {open &&
