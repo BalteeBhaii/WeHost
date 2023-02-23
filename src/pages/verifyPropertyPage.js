@@ -10,9 +10,11 @@ import FifthStep from '../components/verifyPropertyComponent/fifthStep';
 import SixthStep from '../components/verifyPropertyComponent/sixthStep';
 import StepTwo from '../components/verifyPropertyComponent/stepTwo';
 import SeventhStep from '../components/verifyPropertyComponent/seventhStep';
+import EightStep from '../components/verifyPropertyComponent/eightStep';
+import NinethStep from '../components/verifyPropertyComponent/ninethStep';
 import '../globalcss/styles.css';
 const VerifyPropertyPage = () => {
-    const [page, setPage] = useState(8)
+    const [page, setPage] = useState(10)
     return (
         <>
             <PropertyHeader/>
@@ -27,6 +29,8 @@ const VerifyPropertyPage = () => {
                     {(page === 6) && <SixthStep/>}
                     {(page === 7) && <StepTwo/>}
                     {(page === 8) && <SeventhStep/>}
+                    {(page === 9) && <EightStep/>}
+                    {(page === 10) && <NinethStep />}
                     <div className='position-relative container'>
                         <div className="progress my-5" style={{background: '#0079c2bf'}}>
                             <div className="progress-bar" style={{width: '5%', background: '#81E2F1'}}></div>
