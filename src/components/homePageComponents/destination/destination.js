@@ -24,9 +24,9 @@ const Destination = () => {
       key: 'selection'
     }
   ]);
-  const [previousDropdown, setPreviousDropdown] = useState('');
-  const [currentDropdown, setCurrentDropdown] = useState('');
-  const [dropdownStateToggle, setDropdownStateToggle] = useState(Math.random());
+  // const [previousDropdown, setPreviousDropdown] = useState('');
+  // const [currentDropdown, setCurrentDropdown] = useState('');
+  // const [dropdownStateToggle, setDropdownStateToggle] = useState(Math.random());
 
   const refOne = useRef(null);
 
@@ -50,44 +50,83 @@ const Destination = () => {
     document.addEventListener("keydown", hideOnEscape, true)
   }, [])
 
+  // useEffect(() => {
+  //   console.log(currentDropdown);
+  //       let dropdowns = document.querySelectorAll(".search-dropdown");
+  //       if(currentDropdown !== '' && typeof(currentDropdown) !== "undefined"){
+          // console.log('in if');
+  //         dropdowns[currentDropdown].classList.add('dropdown-active');
+  //         if(dropdowns[currentDropdown].classList.contains('dropdown-inactive')){
+  //           dropdowns[currentDropdown].classList.remove('dropdown-inactive');
+  //         }
+  //       }
+
+  //       // console.log(dropdowns[currentDropdown]);
+  //       if(previousDropdown !== '' && typeof(previousDropdown) !== "undefined"){
+  //         console.log(currentDropdown);
+  //         console.log('in if2');
+  //         dropdowns[previousDropdown].classList.add('dropdown-inactive');
+  //         dropdowns[previousDropdown].classList.remove('dropdown-active');
+  //       }
+  // }, [currentDropdown, previousDropdown, dropdownStateToggle]);
+  var previousDropdown = '';
+  var currentDropdown = '';
+  // var dropdowns = '';
+  // useEffect(() => {
+  //   ;
+  // }, [])
+
+  const dropdownsHandler = (event) => {
+    // return console.log(event.target.dataset.coun
+    var dropdowns = document.querySelectorAll(".search-dropdown");
+
+    previousDropdown = currentDropdown;
+    currentDropdown = event.target.dataset.count;
+
+    if(typeof(dropdowns[previousDropdown]) !== "undefined"){
+      dropdowns[previousDropdown].classList.add("dropdown-inactive");
+      dropdowns[previousDropdown].classList.remove("dropdown-active");
+    }
+    
+    dropdowns[currentDropdown].classList.add("dropdown-active");
+    if(dropdowns[currentDropdown].classList.contains("dropdown-inactive")){
+      dropdowns[currentDropdown].classList.remove("dropdown-inactive");
+    }
+
+    if(currentDropdown === previousDropdown && dropdowns[previousDropdown].classList.contains("dropdown-active")){
+      dropdowns[previousDropdown].classList.remove("dropdown-active");
+      dropdowns[previousDropdown].classList.add("dropdown-inactive");
+      previousDropdown = '';
+      currentDropdown = '';
+    }
+  };
+
   useEffect(() => {
-    console.log(currentDropdown);
-        let dropdowns = document.querySelectorAll(".search-dropdown");
-        if(currentDropdown !== '' && typeof(currentDropdown) !== "undefined"){
-          console.log('in if');
-          dropdowns[currentDropdown].classList.add('dropdown-active');
-          if(dropdowns[currentDropdown].classList.contains('dropdown-inactive')){
-            dropdowns[currentDropdown].classList.remove('dropdown-inactive');
-          }
-        }
+    document.addEventListener("click", (event) => {
+     console.log(open);
+      
+      var dropdowns = document.querySelectorAll(".search-dropdown");
+      if(!event.target.closest('.search-dropdown') && (!event.target.closest('.form-control') || event.target.closest('.datapicker-input-field'))){
+        console.log(currentDropdown);
+        if(currentDropdown !== ''){
 
-        console.log(dropdowns[currentDropdown]);
-        if(previousDropdown !== '' && typeof(previousDropdown) !== "undefined" && !dropdowns[currentDropdown].classList.contains("dropdown-inactive")){
-          console.log('in if2');
-          dropdowns[previousDropdown].classList.add('dropdown-inactive');
-          dropdowns[previousDropdown].classList.remove('dropdown-active');
-        }
-  }, [currentDropdown, previousDropdown, dropdownStateToggle]);
+        dropdowns[currentDropdown].classList.add("dropdown-inactive");
+        dropdowns[currentDropdown].classList.remove("dropdown-active");
 
-  
+        currentDropdown = '';
+        previousDropdown = '';
+        }
+      }
+
+      if(event.target.closest('.datapicker-input-field')){
+       
+      }
+    });
+  }, []);
+
   return (
     <>
-      <div className='bg-overlay text-light z-0' onClick={(event) => {
-        if(!event.target.closest(".search-dropdown") && currentDropdown !== ''){
-          setPreviousDropdown(currentDropdown);
-
-          if(event.target.closest(".form-control")){
-            let element = event.target.closest(".form-control");
-            setCurrentDropdown(element.dataset.count);
-          } else {
-            setCurrentDropdown('');
-          }
-        }
-
-        if(!event.target.closest(".datapicker-input-field") && !event.target.closest(".datepicker-display") && open === true){
-          setOpen(false)
-        }
-      }}>
+      <div className='bg-overlay text-light z-0' onClick={() => {if(open === true){setOpen(open => !open); previousDropdown = currentDropdown; currentDropdown = '';}}}>
         <div className='center'>
           <div className='container-xxl container-xl container-lg container-md position-relative' >
             <h1 className='fw-bold text destination-main-title' >
@@ -101,7 +140,8 @@ const Destination = () => {
                     <span className="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-geo-alt-fill"></i>
                     </span>
-                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" data-count={0} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(0); setDropdownStateToggle(Math.random())}}></input>
+                    {/* <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" data-count={0} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(0); setDropdownStateToggle(Math.random())}}></input> */}
+                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" data-count={0} onClick={dropdownsHandler}></input>
                     {/* <LocationModal show={showModal} setShowModal={setShowModal} /> */}
                     <div className='search-dropdown'>
                       <div className='search-dropdown-main py-2'>
@@ -126,9 +166,9 @@ const Destination = () => {
                     <span className="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-calendar-date"></i>
                     </span>
-                    <input type="text" class="form-control border-0 shadow-none p-1 searchfeildtxt datapicker-input-field" placeholder={checkinPlaceholder} readOnly onClick={() => setOpen(open => !open)} />
+                    <input type="text" class="form-control border-0 shadow-none p-1 searchfeildtxt datapicker-input-field" placeholder={checkinPlaceholder} readOnly onClick={() => {setOpen(open => !open)}} />
                     <span className='destination-arrow-icon'></span>
-                    <input type="text" class="form-control border-0 shadow-none ps-2 searchfeildtxt datapicker-input-field" placeholder={checkoutPlaceholder} readOnly onClick={() => setOpen(open => !open)} />
+                    <input type="text" class="form-control border-0 shadow-none ps-2 searchfeildtxt datapicker-input-field" placeholder={checkoutPlaceholder} readOnly onClick={() => {setOpen(open => !open)}} />
                   </div>
                   <div className='datepicker-display'>
                     {open &&
@@ -164,7 +204,8 @@ const Destination = () => {
                     <span class="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-person-circle"></i>
                     </span>
-                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-count={1} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(1); setDropdownStateToggle(Math.random())}}/>
+                    {/* <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-count={1} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(1); setDropdownStateToggle(Math.random())}}/> */}
+                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-count={1} onClick={dropdownsHandler}/>
                     <div className='search-dropdown'>
                       <div className='search-dropdown-main pt-2 pb-3'>
                         <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-2'>
@@ -270,3 +311,33 @@ const Destination = () => {
 }
 
 export default Destination;
+
+
+
+
+
+
+
+// onClick={(event) => {
+//   console.log('current '+currentDropdown);
+//   if(!event.target.closest(".search-dropdown") && !event.target.closest(".form-control") && currentDropdown !== ''){
+//     setPreviousDropdown(currentDropdown);
+    
+    // let dropdowns = document.querySelectorAll(".search-dropdown");
+    // let a = '';
+    // console.log(dropdowns[currentDropdown]);
+
+//     if(!event.target.closest(".form-control")){
+//       let element = event.target.closest(".form-control");
+//       setCurrentDropdown(element.dataset.count);
+//       setPreviousDropdown(currentDropdown);
+//     } else {
+//       setPreviousDropdown(currentDropdown);
+//       setCurrentDropdown('');
+//     }
+//   }
+
+//   if(!event.target.closest(".datapicker-input-field") && !event.target.closest(".datepicker-display") && open === true){
+//     setOpen(false)
+//   }
+// }}
