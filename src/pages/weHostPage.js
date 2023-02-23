@@ -6,7 +6,7 @@ const WeHostPage = () => {
     return ( 
         <>
             <WeHostHeader/>
-            <div className='container-fluid'>
+            <div className=''>
                 <WeHost/>
             </div>
             <Footer/>
