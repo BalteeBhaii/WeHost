@@ -62,11 +62,11 @@ const Destination = () => {
     <>
       <div className='bg-overlay text-light z-0'>
         <div className='center'>
-          <div className='container-xxl container-xl container-lg position-relative' >
-            <h1 className='fw-bold text destination-main-title text-center'><span >Welcome to <span style={{color:'#CBF2FC'}}>we<span style={{color:'#7B61FF'}}>H</span>ost</span> "the better BnB" - we are a community that is dedicated to making short-term vacation travel a better experience for everyone.<br/>
-            </span></h1>
-
-            <h3 className="text-center formulatxt">We are advocates for Lower Fees - Greater Exposure for Your Rental Property - And White Glove Customer Service.</h3>
+          <div className='container-xxl container-xl container-lg container-md position-relative' >
+            <h1 className='fw-bold text destination-main-title' >
+              Welcome to weHost "the better BnB"<br/>
+            </h1>
+            <h3 className="formulatxt">We are dedicated to making short-term vacation travel a better experience for everyone.</h3>
             <div className="container mt-3">
               <div className='row pt-3 rounded-1' style={{ background: '#ffffffde' }}>
                 <div className='col-xl-3 col-lg-6 col-md-6'>
@@ -187,9 +187,9 @@ const Destination = () => {
                 </div>
 
               </div>
-              <div className="mt-3"> <h3 className='fw-bold text destination-main-title text-center'><span >
+              {/* <div className="mt-3"> <h3 className='fw-bold text destination-main-title text-center'><span >
                 Our Formula = More Money in Your Pocket and a Better Overall Experience for Everyone!
-              </span></h3></div>
+              </span></h3></div> */}
             </div>
           </div>
         </div>

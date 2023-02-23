@@ -56,9 +56,10 @@
 
 /* ************************ Hotel CSSS **************************** */
 
-.destination-main-title {
-    font-size: 35px !important;
-    text-shadow: 1px 2px 5px black !important;
+.destination-main-title{
+    font-size: 3.125rem !important;
+    font-family: 'Nunito' !important;
+    font-weight: 800 !important;
 }
 
 .center{
@@ -264,7 +265,7 @@
 }
 
 .wehost-main-container p {
-    font-size: 15px;
+    font-size: 16px;
     text-align: justify;
     width: 90%;
 }
@@ -388,9 +389,9 @@
     .text {
         font-size: 1.5em !important;
     }
-    .destination-main-title {
+    /* .destination-main-title {
         font-size: 46px !important;
-    }
+    } */
     .rowPaddingStyle{
         padding-left: 70px;
         padding-right: 70px;
@@ -764,14 +765,10 @@ input{
     }
 }
 
-.center {
-    /* background: rgba(0, 0, 0, 0.4) !important; */
-}
-
-.destination-main-title {
+/* .destination-main-title {
     font-size: 66px !important;
     text-shadow: 1px 2px 5px black !important;
-}
+} */
 
 .destination-input input {
     font-size: 19px;
@@ -889,41 +886,41 @@ input{
 }
 
 @media(max-width: 1306px) {
-    .destination-main-title {
+    /* .destination-main-title {
         font-size: 58px !important;
-    }
+    } */
 }
 
 @media(max-width: 1199px) {
     .destination-main-title {
-        font-size: 49px !important;
-        text-align: center !important;
+        font-size: 3rem !important;
+    }
+    .formulatxt{
+        font-size: 1.2rem !important;
     }
 }
 
 @media(max-width: 889px) {
-    .destination-main-title {
-        font-size: 44px !important;
-        text-align: center !important;
-    }
 }
 
 @media(max-width: 799px) {
     .destination-main-title {
-        font-size: 48px !important;
-        text-align: center !important;
+        font-size: 2.1rem !important;
+    }
+    .formulatxt{
+        font-size: 15px !important;
     }
 }
 
 @media(max-width: 899px) {
-    .destination-main-title {
+    /* .destination-main-title {
         font-size: 48px !important;
-    }
+    } */
 }
 
 @media(max-width: 555px) {
     .destination-main-title {
-        font-size: 36px !important;
+        font-size: 1rem !important;
     }
 }
 
@@ -1359,12 +1356,13 @@ li.list-group-item.guesthouse {
     }
 }
 
-.destination-main-title {
+/* .destination-main-title {
     font-size: 17px !important;
     text-shadow: 1px 2px 5px black !important;
-}
+} */
 .formulatxt{
-    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 input.form-control.border-0.shadow-none.searchfeildtxt {
     font-size: 15px !important;
@@ -1405,12 +1403,12 @@ input{
 }
 
 @media (max-width:770px) {
-    .text {
+    /* .text {
         font-size: 1.5em !important;
-    }
-    .destination-main-title {
+    } */
+    /* .destination-main-title {
         font-size: 46px !important;
-    }
+    } */
     .rowPaddingStyle{
         padding-left: 70px;
         padding-right: 70px;
@@ -1423,7 +1421,10 @@ input{
         padding-bottom: 80px;
     }
     .destination-main-title {
-        font-size: 30px !important;
+        font-size: 1.1rem !important;
+    }
+    .formulatxt{
+        font-size: 0.9rem !important;
     }
     .rowPaddingStyle{
         padding-left: 50px;
@@ -2335,7 +2336,7 @@ line-height: 37px;
 }
 
 * {
-    font-family: Arial !important;
+    font-family: 'Montserrat', sans-serif ;
 }
 
 .footer-item-header {
@@ -2521,9 +2522,9 @@ line-height: 37px;
     color: #717171;
 }
 
-.destination-main-title {
+/* .destination-main-title {
     font-size: 15px !important;
-}
+} */
 
 .destination-arrow-icon {
     position: relative;

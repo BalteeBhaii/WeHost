@@ -13,9 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/hotel" element={<HotelsPage />} />
-        <Route path="/host" element={<WeHostPage />} />
-        <Route path="/hotel/:id" element={<SpecificHotelPage/>} />
-        <Route path="/property" element={<VerifyPropertyPage/>} />
+        <Route exact path="/host" element={<WeHostPage />} />
+        <Route exact path="/hotel/:id" element={<SpecificHotelPage/>} />
+        <Route exact path="/property" element={<VerifyPropertyPage/>} />
         <Route exact path = '/' element = {<HomePage/>}/>
       </Routes>
     </BrowserRouter>

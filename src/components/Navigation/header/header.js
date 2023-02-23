@@ -144,8 +144,8 @@ const Header = () => {
                 <span className="menu-item auth-item">Login/SignUp</span>
               </button>
               {(toggle) && (<div className="position-relative border rounded-2 mt-1 ps-3 pe-5 py-2 overflow-hidden bg-white shadow" >
-                <p className="mb-1"><button className="btn fw-semibold" onClick={() => setshowSigninModal(!showSigninModal)}>Guest Login</button></p>
-                <p className="mb-0"><button className="btn fw-semibold" onClick={() => setShowSignupModal(!showSignupModal)}>Owner Login</button></p>
+                <p className="mb-1"><button className="btn fw-semibold w-100" onClick={() => setshowSigninModal(!showSigninModal)}>Guest Login</button></p>
+                <p className="mb-0"><button className="btn fw-semibold w-100" onClick={() => setShowSignupModal(!showSignupModal)}>Owner Login</button></p>
               </div>)}
             </div>
           </ul>
