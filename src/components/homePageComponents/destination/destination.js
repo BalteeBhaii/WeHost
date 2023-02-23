@@ -26,6 +26,7 @@ const Destination = () => {
   ]);
   const [previousDropdown, setPreviousDropdown] = useState('');
   const [currentDropdown, setCurrentDropdown] = useState('');
+  const [dropdownStateToggle, setDropdownStateToggle] = useState(Math.random());
 
   const refOne = useRef(null);
 
@@ -50,19 +51,23 @@ const Destination = () => {
   }, [])
 
   useEffect(() => {
+    console.log(currentDropdown);
         let dropdowns = document.querySelectorAll(".search-dropdown");
-        console.log(currentDropdown);
         if(currentDropdown !== '' && typeof(currentDropdown) !== "undefined"){
+          console.log('in if');
           dropdowns[currentDropdown].classList.add('dropdown-active');
           if(dropdowns[currentDropdown].classList.contains('dropdown-inactive')){
             dropdowns[currentDropdown].classList.remove('dropdown-inactive');
           }
         }
-        if(previousDropdown !== '' && typeof(previousDropdown) !== "undefined" && dropdowns[previousDropdown].classList.contains("dropdown-active")){
+
+        console.log(dropdowns[currentDropdown]);
+        if(previousDropdown !== '' && typeof(previousDropdown) !== "undefined" && !dropdowns[currentDropdown].classList.contains("dropdown-inactive")){
+          console.log('in if2');
           dropdowns[previousDropdown].classList.add('dropdown-inactive');
           dropdowns[previousDropdown].classList.remove('dropdown-active');
         }
-  }, [currentDropdown]);
+  }, [currentDropdown, previousDropdown, dropdownStateToggle]);
 
   
   return (
@@ -96,7 +101,7 @@ const Destination = () => {
                     <span className="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-geo-alt-fill"></i>
                     </span>
-                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" data-count={0} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(0)}}></input>
+                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" data-count={0} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(0); setDropdownStateToggle(Math.random())}}></input>
                     {/* <LocationModal show={showModal} setShowModal={setShowModal} /> */}
                     <div className='search-dropdown'>
                       <div className='search-dropdown-main py-2'>
@@ -159,7 +164,7 @@ const Destination = () => {
                     <span class="input-group-text border-0" id="basic-addon1">
                       <i class="bi bi-person-circle"></i>
                     </span>
-                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-count={1} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(1)}}/>
+                    <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-count={1} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(1); setDropdownStateToggle(Math.random())}}/>
                     <div className='search-dropdown'>
                       <div className='search-dropdown-main pt-2 pb-3'>
                         <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-2'>
