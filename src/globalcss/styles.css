@@ -2058,6 +2058,12 @@ line-height: 37px;
     transform: scale(1.2);
     margin-right: 4px;
 }
+.amenities-icon{
+    transform: scale(1.2);
+    margin-right: 4px;
+    width: auto;
+    height: 20px;
+}
 
 .verify-2nd-list-item {
     cursor: pointer;
@@ -2158,20 +2164,23 @@ line-height: 37px;
     cursor: pointer;
 }
 .photos-drag-files-wrapper{
-    max-width:250px;
-    margin:0 auto;
+    max-width:381px;
     margin-top:40px;
     cursor: pointer;
+    aspect-ratio: 2/0.8;
 }
 .photoDropBox{
     padding: 1rem 1rem;
     border: 1px dashed gray;
     text-align: center;
     color: gray;
-    border-radius: 7px;
+    
+    width: 100%;
 }
 .upload-main-image{
-    max-width: 700px;
+      max-width: 722px;;
+      width: 100%;
+      height: auto;
 }
 .uploaded-image{
     max-width: 100%;
@@ -2181,7 +2190,11 @@ line-height: 37px;
        margin: auto;                
 }
 /* image upload section Ended */
+.property-title-field{
+    max-width: 618px;
+    width: 100%;
 
+}
 @media screen and (max-width: 1025px) {
     .figure-text-sizing h2{
         font-size: 18px;
