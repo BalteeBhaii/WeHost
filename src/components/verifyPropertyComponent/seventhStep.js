@@ -23,42 +23,42 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/kitchen.png' /> Kitchen
+                                    <img className="amenities-icon" src='/images/kitchen.png' /> Kitchen
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/washer.png' /> Washer
+                                    <img className="amenities-icon" src='/images/washer.png' /> Washer
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/garage.png' />  Free Parking
+                                    <img className="amenities-icon" src='/images/garage.png' />  Free Parking
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/parking1.png' /> Paid Parking
+                                    <img className="anenities-icon" src='/images/parking1.png' /> Paid Parking
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/office-space.png' />Workspace
+                                    <img className="amenities-icon" src='/images/office-space.png' />Workspace
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/air-conditioner.png' /> Ac
+                                    <img className="amenities-icon" src='/images/air-conditioner.png' /> Ac
                                 </span>
                             </div>
                         </div>
@@ -76,14 +76,14 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border px-2 text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/swimming-pool.png' /> Pool
+                                    <img className="amenities-icon" src='/images/swimming-pool.png' /> Pool
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/bath.png' /> Tv
+                                    <img className="amenities-icon" src='/images/bath.png' /> Tv
                                 </span>
                             </div>
                         </div>
@@ -97,28 +97,28 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/grill.png' /> BBQ grill
+                                    <img className="amenities-icon" src='/images/grill.png' /> BBQ grill
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/outdoor.png' />  Outdoor
+                                    <img className="amenities-icon" src='/images/outdoor.png' />  Outdoor
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/firepit.png' /> Firepit
+                                    <img className="amenities-icon" src='/images/firepit.png' /> Firepit
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/pool-table.png' />Pool
+                                    <img className="amenities-icon" src='/images/pool-table.png' />Pool
                                     Table
                                 </span>
                             </div>
@@ -135,7 +135,7 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/piano.png' />Paino
+                                    <img className="amenities-icon" src='/images/piano.png' />Paino
                                 </span>
                             </div>
 
@@ -143,7 +143,7 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/gym.png' />Exercise
+                                    <img className="amenities-icon" src='/images/gym.png' />Exercise
                                 </span>
                             </div>
 
@@ -151,7 +151,7 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/lake .png' />Lake
+                                    <img className="amenities-icon" src='/images/lake .png' />Lake
                                     access
                                 </span>
                             </div>
@@ -160,7 +160,7 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/beach.png' />Beach
+                                    <img className="amenities-icon" src='/images/beach.png' />Beach
                                     access
                                 </span>
                             </div>
@@ -169,7 +169,7 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/skating.png' />Sk-in/out
+                                    <img className="amenities-icon" src='/images/skating.png' />Sk-in/out
                                 </span>
                             </div>
 
@@ -185,7 +185,7 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border px-2 text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                <img className="verify-2nd-list-item-main-icon" src='/images/alarm.png' />Fire
+                                <img className="amenities-icon" src='/images/alarm.png' />Fire
                                     Alarm
                                 </span>
                             </div>
@@ -193,14 +193,14 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                <img className="verify-2nd-list-item-main-icon" src='/images/first-aid.png' /> First aid
+                                <img className="amenities-icon" src='/images/first-aid.png' /> First aid
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <img className="verify-2nd-list-item-main-icon" src='/images/fire-extinguisher.png' /> Fire
+                                    <img className="amenities-icon" src='/images/fire-extinguisher.png' /> Fire
                                     extinguisher
                                 </span>
                             </div>
