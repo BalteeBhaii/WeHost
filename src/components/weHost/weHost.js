@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 const WeHost = () => {
     return ( 
         <>
@@ -62,7 +63,9 @@ const WeHost = () => {
                                                 </p>
                                         </div>   
                                         <div className='wehost-button'>
-                                            <button className='btn'><i className="bi bi-house-add pe-1"></i>Start Now</button>
+                                            <Link to='/property'>
+                                                <button className='btn'><i className="bi bi-house-add pe-1"></i>Start Now</button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

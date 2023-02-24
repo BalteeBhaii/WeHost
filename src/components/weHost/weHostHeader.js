@@ -5,7 +5,7 @@ const WeHostHeader = () => {
             <div className='container-fluid py-3 header-section-padding'>
                 <div className='d-flex justify-content-between align-items-center'>
                     <div className='propertyHeaderWidth'>
-                        <a href='/property'>
+                        <a href='/'>
                             <img src='/images/logo.png' width={'100%'} height={'100%'}/>
                         </a>
                     </div>
