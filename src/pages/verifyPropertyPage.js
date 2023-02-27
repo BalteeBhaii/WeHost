@@ -20,22 +20,23 @@ import TenthStep from '../components/verifyPropertyComponent/tenthStep';
 import StepThree from '../components/verifyPropertyComponent/stepThree';
 
 const VerifyPropertyPage = () => {
-    const [page, setPage] = useState(12)
+    const [page, setPage] = useState(0);
+    const [width, setWidth] = useState(0);
     return (
         <>
-            <PropertyHeader/>
-            <div className=''>
+            <PropertyHeader />
+            <div className='my-5'>
                 <div>
-                    {(page === 0) && <Welcome/>}
-                    {(page === 1) && <FirstStep/>}
-                    {(page === 2) && <SecondStep/>}
-                    {(page === 3) && <ThirdStep/>}
-                    {(page === 4) && <ForthStep/>}
-                    {(page === 5) && <FifthStep/>}
-                    {(page === 6) && <SixthStep/>}
-                    {(page === 7) && <StepTwo/>}
-                    {(page === 8) && <SeventhStep/>}
-                    {(page === 9) && <EightStep/>}
+                    {(page === 0) && <Welcome />}
+                    {(page === 1) && <FirstStep />}
+                    {(page === 2) && <SecondStep />}
+                    {(page === 3) && <ThirdStep />}
+                    {(page === 4) && <ForthStep />}
+                    {(page === 5) && <FifthStep />}
+                    {(page === 6) && <SixthStep />}
+                    {(page === 7) && <StepTwo />}
+                    {(page === 8) && <SeventhStep />}
+                    {(page === 9) && <EightStep />}
                     {(page === 10) && <NinethStep />}
                     {(page === 13) && <FourTenStep />}
                     {(page === 14) && <FiveTenStep />}
@@ -43,27 +44,30 @@ const VerifyPropertyPage = () => {
                     {(page === 11) && <TenthStep />}
                     {(page === 12) && <StepThree />}
                     <div className='position-relative container'>
-                        <div className="progress my-5" style={{background: '#0079c2bf'}}>
-                            <div className="progress-bar" style={{width: '5%', background: '#81E2F1'}}></div>
+                        <div className="progress my-5" style={{ background: '#0079c2bf' }}>
+                            <div className="progress-bar" style={{ width: `${width}%`, background: '#81E2F1' }}></div>
                         </div>
-                        {(page===0)&&(
+                        {(page === 0) && (
                             <div className='text-end'>
-                                <button className='btn fw-semibold property-footer-button' style={{width: 115}} onClick={()=>{setPage(page+1)}}>
+                                <button className='btn fw-semibold property-footer-button' style={{ width: 115 }} onClick={() => { setPage(page + 1);setWidth(page*6.66); console.log(page) }}>
                                     Get Started
                                 </button>
                             </div>
                         )}
-                        {(page >=1)&&(
+                        {(page >= 1) && (
                             <div className='d-flex justify-content-between'>
-                                <button className='btn property-footer-button' onClick={()=>{setPage(page-1)}}><i class="bi bi-arrow-left me-1"></i>Back</button>
-                                <button className='btn property-footer-button' onClick={()=>{setPage(page+1)}}>Next<i class="bi bi-arrow-right ms-1"></i></button>
+                                <button className='btn property-footer-button' onClick={() => { setPage(page - 1); setWidth((page-1)*6.66);console.log(page, width)}}><i class="bi bi-arrow-left me-1"></i>Back</button>
+                                {(page < 15)&&(
+                                    <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66) }}>Next<i class="bi bi-arrow-right ms-1"></i></button>
+                                )}
+                                {(page === 15) && ('')}
                             </div>
                         )}
                     </div>
                 </div>
             </div>
         </>
-     );
+    );
 }
- 
+
 export default VerifyPropertyPage;

@@ -150,8 +150,8 @@ const Header = () => {
             </div>
           </ul>
         </div>
-        <SignIn showSigninModal={showSigninModal} setshowSigninModal={setshowSigninModal} />
-        <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal} />
+        <SignIn showSigninModal={showSigninModal} setshowSigninModal={setshowSigninModal}  loginValue={loginValue}/>
+        <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal} loginValue={loginValue}/>
       </div>
     </>
   );

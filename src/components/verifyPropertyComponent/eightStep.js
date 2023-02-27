@@ -1,5 +1,8 @@
 import React from 'react';
 const EightStep= () => {
+    const handleImgClick = ()=>{
+        document.getElementById('imgUpload').click()
+    }
     return (
         <>
             <div className='container '>
@@ -9,8 +12,8 @@ const EightStep= () => {
                 <div className="fileDropBox"><i className="bi bi-images drag-file-image "></i>
                 <h3 className='drag-file-header mt-4'>Drag Your Photos Here</h3>
                 <p className='drag-file-text'>Choose atleast 5 photos</p>
-                <span className='text-decoration-underline text-dark mt-5 drag-file-here'>Upload your file here</span>
-                
+                <span className='text-decoration-underline text-dark mt-5 drag-file-here' onClick={handleImgClick}>Upload your file here</span>
+                <input type='file' className='d-none' id='imgUpload'/>
                 </div>
                 </div>
             </div>

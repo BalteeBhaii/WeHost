@@ -14,7 +14,7 @@ const SixthStep = () => {
                                     <span className="counter-header-text d-block ">Guest</span>
                                    
                                 <div className="counter-buttons">
-                                    <button className="counter-button" onClick={() => setCount(count - 1)}>-</button>
+                                    {(count>0)&&(<button className="counter-button" onClick={() => setCount(count - 1)}>-</button>)}
                                     <span className="counter-header-count">{count}</span>
                                     <button className="counter-button" onClick={() => setCount(count + 1)}>+</button>
 
@@ -25,7 +25,7 @@ const SixthStep = () => {
                                     <span className="counter-header-text d-block">Bedrooms</span>
                                    
                                 <div className="counter-buttons">
-                                    <button className="counter-button" onClick={() => setCounttwo(counttwo - 1)}>-</button>
+                                    {(counttwo>0)&&(<button className="counter-button" onClick={() => setCounttwo(counttwo - 1)}>-</button>)}
                                     <span className="counter-header-count">{counttwo}</span>
                                     <button className="counter-button" onClick={() => setCounttwo(counttwo + 1)}>+</button>
                                 </div>
@@ -34,7 +34,7 @@ const SixthStep = () => {
                                     <span className="counter-header-text d-block">Bathroom</span>
                                    
                                 <div className="counter-buttons">
-                                    <button className="counter-button" onClick={() => setCountthree(countthree - 1)}>-</button>
+                                    {(countthree>0)&&(<button className="counter-button" onClick={() => setCountthree(countthree - 1)}>-</button>)}
                                     <span className="counter-header-count">{countthree}</span>
                                     <button className="counter-button" onClick={() => setCountthree(countthree + 1)}>+</button>
                                 </div>
@@ -43,7 +43,7 @@ const SixthStep = () => {
                                     <span className="counter-header-text d-block">Beds</span>
                                    
                                 <div className="counter-buttons">
-                                    <button className="counter-button" onClick={() => setCountforth(countforth - 1)}>-</button>
+                                    {(countforth>0)&&(<button className="counter-button" onClick={() => setCountforth(countforth - 1)}>-</button>)}
                                     <span className="counter-header-count">{countforth}</span>
                                     <button className="counter-button" onClick={() => setCountforth(countforth + 1)}>+</button>
                                 </div>

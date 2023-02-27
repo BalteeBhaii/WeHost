@@ -3,6 +3,18 @@
     --button-hover-color:#03568a;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .figure-text-sizing h2{
     font-size: 20px;
 }
@@ -93,7 +105,7 @@
     margin-bottom: 25px;
 }
 
-.signin-input-container select{
+.signin-input-container .select{
     background-color: #B4EBF9;
     margin-bottom: 25px;
 }
@@ -112,6 +124,30 @@
 .signin-input-container .button-facebook{
     background-color: #B4EBF9;
     padding: 6px;
+}
+
+.react-tel-input{
+    width: 75% !important
+}
+
+.react-tel-input input, .flag-dropdown{
+    background-color: #B4EBF9 !important;
+    border: none;
+}
+
+.react-tel-input input, .flag-dropdown{
+    border: none !important;
+    box-shadow: none !important;
+} 
+
+.react-tel-input .form-control{
+    width: 100% !important
+}
+
+.css-13cymwt-control{
+    background-color: #B4EBF9 !important;
+    border-radius: 6px !important;
+    border: none !important;
 }
 
 .signin-hr{
@@ -205,10 +241,10 @@
     background-color: #9ad9e9;
     font-size: 15px;
 }
-.headerText h5{
+.headerText a{
     font-size: 15px;
     font-weight: 600;
-    letter-spacing: 0.09cm;
+    letter-spacing: 0.04cm;
 }
 
 .propertyHeaderWidth{
@@ -939,8 +975,10 @@ li.list-group-item.guesthouse {
 
 .image-div{
     height: 275px;
+    border-radius: 10px !important;
     background-position: center;
     background-size: contain;
+    overflow: hidden;
 }
 
 .multipleImages{
@@ -950,12 +988,6 @@ li.list-group-item.guesthouse {
 .imgSizeStyle{
     object-fit: cover;
     /* border-radius: 6px !important; */
-}
-
-.card{
-    border-radius: 15px !important;
-    overflow: hidden;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .main-text-size-style h1{
@@ -990,10 +1022,6 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
 .center{
     padding-top: 180px;
     padding-bottom: 290px;
-}
-
-input{
-    border: none;
 }
 
 .check-in{
@@ -2306,6 +2334,9 @@ line-height: 37px;
     }
     .signin-input-width{
         width: 85%;
+    }
+    .react-tel-input{
+        width: 85% !important
     }
     .sign-in-text-size h1{
         font-size: 30px;

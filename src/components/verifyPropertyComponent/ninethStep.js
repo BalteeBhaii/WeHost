@@ -1,5 +1,9 @@
 import React from 'react';
 const NinethStep= () => {
+    console.log(document.getElementById('imgUpload'))
+    const handleimgClick = ()=>{
+        document.getElementById('imgUpload').click()
+    }
     return (
         <>
             <div className='container '>
@@ -20,11 +24,12 @@ const NinethStep= () => {
                 </div>
                 <div className='row uploaded-images'>
                     <div className='col-6 mt-3 d-flex d-flex justify-content-center align-item-center flex-column photos-drag-files-wrapper'>
-                    <div className="photoDropBox"><i className="bi bi-plus-circle drag-file-image "></i>
-                <p className=' mt-4 d-none d-md-block'>Add image here</p>                
-                </div>
+                        <div className="photoDropBox" onClick={handleimgClick}>
+                            <i className="bi bi-plus-circle drag-file-image "></i>
+                            <input type='file' className='d-none' id='imgUpload'/>
+                            <p className=' mt-4 d-none d-md-block'>Add image here</p>                
+                        </div>
                     </div>
-                    
                 </div>
                 
             </div>

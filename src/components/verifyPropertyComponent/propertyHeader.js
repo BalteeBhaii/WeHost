@@ -10,7 +10,7 @@ const PropertyHeader = () => {
                         </a>
                     </div>
                     <div className='headerText'>
-                        <h5>Save & exit</h5>
+                        <a href='/' className='text-black'>Save & exit</a>
                     </div>
                 </div>
             </div>

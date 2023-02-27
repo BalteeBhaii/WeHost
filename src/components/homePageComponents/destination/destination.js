@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import LocationModal from '../../LocationModal/LocationModal';
 import GuestModal from '../../GuestModal/GuestModal';
+import FilterModal from '../../Filter/filter';
 import { Link } from "react-router-dom";
 // date-fns format imports
 import format from 'date-fns/format'
@@ -9,11 +10,12 @@ import { addDays } from 'date-fns'
 // React Date Range import
 import { DateRangePicker } from 'react-date-range';
 import { DateRange } from 'react-date-range';
+
 import { event } from 'jquery';
 
 const Destination = () => {
   const [showModal, setShowModal] = useState(false);
-  const [guestModal, setguestModal] = useState(false);
+  const [filterModal, setFilterModal] = useState(false);
   const [open, setOpen] = useState(false);
   const [checkinPlaceholder, setcheckinPlaceholder] = useState(`Check-In`)
   const [checkoutPlaceholder, setcheckoutPlaceholder] = useState(`Check-Out`)
@@ -103,11 +105,9 @@ const Destination = () => {
 
   useEffect(() => {
     document.addEventListener("click", (event) => {
-     console.log(open);
-      
       var dropdowns = document.querySelectorAll(".search-dropdown");
       if(!event.target.closest('.search-dropdown') && (!event.target.closest('.form-control') || event.target.closest('.datapicker-input-field'))){
-        console.log(currentDropdown);
+        // console.log(currentDropdown);
         if(currentDropdown !== ''){
 
         dropdowns[currentDropdown].classList.add("dropdown-inactive");
@@ -299,13 +299,15 @@ const Destination = () => {
                 </th>
                 <th className="border-0">
                   <div className='button-column'>
-                    <button className='btn btn-primary bottom-button bi px-5' id='more'>Filter</button>
+                    <button className='btn btn-primary bottom-button bi px-5' id='more' onClick={()=>{setFilterModal(!filterModal)}}>Filter</button>
                   </div>
+                  <FilterModal show={filterModal} setShowModal={setFilterModal}/>
                 </th>
               </tr>
             </thead>
           </table>
         </div>
+        
       </div>
 
     </>

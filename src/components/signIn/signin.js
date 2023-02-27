@@ -2,7 +2,32 @@ import React from 'react';
 import { useState } from 'react';
 import SignUp from './signUp';
 const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
-  const [showSignupModal, setShowSignupModal] = useState(false)
+  const [showSignupModal, setShowSignupModal] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage]= useState('');
+  const handleLoginClick = () => {
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(email !== '' && password !== ''){
+      if(email.match(validRegex)){
+        console.log('valid email');
+        setshowSigninModal(!showSigninModal)
+        console.log(password)
+      } else{
+        setErrorMessage('"Email is not Correct!"')
+      }
+
+      
+      if(document.getElementById('CheckBox').checked){
+        console.log('checked')
+      } else{
+        console.log('not Checked')
+      }
+
+    } else {
+      setErrorMessage("'Provide correct Email and Password!'");
+    }
+  }
   return (
     <>
       {/* <button type='button' onClick={()=> setShowModal(!showModal)}> laundh</button> */}
@@ -15,15 +40,28 @@ const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
               </div>
               <div className='text-center mb-4 sign-in-text-size'>
                 <h1 className='mb-2'><span >S</span>ign in</h1>
-                <h5>Welcome to the {loginValue} account</h5>
+                <h5>Welcome to {loginValue} account</h5>
                 <p className='text-secondary'>Sign in and start managing your candidates!</p>
               </div>
               <div className='d-flex flex-column justify-content-center align-items-center signin-input-container'>
-                <input className='form-control border-0 shadow-none signin-input-width' type="text" placeholder='Log in' />
-                <input className='form-control border-0 shadow-none signin-input-width' type="text" placeholder='Password' />
+                <label className='text-danger mb-2 fw-semibold'>{errorMessage}</label>
+                <form className='signin-input-width'>
+                  <input
+                   className='form-control border-0 shadow-none'
+                    type="email"
+                    name='email' 
+                    placeholder='Email'
+                    required onChange={(e)=>{setEmail(e.target.value)}}
+                  />
+                  <input className='form-control border-0 shadow-none' 
+                    type="password"
+                    placeholder='Password' 
+                    required onChange={(e)=>{setPassword(e.target.value)}}
+                  />
+                </form>
                 <div className='d-flex justify-content-between align-items-center sign-in-checkbox'>
                   <div class="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <input className="form-check-input shadow-none" type="checkbox" value="" id="CheckBox" />
                     <label className="form-check-label fw-semibold" for="flexCheckDefault">
                       Remember me
                     </label>
@@ -31,7 +69,7 @@ const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
                   <p className='fw-semibold'>Forgot Password</p>
                 </div>
                 <div className='sign-in-checkbox mb-3'>
-                  <button className='btn w-100 text-white fw-semibold fs-5' style={{ backgroundColor: '#0D7BC4' }} onClick={() => { setshowSigninModal(!showSigninModal) }}>
+                  <button className='btn w-100 text-white fw-semibold fs-5' style={{ backgroundColor: '#0D7BC4' }} onClick={handleLoginClick}>
                     Login
                   </button>
                 </div>

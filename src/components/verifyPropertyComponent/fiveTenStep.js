@@ -3,7 +3,7 @@ const FiveTenStep = () => {
     return ( 
         <div className='container my-5'>
             <div className='row'>
-                <div className='col-12 col-md-6 col-lg-4'>
+                <div className='col-12 col-md-8 col-lg-5'>
                     <div className='mb-5 fiveteen-step-text'>
                         <h2>Just one last step and we are ready to go.</h2>
                         <h6>Does your place offers any of the following?</h6>

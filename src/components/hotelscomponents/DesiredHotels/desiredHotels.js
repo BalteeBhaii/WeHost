@@ -21,10 +21,10 @@ const DesiredHotels = () => {
             {/* </div> */}
             {/* <div className='container mb-5'> */}
                 <div className='row'>
-                    <div className='col-sm-11 col-md-6 col-lg-4 mb-3'>
-                        <div className="card hotel-card-style" >
+                    <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
+                        <div className="card hotel-card-style border-0" >
                             <div className='image-div'>
-                                <img className='imgSizeStyle' src="/images/cardImage.svg" width={'100%'} height={'100%'} alt="..."/>
+                                <img className='imgSizeStyle' src="https://images.pexels.com/photos/1458457/pexels-photo-1458457.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..."/>
                             </div>
                             <div className='container'>
                                 <div className="card-body p-1">
@@ -48,10 +48,10 @@ const DesiredHotels = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-sm-11 col-md-6 col-lg-4 mb-3'>
-                        <div className="card hotel-card-style" >
+                    <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
+                        <div className="card hotel-card-style border-0" >
                             <div className='image-div'>
-                                <img className='imgSizeStyle' src="/images/cardImage.svg" width={'100%'} height={'100%'} alt="..."/>
+                                <img className='imgSizeStyle' src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..."/>
                             </div>
                             <div className='container'>
                                 <div className="card-body p-1">
@@ -75,10 +75,10 @@ const DesiredHotels = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-sm-11 col-md-6 col-lg-4 mb-3'>
-                        <div className="card hotel-card-style" >
+                    <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
+                        <div className="card hotel-card-style border-0" >
                             <div className='image-div'>
-                                <img className='imgSizeStyle' src="/images/cardImage.svg" width={'100%'} height={'100%'} alt="..."/>
+                                <img className='imgSizeStyle' src="https://images.pexels.com/photos/53464/sheraton-palace-hotel-lobby-architecture-san-francisco-53464.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..."/>
                             </div>
                             <div className='container'>
                                 <div className="card-body p-1">
@@ -102,10 +102,10 @@ const DesiredHotels = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-sm-11 col-md-6 col-lg-4 mb-3'>
-                        <div className="card hotel-card-style" >
+                    <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
+                        <div className="card hotel-card-style border-0" >
                             <div className='image-div'>
-                                <img className='imgSizeStyle' src="/images/cardImage.svg" width={'100%'} height={'100%'} alt="..."/>
+                                <img className='imgSizeStyle' src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..."/>
                             </div>
                             <div className='container'>
                                 <div className="card-body p-1">
@@ -129,10 +129,10 @@ const DesiredHotels = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-sm-11 col-md-6 col-lg-4 mb-3'>
-                        <div className="card hotel-card-style" >
+                    <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
+                        <div className="card hotel-card-style border-0" >
                             <div className='image-div'>
-                                <img className='imgSizeStyle' src="/images/cardImage.svg" width={'100%'} height={'100%'} alt="..."/>
+                                <img className='imgSizeStyle' src="https://images.pexels.com/photos/1375383/pexels-photo-1375383.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..."/>
                             </div>
                             <div className='container'>
                                 <div className="card-body p-1">
@@ -156,10 +156,10 @@ const DesiredHotels = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-sm-11 col-md-6 col-lg-4 mb-3'>
-                        <div className="card hotel-card-style" >
+                    <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
+                        <div className="card hotel-card-style border-0" >
                             <div className='image-div'>
-                                <img className='imgSizeStyle' src="/images/cardImage.svg" width={'100%'} height={'100%'} alt="..."/>
+                                <img className='imgSizeStyle' src="https://images.pexels.com/photos/1058759/pexels-photo-1058759.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..."/>
                             </div>
                             <div className='container'>
                                 <div className="card-body p-1">
