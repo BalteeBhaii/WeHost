@@ -15,7 +15,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.figure-text-sizing h2{
+.figure-text-sizing h2 {
     font-size: 20px;
 }
 
@@ -386,7 +386,11 @@ span {
     color: white;
 }
 
-.wehost-bg-img {
+.daterange-display .search-dropdown {
+    width: fit-content !important;
+}
+
+.wehost-bg-img{
     background: url('/public/images/Group12.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -692,7 +696,8 @@ input {
 }
 
 .destination-input span {
-    background-color: white !important;
+    background-color: white;
+    user-select: none;
 }
 
 .destination-input span i {
@@ -2098,8 +2103,13 @@ span.riceranger {
     width: 100%;
     background-color: white;
     color: black;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.datepicker-display .search-dropdown {
+    border-radius: 10px !important;
+    overflow: hidden;
 }
 
 .search-dropdown {
@@ -2121,6 +2131,7 @@ span.riceranger {
     font-size: 15px;
     font-weight: 600;
     font-family: unset !important;
+    user-select: none;
 }
 
 .destination-main-search-item-icon {
@@ -2197,6 +2208,33 @@ span.riceranger {
     cursor: pointer;
 }
 
+.guest-dropdown-counter-text {
+    width: 56px !important;
+    margin: 0px 5px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.guest-dropdown-counter-minus {
+    font-size: 15px;
+}
+
+.guest-dropdown-counter-text {
+    pointer-events: none;
+}
+
+.guest-dropdown-counter-minus,
+.guest-dropdown-counter-plus {
+    color: var(--theme-color);
+    cursor: pointer;
+}
+
+.guest-dropdown-counter-text::selection {
+    background-color: none;
+    color: revert;
+}
+
 .guest-dropdown-counter-minus::before,
 .guest-dropdown-counter-plus::before {
     transform: scale(1.4);
@@ -2207,8 +2245,8 @@ span.riceranger {
 }
 
 .form-check-input:checked {
-    background-color: #1AB2C5 !important;
-    border-color: #1AB2C5 !important;
+    background-color: var(--theme-color) !important;
+    border-color: var(--theme-color) !important;
 }
 
 .guest-dropdown-counter-radio {
@@ -2224,16 +2262,19 @@ span.riceranger {
 .search-dropdown {
     transform: translateY(45px);
     opacity: 0;
+    pointer-events: none;
 }
 
 .dropdown-active {
     animation: destinationActiveDropdown 0.4s ease forwards;
     transition: all 0.4s ease;
+    pointer-events: all !important;
 }
 
 .dropdown-inactive {
     animation: destinationInactiveDropdown 0.4s ease forwards;
     transition: all 0.4s ease;
+    pointer-events: none;
 }
 
 .verify-3rd-list-item-main-icon {
@@ -2247,6 +2288,59 @@ span.riceranger {
 
 .entire-place-text {
     color: #ADADAD;
+}
+
+.date-range-picker {
+    margin-top: 0px !important;
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+}
+
+.rdrStaticRangeSelected,
+.rdrInRange,
+.rdrStartEdge,
+.rdrEndEdge {
+    color: var(--theme-color) !important;
+}
+
+.rdrDateDisplayItem {
+    border-color: var(--theme-color) !important;
+}
+
+.rdrDayInPreview,
+.rdrDayHovered {
+    border-color: var(--theme-color) !important;
+    outline-color: var(--theme-color) !important;
+}
+
+.date-range-btn {
+    color: var(--theme-color) !important;
+}
+
+.date-range-btn:hover {
+    color: white !important;
+    background-color: var(--theme-color) !important;
+}
+
+.destination-searchbar-holder {
+    position: relative;
+    padding: 5px 0px;
+    border-bottom: solid 1px #adadad;
+}
+
+.search-bottom-outline {
+    position: absolute;
+    width: 100%;
+    height: 0.2vh;
+    background-color: black !important;
+    left: 0;
+    bottom: -1px;
+    transform: scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+
+.search-bottom-outline-active {
+    transform: scale(1);
 }
 
 /* image upload section stared */
@@ -2319,7 +2413,6 @@ span.riceranger {
 .property-title-field {
     max-width: 618px;
     width: 100%;
-
 }
 
 /* Manage Account */
@@ -2353,6 +2446,38 @@ span.riceranger {
     font-weight: 400;
     font-size: 17px;
 }
+.guest-count {
+    position: absolute;
+    right: 0;
+    background: none;
+    color: #837592;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 15px !important;
+    margin-right: 7px;
+    z-index: 102;
+}
+
+@media(min-width: 775px) {
+    .daterange-display {
+        display: none !important;
+    }
+}
+
+@media(max-width: 775px) {
+    .datepicker-display {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .datepicker-mbl-display {
+        display: revert !important;
+    }
+}
+
+/* Media Queries */
 
 @media screen and (max-width: 1025px) {
     .figure-text-sizing h2 {
@@ -2412,6 +2537,10 @@ span.riceranger {
 
     .daterange-display {
         display: block;
+    }
+
+    .datepicker-pc-display {
+        display: none;
     }
 
     .wehost-card-position {
