@@ -32,7 +32,7 @@ const SignUp = ({showSignupModal, setShowSignupModal}) => {
                                 <p className='fw-semibold '>Join us now</p>
                             </div>
                             <div className='d-flex flex-column justify-content-center align-items-center signin-input-container'>
-                                <select className='border-0 shadow-none signin-input-width form-select' 
+                                <select className='border-0 shadow-none signin-input-width form-select'  name='country'
                                     value={selectedcountries} 
                                     onChange= {(e)=> selectcountryHandler(e.target.value)}>
                                         {!!countryArr?.length && countryArr.map(({label, value})=>(
@@ -40,7 +40,7 @@ const SignUp = ({showSignupModal, setShowSignupModal}) => {
                                         )
                                     )}
                                 </select>
-                                <input className='form-control border-0 shadow-none signin-input-width' type="number" placeholder='+92'/>
+                                <input className='form-control border-0 shadow-none signin-input-width' type="email" name="email" placeholder='Email'/>
                                 <button className='btn button-continue text-white fw-semibold signin-input-width' onClick={()=>setShowCodeModal(!showCodeModel)}>
                                     Continue
                                 </button>

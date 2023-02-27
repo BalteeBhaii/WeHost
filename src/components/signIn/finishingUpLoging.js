@@ -19,12 +19,12 @@ const FinishUpLoging = ({showLoginModel, setShowLoginModal, showSignupModal, set
                         </div>
                         <div className='d-flex flex-column justify-content-center align-items-center'>
                             
-                            <input className='form-control border-0 shadow-none login-input-width' type="number" placeholder='First Name'/>
-                            <input className='form-control border-0 shadow-none login-input-width' type="number" placeholder='Last Name'/>
-                            <input className='form-control border-0 shadow-none login-input-width' type="number" placeholder='Date of Birth'/>
-                            <input className='form-control border-0 shadow-none login-input-width' type="number" placeholder='Email Address'/>
-                            <input className='form-control border-0 shadow-none login-input-width' type="number" placeholder='Password'/>
-                            <input className='form-control border-0 shadow-none login-input-width' type="number" placeholder='Confirm Passowrd'/>
+                            <input className='form-control border-0 shadow-none login-input-width' type="text" name='first_name' placeholder='First Name'/>
+                            <input className='form-control border-0 shadow-none login-input-width' type="text" name='last_name' placeholder='Last Name'/>
+                            <input className='form-control border-0 shadow-none login-input-width' type="date" name='dob' placeholder='Date of Birth'/>
+                            <input className='form-control border-0 shadow-none login-input-width' type="text" name='phone' placeholder='Phone'/>
+                            <input className='form-control border-0 shadow-none login-input-width' type="text" name='password' placeholder='Password'/>
+                            <input className='form-control border-0 shadow-none login-input-width' type="text" name='password_confirmation' placeholder='Confirm Passowrd'/>
                             <div class="form-check signin-input-width mb-3">
                                 <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
                                 <label className="form-check-label fw-semibold" for="flexCheckDefault">
