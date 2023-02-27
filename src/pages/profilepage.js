@@ -1,16 +1,17 @@
-import React from 'react';
-import Hotel from '../components/hotelscomponents/hotel/hotel';
-import Header from '../components/Navigation/header/header';
-import DesiredHotels from '../components/hotelscomponents/DesiredHotels/desiredHotels';
-import Footer from '../components/Navigation/footer/footer';
-import '../globalcss/styles.css';
+import React from "react";
+import Footer from "../components/Navigation/footer/footer";
+import ManageAccountHeader from "../components/Accounts/manageAccountHeader";
+import ManageAccount from "../components/Accounts/manageAccount";
+import ProfileInfo from "../components/Accounts/profileInfo";
 
-const ProfilePage = () => {
-    return ( 
+const ProfilePage = ()=>{
+    return(
         <>
-            <h1>hey</h1>
-        </> 
-    );
+        <ManageAccountHeader/>
+       <ProfileInfo/>
+        <Footer/>
+        </>
+    )
 }
- 
+
 export default ProfilePage;
