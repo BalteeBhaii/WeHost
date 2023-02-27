@@ -2347,6 +2347,13 @@ span.riceranger {
     border-radius: 15px;
 }
 
+.upload-photo {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 17px;
+}
+
 @media screen and (max-width: 1025px) {
     .figure-text-sizing h2 {
         font-size: 18px;
@@ -2934,11 +2941,12 @@ span.riceranger {
         width: 100% !important;
     }
 }
-@media (min-width: 768px){
-.col-md-7 {
-    flex: 0 0 auto;
-    width: 92.333333%;
-}
+
+@media (min-width: 768px) {
+    .col-md-7 {
+        flex: 0 0 auto;
+        width: 92.333333%;
+    }
 }
 
 @media(max-width:750px) {
