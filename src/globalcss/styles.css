@@ -259,6 +259,20 @@
     height: 100%;
 }
 
+.fourteen-step-text h6, span{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.fiveteen-step-text h6{
+    font-size: 15px;
+}
+
+.fiveteen-step-text h2{
+    font-weight: 600;
+    font-size: 16px;
+}
+
 /* ****************************** WEHOST CSS *************************** */
 .wehost-main-container {
     padding-left: 40px;
@@ -337,6 +351,41 @@
     width: fit-content !important;
 }
 
+.wehost-bg-img{
+    background: url('/public/images/Group12.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 330px;
+    padding-bottom: 150px;
+    height: 100%;
+    width: 100%;
+}
+
+.wehost-bg-img-text h1{
+    font-size: 30px;
+    margin-bottom: 80px;
+    font-weight: 700;
+
+}
+
+.wehost-conviction-text h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.wehost-profile-pic{
+    width: 100px;
+    height: 100px;
+}
+
+.wehost-profile-text{
+    width: 75%;
+}
+.wehost-profile-text h6{
+    font-size: 15px;
+}
+
 /* ****************************** First Step CSS *********************** */
 .firstStep-text h1 {
     font-size: 20px;
@@ -370,9 +419,6 @@ h4 {
     width: 100%;
     height: 100%;
 }
-
-
-
 
 /* Footer Style start */
 /* Header */
@@ -457,10 +503,7 @@ a {
     animation: dropdownInActive 0.4s ease-in forwards;
 }
 
-
 /* ------------- */
-
-
 
 /* Footer */
 .footer-title.ftitle {
@@ -2096,6 +2139,12 @@ span.riceranger {
     transform: scale(1.2);
     margin-right: 4px;
 }
+.amenities-icon{
+    transform: scale(1.2);
+    margin-right: 4px;
+    width: auto;
+    height: 20px;
+}
 
 .verify-2nd-list-item {
     cursor: pointer;
@@ -2240,7 +2289,65 @@ span.riceranger {
 .search-bottom-outline-active {
     transform: scale(1);
 }
-
+ /* image upload section stared */
+.drag-files-wrapper{
+    max-width:500px;
+    margin:0 auto;
+    margin-top:40px;
+}
+.fileDropBox{
+    padding: 4rem 4rem;
+    border: 1px dashed gray;
+    text-align: center;
+    color: gray;
+    border-radius: 7px;
+}
+.drag-file-image{
+    font-size: 30px;
+    color: #000000;
+}
+.drag-file-header{
+    color:#000000;
+    font-size: 20px;
+}
+.drag-file-text{
+    font-size: 15px;
+}
+.drag-file-here{
+    font-size: 15px;
+    cursor: pointer;
+}
+.photos-drag-files-wrapper{
+    max-width:381px;
+    margin-top:40px;
+    cursor: pointer;
+    aspect-ratio: 2/0.8;
+}
+.photoDropBox{
+    padding: 1rem 1rem;
+    border: 1px dashed gray;
+    text-align: center;
+    color: gray;
+    
+    width: 100%;
+}
+.upload-main-image{
+      max-width: 722px;;
+      width: 100%;
+      height: auto;
+}
+.uploaded-image{
+    max-width: 100%;
+}
+.uploaded-images{
+       max-width: 743px;
+       margin: auto;                
+}
+/* image upload section Ended */
+.property-title-field{
+    max-width: 618px;
+    width: 100%;
+}
 
 .guest-count {
     position: absolute;
@@ -2295,6 +2402,13 @@ span.riceranger {
     .wehost-card-position-2 {
         top: -135px;
     }
+    .wehost-bg-img{
+        padding-top: 155px !important;
+    }
+    .wehost-bg-img-text h1{
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
 }
 
 @media screen and (max-width: 775px) {
@@ -2334,13 +2448,15 @@ span.riceranger {
     .wehost-h6-div {
         width: 82%
     }
-}
-
-@media(min-width: 775px) {
-    .datepicker-mbl-display {
-        display: none;
+    .wehost-bg-img{
+        padding-top: 230px !important;
     }
-}
+    .wehost-profile-text{
+        width: 90%;
+        text-align: justify;
+    }
+
+ }
 
 @media screen and (max-width: 425px) {
     .filter-button-size-style {
@@ -2450,6 +2566,15 @@ span.riceranger {
 
     .wehost-button button {
         width: 120px
+    }
+    
+    .wehost-bg-img-text h1{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .wehost-profile-text{
+        width: 100%;
+        text-align: justify;
     }
 }
 
@@ -2798,9 +2923,14 @@ span.riceranger {
 
 }
 
-@media screen and (max-width: 770px) {}
+@media screen and (max-width: 1440px){
+    .wehost-bg-img{
+        padding-top: 218px;
+    }
+}
+@media screen and (max-width: 500px){
 
-@media screen and (max-width: 500px) {}
+}
 
 @media(max-width:475px) {
     .review-main-section .owl-carousel .owl-nav .owl-prev {

@@ -344,7 +344,9 @@ const Destination = () => {
                 </th>
                 <th className="border-0">
                   <div className='button-column'>
-                    <button className='btn btn-primary bottom-button bi' id='things'>Things to Do</button>
+                    <Link to='/host'>
+                      <button className='btn btn-primary bottom-button bi' id='things'>Things to Do</button>
+                    </Link>
                   </div>
                 </th>
                 <th className="border-0">
