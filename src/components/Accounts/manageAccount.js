@@ -31,10 +31,12 @@ const ManageAccount = () => {
 
                             </span>
                             <div>
-                                <p className="account-manage-title">Personal Information</p>
-                                <p className="account-manage-text m-0">Show’s personal details about you and
-                                    how can we reach you out here are all
-                                    your personal details. </p>
+                                <Link className="text-black" to='/pinfo'>
+                                    <p className="account-manage-title">Personal Information</p>
+                                    <p className="account-manage-text m-0">Show’s personal details about you and
+                                        how can we reach you out here are all
+                                        your personal details. </p>
+                                </Link>
                             </div>
                         </div>
                     </div>
