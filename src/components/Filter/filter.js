@@ -18,7 +18,10 @@ const FilterModal = ({ show, setShowModal }) => {
         <div className="modal-background searchmodal">
           <div className="modal-card filtermodal">
             <header>
-              <p class="headerfilter">Refine Your Search</p>
+              <div className='d-flex justify-content-between align-items-center'>
+                <p className="headerfilter">Refine Your Search</p>
+                <button type="button" className="btn-close shadow-none mx-3" onClick={()=>setShowModal(!show)}></button>
+              </div>
               <div className='refineline'>
               </div>
 
@@ -26,13 +29,13 @@ const FilterModal = ({ show, setShowModal }) => {
             <section className="modal-body">
               <div className='spaceleft'>
                 <a className='modaldes' href="#">
-                  <i class="bi bi-geo-alt-fill geoimg "></i>
-                  <span class="Filtertxt">Location</span>
+                  <i className="bi bi-geo-alt-fill geoimg "></i>
+                  <span className="Filtertxt">Location</span>
                 </a></div>
-              <div class="spaceleft">
+              <div className="spaceleft">
                 <a className='modaldes' href="#">
-                  <i class="bi bi-house-door-fill housedoorimg"></i>
-                  <span class="Filtertxt">Type of Place</span>
+                  <i className="bi bi-house-door-fill housedoorimg"></i>
+                  <span className="Filtertxt">Type of Place</span>
                 </a>
                 <Form className='formfilter'>
                   {['checkbox'].map((type) => (
@@ -62,47 +65,47 @@ const FilterModal = ({ show, setShowModal }) => {
                 </Form>
 
               </div>
-              <div class="spaceleft">
+              <div className="spaceleft">
                 <a className='modaldes' href="#">
-                  <i class="bi bi-cash-coin cashimg"></i>
-                  <span class="Filtertxt">Price Range</span>
+                  <i className="bi bi-cash-coin cashimg"></i>
+                  <span className="Filtertxt">Price Range</span>
                 </a></div>
-              <div class="Ranger">
+              <div className="Ranger">
                 <Form.Range />
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control " placeholder="$50" aria-label="Username" />
-                  <span class="riceranger">to</span>
-                  <input type="text" class="form-control" placeholder="$500" aria-label="Server">
+                <div className="input-group mb-3">
+                  <input type="text" className="form-control " placeholder="$50" aria-label="Username" />
+                  <span className="riceranger">to</span>
+                  <input type="text" className="form-control" placeholder="$500" aria-label="Server">
                   </input>
                 </div>
               </div>
 
-              <div class="spaceleft">
+              <div className="spaceleft">
 
                 <a className='modaldes' href="#">
-                  <i class="bi bi-buildings buildingimg"></i>
-                  <span class="Filtertxt">Property Type</span>
+                  <i className="bi bi-buildings buildingimg"></i>
+                  <span className="Filtertxt">Property Type</span>
                 </a>
-                <ul class="list-group list-group-horizontal property-type-list">
+                <ul className="list-group list-group-horizontal property-type-list">
 
-                  <li class="list-group-item">
+                  <li className="list-group-item">
                     <button>
-                      <i class="bi bi-house-door"></i>
+                      <i className="bi bi-house-door"></i>
                       <p>Houses</p>
                     </button>
 
                   </li>
-                  <li class="list-group-item">
-                    <button><i class="bi bi-buildings-fill"></i>
+                  <li className="list-group-item">
+                    <button><i className="bi bi-buildings-fill"></i>
                       <p>Apartment</p></button>
 
                   </li>
-                  <li class="list-group-item">
-                    <button><i class="bi bi-building-fill"></i>
+                  <li className="list-group-item">
+                    <button><i className="bi bi-building-fill"></i>
                       <p>Hotel</p></button>
 
                   </li>
-                  <li class="list-group-item">
+                  <li className="list-group-item">
                     <button>
                       <img style={{ height: '16px' }} src={img1} />
                       <p>Guest House</p>
@@ -111,16 +114,16 @@ const FilterModal = ({ show, setShowModal }) => {
                   </li>
                 </ul>
               </div>
-              <div class="spaceleft">
+              <div className="spaceleft">
                 <a className='modaldes' href="#">
-                  <img class="convenience" src={img2} />
-                  <span class="Filtertxt">Convenience</span>
+                  <img className="convenience" src={img2} />
+                  <span className="Filtertxt">Convenience</span>
                 </a>
                 <Form>
                   {['checkbox'].map((type) => (
 
                     <>
-                      <div class="coveniencehead ">Essentails</div>
+                      <div className="coveniencehead ">Essentails</div>
                       <div key={`inline-${type}`} className="row .spaceleft10">
 
                         <div className='col-6'>
@@ -233,7 +236,7 @@ const FilterModal = ({ show, setShowModal }) => {
                   {['checkbox'].map((type) => (
 
                     <>
-                      <div class="coveniencehead ">Features</div>
+                      <div className="coveniencehead ">Features</div>
                       <div key={`inline-${type}`} className="row .spaceleft10 ">
 
                         <div className='col-6'>
@@ -304,67 +307,67 @@ const FilterModal = ({ show, setShowModal }) => {
                   ))}
                 </Form>
               </div>
-              <div class="spaceleft">
+              <div className="spaceleft">
                 <a className='modaldes' href="#">
-                  <img class="bed" src={img3} />
-                  <span class="Filtertxt">Rooms and Beds</span>
+                  <img className="bed" src={img3} />
+                  <span className="Filtertxt">Rooms and Beds</span>
                 </a>
-                <p class="Roomandbedstxt">Bedrooms</p>
+                <p className="Roomandbedstxt">Bedrooms</p>
 
-                <ul class="d-flex gap-2 spaceleft">
-                  <li class="Roomandbedtype">Any</li>
-                  <li class="Roomandbedtype">1</li>
-                  <li class="Roomandbedtype">2</li>
-                  <li class="Roomandbedtype">3</li>
-                  <li class="Roomandbedtype">4</li>
-                  <li class="Roomandbedtype">5</li>
-                  <li class="Roomandbedtype">6+</li>
+                <ul className="d-flex gap-2 spaceleft">
+                  <li className="Roomandbedtype">Any</li>
+                  <li className="Roomandbedtype">1</li>
+                  <li className="Roomandbedtype">2</li>
+                  <li className="Roomandbedtype">3</li>
+                  <li className="Roomandbedtype">4</li>
+                  <li className="Roomandbedtype">5</li>
+                  <li className="Roomandbedtype">6+</li>
                 </ul>
-                <p class="Roomandbedstxt">Beds</p>
+                <p className="Roomandbedstxt">Beds</p>
 
-                <ul class="d-flex gap-2 ml-3 spaceleft">
-                  <li class="Roomandbedtype">Any</li>
-                  <li class="Roomandbedtype">1</li>
-                  <li class="Roomandbedtype">2</li>
-                  <li class="Roomandbedtype">3</li>
-                  <li class="Roomandbedtype">4</li>
-                  <li class="Roomandbedtype">5</li>
-                  <li class="Roomandbedtype">6+</li>
+                <ul className="d-flex gap-2 ml-3 spaceleft">
+                  <li className="Roomandbedtype">Any</li>
+                  <li className="Roomandbedtype">1</li>
+                  <li className="Roomandbedtype">2</li>
+                  <li className="Roomandbedtype">3</li>
+                  <li className="Roomandbedtype">4</li>
+                  <li className="Roomandbedtype">5</li>
+                  <li className="Roomandbedtype">6+</li>
                 </ul>
-                <p class="Roomandbedstxt">Bathrooms</p>
+                <p className="Roomandbedstxt">Bathrooms</p>
 
-                <ul class="d-flex gap-2 ml-3 spaceleft">
-                  <li class="Roomandbedtype">Any</li>
-                  <li class="Roomandbedtype">1</li>
-                  <li class="Roomandbedtype">2</li>
-                  <li class="Roomandbedtype">3</li>
-                  <li class="Roomandbedtype">4</li>
-                  <li class="Roomandbedtype">5</li>
-                  <li class="Roomandbedtype">6+</li>
+                <ul className="d-flex gap-2 ml-3 spaceleft">
+                  <li className="Roomandbedtype">Any</li>
+                  <li className="Roomandbedtype">1</li>
+                  <li className="Roomandbedtype">2</li>
+                  <li className="Roomandbedtype">3</li>
+                  <li className="Roomandbedtype">4</li>
+                  <li className="Roomandbedtype">5</li>
+                  <li className="Roomandbedtype">6+</li>
                 </ul>
 
 
               </div>
-              <div class="spaceleft">
+              <div className="spaceleft">
                 <a className='modaldes' href="#">
-                  <img class="bed" src={img4} />
-                  <span class="Filtertxt">Booking Options</span>
+                  <img className="bed" src={img4} />
+                  <span className="Filtertxt">Booking Options</span>
                 </a>
 
                 <div >
                   <div className="d-flex justify-content-between">
-                    <p class="Roomandbedstxt mb-0">Instant Book</p>
-                    {/* <BootstrapSwitchButton checked={true} onstyle="outline-secondary" offstyle="outline-success" class="switchbtn"  size="xs" /> */}
+                    <p className="Roomandbedstxt mb-0">Instant Book</p>
+                    {/* <BootstrapSwitchButton checked={true} onstyle="outline-secondary" offstyle="outline-success" className="switchbtn"  size="xs" /> */}
                   </div>
-                  <p class="instantbooktxt">Book without waiting of approval get your booking now</p>
+                  <p className="instantbooktxt">Book without waiting of approval get your booking now</p>
 
                 </div>
                 <div >
                   <div className="d-flex justify-content-between">
-                    <p class="Roomandbedstxt mb-0">Self check-in</p>
-                    {/* <BootstrapSwitchButton checked={true} onstyle="outline-secondary" offstyle="outline-success" class="switchbtn"  size="xs" /> */}
+                    <p className="Roomandbedstxt mb-0">Self check-in</p>
+                    {/* <BootstrapSwitchButton checked={true} onstyle="outline-secondary" offstyle="outline-success" className="switchbtn"  size="xs" /> */}
                   </div>
-                  <p class="instantbooktxt">Once you arrive, the property is straightforward to access</p>
+                  <p className="instantbooktxt">Once you arrive, the property is straightforward to access</p>
 
                 </div>
                 <div>

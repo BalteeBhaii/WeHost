@@ -8,9 +8,11 @@ import PersonalInfoPage from './pages/personalInfoPage';
 import LoginActivityPage from './pages/loginActivityPage';
 import SecurityPage from './pages/securityPage';
 import PrivacyPage from './pages/PrivacyPage';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AccountDashboardPage from './pages/accountDashboardPage';
+import PaymentPage from './pages/paymentPage';
 import ProfilePage from './pages/profilepage';
+import CouponPage from './pages/couponPage';
+import AccountDashboardPage from './pages/accountDashboardPage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route exact path="/loginfo" element={<LoginActivityPage/>} />
         <Route exact path="/security" element={<SecurityPage/>} />
         <Route exact path="/privacy" element={<PrivacyPage/>} />
+        <Route exact path="/pay" element={<PaymentPage/>} />
+        <Route exact path="/coup" element={<CouponPage/>} />
         <Route exact path = '/' element = {<HomePage/>}/>
       </Routes>
     </BrowserRouter>

@@ -63,7 +63,7 @@ const Header = () => {
           <div className="items-section d-flex align-items-center justify-content-end w-100">
             <ul className="header-main-menu mb-0 d-flex align-items-center h-100 mb-0">
               <a href="">
-                <li className="mx-2 menu-item">Vocational Rental Management
+                <li className="mx-2 menu-item">Vacational Rental Management
                   <span></span>
                 </li>
               </a>
@@ -114,7 +114,7 @@ const Header = () => {
         <div className="menu-collapse">
           <ul className="header-main-menu mb-0 d-flex flex-column h-100 mb-0 pb-3">
             <a href="">
-              <li className="mx-2 menu-item menu-mbl-item mb-3">Vocational Rental Management
+              <li className="mx-2 menu-item menu-mbl-item mb-3">Vacational Rental Management
                 <span></span>
               </li>
             </a>
