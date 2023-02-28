@@ -109,9 +109,12 @@ const ManageAccount = () => {
 
                             </span>
                             <div>
-                                <p className="account-manage-title">Notifications </p>
-                                <p className="account-manage-text m-0">Manage your notifications setting and
-                                    choose how you want to be contacted</p>
+                                <Link className="text-black" to='/Notification'>
+                                    <p className="account-manage-title">Notifications </p>
+                                    <p className="account-manage-text m-0">Manage your notifications setting and
+                                        choose how you want to be contacted</p>
+                                </Link>
+
                             </div>
                         </div>
 
@@ -123,9 +126,12 @@ const ManageAccount = () => {
 
                             </span>
                             <div>
-                                <p className="account-manage-title">Worldwide interests </p>
-                                <p className="account-manage-text m-0">Setup your lanaguage currency and
-                                    timezone</p>
+                                <Link className="text-black" to='/worldwide'>
+                                    <p className="account-manage-title">Worldwide interests </p>
+                                    <p className="account-manage-text m-0">Setup your lanaguage currency and
+                                        timezone</p>
+                                </Link>
+
                             </div>
                         </div>
 
@@ -137,9 +143,12 @@ const ManageAccount = () => {
 
                             </span>
                             <div>
-                                <p className="account-manage-title">Business Trip </p>
-                                <p className="account-manage-text m-0">Want to gain advantage add your
-                                    work email and recieve some benefits</p>
+                                <Link className="text-black" to='/business'>
+                                    <p className="account-manage-title">Business Trip </p>
+                                    <p className="account-manage-text m-0">Want to gain advantage add your
+                                        work email and recieve some benefits</p>
+                                </Link>
+
                             </div>
                         </div>
 
@@ -151,9 +160,10 @@ const ManageAccount = () => {
 
                             </span>
                             <div>
-                                <p className="account-manage-title">Taxes </p>
-                                <p className="account-manage-text m-0">Manage you tax documents and taxpayer
-information</p>
+                                <Link className="text-black" to='/taxinfo'>
+                                    <p className="account-manage-title">Taxes </p>
+                                    <p className="account-manage-text m-0">Manage you tax documents and taxpayer
+                                        information</p></Link>
                             </div>
                         </div>
 

@@ -13,6 +13,10 @@ import ProfilePage from './pages/profilepage';
 import CouponPage from './pages/couponPage';
 import AccountDashboardPage from './pages/accountDashboardPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import WorldWide from './pages/worldWide';
+import BusinessPage from './pages/businesstripPage';
+import TaxPage from './pages/taxPage';
+import NotificationPage from './pages/notificationPage';
 
 function App() {
   return (
@@ -32,6 +36,11 @@ function App() {
         <Route exact path="/privacy" element={<PrivacyPage/>} />
         <Route exact path="/pay" element={<PaymentPage/>} />
         <Route exact path="/coup" element={<CouponPage/>} />
+        <Route exact path="/worldwide" element={<WorldWide/>} />
+        <Route exact path="/business" element={<BusinessPage/>} />
+        <Route exact path="/taxinfo" element={<TaxPage/>} />
+        <Route exact path="/Notification" element={<NotificationPage/>} />
+        
         <Route exact path = '/' element = {<HomePage/>}/>
       </Routes>
     </BrowserRouter>
