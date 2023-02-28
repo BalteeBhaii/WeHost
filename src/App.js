@@ -5,6 +5,9 @@ import SpecificHotelPage from './pages/specificHotelPage';
 import VerifyPropertyPage from './pages/verifyPropertyPage';
 import WeHostPage from './pages/weHostPage';
 import PersonalInfoPage from './pages/personalInfoPage';
+import LoginActivityPage from './pages/loginActivityPage';
+import SecurityPage from './pages/securityPage';
+import PrivacyPage from './pages/PrivacyPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AccountDashboardPage from './pages/accountDashboardPage';
 import ProfilePage from './pages/profilepage';
@@ -22,6 +25,9 @@ function App() {
         <Route exact path="/account" element={<AccountDashboardPage/>} />
         <Route exact path="/profile" element={<ProfilePage/>} />
         <Route exact path="/pinfo" element={<PersonalInfoPage/>} />
+        <Route exact path="/loginfo" element={<LoginActivityPage/>} />
+        <Route exact path="/security" element={<SecurityPage/>} />
+        <Route exact path="/privacy" element={<PrivacyPage/>} />
         <Route exact path = '/' element = {<HomePage/>}/>
       </Routes>
     </BrowserRouter>

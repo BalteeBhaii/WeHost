@@ -1,6 +1,7 @@
 :root {
     --theme-color: #0d7bc4;
     --button-hover-color: #03568a;
+    --bulue-color: #0079C2
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -2415,7 +2416,7 @@ span.riceranger {
     width: 100%;
 }
 
-/* Manage Account */
+/* *************************************** Manage Account **************************************** */
 .account-manage-icon {
     font-size: 20px;
     padding-left: 4px;
@@ -2457,6 +2458,15 @@ span.riceranger {
     font-size: 15px !important;
     margin-right: 7px;
     z-index: 102;
+}
+
+.loginInfoImg{
+    width: 30%;
+}
+
+.security-width{
+    width: 25%;
+    color: var(--bulue-color)
 }
 
 @media(min-width: 775px) {
@@ -2563,6 +2573,13 @@ span.riceranger {
     .wehost-profile-text {
         width: 90%;
         text-align: justify;
+    }
+    .loginInfoImg{
+        width: 50%;
+    }
+
+    .security-width{
+        width: 40%;
     }
 
 }
@@ -2687,6 +2704,15 @@ span.riceranger {
     .wehost-profile-text {
         width: 100%;
         text-align: justify;
+    }
+
+    .loginInfoImg{
+        width: 80%;
+    }
+
+    .security-width{
+        text-align: end !important;
+        width: 54%;
     }
 }
 
