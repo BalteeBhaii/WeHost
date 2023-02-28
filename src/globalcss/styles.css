@@ -2445,6 +2445,38 @@ span.riceranger {
     text-decoration: underline;
     font-weight: 400;
     font-size: 17px;
+    margin-left: 35px;
+    color: #000000;
+}
+.idnentity-verfication-text{
+    font-size: 15px;
+    margin-left: 42px;
+}
+.get-badge-button{
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+background: #0579C1;
+border: 1px solid #000000;
+margin-left: 42px;
+}
+.confirmation-title{
+    font-weight: 700;
+font-size: 17px;
+
+}
+.information-card{
+    background: #FFFFFF;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+.confirmation-section{
+    margin-left: 42px;
+}
+.confirmation-check{
+    color: #0579c1;
+    font-size: 17px;
 }
 .guest-count {
     position: absolute;
@@ -2458,7 +2490,36 @@ span.riceranger {
     margin-right: 7px;
     z-index: 102;
 }
-
+.about-confirmation-text{
+    font-weight: 700;
+    font-size: 17px;
+}
+.profile-info-icon {
+ font-size: 17px; 
+ color: #0D7BC4 
+}
+.profile-info-text{
+    font-size: 17px;
+    color: #0D7BC4;
+}
+.about-section-text{
+    color: #626161;
+    font-weight: 400;
+font-size: 15px;
+line-height: 117.5%;
+}
+.about-text-information{
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+}.Reviews{
+    font-weight: 700;
+font-size: 17px;
+}
+.join-text{
+    color: #ADADAD;
+    font-size: 15px;
+}
 @media(min-width: 775px) {
     .daterange-display {
         display: none !important;
