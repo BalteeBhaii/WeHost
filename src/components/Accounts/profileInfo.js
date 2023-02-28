@@ -4,7 +4,7 @@ const ProfileInfo = () => {
     return (
         <>
             <div className='container'>
-                <h3 className='verify-2nd-title mb-0 mt-5'>Profile Information ?</h3>
+                <h3 className='title-account-page mb-0 mt-5'>Profile Information ?</h3>
                 <h4 className='mt-2'>Welcome to your Profile</h4>
                 <div className=' row  mt-4'>
 

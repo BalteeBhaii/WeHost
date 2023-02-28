@@ -5,9 +5,16 @@ import SpecificHotelPage from './pages/specificHotelPage';
 import VerifyPropertyPage from './pages/verifyPropertyPage';
 import WeHostPage from './pages/weHostPage';
 import PersonalInfoPage from './pages/personalInfoPage';
+import LoginActivityPage from './pages/loginActivityPage';
+import SecurityPage from './pages/securityPage';
+import PrivacyPage from './pages/PrivacyPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AccountDashboardPage from './pages/accountDashboardPage';
 import ProfilePage from './pages/profilepage';
+import WorldWide from './pages/worldWide';
+import BusinessPage from './pages/businesstripPage';
+import TaxPage from './pages/taxPage';
+import NotificationPage from './pages/notificationPage';
 
 function App() {
   return (
@@ -22,6 +29,14 @@ function App() {
         <Route exact path="/account" element={<AccountDashboardPage/>} />
         <Route exact path="/profile" element={<ProfilePage/>} />
         <Route exact path="/pinfo" element={<PersonalInfoPage/>} />
+        <Route exact path="/loginfo" element={<LoginActivityPage/>} />
+        <Route exact path="/security" element={<SecurityPage/>} />
+        <Route exact path="/privacy" element={<PrivacyPage/>} />
+        <Route exact path="/worldwide" element={<WorldWide/>} />
+        <Route exact path="/business" element={<BusinessPage/>} />
+        <Route exact path="/taxinfo" element={<TaxPage/>} />
+        <Route exact path="/Notification" element={<NotificationPage/>} />
+        
         <Route exact path = '/' element = {<HomePage/>}/>
       </Routes>
     </BrowserRouter>

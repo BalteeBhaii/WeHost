@@ -1,6 +1,7 @@
 :root {
     --theme-color: #0d7bc4;
     --button-hover-color: #03568a;
+    --bulue-color: #0079C2
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -2193,7 +2194,11 @@ span.riceranger {
 .verify-2nd-list-item:hover {
     background-color: rgb(218, 217, 217);
 }
-
+.title-account-page{
+    font-size: 30px;
+    font-weight: 900;
+    color: #000000;
+}
 
 
 .guest-dropdown-counter-minus,
@@ -2415,7 +2420,7 @@ span.riceranger {
     width: 100%;
 }
 
-/* Manage Account */
+/* *************************************** Manage Account **************************************** */
 .account-manage-icon {
     font-size: 20px;
     padding-left: 4px;
@@ -2478,6 +2483,34 @@ border-radius: 10px;
     color: #0579c1;
     font-size: 17px;
 }
+.business-mail-title{
+    font-size: 20px;
+    font-weight: 700;
+}
+.business-mail-text{
+    color: #ADADAD;
+    font-size: 15px;
+}
+.add-mail-btn{
+    background: #0079C2;
+}
+.add-mail-btn:hover{
+    background: #005B93;
+}
+.tax-information-title{
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+}
+.recieve-title{
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+}
+.tax-info-contact-us{
+    color: #0079C2; 
+    cursor: pointer;
+}
 .guest-count {
     position: absolute;
     right: 0;
@@ -2490,36 +2523,16 @@ border-radius: 10px;
     margin-right: 7px;
     z-index: 102;
 }
-.about-confirmation-text{
-    font-weight: 700;
-    font-size: 17px;
+
+.loginInfoImg{
+    width: 30%;
 }
-.profile-info-icon {
- font-size: 17px; 
- color: #0D7BC4 
+
+.security-width{
+    width: 25%;
+    color: var(--bulue-color)
 }
-.profile-info-text{
-    font-size: 17px;
-    color: #0D7BC4;
-}
-.about-section-text{
-    color: #626161;
-    font-weight: 400;
-font-size: 15px;
-line-height: 117.5%;
-}
-.about-text-information{
-    font-weight: 400;
-    font-size: 15px;
-    color: #000000;
-}.Reviews{
-    font-weight: 700;
-font-size: 17px;
-}
-.join-text{
-    color: #ADADAD;
-    font-size: 15px;
-}
+
 @media(min-width: 775px) {
     .daterange-display {
         display: none !important;
@@ -2624,6 +2637,13 @@ font-size: 17px;
     .wehost-profile-text {
         width: 90%;
         text-align: justify;
+    }
+    .loginInfoImg{
+        width: 50%;
+    }
+
+    .security-width{
+        width: 40%;
     }
 
 }
@@ -2748,6 +2768,15 @@ font-size: 17px;
     .wehost-profile-text {
         width: 100%;
         text-align: justify;
+    }
+
+    .loginInfoImg{
+        width: 80%;
+    }
+
+    .security-width{
+        text-align: end !important;
+        width: 54%;
     }
 }
 
