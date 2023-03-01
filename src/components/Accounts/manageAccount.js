@@ -47,9 +47,11 @@ const ManageAccount = () => {
 
                             </span>
                             <div>
-                                <p className="account-manage-title">Login Acitivity </p>
-                                <p className="account-manage-text m-0">Check where your account is logged in
-                                    and check your logins activities here. </p>
+                                <Link className="text-black" to='/loginfo'>
+                                    <p className="account-manage-title">Login Acitivity </p>
+                                    <p className="account-manage-text m-0">Check where your account is logged in
+                                        and check your logins activities here. </p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -60,10 +62,12 @@ const ManageAccount = () => {
 
                             </span>
                             <div>
-                                <p className="account-manage-title">Security </p>
-                                <p className="account-manage-text m-0">Update your password or change your
-                                    password and make your account
-                                    secure. </p>
+                                <Link className="text-black" to='/security'>
+                                    <p className="account-manage-title">Security </p>
+                                    <p className="account-manage-text m-0">Update your password or change your
+                                        password and make your account
+                                        secure. </p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -74,9 +78,11 @@ const ManageAccount = () => {
 
                             </span>
                             <div>
-                                <p className="account-manage-title">Privacy </p>
-                                <p className="account-manage-text m-0">Checkout your  personal data, connected
-                                    services and data sharing settings </p>
+                                <Link className="text-black" to='/privacy'>
+                                    <p className="account-manage-title">Privacy </p>
+                                    <p className="account-manage-text m-0">Checkout your  personal data, connected
+                                        services and data sharing settings </p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -87,9 +93,11 @@ const ManageAccount = () => {
 
                             </span>
                             <div>
-                                <p className="account-manage-title">Payment </p>
-                                <p className="account-manage-text m-0">See your payment, payment method
-                                    gifts,payload and coupons  </p>
+                                <Link className="text-black" to='/pay'>
+                                    <p className="account-manage-title">Payment </p>
+                                    <p className="account-manage-text m-0">See your payment, payment method
+                                        gifts,payload and coupons  </p>
+                                </Link>
                             </div>
                         </div>
 
@@ -167,8 +175,10 @@ const ManageAccount = () => {
 
                             </span>
                             <div>
-                                <p className="account-manage-title">Coupons and credits</p>
-                                <p className="account-manage-text m-0">No credit or coupons till yet</p>
+                                <Link className="text-black" to='/coup'>
+                                    <p className="account-manage-title">Coupons and credits</p>
+                                    <p className="account-manage-text m-0">No credit or coupons till yet</p>
+                                </Link>
                             </div>
                         </div>
 

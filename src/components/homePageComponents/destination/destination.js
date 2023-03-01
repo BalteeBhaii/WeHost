@@ -198,7 +198,7 @@ const Destination = () => {
                 <div className='col-xl-3 col-lg-6 col-md-6'>
                   <div className="input-group mb-3 border border border-secondary rounded destination-input border-color">
                     <span className="input-group-text border-0" id="basic-addon1">
-                      <i class="bi bi-geo-alt-fill"></i>
+                      <i className="bi bi-geo-alt-fill"></i>
                     </span>
                     {/* <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" data-count={0} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(0); setDropdownStateToggle(Math.random())}}></input> */}
                     <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Where to?" data-index={0} onClick={dropdownsHandler} readOnly></input>
@@ -207,15 +207,15 @@ const Destination = () => {
                       <div className='search-dropdown-main py-2'>
                         <div className='destination-searchbar-holder mx-3'>
                           <input type="text" className='destination-searchbar' placeholder='Search...' onClick={searchOutlineHandler} />
-                          <i class="bi bi-search destination-searchbar-icon"></i>
+                          <i className="bi bi-search destination-searchbar-icon"></i>
                           <span className='search-bottom-outline'></span>
                         </div>
                         <div className='mx-3 d-flex flex-column mt-3 mb-2'>
-                          <Link className='destination-main-search-item mt-2'><i class="bi bi-send-fill destination-main-search-item-icon"></i>Nearby Locations</Link>
-                          <Link className='destination-main-search-item mt-2'><i class="bi-star-fill destination-main-search-item-icon"></i>Most Visited</Link>
+                          <Link className='destination-main-search-item mt-2'><i className="bi bi-send-fill destination-main-search-item-icon"></i>Nearby Locations</Link>
+                          <Link className='destination-main-search-item mt-2'><i className="bi-star-fill destination-main-search-item-icon"></i>Most Visited</Link>
                           <span className='destination-main-search-item-title mt-3'>Popular Destinations</span>
-                          <Link className='destination-main-search-item mt-2'><i class="bi-geo-alt-fill destination-main-search-item-icon"></i>Hawai</Link>
-                          <Link className='destination-main-search-item mt-2'><i class="bi-geo-alt-fill destination-main-search-item-icon"></i>Paris</Link>
+                          <Link className='destination-main-search-item mt-2'><i className="bi-geo-alt-fill destination-main-search-item-icon"></i>Hawai</Link>
+                          <Link className='destination-main-search-item mt-2'><i className="bi-geo-alt-fill destination-main-search-item-icon"></i>Paris</Link>
                         </div>
                       </div>
                     </div>
@@ -224,11 +224,11 @@ const Destination = () => {
                 <div className='col-xl-3 col-lg-6 col-md-6'>
                   <div className="input-group mb-3 border border border-secondary rounded destination-input border-color ">
                     <span className="input-group-text border-0" id="basic-addon1">
-                      <i class="bi bi-calendar-date"></i>
+                      <i className="bi bi-calendar-date"></i>
                     </span>
-                    <input type="text" class="form-control border-0 shadow-none p-1 searchfeildtxt datapicker-input-field" placeholder={checkinPlaceholder} data-index={1} onClick={dropdownsHandler} />
+                    <input type="text" className="form-control border-0 shadow-none p-1 searchfeildtxt datapicker-input-field" placeholder={checkinPlaceholder} data-index={1} onClick={dropdownsHandler} />
                     <span className='destination-arrow-icon'></span>
-                    <input type="text" class="form-control border-0 shadow-none ps-2 searchfeildtxt datapicker-input-field" placeholder={checkoutPlaceholder} data-index={1} onClick={dropdownsHandler} />
+                    <input type="text" className="form-control border-0 shadow-none ps-2 searchfeildtxt datapicker-input-field" placeholder={checkoutPlaceholder} data-index={1} onClick={dropdownsHandler} />
                   </div>
                   <div className='datepicker-display'>
                     <div className='position-absolute d-flex flex-column date-range-picker search-dropdown'>
@@ -256,9 +256,9 @@ const Destination = () => {
                   </div>
                 </div>
                 <div className='col-xl-3 col-lg-6 col-md-6'>
-                  <div class="input-group mb-3 border border border-secondary rounded destination-input border-color">
-                    <span class="input-group-text border-0" id="basic-addon1">
-                      <i class="bi bi-person-circle"></i>
+                  <div className="input-group mb-3 border border border-secondary rounded destination-input border-color">
+                    <span className="input-group-text border-0" id="basic-addon1">
+                      <i className="bi bi-person-circle"></i>
                     </span>
                     {/* <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-count={1} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(1); setDropdownStateToggle(Math.random())}}/> */}
                     <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-index={2} onClick={dropdownsHandler} readOnly />
@@ -268,46 +268,46 @@ const Destination = () => {
                         <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-2'>
                           <span className='destination-main-search-item mt-2'>Adults</span>
                           <div className='guest-dropdown-counter'>
-                            <i class="bi bi-dash-circle guest-dropdown-counter-minus" onClick={() => {
+                            <i className="bi bi-dash-circle guest-dropdown-counter-minus" onClick={() => {
                               if (adultCount > 0) {
                                 setAdultCount(adultCount - 1);
                               }
                             }}></i>
                             <span className='guest-dropdown-counter-text'>{adultCount}</span>
-                            <i class="bi bi-plus-circle guest-dropdown-counter-plus" onClick={(event) => { event.preventDefault(); setAdultCount(adultCount + 1); }}></i>
+                            <i className="bi bi-plus-circle guest-dropdown-counter-plus" onClick={(event) => { event.preventDefault(); setAdultCount(adultCount + 1); }}></i>
                           </div>
                         </div>
                         <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-4'>
                           <span className='destination-main-search-item mt-2'>Children</span>
                           <div className='guest-dropdown-counter'>
-                            <i class="bi bi-dash-circle guest-dropdown-counter-minus" onClick={() => {
+                            <i className="bi bi-dash-circle guest-dropdown-counter-minus" onClick={() => {
                               if (childrenCount > 0) {
                                 setChildrenCount(childrenCount - 1);
                               }
                             }}></i>
                             <span className='guest-dropdown-counter-text'>{childrenCount}</span>
-                            <i class="bi bi-plus-circle guest-dropdown-counter-plus" onClick={() => { setChildrenCount(childrenCount + 1); }}></i>
+                            <i className="bi bi-plus-circle guest-dropdown-counter-plus" onClick={() => { setChildrenCount(childrenCount + 1); }}></i>
                           </div>
                         </div>
                         <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-4'>
                           <span className='destination-main-search-item mt-2'>Infants</span>
                           <div className='guest-dropdown-counter'>
-                            <i class="bi bi-dash-circle guest-dropdown-counter-minus" onClick={() => {
+                            <i className="bi bi-dash-circle guest-dropdown-counter-minus" onClick={() => {
                               if (infantCount > 0) {
                                 setInfantCount(infantCount - 1);
                               }
                             }}></i>
                             <span className='guest-dropdown-counter-text'>{infantCount}</span>
-                            <i class="bi bi-plus-circle guest-dropdown-counter-plus" onClick={() => { setInfantCount(infantCount + 1); }}></i>
+                            <i className="bi bi-plus-circle guest-dropdown-counter-plus" onClick={() => { setInfantCount(infantCount + 1); }}></i>
                           </div>
                         </div>
                         <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-4 mb-1'>
                           <span className='destination-main-search-item mt-2'>Pets</span>
                           <div className='guest-dropdown-counter'>
                             <span className='guest-dropdown-counter-pets'>Yes</span>
-                            <input class="form-check-input shadow-none guest-dropdown-counter-radio guest-dropdown-counter-radio-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                            <input className="form-check-input shadow-none guest-dropdown-counter-radio guest-dropdown-counter-radio-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                             <span className='guest-dropdown-counter-pets'>No</span>
-                            <input class="form-check-input shadow-none guest-dropdown-counter-radio guest-dropdown-counter-radio-2" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                            <input className="form-check-input shadow-none guest-dropdown-counter-radio guest-dropdown-counter-radio-2" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                           </div>
                         </div>
                       </div>
@@ -315,9 +315,9 @@ const Destination = () => {
                   </div>
                 </div>
                 <div className='col-xl-3 col-lg-6 col-md-6'>
-                  <div class="destination-input mb-3">
+                  <div className="destination-input mb-3">
                     <a type="text" className="btn text-white w-100 fw-semibold" style={{ backgroundColor: '#0579C1' }}>
-                      <i class="bi bi-search bi-searchIcon me-1"></i>
+                      <i className="bi bi-search bi-searchIcon me-1"></i>
                       Search
                     </a>
                   </div>
