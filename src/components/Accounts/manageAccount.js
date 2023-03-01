@@ -5,7 +5,7 @@ const ManageAccount = () => {
     return (
         <div className="container">
             <h3 className='verify-2nd-title mb-0 mt-5'>Manage Account</h3>
-            <h4 className=' mt-3'>Hello Ali , where want to apply changes?</h4>
+            <h4 className=' mt-3'>Hello Ali, where do you want to apply the changes?</h4>
             <div className='verify-2nd-list-items row mt-4'>
                 <div className='verify-2nd-list-items-1st-column col-md-7 col-sm-12 row'>
                     <div className='col-lg-4 mb-3 col-md-6 col-sm-6 col-12 verify-2nd-list-item-holder'>
