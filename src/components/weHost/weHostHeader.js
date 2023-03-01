@@ -11,7 +11,7 @@ const WeHostHeader = () => {
                     </div>
                     <div className='headerText'>
                         <a>
-                            <h5><i class="bi bi-question-square me-2"></i>Help?</h5>
+                            <h5><i className="bi bi-question-square me-2"></i>Help?</h5>
                         </a>
                     </div>
                 </div>

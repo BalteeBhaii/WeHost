@@ -36,21 +36,21 @@ const Hotel = () => {
   const dropdownsHandler = (event) => {
     var dropdowns = document.querySelectorAll(".search-dropdown");
     let index = event.target.dataset.index;
-    console.log(index);
+    
 
-    // if(window.screen.width < 775){
-    //   if(index == 0){
-    //     index = 1;
-    //   } else if(index == 1) {
-    //     index = 2;
-    //   }
-    // }
+    if(window.screen.width < 775){
+      if(index == 0){
+        index = 1;
+      } else if(index == 1) {
+        index = 2;
+      }
+    }
 
-    // if(window.screen.width >= 775){
-    //   if(index == 1){
-    //     index = 2;
-    //   }
-    // }
+    if(window.screen.width >= 775){
+      if(index == 1){
+        index = 2;
+      }
+    }
 
     if (previousDropdown === '') {
       for (let i = 0; i < dropdowns.length; i++) {
@@ -60,6 +60,7 @@ const Hotel = () => {
         }
       }
     }
+    console.log('index',index);
 
     if (index !== '1') {
       if (dropdowns['1'].classList.contains("dropdown-active")) {
@@ -122,9 +123,9 @@ const Hotel = () => {
                   <span className="input-group-text border-0" id="basic-addon1">
                     <i className="bi bi-calendar-date"></i>
                   </span>
-                  <input type="text" className="form-control border-0 shadow-none p-1 searchfeildtxt datapicker-input-field" placeholder={checkinPlaceholder} data-index={1} onClick={dropdownsHandler} />
+                  <input type="text" className="form-control border-0 shadow-none p-1 searchfeildtxt datapicker-input-field" placeholder={checkinPlaceholder} data-index={0} onClick={dropdownsHandler} />
                   <span className='destination-arrow-icon'></span>
-                  <input type="text" className="form-control border-0 shadow-none ps-2 searchfeildtxt datapicker-input-field" placeholder={checkoutPlaceholder} data-index={1} onClick={dropdownsHandler} />
+                  <input type="text" className="form-control border-0 shadow-none ps-2 searchfeildtxt datapicker-input-field" placeholder={checkoutPlaceholder} data-index={0} onClick={dropdownsHandler} />
                 </div>
                 <div className='datepicker-display'>
                   <div className='position-absolute d-flex flex-column date-range-picker search-dropdown'>
@@ -136,7 +137,7 @@ const Hotel = () => {
                       direction="horizontal"
                       ranges={range}
                     />
-                    <a className='btn date-range-btn my-1' data-index={1} onClick={datePickerClose}>close</a>
+                    <a className='btn date-range-btn my-1' data-index={0} onClick={datePickerClose}>close</a>
                   </div>
                 </div>
                 <div className='daterange-display'>
@@ -147,7 +148,7 @@ const Hotel = () => {
                       moveRangeOnFirstSelection={false}
                       ranges={range}
                     />
-                    <a className='btn date-range-btn my-1' data-index={1} onClick={datePickerClose}>close</a>
+                    <a className='btn date-range-btn my-1' data-index={0} onClick={datePickerClose}>close</a>
                   </div>
                 </div>
               </div>
@@ -157,7 +158,7 @@ const Hotel = () => {
                     <i className="bi bi-person-circle"></i>
                   </span>
                   {/* <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-count={1} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(1); setDropdownStateToggle(Math.random())}}/> */}
-                  <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-index={2} onClick={dropdownsHandler}/>
+                  <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-index={1} onClick={dropdownsHandler}/>
                   <span className='guest-count'>{guestCount > 0 ? `(${guestCount})` : ''}</span>
                   <div className='search-dropdown'>
                     <div className='search-dropdown-main pt-2 pb-3'>

@@ -12,7 +12,7 @@ const Taxes = () => {
                             <h1 className='title-account-page' >Taxes</h1>
                             <h3 className='mt-2 tax-information-title'>Tax Information</h3>
                             <p>Most nations demand tax information if the taxpayer is a resident, Host or Co-Host, or both</p>
-                            <button type="submit" class="btn add-mail-btn text-white rounded-0">Add tax Info</button>
+                            <button type="submit" className="btn add-mail-btn text-white rounded-0">Add tax Info</button>
                         </div>
                         <div>
                             <div>
@@ -20,7 +20,7 @@ const Taxes = () => {
                                 <p>You may not be charged VAT on weHost service fees if you are VAT registered if your stay is
                                     for business. VAT is not applicable to US hosts. Discover the VAT regulations for each nation
                                     or area.</p>
-                                <button type="submit" class="btn add-mail-btn text-white rounded-0">Add VAT ID Number</button>
+                                <button type="submit" className="btn add-mail-btn text-white rounded-0">Add VAT ID Number</button>
                             </div>
                             <div>
                                 <h3 className='mt-4 tax-information-title '>Want Some Help?</h3>

@@ -16,7 +16,7 @@ const GuestModal = ({show, setShowModal}) => {
                     <div className="modal-card">
                         <section className="modal-body">
                             <div className="counter">
-                                <div class="counter-header d-flex justify-content-between">
+                                <div className="counter-header d-flex justify-content-between">
                                     <span className="counter-header-text d-block">Adult</span>
                                    
                                 <div className="counter-buttons">
@@ -28,7 +28,7 @@ const GuestModal = ({show, setShowModal}) => {
                                 <span className="counter-text">(18+ years)</span>
                             </div>
                             <div className="counter">
-                                <div class="counter-header d-flex justify-content-between">
+                                <div className="counter-header d-flex justify-content-between">
                                     <span className="counter-header-text d-block">Children</span>
                                    
                                 <div className="counter-buttons">
@@ -40,7 +40,7 @@ const GuestModal = ({show, setShowModal}) => {
                                 <span className="counter-text">(0-17 years)</span>
                             </div>
                             <div className="counter">
-                                <div class="counter-header d-flex justify-content-between">
+                                <div className="counter-header d-flex justify-content-between">
                                     <span className="counter-header-text d-block">Pets</span>
                                    
                                 <div className="counter-buttons">

@@ -15,7 +15,7 @@ const FilterModal = ({ show, setShowModal }) => {
     <>
 
       {(show) && (
-        <div className="modal-background searchmodal">
+        <div className="modal-background searchmodal" style={{backgroundColor: 'rgba(0, 0, 0, 0.4)'}}>
           <div className="modal-card filtermodal">
             <header>
               <div className='d-flex justify-content-between align-items-center'>

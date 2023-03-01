@@ -9,14 +9,14 @@ const SeventhStep = () => {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border px-2 text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <i class="verify-2nd-list-item-main-icon bi bi-wifi"></i> Wifi
+                                    <i className="verify-2nd-list-item-main-icon bi bi-wifi"></i> Wifi
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
-                                    <i class="verify-2nd-list-item-main-icon bi bi-tv"></i> Tv
+                                    <i className="verify-2nd-list-item-main-icon bi bi-tv"></i> Tv
                                 </span>
                             </div>
                         </div>

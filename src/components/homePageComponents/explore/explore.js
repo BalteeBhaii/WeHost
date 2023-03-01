@@ -24,7 +24,7 @@ const Explore = () => {
                         </div>
                     </div>
                     <div className='d-flex justify-content-center mt-4 px-3'>
-                        <button className='explore-button bi'>Explore More  <i class="bi bi-arrow-right button-icon"></i></button>
+                        <button className='explore-button bi'>Explore More  <i className="bi bi-arrow-right button-icon"></i></button>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@ const Explore = () => {
                         <p style={{fontSize: '2vw'}}>Rent House with amenities, spaciousness, and comfort</p>
                     </div>
                     <div >
-                        <button className='btn btn-primary btn-md' style={{fontSize: '0.9rem'}}><i class="bi bi-funnel me-1"></i>Filters</button>
+                        <button className='btn btn-primary btn-md' style={{fontSize: '0.9rem'}}><i className="bi bi-funnel me-1"></i>Filters</button>
                     </div>
                 </div>
                 <div className='row justify-content-center h-100 px-0' >
@@ -70,7 +70,7 @@ const Explore = () => {
                 </div>
                 <div className='container text-center mt-4'>
                     <div className=''>
-                        <a className='btn btn-lg text-light explore'>Explore more <i class="bi bi-arrow-right"></i></a>
+                        <a className='btn btn-lg text-light explore'>Explore more <i className="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div> */}

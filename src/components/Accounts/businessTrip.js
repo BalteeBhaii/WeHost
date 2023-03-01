@@ -22,10 +22,10 @@ const BusinessTrip = () => {
                                     deals on business travels.</p>
                             </div>
                             <div>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="exampleInputEmail1" className='business-mail-title'>Work Mail </label>
-                                    <input type="email" class="form-control w-50 mt-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                                    <button type="submit" class="btn add-mail-btn mt-3 text-white rounded-0">Add Mail</button>
+                                    <input type="email" className="form-control w-50 mt-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                                    <button type="submit" className="btn add-mail-btn mt-3 text-white rounded-0">Add Mail</button>
                                 </div>
                             </div>
                         </div>

@@ -49,7 +49,8 @@ const SignUp = ({ showSignupModal, setShowSignupModal }) => {
                 <input
                    className='form-control border-0 shadow-none signin-input-width'
                     type="email"
-                    name='email' 
+                    name='email'
+                    value={email}
                     placeholder='Email'
                     required onChange={(e)=>{setEmail(e.target.value)}}
                   />
@@ -70,7 +71,7 @@ const SignUp = ({ showSignupModal, setShowSignupModal }) => {
                 <button className='form-control button-facebook fw-semibold mb-3 border-0 shadow-none signin-input-width'>Login with facebook</button>
                 <button className='form-control button-facebook fw-semibold border-0 shadow-none signin-input-width'>Login with Gmail</button>
                 {/* <div className='d-flex justify-content-between align-items-center sign-in-checkbox'>
-                  <div class="form-check">
+                  <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
                     <label className="form-check-label fw-semibold" for="flexCheckDefault">
                         Default checkbox

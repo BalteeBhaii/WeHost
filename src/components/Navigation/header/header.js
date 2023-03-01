@@ -108,7 +108,7 @@ const Header = () => {
             </div>
           </div>
           <div className="menu-dropdown">
-            <i class="bi bi-list menu-toggle" onClick={menuHandler}></i>
+            <i className="bi bi-list menu-toggle" onClick={menuHandler}></i>
           </div>
         </div>
         <div className="menu-collapse">

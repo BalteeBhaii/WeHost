@@ -23,8 +23,8 @@ const SixTenStep = () => {
                             <input type="file" className="form-control rounded-0 shadow-none" placeholder="Upload your photo here" multiple/>
                             <button className="btn btn-outline-secondary border px-3 rounded-0" type="button" id="button-addon2">Upload</button>
                         </div>
-                        <div class="d-flex align-items-center" role="alert">
-                            <i class="bi bi-exclamation-circle pe-2"></i>
+                        <div className="d-flex align-items-center" role="alert">
+                            <i className="bi bi-exclamation-circle pe-2"></i>
                             <div>Please provide us clear photo of your face</div>
                         </div>
                 </div>
