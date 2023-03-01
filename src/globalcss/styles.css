@@ -1317,6 +1317,24 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
 .worldwide-tab-options-active {
     display: flex !important;
 }
+.tip-card{
+    width: 222px;
+}
+
+.additonal-step-section{
+    background: url('/public//images/additonal-step-img.png');
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+}
+.additional-step-card{
+    width: 18rem;
+    border-radius: 0% !important;
+    border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: rgba(255, 255, 255, 0.84);
+}
+
+
 
 .review-main-section {
     background: url('/public//images/reviews-bg.png');
@@ -2516,6 +2534,13 @@ border-radius: 10px;
 .tax-info-contact-us{
     color: #0079C2; 
     cursor: pointer;
+}
+.welcome-title{
+    font-weight: 700;
+font-size: 25px;
+}
+.welcome-text{
+    font-size: 15px;
 }
 .recieve-text{
     font-size: 15px;
