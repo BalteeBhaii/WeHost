@@ -35,11 +35,11 @@ const Footer = () => {
     <>
       <footer>
         <div
-          class="container section prefooter mt-4 pb-0 px-0"
+          className="container section prefooter mt-4 pb-0 px-0"
           style={{ backgroundColor: "#D1EFF6" }}
         >
-          <div class="p-2">
-            <h3 class="inquirysection text-center p-2 pt-3">
+          <div className="p-2">
+            <h3 className="inquirysection text-center p-2 pt-3">
               For inquires and queries do send us mail or any other issue. Feel
               Free to contact us
             </h3>
@@ -75,7 +75,7 @@ const Footer = () => {
               <div className="row">
                 <div className="footer-bottom-items-container col-lg-3 p-0">
                   {/* For Pc */}
-                  <h3 className="footer-item-header mb-0">FOR OWNERS<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                  <h3 className="footer-item-header mb-0">FOR OWNERS<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Property Management</Link>
                     <Link className="footer-bottom-item mb-3">How We Work Together</Link>
@@ -88,8 +88,8 @@ const Footer = () => {
                   {/*  */}
                   {/* For Mobile */}
                   <div className="footer-bottom-mbl-dropdown py-2">
-                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#ownersCollpase">FOR OWNERS<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
-                    <div class="collapse" id="ownersCollpase">
+                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#ownersCollpase">FOR OWNERS<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                    <div className="collapse" id="ownersCollpase">
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-2">Property Management</Link>
                         <Link className="footer-bottom-item mb-2">Lower Fees</Link>
@@ -106,7 +106,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-bottom-items-container col-lg-3 p-0">
                   {/* For Pc */}
-                  <h3 className="footer-item-header mb-0">For Guests<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                  <h3 className="footer-item-header mb-0">For Guests<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Explore Vacation Rentals</Link>
                     <Link className="footer-bottom-item mb-3">Our Rest Easy Promise</Link>
@@ -116,8 +116,8 @@ const Footer = () => {
                   {/*  */}
                   {/* For Mobile */}
                   <div className="footer-bottom-mbl-dropdown py-2">
-                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#guestsCollapse">For Guests<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
-                    <div class="collapse" id="guestsCollapse">
+                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#guestsCollapse">For Guests<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                    <div className="collapse" id="guestsCollapse">
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-2">Explore Vacation Rentals</Link>
                         <Link className="footer-bottom-item mb-2">Our Rest Easy Promise</Link>
@@ -130,7 +130,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-bottom-items-container col-lg-3 p-0">
                   {/* For Pc */}
-                  <h3 className="footer-item-header mb-0">HOSTINGS<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                  <h3 className="footer-item-header mb-0">HOSTINGS<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Try Hosting</Link>
                     <Link className="footer-bottom-item mb-3">Lower Fees</Link>
@@ -144,8 +144,8 @@ const Footer = () => {
                   {/*  */}
                   {/* For Mobile */}
                   <div className="footer-bottom-mbl-dropdown py-2">
-                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#hostingCollapse">HOSTINGS<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
-                    <div class="collapse" id="hostingCollapse">
+                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#hostingCollapse">HOSTINGS<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                    <div className="collapse" id="hostingCollapse">
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-2">Try Hosting</Link>
                         <Link className="footer-bottom-item mb-2">Lower Fees</Link>
@@ -162,7 +162,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-bottom-items-container col-lg-3 p-0">
                   {/* For Pc */}
-                  <h3 className="footer-item-header mb-0">Community<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                  <h3 className="footer-item-header mb-0">Community<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Support Ukraine Refugees</Link>
                     <Link className="footer-bottom-item mb-3">Combating Discrimination</Link>
@@ -170,8 +170,8 @@ const Footer = () => {
                   {/*  */}
                   {/* For Mobile */}
                   <div className="footer-bottom-mbl-dropdown py-2">
-                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#communityCollapse">Community<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
-                    <div class="collapse" id="communityCollapse">
+                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#communityCollapse">Community<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                    <div className="collapse" id="communityCollapse">
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-2">Support Ukraine Refugees</Link>
                         <Link className="footer-bottom-item mb-2">Combating Discrimination</Link>
@@ -183,8 +183,8 @@ const Footer = () => {
                 <div className="footer-bottom-items-container d-lg-none p-0">
                   {/* For Mobile */}
                   <div className="footer-bottom-mbl-dropdown py-2">
-                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#supportCollapse">SUPPORT<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
-                    <div class="collapse" id="supportCollapse">
+                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#supportCollapse">SUPPORT<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                    <div className="collapse" id="supportCollapse">
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-3">Support and Contact</Link>
@@ -204,8 +204,8 @@ const Footer = () => {
                 <div className="footer-bottom-items-container d-lg-none p-0">
                   {/* For Mobile */}
                   <div className="footer-bottom-mbl-dropdown py-2">
-                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#aboutCollapse">ABOUT<i class="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
-                    <div class="collapse" id="aboutCollapse">
+                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#aboutCollapse">ABOUT<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                    <div className="collapse" id="aboutCollapse">
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-3">Our Story</Link>
                         <Link className="footer-bottom-item mb-3">Social Responsibility</Link>
@@ -231,10 +231,10 @@ const Footer = () => {
                 <div className="footer-bottom-2nd-icons d-flex flex-column col-lg-4 col-md-12">
                 <h3 className="footer-item-header-2nd mb-0">INVESTORS</h3>
                   <div className="d-flex mt-4">
-                    <i class="bi bi-facebook footer-bottom-2nd-icon"></i>
-                    <i class="bi bi-instagram footer-bottom-2nd-icon"></i>
-                    <i class="bi bi-twitter footer-bottom-2nd-icon"></i>
-                    <i class="bi bi-linkedin footer-bottom-2nd-icon"></i>
+                    <i className="bi bi-facebook footer-bottom-2nd-icon"></i>
+                    <i className="bi bi-instagram footer-bottom-2nd-icon"></i>
+                    <i className="bi bi-twitter footer-bottom-2nd-icon"></i>
+                    <i className="bi bi-linkedin footer-bottom-2nd-icon"></i>
                   </div>
                   <div className="mt-4 d-flex flex-column">
                     <span className="footer-bottom-item mb-2">© weHosttravel / © weHost. All Rights Reserved 2023.</span>

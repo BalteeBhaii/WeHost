@@ -10,7 +10,7 @@ const SixthStep = () => {
              <div className='container'>
                 <h3 className='verify-2nd-title mb-0 mt-5'>Some more details about your property. </h3>
                 <h4 className='verify-2nd-title mb-0 mt-2'>Can you tell us that: </h4>
-                <div class="counter-header d-flex justify-content-between">
+                <div className="counter-header d-flex justify-content-between">
                                     <span className="counter-header-text d-block ">Guest</span>
                                    
                                 <div className="counter-buttons">
@@ -21,7 +21,7 @@ const SixthStep = () => {
                                 </div>                                
                                 </div>
                                 <span className="counter-text">(18+ years)</span>
-                                <div class="counter-header d-flex justify-content-between mt-2">
+                                <div className="counter-header d-flex justify-content-between mt-2">
                                     <span className="counter-header-text d-block">Bedrooms</span>
                                    
                                 <div className="counter-buttons">
@@ -30,7 +30,7 @@ const SixthStep = () => {
                                     <button className="counter-button" onClick={() => setCounttwo(counttwo + 1)}>+</button>
                                 </div>
                                 </div>
-                                <div class="counter-header d-flex justify-content-between mt-2">
+                                <div className="counter-header d-flex justify-content-between mt-2">
                                     <span className="counter-header-text d-block">Bathroom</span>
                                    
                                 <div className="counter-buttons">
@@ -39,7 +39,7 @@ const SixthStep = () => {
                                     <button className="counter-button" onClick={() => setCountthree(countthree + 1)}>+</button>
                                 </div>
                                 </div>
-                                <div class="counter-header d-flex justify-content-between mt-2">
+                                <div className="counter-header d-flex justify-content-between mt-2">
                                     <span className="counter-header-text d-block">Beds</span>
                                    
                                 <div className="counter-buttons">

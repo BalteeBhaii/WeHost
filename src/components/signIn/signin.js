@@ -1,12 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { logIn } from '../../features/user/userSlice';
 import SignUp from './signUp';
 const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage]= useState('');
+  const {isLoggedIn} = useSelector(state => state.user);
+  const dispatch = useDispatch();
+  // console.log(isLoggedIn)
   const handleLoginClick = () => {
+    dispatch(logIn(true));
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if(email !== '' && password !== ''){
       if(email.match(validRegex)){
@@ -32,9 +38,9 @@ const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
     <>
       {/* <button type='button' onClick={()=> setShowModal(!showModal)}> laundh</button> */}
       {(showSigninModal) && (
-        <div className="modal-background" style={{ zIndex: "500" }}>
+        <div className="modal-background" style={{ zIndex: "1000" }}>
           <div className="modal-card">
-            <section className="modal-body my-3">
+            <section className="modal-body">
               <div className='w-100 text-end'>
                 <button type="button" className="btn-close" onClick={() => setshowSigninModal(!showSigninModal)}></button>
               </div>
@@ -60,9 +66,9 @@ const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
                   />
                 </form>
                 <div className='d-flex justify-content-between align-items-center sign-in-checkbox'>
-                  <div class="form-check">
+                  <div className="form-check">
                     <input className="form-check-input shadow-none" type="checkbox" value="" id="CheckBox" />
-                    <label className="form-check-label fw-semibold" for="flexCheckDefault">
+                    <label className="form-check-label fw-semibold">
                       Remember me
                     </label>
                   </div>

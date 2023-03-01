@@ -59,9 +59,9 @@ const VerifyPropertyPage = () => {
                         )}
                         {(page >= 1) && (
                             <div className='d-flex justify-content-between'>
-                                <button className='btn property-footer-button' onClick={() => { setPage(page - 1); setWidth((page-1)*6.66);console.log(page, width)}}><i class="bi bi-arrow-left me-1"></i>Back</button>
+                                <button className='btn property-footer-button' onClick={() => { setPage(page - 1); setWidth((page-1)*6.66);console.log(page, width)}}><i className="bi bi-arrow-left me-1"></i>Back</button>
                                 {(page < 15)&&(
-                                    <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66) }}>Next<i class="bi bi-arrow-right ms-1"></i></button>
+                                    <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
                                 )}
                                 {(page === 15) && ('')}
                             </div>

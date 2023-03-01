@@ -9,15 +9,15 @@ const FiveTenStep = () => {
                         <h6>Does your place offers any of the following?</h6>
                     </div>
                     <div className='d-flex justify-content-between mb-3 fw-semibold'>
-                        <label className="form-check-label" for="flexCheckDefault">Security camera</label>
+                        <label className="form-check-label">Security camera</label>
                         <input className="form-check-input border border-secondary shadow-none" type="checkbox" value="" id="flexCheckDefault"/>
                     </div>
                     <div className='d-flex justify-content-between mb-3 fw-semibold'>
-                        <label className="form-check-label" for="flexCheckDefault">Weapons</label>
+                        <label className="form-check-label">Weapons</label>
                         <input className="form-check-input border border-secondary shadow-none" type="checkbox" value="" id="flexCheckDefault"/>
                     </div>
                     <div className='d-flex justify-content-between mb-3 fw-semibold'>
-                        <label className="form-check-label" for="flexCheckDefault">Dangerous Animals</label>
+                        <label className="form-check-label">Dangerous Animals</label>
                         <input className="form-check-input border border-secondary shadow-none" type="checkbox" value="" id="flexCheckDefault"/>
                     </div>
                     <hr/>

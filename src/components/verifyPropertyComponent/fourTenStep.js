@@ -24,7 +24,7 @@ const FourTenStep = () => {
                     <div className='border border-2 mb-5'>
                         <div className='px-3 py-2'>
                             <div className='d-flex justify-content-between'>
-                                <label className="form-check-label fw-semibold" for="flexCheckDefault">Want to draw more attention?</label>
+                                <label className="form-check-label fw-semibold">Want to draw more attention?</label>
                                 <input className="form-check-input border border-secondary shadow-none" type="checkbox" value="" id="flexCheckDefault"/>
                             </div>
                             <div>

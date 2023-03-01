@@ -8,11 +8,11 @@ const SpecificHotel = () => {
             <h2>Hotel of Lima City</h2>
             <div className='d-flex'>
               <p className='me-3'>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-half text-warning"></i>
+                <i className="bi bi-star-fill text-warning"></i>
+                <i className="bi bi-star-fill text-warning"></i>
+                <i className="bi bi-star-fill text-warning"></i>
+                <i className="bi bi-star-fill text-warning"></i>
+                <i className="bi bi-star-half text-warning"></i>
               </p>
               <p className='me-2'>
                 345 reviews
@@ -59,11 +59,11 @@ const SpecificHotel = () => {
                 <div className='input-group-design'>
                   <div className='d-flex input-bottom-border'>
                     <div className="input-group  input-group-boder-check-in">
-                      <span className="input-group-text  border-0" ><i class="bi bi-calendar-event"></i></span>
+                      <span className="input-group-text  border-0" ><i className="bi bi-calendar-event"></i></span>
                       <input className='form-control  border-0 shadow-none' type="text" placeholder='Check In' />
                     </div>
                     <div className="input-group  input-group-boder-check-out">
-                      <span className="input-group-text  border-0" ><i class="bi bi-calendar-event"></i></span>
+                      <span className="input-group-text  border-0" ><i className="bi bi-calendar-event"></i></span>
                       <input className='form-control  border-0 shadow-none' type="text" placeholder='Check Out' />
                     </div>
                   </div>
@@ -105,22 +105,22 @@ const SpecificHotel = () => {
           <h2>Want To See What This Hotel Offers?</h2>
           <div className='row'>
             <div className='col-12 col-md-6'>
-              <p><i class="bi bi-wifi me-1"></i>Wifi</p>
+              <p><i className="bi bi-wifi me-1"></i>Wifi</p>
             </div>
             <div className='col-12 col-md-6'>
-              <p><i class="bi bi-snow me-1"></i>Air-Conditioner</p>
+              <p><i className="bi bi-snow me-1"></i>Air-Conditioner</p>
             </div>
             <div className='col-12 col-md-6'>
-              <p><i class="bi bi-p-circle me-1"></i>Parking</p>
+              <p><i className="bi bi-p-circle me-1"></i>Parking</p>
             </div>
             <div className='col-12 col-md-6'>
-              <p><i class="bi bi-water me-1"></i>Pool</p>
+              <p><i className="bi bi-water me-1"></i>Pool</p>
             </div>
             <div className='col-12 col-md-6'>
-              <p><i class="bi bi-tv me-1"></i>Lcd</p>
+              <p><i className="bi bi-tv me-1"></i>Lcd</p>
             </div>
             <div className='col-12 col-md-6'>
-              <p><i class="bi bi-playstation me-1"></i>gaming</p>
+              <p><i className="bi bi-playstation me-1"></i>gaming</p>
             </div>
           </div>
         </div>
@@ -164,8 +164,8 @@ const SpecificHotel = () => {
             </div>
             <div className='paragraphWidth d-flex justify-content-between mb-3'>
               <p><i className="bi bi-star-fill me-2"></i>104 reviews</p>
-              <p><i class="bi bi-patch-check-fill me-2"></i>Verified host</p>
-              <p><i class="bi bi-shield-check me-2"></i>Super host</p>
+              <p><i className="bi bi-patch-check-fill me-2"></i>Verified host</p>
+              <p><i className="bi bi-shield-check me-2"></i>Super host</p>
             </div>
             <h5>Co-host</h5>
             <div className='d-flex align-items-center my-3'>

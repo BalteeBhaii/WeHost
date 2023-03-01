@@ -8,10 +8,10 @@ const ThirdStep = () => {
                     <div className='verify-2nd-list-items-1st-column col-md-6 col-sm-12 row'>
                         <div className='col-12 col-lg-9 col-md-9 col-sm-9 col-9 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border py-3 mb-3'>
-                                <div class="verify-2nd-list-item-main gap-4 d-flex">
+                                <div className="verify-2nd-list-item-main gap-4 d-flex">
                                 <img className="verify-3rd-list-item-main-icon"   src='/images/mansion.png' /> 
 
-                                <div class='row'>
+                                <div className='row'>
                                     <p className='mb-0'>Entire place</p>
                                     <p className="entire-place-text">Offer them entire place of yours</p>
                                     </div>                              
@@ -20,10 +20,10 @@ const ThirdStep = () => {
                         </div>
                         <div className='col-12  col-lg-9 col-md-9 col-sm-9 col-9 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border  py-3 mb-3'>
-                            <div class="verify-2nd-list-item-main gap-4 d-flex">
+                            <div className="verify-2nd-list-item-main gap-4 d-flex">
                                 <img className="verify-3rd-list-item-main-icon"   src='/images/privateroom.png' /> 
 
-                                <div class='row'>
+                                <div className='row'>
                                     <p className='mb-0'>Private Room</p>
                                     <p className="entire-place-text">Offer them single room of yours</p>
                                     </div>                              
@@ -32,10 +32,10 @@ const ThirdStep = () => {
                         </div>
                         <div className='col-12 col-lg-9 col-md-9 col-sm-9 col-9 verify-2nd-list-item-holder'>
                             <div className='verify-2nd-list-item border  py-3 mb-3'>
-                            <div class="verify-2nd-list-item-main gap-4 d-flex">
+                            <div className="verify-2nd-list-item-main gap-4 d-flex">
                                 <img className="verify-3rd-list-item-main-icon"   src='/images/sharedroom.png' /> 
 
-                                <div class='row'>
+                                <div className='row'>
                                     <p className='mb-0'>Shared Room</p>
                                     <p className="entire-place-text">Offer them to share room</p>
                                     </div>                              

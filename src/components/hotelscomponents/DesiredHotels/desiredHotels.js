@@ -13,7 +13,7 @@ const DesiredHotels = () => {
                     <h1 className='mb-3'>Here are the desired hotels for you</h1>
                     <button className='btn filter-button-size-style text-white btn-md px-3 position-fixed'  
                         onClick ={(ev) =>setShowModal(!showModal)}>
-                        <i class="bi bi-funnel me-1"></i>
+                        <i className="bi bi-funnel me-1"></i>
                         Filters
                     </button>
                     <FilterModal show={showModal} setShowModal={setShowModal}/>
@@ -33,15 +33,15 @@ const DesiredHotels = () => {
                                         <p className='mb-1'>$800/Person</p>
                                     </div>
                                     <p className='mb-1'>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-half"></i>
                                     </p>
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
-                                        <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                                        <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
                                         <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>
@@ -60,15 +60,15 @@ const DesiredHotels = () => {
                                         <p className='mb-1'>$800/Person</p>
                                     </div>
                                     <p className='mb-1'>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-half"></i>
                                     </p>
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
-                                        <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                                        <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
                                         <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>
@@ -87,15 +87,15 @@ const DesiredHotels = () => {
                                         <p className='mb-1'>$800/Person</p>
                                     </div>
                                     <p className='mb-1'>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-half"></i>
                                     </p>
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
-                                        <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                                        <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
                                         <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>
@@ -114,15 +114,15 @@ const DesiredHotels = () => {
                                         <p className='mb-1'>$800/Person</p>
                                     </div>
                                     <p className='mb-1'>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-half"></i>
                                     </p>
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
-                                        <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                                        <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
                                         <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>
@@ -141,15 +141,15 @@ const DesiredHotels = () => {
                                         <p className='mb-1'>$800/Person</p>
                                     </div>
                                     <p className='mb-1'>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-half"></i>
                                     </p>
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
-                                        <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                                        <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
                                         <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>
@@ -168,15 +168,15 @@ const DesiredHotels = () => {
                                         <p className='mb-1'>$800/Person</p>
                                     </div>
                                     <p className='mb-1'>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-fill"></i>
+                                        <i className="bi bi-star-half"></i>
                                     </p>
                                     <p className="card-text mb-1">Enjoy the Lima city sightseeing and explore the buetyof Lima</p>
                                     <div className='d-flex justify-content-between w-100' style={{fontSize: '0.8rem'}}>
-                                        <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                                        <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
                                         <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
                                     </div>
                                 </div>

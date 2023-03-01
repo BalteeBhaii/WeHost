@@ -11,7 +11,7 @@ const ManageAccount = () => {
                     <div className='col-lg-4 mb-3 col-md-6 col-sm-6 col-12 verify-2nd-list-item-holder'>
                         <div className='account-manage-list-item border px-3 h-100 py-3 mb-3'>
                             <span className='verify-2nd-list-item-main'>
-                                <i class="account-manage-icon bi bi-person-bounding-box"></i>
+                                <i className="account-manage-icon bi bi-person-bounding-box"></i>
 
                             </span>
                             <div>
@@ -27,7 +27,7 @@ const ManageAccount = () => {
                     <div className='col-lg-4 mb-3 col-md-6 col-sm-6 col-12 verify-2nd-list-item-holder'>
                         <div className='account-manage-list-item border px-3 py-3 mb-3 h-100 '>
                             <span className='verify-2nd-list-item-main'>
-                                <i class="account-manage-icon bi bi-person-vcard"></i>
+                                <i className="account-manage-icon bi bi-person-vcard"></i>
 
                             </span>
                             <div>
@@ -58,7 +58,7 @@ const ManageAccount = () => {
                     <div className='col-lg-4 mb-3 col-md-6 col-sm-6 col-12 verify-2nd-list-item-holder'>
                         <div className='account-manage-list-item border px-3 py-3 mb-3 h-100'>
                             <span className='verify-2nd-list-item-main'>
-                                <i class="account-manage-icon bi bi-shield-lock"></i>
+                                <i className="account-manage-icon bi bi-shield-lock"></i>
 
                             </span>
                             <div>

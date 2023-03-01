@@ -63,8 +63,8 @@ const Notifications = () => {
                         <p className=' mt-2 recieve-text '>You accept to receive autodialed promotional
                             messages from weHost and weHost partners
                             by checking an SMS box.</p>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Phone Number" />
-                        <p className='mt-2 recieve-text'>For more Information contact us at number send Text to 1234 and if you want to stop
+                        <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Phone Number" />
+                        <p className='mt-2'>For more Information contact us at number send Text to 1234 and if you want to stop
                             notification just text us STOP to 1234 and you will no longer receive notification </p>
 
                     </div>

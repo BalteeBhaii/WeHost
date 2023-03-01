@@ -15,7 +15,7 @@ const CodeModal = ({showCodeModel, setShowCodeModal, showSignupModal, setShowSig
     return ( <>
         {(showCodeModel)&&(
             <div className="modal-background" style={{  zIndex: "2000"}}>
-                <div className="modal-card">
+                <div className="modal-card d-flex justify-content-center align-items-center" style={{height: 497}}>
                     <section className="modal-body my-3">
                     <div className='w-100 text-end'>
                         <button type="button" className="btn-close" onClick={()=>setShowCodeModal(!showCodeModel)}></button>

@@ -57,9 +57,9 @@ const FinishUpLoging = ({showLoginModel, setShowLoginModal, showSignupModal, set
                             />
                             <input className='form-control border-0 shadow-none login-input-width' type="text" name='password' onChange={(e)=>setPassword(e.target.value)} placeholder='Password'/>
                             <input className='form-control border-0 shadow-none login-input-width' type="text" name='password_confirmation' onChange={(e)=>setConfirmP(e.target.value)} placeholder='Confirm Passowrd'/>
-                            <div class="form-check signin-input-width mb-3">
+                            <div className="form-check signin-input-width mb-3">
                                 <input className="form-check-input" type="checkbox" value="" id="checkbox"/>
-                                <label className="form-check-label fw-semibold" for="flexCheckDefault">
+                                <label className="form-check-label fw-semibold">
                                 By selecting Agree and continue, I agree to <a href='/'><ins>Terms of Service,</ins></a>
                                 </label>
                             </div>
