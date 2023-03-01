@@ -2511,6 +2511,10 @@ border-radius: 10px;
     color: #0079C2; 
     cursor: pointer;
 }
+.recieve-text{
+    font-size: 15px;
+    font-weight: 500;
+}
 .guest-count {
     position: absolute;
     right: 0;

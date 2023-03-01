@@ -55,16 +55,16 @@ const Notifications = () => {
                         </div>
 
                     </div>
-                    <div className='col-12 col-md-4 border information-card'>
+                    <div className='col-12 col-md-4 border information-card mb-2'>
                         <div className='mt-3' >
                             <p className='recieve-title'>Where do you want to
                                 receive text messages?</p>
                         </div>
-                        <p className=' mt-2 '>You accept to receive autodialed promotional
+                        <p className=' mt-2 recieve-text '>You accept to receive autodialed promotional
                             messages from weHost and weHost partners
                             by checking an SMS box.</p>
                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Phone Number" />
-                        <p className='mt-2'>For more Information contact us at number send Text to 1234 and if you want to stop
+                        <p className='mt-2 recieve-text'>For more Information contact us at number send Text to 1234 and if you want to stop
                             notification just text us STOP to 1234 and you will no longer receive notification </p>
 
                     </div>
@@ -72,7 +72,7 @@ const Notifications = () => {
                     <div className='col-12 col-md-8 m-0'>
                         <div>
                             <h3 className='title-account-page '>Reminder</h3>
-                            <p className='mt-2'>Get notifications about your reservations, listings, and account activities.</p>
+                            <p className='mt-2 '>Get notifications about your reservations, listings, and account activities.</p>
                             <div className='d-flex justify-content-between'>
                                 <div>
                                     <span>Reminder </span>
