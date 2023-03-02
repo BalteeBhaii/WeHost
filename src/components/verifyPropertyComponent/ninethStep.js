@@ -22,6 +22,7 @@ const NinethStep= () => {
                     <img className='uploaded-image' src='/images/explore-1.jpg' alt="" />
                     </div>
                 </div>
+                
                 <div className='row uploaded-images'>
                     <div className='col-6 mt-3 d-flex d-flex justify-content-center align-item-center flex-column photos-drag-files-wrapper'>
                         <div className="photoDropBox" onClick={handleimgClick}>

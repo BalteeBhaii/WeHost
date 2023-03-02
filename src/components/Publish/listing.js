@@ -65,11 +65,12 @@ const ListingStep = () => {
                             <th scope="col">Instant Book</th>
                             <th scope="col">Rooms and bedroom</th>
                             <th scope="col">Last Modified</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row"><div class="form-check">
+                            <th scope="row" className='field-check-listing'><div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                 
                             </div></th>
@@ -111,6 +112,14 @@ const ListingStep = () => {
                             <td>
                                 <div className='instant-book-table'>
                                 <p>2 days ago</p>
+                                </div>
+                                
+                                
+                            </td>
+                            <td>
+                                <div className='d-flex gap-1 '>
+                                <i class="edit-listing-icon bi bi-gear-fill"></i>
+                                <p className='edit-listing-text'>Edit</p>
                                 </div>
                                 
                                 

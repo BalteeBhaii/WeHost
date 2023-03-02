@@ -2592,12 +2592,25 @@ font-size: 25px;
     background-color: var(--bulue-color);
     width: 170px
 }
+.field-check-listing{
+    vertical-align: middle;
+}
 
 .coupon-card{
     width: 50%;
 }
 .instant-book-table{
     width: 110px;
+}
+.edit-listing-text{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0079C2;
+}
+.edit-listing-icon{
+    color: #0079C2;
+    font-size: 15px;
+    cursor: pointer;
 }
 .listing-property-text{
     font-size: 18px;
