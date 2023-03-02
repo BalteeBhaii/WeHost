@@ -21,7 +21,7 @@ import StepThree from '../components/verifyPropertyComponent/stepThree';
 
 
 const VerifyPropertyPage = () => {
-    const [page, setPage] = useState(16);
+    const [page, setPage] = useState(0);
     const [width, setWidth] = useState(0);
     return (
         <>
