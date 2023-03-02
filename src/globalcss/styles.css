@@ -107,10 +107,13 @@ input[type=number] {
 
 
 .signin-input-container input {
-    background-color: #B4EBF9;
+    background-color: #CBF2FC !important;
     margin-bottom: 25px;
-}
 
+}
+.signin-background{
+    background-color: rgba(0,0,0,.5)
+}
 .signin-input-container .select{
     background-color: #B4EBF9;
     margin-bottom: 25px;
@@ -1319,7 +1322,13 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
 }
 .tip-card{
     width: 222px;
+    height: 222px;
 }
+.card-width{
+    width: 222px;
+    height: 260px;
+}
+
 
 .additonal-step-section{
     background: url('/public//images/additonal-step-img.png');
@@ -2583,10 +2592,45 @@ font-size: 25px;
     background-color: var(--bulue-color);
     width: 170px
 }
+.field-check-listing{
+    vertical-align: middle;
+}
 
 .coupon-card{
     width: 50%;
 }
+.instant-book-table{
+    width: 110px;
+}
+.edit-listing-text{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0079C2;
+}
+.edit-listing-icon{
+    color: #0079C2;
+    font-size: 15px;
+    cursor: pointer;
+}
+.listing-property-text{
+    font-size: 18px;
+    font-weight: 700;
+}
+.listing-text{
+    font-size: 15px;
+}
+.listing-property-done{
+    color:#188907;
+}
+
+ /* style listing start */
+ .btn-search-listing{
+background-color: #0579C1;
+color:white
+ }
+ .image-listing{
+    width: 200px;
+ }
 
 @media(min-width: 775px) {
     .daterange-display {

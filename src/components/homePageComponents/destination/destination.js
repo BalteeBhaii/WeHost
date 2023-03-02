@@ -300,16 +300,7 @@ const Destination = () => {
                             <span className='guest-dropdown-counter-text'>{infantCount}</span>
                             <i className="bi bi-plus-circle guest-dropdown-counter-plus" onClick={() => { setInfantCount(infantCount + 1); }}></i>
                           </div>
-                        </div>
-                        <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-4 mb-1'>
-                          <span className='destination-main-search-item mt-2'>Pets</span>
-                          <div className='guest-dropdown-counter'>
-                            <span className='guest-dropdown-counter-pets'>Yes</span>
-                            <input className="form-check-input shadow-none guest-dropdown-counter-radio guest-dropdown-counter-radio-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                            <span className='guest-dropdown-counter-pets'>No</span>
-                            <input className="form-check-input shadow-none guest-dropdown-counter-radio guest-dropdown-counter-radio-2" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                          </div>
-                        </div>
+                        </div>                         
                       </div>
                     </div>
                   </div>

@@ -18,10 +18,10 @@ import FourTenStep from '../components/verifyPropertyComponent/fourTenStep';
 import '../globalcss/styles.css';
 import TenthStep from '../components/verifyPropertyComponent/tenthStep';
 import StepThree from '../components/verifyPropertyComponent/stepThree';
-import EleventhStep from '../components/verifyPropertyComponent/eleventhStep';
+
 
 const VerifyPropertyPage = () => {
-    const [page, setPage] = useState(16);
+    const [page, setPage] = useState(0);
     const [width, setWidth] = useState(0);
     return (
         <>
@@ -44,7 +44,7 @@ const VerifyPropertyPage = () => {
                     {(page === 15) && <SixTenStep />}
                     {(page === 11) && <TenthStep />}
                     {(page === 12) && <StepThree />}
-                    {(page === 16) && <EleventhStep />}
+                    
                    
                     <div className='position-relative container'>
                         <div className="progress my-5" style={{ background: '#0079c2bf' }}>

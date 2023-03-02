@@ -69,8 +69,7 @@ const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
     <>
       {/* <button type='button' onClick={()=> setShowModal(!showModal)}> laundh</button> */}
       {(showSigninModal) && (
-
-        <div className="modal-background" style={{ zIndex: "1000" }}>
+        <div className="modal-background signin-background" style={{ zIndex: "1000" }}>
           <div className="modal-card">
             <section className="modal-body">
               <div className='w-100 text-end'>
