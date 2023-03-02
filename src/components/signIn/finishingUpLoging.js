@@ -1,9 +1,10 @@
 import { error } from 'jquery';
 import React from 'react';
 import { useState } from 'react';
+import axios from 'axios';
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-const FinishUpLoging = ({showLoginModel, setShowLoginModal, showSignupModal, setShowSignupModal, showCodeModel, setShowCodeModel}) => {
+const FinishUpLoging = ({showLoginModel, setShowLoginModal, showSignupModal, setShowSignupModal, showCodeModel, setShowCodeModel, email}) => {
     const [number, setNumber] = useState('');
     const [fName, setfName] = useState('');
     const [lName, setlName] = useState('');
@@ -11,15 +12,16 @@ const FinishUpLoging = ({showLoginModel, setShowLoginModal, showSignupModal, set
     const [password, setPassword] = useState('');
     const [confirmP, setConfirmP] = useState('');
     const [error, setError] = useState('');
-
+    const url = 'http://localhost:8000/api/'
     const handleAgreeAndContinue = ()=>{
         var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         if(number !== '' && fName !== '' && lName !== '' && dob !== '' && password !== '' && confirmP !== ''){
             if(password === confirmP){
                 if(document.getElementById('checkbox').checked){
-                    setShowLoginModal(!showLoginModel);
-                    setShowSignupModal(!showSignupModal);
-                    setShowCodeModel(!showCodeModel);
+                    postData()
+                    // setShowLoginModal(!showLoginModel);
+                    // setShowSignupModal(!showSignupModal);
+                    // setShowCodeModel(!showCodeModel);
                 } else {
                     setError('"Please accept terms of services"')
                 }
@@ -31,6 +33,31 @@ const FinishUpLoging = ({showLoginModel, setShowLoginModal, showSignupModal, set
             console.log(number,'p', password, )
         }
         
+    }
+
+    const apibody = {
+        name: fName,
+        email: email,
+        password: password,
+        password_confirmation: confirmP
+    }
+
+    const postData = async () => {
+        await axios.post(`${url}register`, apibody, { headers: { "Accept": "application/json" } })
+        .then(res => {
+            if(res.data.success){
+              setError(res.data.message);
+            }
+            console.log(res.data);
+          })
+          .catch(err => {
+            if(err.response.status === 422){
+                console.log(err.response.status)
+                setError(err.response.data.message)
+            }
+            console.log(err.response);
+
+          });
     }
     return ( <>
          {(showLoginModel)&&(

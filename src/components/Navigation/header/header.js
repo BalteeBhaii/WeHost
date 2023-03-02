@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SignIn from "../../signIn/signin";
 import SignUp from "../../signIn/signUp";
+import SignInModel from "../../signIn/signInModel";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 
 

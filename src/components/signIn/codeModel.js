@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import FinishUpLoging from './finishingUpLoging';
 const CodeModal = ({showCodeModel, setShowCodeModal, showSignupModal, setShowSignupModal, email}) => {
     const [showLoginModel, setShowLoginModal] = useState(false);
-    const [code, setCode] = useState(0);
+    const [code, setCode] = useState(null);
     const [error, setError] = useState('');
 
     const handleCodeclick = () => {
-        if(code !== 0){
+        if(code){
             setShowLoginModal(!showLoginModel)
         } else{
             setError('"code is required"')
@@ -42,6 +42,7 @@ const CodeModal = ({showCodeModel, setShowCodeModal, showSignupModal, setShowSig
                     setShowSignupModal={setShowSignupModal}
                     showCodeModel={showCodeModel}
                     setShowCodeModal={setShowCodeModal}
+                    email={email}
                     />
             </div>
         )}

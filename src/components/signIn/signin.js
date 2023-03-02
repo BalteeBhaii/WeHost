@@ -2,31 +2,34 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from '../../features/user/userSlice';
+import { userInfo } from '../../features/user/userInfoSlice';
+import axios from 'axios';
 import SignUp from './signUp';
 const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage]= useState('');
-  const {isLoggedIn} = useSelector(state => state.user);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [data, setData] = useState([]);
+  const { isLoggedIn } = useSelector(state => state.user);
   const dispatch = useDispatch();
-  // console.log(isLoggedIn)
+  const url = 'http://localhost:8000/api/';
   const handleLoginClick = () => {
-    dispatch(logIn(true));
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if(email !== '' && password !== ''){
-      if(email.match(validRegex)){
+    if (email !== '' && password !== '') {
+      if (email.match(validRegex)) {
         console.log('valid email');
-        setshowSigninModal(!showSigninModal)
+        getData(email, password);
+        // setshowSigninModal(!showSigninModal)
         console.log(password)
-      } else{
+      } else {
         setErrorMessage('"Email is not Correct!"')
       }
 
-      
-      if(document.getElementById('CheckBox').checked){
+
+      if (document.getElementById('CheckBox').checked) {
         console.log('checked')
-      } else{
+      } else {
         console.log('not Checked')
       }
 
@@ -34,10 +37,39 @@ const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
       setErrorMessage("'Provide correct Email and Password!'");
     }
   }
+
+  const apibody = {
+    email: email,
+    password: password
+  }
+
+  const getData = async (email, password) => {
+    await axios.post(`${url}login`, { email: email, password: password }, { headers: { "Accept": "application/json" } })
+      .then(res => {
+        if(res.data.success){
+          setData(res.data.data);
+          const token = res.data.token.split("|");
+          localStorage.setItem('dataKey', JSON.stringify(token[1]));
+          dispatch(logIn());
+          dispatch(userInfo({email: res.data.data.email, name: res.data.data.name, role: res.data.data.roles[0].name}));
+          setErrorMessage('successful');
+        }
+        console.log(res.data);
+      })
+      .catch(err => {
+        // setErrorMessage(err.response)
+        console.log(err.response.data.message);
+        if(err.response.data.error){
+          setErrorMessage(err.response.data.message);
+        }
+      });
+  }
+
   return (
     <>
       {/* <button type='button' onClick={()=> setShowModal(!showModal)}> laundh</button> */}
       {(showSigninModal) && (
+
         <div className="modal-background" style={{ zIndex: "1000" }}>
           <div className="modal-card">
             <section className="modal-body">
@@ -53,16 +85,16 @@ const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
                 <label className='text-danger mb-2 fw-semibold'>{errorMessage}</label>
                 <form className='signin-input-width'>
                   <input
-                   className='form-control border-0 shadow-none'
+                    className='form-control border-0 shadow-none'
                     type="email"
-                    name='email' 
+                    name='email'
                     placeholder='Email'
-                    required onChange={(e)=>{setEmail(e.target.value)}}
+                    required onChange={(e) => { setEmail(e.target.value) }}
                   />
-                  <input className='form-control border-0 shadow-none' 
+                  <input className='form-control border-0 shadow-none'
                     type="password"
-                    placeholder='Password' 
-                    required onChange={(e)=>{setPassword(e.target.value)}}
+                    placeholder='Password'
+                    required onChange={(e) => { setPassword(e.target.value) }}
                   />
                 </form>
                 <div className='d-flex justify-content-between align-items-center sign-in-checkbox'>
@@ -79,9 +111,13 @@ const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
                     Login
                   </button>
                 </div>
-                <button className='border-0 bg-white text-black sign-in-checkbox' onClick={() => { setShowSignupModal(!showSignupModal) }}>
-                  <ins>Don't have account?</ins>
-                </button>
+                {(loginValue === 'Guest')&&(
+                  <div>
+                    <a style={{cursor: 'pointer'}} onClick={() => { setShowSignupModal(!showSignupModal) }}>
+                      <ins>Don't have account?</ins>
+                    </a>
+                  </div>
+                )}
               </div>
             </section>
           </div>

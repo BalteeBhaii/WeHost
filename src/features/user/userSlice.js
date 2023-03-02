@@ -8,10 +8,10 @@ const initialState = {
     name: 'user',
     initialState,
     reducers: {
-      logIn: (state, action) => {
+      logIn: (state) => {
         state.isLoggedIn = true;
       },
-      logOut: (state, action) => {
+      logOut: (state) => {
         state.isLoggedIn = false;
       },
     },
