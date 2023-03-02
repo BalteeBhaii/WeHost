@@ -45,9 +45,9 @@ const SignUp = ({ showSignupModal, setShowSignupModal }) => {
               </div>
               <div className='d-flex flex-column justify-content-center align-items-center signin-input-container'>
               <label className='text-danger fw-semibold'>{error}</label>
-                <Select className='signin-input-width mb-3 sign-up-background' options={options} value={country} onChange={changeHandler} />
+                <Select className='signin-input-width mb-3 ' options={options} value={country} onChange={changeHandler}/>
                 <input
-                   className='form-control border-0 shadow-none signin-input-width'
+                   className='form-control border-0 shadow-none signin-input-width signin-input-container-input'
                     type="email"
                     name='email'
                     value={email}

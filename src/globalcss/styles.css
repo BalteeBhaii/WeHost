@@ -106,10 +106,9 @@ input[type=number] {
 }
 
 
-.signin-input-container input {
+.signin-input-container-input {
     background-color: #CBF2FC !important;
     margin-bottom: 25px;
-
 }
 .signin-background{
     background-color: rgba(0,0,0,.5)

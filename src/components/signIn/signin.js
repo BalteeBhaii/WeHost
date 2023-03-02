@@ -84,13 +84,13 @@ const SignIn = ({ showSigninModal, setshowSigninModal, loginValue }) => {
                 <label className='text-danger mb-2 fw-semibold'>{errorMessage}</label>
                 <form className='signin-input-width'>
                   <input
-                    className='form-control border-0 shadow-none'
+                    className='form-control border-0 shadow-none signin-input-container-input'
                     type="email"
                     name='email'
                     placeholder='Email'
                     required onChange={(e) => { setEmail(e.target.value) }}
                   />
-                  <input className='form-control border-0 shadow-none'
+                  <input className='form-control border-0 shadow-none signin-input-container-input'
                     type="password"
                     placeholder='Password'
                     required onChange={(e) => { setPassword(e.target.value) }}
