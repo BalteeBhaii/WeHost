@@ -1319,7 +1319,13 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
 }
 .tip-card{
     width: 222px;
+    height: 222px;
 }
+.card-width{
+    width: 222px;
+    height: 260px;
+}
+
 
 .additonal-step-section{
     background: url('/public//images/additonal-step-img.png');

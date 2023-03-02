@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 
 
-const EleventhStep = () => {
+const PublishStep = () => {
     return (
         <>
             <div className='container'>
@@ -36,15 +36,15 @@ const EleventhStep = () => {
 
             <div className='container-fluid p-0'>
 
-                <div className='additonal-step-section overflow-hidden d-flex justify-content-center gap-2'>
-                    <div className="card  additional-step-card " style={{ width: "18rem" }}>
+                <div className='additonal-step-section overflow-hidden d-flex justify-content-center gap-2 flex-wrap'>
+                    <div className="card  additional-step-card ">
                         <div class="card-body">
                             <h5 class="card-title">Instant Book</h5>
                             <p class="card-text">This will boost up your post and
                                 choose how will your guest book</p>
                         </div>
                     </div>
-                    <div className="card additional-step-card " style={{ width: "18rem" }}>
+                    <div className="card additional-step-card " >
                         <div class="card-body">
                             <h5 class="card-title">Reservation Dates</h5>
                             <p class="card-text">Setup dates  on Calendar on bases of
@@ -57,7 +57,7 @@ const EleventhStep = () => {
                             <p class="card-text">Setup your cancellation policies</p>
                         </div>
                     </div>
-                    <div className="card additional-step-card " style={{ width: "18rem" }}>
+                    <div className="card additional-step-card " >
                         <div class="card-body">
                             <h5 class="card-title">Rules and Promotion </h5>
                             <p class="card-text">Setup your house rule and setup offers
@@ -73,20 +73,20 @@ const EleventhStep = () => {
                 </div>
                 <div className='d-flex gap-3 flex-column flex-md-row  justify-content-start align-items-center'>
                     
-                    <div class="card tip-card " >
-                        <img class="card-img-top img-fluid" src="/images/pricing.jpg"  />
+                    <div class="card card-width " >
+                        <img class="card-img-top img-fluid tip-card" src="/images/pricing.jpg"  />
                         <h5 class="card-title text-center">How to get paid?</h5>   
                                 
                            
                     </div>
-                    <div class="card tip-card" >
-                        <img class="card-img-top img-fluid" src="/images/setprice.jpg"  />
+                    <div class="card card-width" >
+                        <img class="card-img-top img-fluid tip-card" src="/images/setprice.jpg"  />
                         <h5 class="card-title text-center">How to setup pricing strategy</h5>   
                                 
                            
                     </div>
-                    <div class="card tip-card" >
-                        <img class="card-img-top img-fluid" src="/images/housing.jpg"  />
+                    <div class="card card-width" >
+                        <img class="card-img-top img-fluid tip-card" src="/images/housing.jpg"  />
                         <h5 class="card-title text-center">How to Prepare House?</h5>   
                                 
                            
@@ -98,4 +98,4 @@ const EleventhStep = () => {
     );
 }
 
-export default EleventhStep;
+export default PublishStep;
