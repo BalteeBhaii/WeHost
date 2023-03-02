@@ -18,7 +18,7 @@ import BusinessPage from './pages/businesstripPage';
 import TaxPage from './pages/taxPage';
 import NotificationPage from './pages/notificationPage';
 import PublishPage from './pages/publishPage';
-
+import ListingPage from './pages/listingPage';
 
 function App() {
   return (
@@ -43,6 +43,7 @@ function App() {
         <Route exact path="/taxinfo" element={<TaxPage/>} />
         <Route exact path="/Notification" element={<NotificationPage/>} />
         <Route exact path="/Publish" element={<PublishPage/>} />
+        <Route exact path="/Listing" element={<ListingPage/>} />
         
         
         <Route exact path = '/' element = {<HomePage/>}/>

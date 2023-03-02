@@ -107,10 +107,13 @@ input[type=number] {
 
 
 .signin-input-container input {
-    background-color: #B4EBF9;
+    background-color: #CBF2FC !important;
     margin-bottom: 25px;
-}
 
+}
+.signin-background{
+    background-color: rgba(0,0,0,.5)
+}
 .signin-input-container .select{
     background-color: #B4EBF9;
     margin-bottom: 25px;
@@ -2593,6 +2596,28 @@ font-size: 25px;
 .coupon-card{
     width: 50%;
 }
+.instant-book-table{
+    width: 110px;
+}
+.listing-property-text{
+    font-size: 18px;
+    font-weight: 700;
+}
+.listing-text{
+    font-size: 15px;
+}
+.listing-property-done{
+    color:#188907;
+}
+
+ /* style listing start */
+ .btn-search-listing{
+background-color: #0579C1;
+color:white
+ }
+ .image-listing{
+    width: 200px;
+ }
 
 @media(min-width: 775px) {
     .daterange-display {

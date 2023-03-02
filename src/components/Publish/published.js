@@ -6,7 +6,7 @@ const PublishStep = () => {
     return (
         <>
             <div className='container'>
-                <h2 className='welcome-title'>Welcome Ali</h2>
+                <h2 className='welcome-title mt-3'>Welcome Ali</h2>
                 <p className='welcome-text'>Your place can be viewed by guests after this post have been published for 24 hours.</p>
                 <div className='row'>
                     <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
