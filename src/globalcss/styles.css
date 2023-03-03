@@ -68,6 +68,13 @@ input[type=number] {
     font-size: 36px !important;
 }
 
+/* ******************************** signIn signUp card css ************************************ */
+.card-display-style{
+    margin-right: -50px;
+    background: hsla(0, 0%, 100%, 0.55);
+    backdrop-filter: blur(30px);
+}
+
 /* ************************ homepage css ************* */
 
 
@@ -3275,7 +3282,11 @@ color:white
     }
 }
 
-@media screen and (max-width: 500px) {}
+@media screen and (max-width: 650px) {
+    .card-display-style{
+        margin-right: 0px !important;
+    }
+}
 
 @media(max-width:475px) {
     .review-main-section .owl-carousel .owl-nav .owl-prev {
