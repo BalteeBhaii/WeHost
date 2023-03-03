@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-const FinishUpLoging = () => {
+import { useNavigate } from "react-router-dom";
+
+const FinishUpLoging = (props) => {
   const [number, setNumber] = useState('');
   const [fName, setfName] = useState('');
   const [lName, setlName] = useState('');
@@ -11,6 +13,7 @@ const FinishUpLoging = () => {
   const [confirmP, setConfirmP] = useState('');
   const [error, setError] = useState('');
   const [email, setEmail]  = useState('abc@gmail.com');
+  const navigate = useNavigate();
   const url = 'http://localhost:8000/api/'
   const handleAgreeAndContinue = (event) => {
     event.preventDefault();
@@ -36,16 +39,16 @@ const FinishUpLoging = () => {
 
   const apibody = {
     name: fName,
-    email: email,
+    email: props.email,
     password: password,
     password_confirmation: confirmP
   }
 
   const postData = async () => {
-    await axios.post(`${url}registration/complete`, apibody, { headers: { "Accept": "application/json" } })
+    await axios.post(`${url}complete/verification`, apibody, { headers: { "Accept": "application/json" } })
       .then(res => {
         if (res.data.success) {
-          setError(res.data.message);
+          navigate('/signin');
         }
         console.log(res.data);
       })

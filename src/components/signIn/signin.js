@@ -23,7 +23,6 @@ const SingIn = () => {
         if (email.match(validRegex)) {
           console.log('valid email');
           getData(email, password);
-          navigate("/signup");
           // setshowSigninModal(!showSigninModal)
           console.log(password)
         } else {
@@ -50,6 +49,7 @@ const SingIn = () => {
     const getData = async (email, password) => {
       await axios.post(`${url}login`, { email: email, password: password }, { headers: { "Accept": "application/json" } })
         .then(res => {
+          // return console.log(res.data);
           if(res.data.success){
             setData(res.data.data);
             const token = res.data.token.split("|");
@@ -57,6 +57,7 @@ const SingIn = () => {
             dispatch(logIn());
             dispatch(userInfo({email: res.data.data.email, name: res.data.data.name, role: res.data.data.roles[0].name}));
             setErrorMessage('successful');
+            navigate('/');
           }
           console.log(res.data);
         })
