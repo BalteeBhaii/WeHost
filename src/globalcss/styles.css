@@ -2618,6 +2618,55 @@ color:white
     width: 200px;
  }
 
+ .hamburger {
+    position: relative;
+    width: 29px;
+    height: 24px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    position: absolute;
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #000;
+    transform: scaleY(1.2);
+  }
+  
+  .hamburger span:nth-child(1) {
+    margin-top: -19px;
+    transform-origin: left;
+    transition: transform 400ms ease;
+  }
+  
+  .hamburger span:nth-child(2) {
+    transition: opacity 300ms ease;
+  }
+  
+  .hamburger span:nth-child(3) {
+    margin-top: 19px;
+    transform-origin: left;
+    transition: transform 400ms ease;
+  }
+  
+  .ham-burger-active span:nth-child(1) {
+    transform: rotate(42deg);
+  }
+  
+  .ham-burger-active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .ham-burger-active span:nth-child(3) {
+    transform: rotate(-42deg);
+  }
+  
+
 @media(min-width: 775px) {
     .daterange-display {
         display: none !important;
