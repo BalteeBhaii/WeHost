@@ -55,7 +55,7 @@ const Header = () => {
   return (
     <>
       <div className="container-fluid bg-light header-main">
-        <div className="header d-flex">
+        <div className="header d-flex justify-content-between">
           <div className="logo-section">
             <a href="/">
               <img className="header-logo" src="/images/logo.png" alt="logo" />

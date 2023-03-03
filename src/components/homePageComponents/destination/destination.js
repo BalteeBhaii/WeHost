@@ -359,7 +359,7 @@ const Destination = () => {
                 </th>
                 <th className="border-0">
                   <div className='button-column'>
-                    <button className='btn btn-primary bottom-button bi px-5' id='more' onClick={()=>{setFilterModal(!filterModal)}}>Filter</button>
+                    <button className='btn btn-primary bottom-button bi px-5' id='filter' onClick={()=>{setFilterModal(!filterModal)}}>Filter</button>
                   </div>
                   <FilterModal show={filterModal} setShowModal={setFilterModal}/>
                 </th>

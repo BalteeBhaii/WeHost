@@ -51,7 +51,7 @@ const SecondStep = () => {
                       
                         
                     </div>
-                    <div className='col-6 col-md-5 col-sm-12'>
+                    <div className='col-12 col-md-5 col-lg-6'>
                         <img className='verify-2nd-image' src='/images/propertyhouse.png' alt="" />
                     </div>
                 </div>

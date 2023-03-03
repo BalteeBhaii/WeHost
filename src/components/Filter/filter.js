@@ -86,7 +86,7 @@ const FilterModal = ({ show, setShowModal }) => {
                   <i className="bi bi-buildings buildingimg"></i>
                   <span className="Filtertxt">Property Type</span>
                 </a>
-                <ul className="list-group list-group-horizontal property-type-list">
+                <ul className="list-group list-group-horizontal property-type-list mx-5">
 
                   <li className="list-group-item">
                     <button>
@@ -107,7 +107,7 @@ const FilterModal = ({ show, setShowModal }) => {
                   </li>
                   <li className="list-group-item">
                     <button>
-                      <img style={{ height: '16px' }} src={img1} />
+                      <img className='list-btn-guesthouse' src={img1} />
                       <p>Guest House</p>
                     </button>
 
@@ -126,7 +126,7 @@ const FilterModal = ({ show, setShowModal }) => {
                       <div className="coveniencehead ">Essentails</div>
                       <div key={`inline-${type}`} className="row .spaceleft10">
 
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -136,7 +136,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -146,7 +146,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -156,7 +156,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -166,7 +166,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -176,7 +176,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -186,7 +186,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -196,7 +196,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -206,7 +206,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -216,7 +216,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -239,7 +239,7 @@ const FilterModal = ({ show, setShowModal }) => {
                       <div className="coveniencehead ">Features</div>
                       <div key={`inline-${type}`} className="row .spaceleft10 ">
 
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -249,7 +249,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -259,7 +259,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -269,7 +269,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -279,7 +279,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
@@ -289,7 +289,7 @@ const FilterModal = ({ show, setShowModal }) => {
                             id={`inline-${type}-1`}
                           />
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 mt-2'>
                           <Form.Check
 
                             inline
