@@ -19,6 +19,10 @@ import TaxPage from './pages/taxPage';
 import NotificationPage from './pages/notificationPage';
 import PublishPage from './pages/publishPage';
 import ListingPage from './pages/listingPage';
+import SignInPage from './pages/signInPage';
+import SingUpPage from './pages/signUpPage';
+import OtpPage from './pages/otpPage';
+import SignupCompletePage from './pages/signupCompletePage';
 
 function App() {
   return (
@@ -28,7 +32,7 @@ function App() {
         <Route path="/" element={<HomePage />}/>
         <Route path="/hotel" element={<HotelsPage />} />
         <Route exact path="/host" element={<WeHostPage />} />
-        <Route exact path="/hotel/:id" element={<SpecificHotelPage/>} />
+        <Route path="/hotel/:id" element={<SpecificHotelPage/>} />
         <Route exact path="/property" element={<VerifyPropertyPage/>} />
         <Route exact path="/account" element={<AccountDashboardPage/>} />
         <Route exact path="/profile" element={<ProfilePage/>} />
@@ -44,6 +48,10 @@ function App() {
         <Route exact path="/Notification" element={<NotificationPage/>} />
         <Route exact path="/Publish" element={<PublishPage/>} />
         <Route exact path="/Listing" element={<ListingPage/>} />
+        <Route exact path="/signin" element={<SignInPage/>} />
+        <Route exact path="/signup" element={<SingUpPage/>} />
+        <Route exact path="/otp" element={<OtpPage/>} />
+        <Route exact path="/sign-complete" element={<SignupCompletePage/>} />
         
         
         <Route exact path = '/' element = {<HomePage/>}/>

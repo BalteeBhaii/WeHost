@@ -1,26 +1,26 @@
-import React, { useState, useMemo } from 'react';
+import React, {useState, useMemo} from 'react';
+import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 import countryList from "react-select-country-list";
-import CodeModal from './codeModel';
-const SignUp = ({ showSignupModal, setShowSignupModal }) => {
+const SingUp = () => {
+  const [country, setCountry] = useState('');
   const [showCodeModel, setShowCodeModal] = useState(false);
   const [error, setError] = useState('');
   const [email, setEmail] = useState('');
-  const [country, setCountry] = useState('');
-
   const options = useMemo(() => countryList().getData(), [])
-
   const changeHandler = value => {
     setCountry(value)
   }
-
-  const handleContinueClick = () => {
+  const navigate = useNavigate();
+  const handleContinueClick = (event) => {
+    event.preventDefault();
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if(email !== '' && country !== ''){
       if(email.match(validRegex)){
         console.log('valid email');
         setShowCodeModal(!showCodeModel);
         setError('');
+        navigate("/otp");
       } else{
         setError('Email is not Correct!')
       }
@@ -29,65 +29,56 @@ const SignUp = ({ showSignupModal, setShowSignupModal }) => {
     }
   }
 
-
-  return (
-    <>
-      {(showSignupModal) && (
-        <div className="modal-background" style={{ zIndex: "1000" }}>
-          <div className="modal-card">
-            <section className="modal-body my-3">
-              <div className='w-100 text-end'>
-                <button type="button" className="btn-close" onClick={() => setShowSignupModal(!showSignupModal)}></button>
-              </div>
-              <div className='text-center mb-4 sign-in-text-size'>
-                <h1 className='mb-2'><span >S</span>ign up</h1>
-                <p className='fw-semibold '>Join us now</p>
-              </div>
-              <div className='d-flex flex-column justify-content-center align-items-center signin-input-container'>
-              <label className='text-danger fw-semibold'>{error}</label>
-                <Select className='signin-input-width mb-3 ' options={options} value={country} onChange={changeHandler}/>
-                <input
-                   className='form-control border-0 shadow-none signin-input-width signin-input-container-input'
-                    type="email"
-                    name='email'
-                    value={email}
-                    placeholder='Email'
-                    required onChange={(e)=>{setEmail(e.target.value)}}
-                  />
-                {/* <PhoneInput
-                  className='mb-3'
-                  country={'us'}
-                  value={number}
-                  onChange={(e)=>setNumber(e)}
-                /> */}
-                <button className='btn button-continue text-white fw-semibold signin-input-width' onClick={handleContinueClick}>
-                  Continue
-                </button>
-                <div className='d-flex signin-input-width'>
-                  <hr className='signin-hr w-50' />
-                  <p className='mx-3 fw-semibold fs-5'>Or</p>
-                  <hr className='signin-hr w-50' />
-                </div>
-                <button className='form-control button-facebook fw-semibold mb-3 border-0 shadow-none signin-input-width'>Login with facebook</button>
-                <button className='form-control button-facebook fw-semibold border-0 shadow-none signin-input-width'>Login with Gmail</button>
-                {/* <div className='d-flex justify-content-between align-items-center sign-in-checkbox'>
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                    <label className="form-check-label fw-semibold" for="flexCheckDefault">
-                        Default checkbox
-                    </label>
+  return (<>
+    <section className="text-center text-lg-start">
+      <div className="container py-5">
+        <div className="row g-0 align-items-center justify-content-center">
+          <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+            <div className="card cascading-right" style={{
+              marginRight: '-50px',
+            background: 'hsla(0, 0%, 100%, 0.55)',
+            backdropFilter: 'blur(30px)'
+            }}
+            >
+              <div className="card-body p-5 shadow-5 text-center">
+                <h2 className="fw-bold mb-5">Sign up now</h2>
+                <form onSubmit={handleContinueClick}>
+                  <label className='text-danger fw-semibold'>{error}</label>
+                  <div className="row">
+                    <div className="col-md-12 mb-4">
+                      <Select className='form-control p-0 text-start' placeholder='Select Country' options={options} value={country} onChange={changeHandler}/>
+                    </div>
                   </div>
-                  <p className='fw-semibold'>Forgot Password</p>
-                </div> */}
-                {/* <button className='mt-5 border-0 bg-white' onClick={()=>{setshowSigninModal(!showSigninModal)}}><a href='' style={{color: '#7B8FA1'}}><ins>Already have account?</ins></a></button>                       */}
+
+                  <div className="form-outline mb-4">
+                    <input type="email" id="form3Example3" className="form-control shadow-none" placeholder='Email' required onChange={(e)=>{setEmail(e.target.value)}} />
+                  </div>
+                  <div>
+                    <button type="submit" className="btn w-100 text-white fw-semibold btn-block mb-4" style={{background: '#0D7BC4'}}>Sign up</button>
+                  </div>
+                  <hr/>
+                  <div className="text-center">
+                    <p>or sign up with:</p>
+                    <button type="button" className="btn btn-link btn-floating mx-1">
+                      <i class="bi bi-facebook"></i>
+                    </button>
+                    <button type="button" className="btn btn-link btn-floating mx-1">
+                      <i class="bi bi-google"></i>
+                    </button>
+                  </div>
+                </form>
               </div>
-            </section>
+            </div>
           </div>
-          <CodeModal showCodeModel={showCodeModel} email={email} setShowCodeModal={setShowCodeModal} showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal} />
+
+          <div className="col-md-6 col-lg-5 mb-5 mb-lg-0">
+            <img src="https://images.pexels.com/photos/1974596/pexels-photo-1974596.jpeg?auto=compress&cs=tinysrgb&w=1600" className="w-100 rounded-4 shadow-4"
+              alt="" />
+          </div>
         </div>
-      )}
-    </>
-  );
+      </div>
+    </section>
+  </>);
 }
 
-export default SignUp;
+export default SingUp;
