@@ -2,25 +2,53 @@ import React, {useState, useMemo} from 'react';
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 import countryList from "react-select-country-list";
+import CodeModel from './codeModel';
+import FinishUpLoging from './finishingUpLoging';
+import axios from 'axios';
+
 const SingUp = () => {
   const [country, setCountry] = useState('');
   const [showCodeModel, setShowCodeModal] = useState(false);
   const [error, setError] = useState('');
   const [email, setEmail] = useState('');
+  const [authState, setAuthState] = useState(0);
   const options = useMemo(() => countryList().getData(), [])
   const changeHandler = value => {
     setCountry(value)
   }
   const navigate = useNavigate();
+
+  const url = 'http://localhost:8000';
+  var localAuthState = localStorage.getItem("authState");
+ 
   const handleContinueClick = (event) => {
     event.preventDefault();
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if(email !== '' && country !== ''){
       if(email.match(validRegex)){
-        console.log('valid email');
-        setShowCodeModal(!showCodeModel);
-        setError('');
-        navigate("/otp");
+        let data = {email: email};
+        let config = {
+          headers: {
+            'Accept': 'application/json'
+          }
+        };
+
+        axios.post(`${url}/api/register`, data, config)
+        .then((response) => {
+          if(response.data.success){
+            setError('');
+            localStorage.setItem("authState", 1);
+            localAuthState = localStorage.getItem("authState");
+            setAuthState(1);
+          }
+        })
+        .catch((error) => {
+          if(error){
+            console.log(error.response.data.message);
+            setError(error.response.data.message);
+          }
+        })
+
       } else{
         setError('Email is not Correct!')
       }
@@ -30,7 +58,8 @@ const SingUp = () => {
   }
 
   return (<>
-    <section className="text-center text-lg-start">
+  {!localAuthState ?
+  <section className="text-center text-lg-start">
       <div className="container py-5">
         <div className="row g-0 align-items-center justify-content-center">
           <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
@@ -76,6 +105,18 @@ const SingUp = () => {
         </div>
       </div>
     </section>
+    : ''
+  }
+
+  {localAuthState == 1 ?
+    <CodeModel email={email} />
+    : ''
+  }
+
+  {localAuthState == 2 ?
+    <FinishUpLoging />
+    : ''
+  }
   </>);
 }
 
