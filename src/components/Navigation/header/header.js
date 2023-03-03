@@ -38,17 +38,26 @@ const Header = () => {
     }
   }
 
-  const menuHandler = () => {
+  const menuHandler = (event) => {
     let dorpdownMenu = document.getElementsByClassName("menu-collapse")[0];
+    let hamburger = document.getElementsByClassName("hamburger")[0];
 
     if (dorpdownMenu.classList.contains("menu-active")) {
       dorpdownMenu.classList.add("menu-inactive");
       dorpdownMenu.classList.remove("menu-active");
       document.getElementsByTagName("body")[0].style.overflow = "visible";
+      
+      if(hamburger.classList.contains("ham-burger-active")){
+        hamburger.classList.remove("ham-burger-active");
+      }
     } else {
       dorpdownMenu.classList.remove("menu-inactive");
       dorpdownMenu.classList.add("menu-active");
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
+
+      if(!hamburger.classList.contains("ham-burger-active")){
+        hamburger.classList.add("ham-burger-active");
+      }
     }
   }
 
@@ -109,7 +118,18 @@ const Header = () => {
             </div>
           </div>
           <div className="menu-dropdown">
-            <i className="bi bi-list menu-toggle" onClick={menuHandler}></i>
+            {/* <i className="bi bi-list menu-toggle" onClick={menuHandler}></i> */}
+            <div class="hamburger" onClick={menuHandler}>
+              <span>
+
+              </span>
+              <span>
+
+              </span>
+              <span>
+
+              </span>
+            </div>
           </div>
         </div>
         <div className="menu-collapse">
@@ -151,8 +171,8 @@ const Header = () => {
             </div>
           </ul>
         </div>
-        <SignIn showSigninModal={showSigninModal} setshowSigninModal={setshowSigninModal}  loginValue={loginValue}/>
-        <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal} loginValue={loginValue}/>
+        <SignIn showSigninModal={showSigninModal} setshowSigninModal={setshowSigninModal} loginValue={loginValue} />
+        <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal} loginValue={loginValue} />
       </div>
     </>
   );
