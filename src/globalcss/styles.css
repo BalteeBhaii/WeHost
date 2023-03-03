@@ -106,13 +106,9 @@ input[type=number] {
 }
 
 
-.signin-input-container input {
+.signin-input-container-input {
     background-color: #CBF2FC !important;
     margin-bottom: 25px;
-
-}
-.signin-background{
-    background-color: rgba(0,0,0,.5)
 }
 .signin-input-container .select{
     background-color: #B4EBF9;
@@ -135,18 +131,8 @@ input[type=number] {
     padding: 6px;
 }
 
-.react-tel-input{
-    width: 75% !important
-}
-
 .react-tel-input input, .flag-dropdown{
-    background-color: #B4EBF9 !important;
-    border: none;
-}
-
-.react-tel-input input, .flag-dropdown{
-    border: none !important;
-    box-shadow: none !important;
+    border: 1px solid !important;
 } 
 
 .react-tel-input .form-control{
@@ -154,7 +140,7 @@ input[type=number] {
 }
 
 .css-13cymwt-control{
-    background-color: #B4EBF9 !important;
+    /* background-color: #B4EBF9 !important; */
     border-radius: 6px !important;
     border: none !important;
 }
