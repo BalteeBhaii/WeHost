@@ -750,6 +750,11 @@ input {
     content: "\F247";
     margin-right: 9px;
 }
+.add-listing:hover{
+    background-color:#005286;
+    color: #ffff;
+
+}
 .button-column #more::before {
     content: "\F5D4";
     margin-right: 9px;

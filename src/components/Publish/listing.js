@@ -8,9 +8,9 @@ const ListingStep = () => {
             <div className='container my-5 mb-0'>
                 <div className='d-flex justify-content-between'>
                     <h3 className=''>Listing</h3>
-                    <div>
+                    <div className=''>
                         
-                        <button class="btn btn-search-listing " type="button" id="dropdownMenuButton"  >
+                        <button class="btn btn-search-listing add-listing" type="button" id="dropdownMenuButton"  >
                             <i class="bi bi-plus-lg"></i> <span className='d-none d-md-block'>Add listing</span>
                         </button>
                     </div>
@@ -20,24 +20,24 @@ const ListingStep = () => {
                         <div id="search-autocomplete" class="form-outline">
                             <input type="search" id="form1" class="form-control" placeholder='Search listing' />
                         </div>
-                        <button type="button" class="btn btn-search-listing ">
+                        <button type="button" class="btn btn-search-listing  add-listing">
                             <i class="bi bi-search"></i>
                         </button>
                     </div>
 
                     <div className='d-flex gap-4 flex-wrap'>
                         <div class="dropdown">
-                            <button class="btn btn-search-listing dropdown-toggle w-auto " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-search-listing dropdown-toggle w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Rooms and Bedroom
                             </button>
                         </div>
                         <div class="dropdown">
-                            <button class="btn btn-search-listing dropdown-toggle w-auto" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-search-listing dropdown-toggle w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Amenities
                             </button>
                         </div>
                         <div class="dropdown">
-                            <button class="btn btn-search-listing dropdown-toggle w-auto" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-search-listing dropdown-toggle w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Listing Status
                             </button>
                         </div>
