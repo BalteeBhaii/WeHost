@@ -18,7 +18,7 @@ const SingUp = () => {
   }
   const navigate = useNavigate();
 
-  const url = 'http://localhost:8000';
+  const url = 'https://dev.wehosttravel.com';
 
   const handleContinueClick = (event) => {
     event.preventDefault();

@@ -16,7 +16,7 @@ const SingIn = () => {
   const { isLoggedIn } = useSelector(state => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const url = 'http://localhost:8000/api/';
+  const url = 'https://dev.wehosttravel.com/api/';
   const handleLoginClick = (event) => {
     event.preventDefault();
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
