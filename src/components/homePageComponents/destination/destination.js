@@ -263,7 +263,15 @@ const Destination = () => {
                     {/* <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-count={1} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(1); setDropdownStateToggle(Math.random())}}/> */}
                     <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-index={2} onClick={dropdownsHandler} readOnly />
                     <span className='guest-count'>{guestCount > 0 ? `(${guestCount})` : ''}</span>
-                    <div className='search-dropdown'>
+                    <GuestModal 
+                      adultCount={adultCount} 
+                      setAdultCount={setAdultCount} 
+                      childrenCount={childrenCount} 
+                      setChildrenCount={setChildrenCount} 
+                      infantCount={infantCount}
+                      setInfantCount={setInfantCount}
+                    />
+                    {/* <div className='search-dropdown'>
                       <div className='search-dropdown-main pt-2 pb-3'>
                         <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-2'>
                           <span className='destination-main-search-item mt-2'>Adults</span>
@@ -302,7 +310,7 @@ const Destination = () => {
                           </div>
                         </div>                         
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className='col-xl-3 col-lg-6 col-md-6'>
