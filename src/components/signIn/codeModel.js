@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import FinishUpLoging from './finishingUpLoging';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const CodeModel = (props) => {
@@ -9,25 +10,38 @@ const CodeModel = (props) => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const url = 'http://localhost:8000';
+  const { id } = useParams();
+
+  var signupButton = document.getElementsByClassName("submit-button")[0];
+  var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
+
+  const url = 'http://localhost:8000/api/';
 
   const handleCodeclick = (event) => {
     event.preventDefault();
+
+    signupButton.innerHTML = spinner;
+
     if (code) {
-      let data = { email: props.email, otp: code };
+      let data = { id: id, otp: code };
       let config = {
         headers: {
           'Accept': 'application/json'
         }
       };
 
-      axios.post(`${url}/api/email/verification`, data, config)
+      axios.post(`${url}register/email/verification`, data, config)
         .then((response) => {
-          if (response.data.success) {
+          signupButton.innerHTML = "Verify";
 
+          if (response.data.success) {
+            console.log(response.data);
+            navigate('/register/complete/'+response.data.data);
           }
         })
         .catch((error) => {
+          signupButton.innerHTML = "Verify";
+
           if (error) {
             console.log(error.response.data.message);
             setError(error.response.data.message);
@@ -57,8 +71,8 @@ const CodeModel = (props) => {
                     <div className="form-outline mb-4">
                       <input className='form-control border-1 shadow-none mb-5' type="number" onChange={(e) => setCode(e.target.value)} placeholder='i.e 6757' required />
                       <hr className=' w-100' />
-                      <button className='btn btn-outline-secondary border-1 fw-semibold'>
-                        Done
+                      <button className='btn btn-outline-secondary border-1 fw-semibold submit-button' id='auth-email-confirmation-submit-button'>
+                      Verify
                       </button>
                     </div>
                     <div>

@@ -97,6 +97,16 @@ input[type=number] {
     padding-right: 150px;
 }
 
+#auth-email-confirmation-submit-button {
+    color: #fff;
+    background-color: var(--theme-color);
+    border: 0;
+}
+
+.submit-button:hover {
+    background-color: var(--button-hover-color) !important;
+}
+
 .link-text-color {
     color: #6B728E;
     font-weight: bold;
@@ -477,12 +487,55 @@ a {
     height: 10vh !important;
 }
 
+.header-auth-dropdown {
+    position: relative;
+}
+
 .menu-profile-icon {
+    margin-right: 8px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    object-fit: cover;
     cursor: pointer;
 }
 
 .header-main-menu a {
     color: rgb(17, 16, 16);
+}
+
+.header-auth-menu {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header-auth-menu-icon {
+    font-size: 14px;
+}
+
+.header-auth-menu-item {
+    color: #000;
+}
+
+.header-auth-menu-active {
+    animation: headerAuthItemActive 0.3s ease forwards;
+}
+
+.header-auth-menu-inactive {
+    animation: headerAuthItemInactive 0.3s ease forwards;
+}
+
+.header-auth-inner-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .header-main-menu {
@@ -2225,6 +2278,11 @@ span.riceranger {
     margin-right: 4px;
 }
 
+.menu-profile .dropdown .dropdown-menu {
+    border: 0;
+    box-shadow: rgb(0 0 0 / 9%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+}
+
 .amenities-icon {
     transform: scale(1.2);
     margin-right: 4px;
@@ -2292,8 +2350,9 @@ span.riceranger {
 }
 
 .guest-dropdown-counter-radio-1 {
-    margin-right: 43px;
+    margin-right: 68px;
 }
+
 
 .form-check-input:checked {
     background-color: var(--theme-color) !important;
@@ -2669,6 +2728,12 @@ color:white
     margin-top: -19px;
     transform-origin: left;
     transition: transform 400ms ease;
+  }
+
+  .auth-spinner {
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
   }
   
   .hamburger span:nth-child(2) {
@@ -3519,5 +3584,29 @@ color:white
     100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@keyframes headerAuthItemActive {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes headerAuthItemInactive {
+    0% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0px);
     }
 }

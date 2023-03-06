@@ -54,8 +54,8 @@ function App() {
         <Route exact path="/signup" element={<SingUpPage/>} />
         <Route exact path="/otp" element={<OtpPage/>} />
         <Route exact path="/sign-complete" element={<SignupCompletePage/>} />
-        <Route exact path="/register/email-confirmation/:email" element={<CodeModel/>} />
-        <Route exact path="/register/complete" element={<FinishUpLoging/>} />
+        <Route exact path="/register/email-confirmation/:id" element={<CodeModel/>} />
+        <Route exact path="/register/complete/:id" element={<FinishUpLoging/>} />
         
         
         <Route exact path = '/' element = {<HomePage/>}/>
