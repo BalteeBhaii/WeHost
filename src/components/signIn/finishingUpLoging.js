@@ -15,8 +15,8 @@ const FinishUpLoging = (props) => {
   const [error, setError] = useState('');
   const [email, setEmail] = useState('abc@gmail.com');
   const navigate = useNavigate();
-  const url = 'https://dev.wehosttravel.com/api/'
 
+  const url = 'https://dev.wehosttravel.com/api/';
   //const url = 'http://localhost:8000/api/';
   const { id } = useParams();
 
