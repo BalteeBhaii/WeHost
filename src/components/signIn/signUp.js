@@ -4,7 +4,6 @@ import Select from "react-select";
 import countryList from "react-select-country-list";
 import CodeModel from './codeModel';
 import FinishUpLoging from './finishingUpLoging';
-import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 
 const SingUp = () => {
@@ -16,12 +15,18 @@ const SingUp = () => {
   const changeHandler = value => {
     setCountry(value)
   }
+
   const navigate = useNavigate();
+  var signupButton = document.getElementsByClassName("submit-button")[0];
+  var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
 
   const url = 'https://dev.wehosttravel.com';
 
   const handleContinueClick = (event) => {
     event.preventDefault();
+
+    signupButton.innerHTML = spinner;
+
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (email !== '' && country !== '') {
       if (email.match(validRegex)) {
@@ -35,12 +40,15 @@ const SingUp = () => {
         axios.post(`${url}/api/register`, data, config)
           .then((response) => {
             if (response.data.success) {
+              console.log(response.data);
               setError('');
-              return (<Navigate  to={'/register/email-confirmation/'+email} />)
+              signupButton.innerHTML = 'Sign up';
+              return navigate('/register/email-confirmation/'+response.data.data);
             }
           })
           .catch((error) => {
             if (error) {
+              signupButton.innerHTML = 'Sign up';
               console.log(error.response.data.message);
               setError(error.response.data.message);
             }
@@ -73,7 +81,7 @@ const SingUp = () => {
                     <input type="email" id="form3Example3" className="form-control shadow-none" placeholder='Email' required onChange={(e) => { setEmail(e.target.value) }} />
                   </div>
                   <div className='mb-4'>
-                    <button type="submit" className="btn w-100 text-white fw-semibold btn-block " style={{background: '#0D7BC4'}}>Sign up</button>
+                    <button type="submit" className="btn w-100 text-white fw-semibold btn-block py-2 submit-button" style={{background: '#0D7BC4'}}>Sign up</button>
                   </div>
                   <div >
                     <a className='text-muted' href='/signin'><ins>Already have an account? Sign In here.</ins></a>
