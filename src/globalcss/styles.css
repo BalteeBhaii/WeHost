@@ -68,6 +68,13 @@ input[type=number] {
     font-size: 36px !important;
 }
 
+/* ******************************** signIn signUp card css ************************************ */
+.card-display-style{
+    margin-right: -50px;
+    background: hsla(0, 0%, 100%, 0.55);
+    backdrop-filter: blur(30px);
+}
+
 /* ************************ homepage css ************* */
 
 
@@ -736,6 +743,19 @@ input {
     content: "\F247";
     margin-right: 9px;
 }
+.add-listing:hover{
+    background-color:#005286;
+    color: #ffff;
+
+}
+.button-column #more::before {
+    content: "\F5D4";
+    margin-right: 9px;
+}
+.button-column #filter::before {
+    content: "\F56B";
+    margin-right: 9px;
+}
 
 .button-column {
     display: flex;
@@ -1166,7 +1186,14 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
     color: #333;
     text-decoration: none;
 }
+.modaldes:hover{
+    color: #333;
+}
+.list-btn-guesthouse{
+    height: 16px;
+    margin-top: 5px;
 
+}
 .locationimg {
     border: 1px solid;
     border-radius: 20px;
@@ -3275,7 +3302,11 @@ color:white
     }
 }
 
-@media screen and (max-width: 500px) {}
+@media screen and (max-width: 650px) {
+    .card-display-style{
+        margin-right: 0px !important;
+    }
+}
 
 @media(max-width:475px) {
     .review-main-section .owl-carousel .owl-nav .owl-prev {

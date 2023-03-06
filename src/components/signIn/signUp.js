@@ -59,12 +59,7 @@ const SingUp = () => {
       <div className="container py-5">
         <div className="row g-0 align-items-center justify-content-center">
           <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
-            <div className="card cascading-right" style={{
-              marginRight: '-50px',
-              background: 'hsla(0, 0%, 100%, 0.55)',
-              backdropFilter: 'blur(30px)'
-            }}
-            >
+            <div className="card cascading-right card-display-style">
               <div className="card-body p-5 shadow-5 text-center">
                 <h2 className="fw-bold mb-5">Sign up now</h2>
                 <form onSubmit={handleContinueClick}>
@@ -78,8 +73,11 @@ const SingUp = () => {
                   <div className="form-outline mb-4">
                     <input type="email" id="form3Example3" className="form-control shadow-none" placeholder='Email' required onChange={(e) => { setEmail(e.target.value) }} />
                   </div>
-                  <div>
-                    <button type="submit" className="btn w-100 text-white fw-semibold btn-block mb-4" style={{ background: '#0D7BC4' }}>Sign up</button>
+                  <div className='mb-4'>
+                    <button type="submit" className="btn w-100 text-white fw-semibold btn-block " style={{background: '#0D7BC4'}}>Sign up</button>
+                  </div>
+                  <div >
+                    <a className='text-muted' href='/signin'><ins>Already have an account? Sign In here.</ins></a>
                   </div>
                   <hr />
                   <div className="text-center">
@@ -96,7 +94,7 @@ const SingUp = () => {
             </div>
           </div>
 
-          <div className="col-md-6 col-lg-5 mb-5 mb-lg-0">
+          <div className="col-md-6 col-lg-5 mb-5 mb-lg-0 d-none d-md-block">
             <img src="https://images.pexels.com/photos/1974596/pexels-photo-1974596.jpeg?auto=compress&cs=tinysrgb&w=1600" className="w-100 rounded-4 shadow-4"
               alt="" />
           </div>

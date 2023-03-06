@@ -64,10 +64,7 @@ const FinishUpLoging = (props) => {
         <div className="container py-5">
           <div className="row g-0 align-items-center justify-content-center">
             <div className="col-md-6 col-lg-5 col-xl-4 mb-5 mb-lg-0">
-              <div className="card cascading-right" style={{
-                marginRight: '-50px', background: 'hsla(0, 0%, 100%, 0.55)', backdropFilter: 'blur(30px)'
-              }}
-              >
+              <div className="card cascading-right card-display-style">
                 <div className="card-body p-5 shadow-5 text-center">
                   <h3 className='mb-2'>Finishing up loging</h3>
                   <hr className='signin-hr mb-4' />
@@ -101,7 +98,7 @@ const FinishUpLoging = (props) => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-6 col-xl-5 mb-5 mb-lg-0">
+            <div className="col-md-6 col-lg-6 col-xl-5 mb-5 mb-lg-0 d-none d-md-block">
               <img src="https://images.pexels.com/photos/1974596/pexels-photo-1974596.jpeg?auto=compress&cs=tinysrgb&w=1600" className="w-100 rounded-4 shadow-4"
                 alt="" />
             </div>
