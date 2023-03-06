@@ -3,6 +3,8 @@ import SignIn from "../../signIn/signin";
 import SignUp from "../../signIn/signUp";
 import SignInModel from "../../signIn/signInModel";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
+import { useNavigate } from "react-router-dom";
+
 
 
 const Header = () => {
@@ -11,7 +13,7 @@ const Header = () => {
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [display, setDisplay] = useState('none');
   const [loginValue, setLoginValue] = useState('');
-
+  const navigate = useNavigate();
   const handleToggleClick = () => {
     setToggle(!toggle)
   }
@@ -38,17 +40,26 @@ const Header = () => {
     }
   }
 
-  const menuHandler = () => {
+  const menuHandler = (event) => {
     let dorpdownMenu = document.getElementsByClassName("menu-collapse")[0];
+    let hamburger = document.getElementsByClassName("hamburger")[0];
 
     if (dorpdownMenu.classList.contains("menu-active")) {
       dorpdownMenu.classList.add("menu-inactive");
       dorpdownMenu.classList.remove("menu-active");
       document.getElementsByTagName("body")[0].style.overflow = "visible";
+      
+      if(hamburger.classList.contains("ham-burger-active")){
+        hamburger.classList.remove("ham-burger-active");
+      }
     } else {
       dorpdownMenu.classList.remove("menu-inactive");
       dorpdownMenu.classList.add("menu-active");
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
+
+      if(!hamburger.classList.contains("ham-burger-active")){
+        hamburger.classList.add("ham-burger-active");
+      }
     }
   }
 
@@ -89,27 +100,32 @@ const Header = () => {
                 </li>
               </a>
             </ul>
-            <div className="menu-profile">
+            <div className="menu-profile d-flex">
               <img className="menu-profile-icon" src="/images/user.svg" alt="user" />
-              <button style={{ border: 'none', background: 'none' }} onClick={() => handleDisplayClick()}>
-                <span className="menu-item auth-item">Login/SignUp</span>
-              </button>
-              <div className="position-absolute shadow border rounded-2 mt-1 ps-3 pe-5 py-2 overflow-hidden bg-white " style={{ display: display }}>
-                <p className="mb-0 bg-white">
-                  <button className="menu-item btn p-1" value='Guest' onClick={(e) => handleLoginClick(e)}>
-                    Guest Login
-                  </button>
-                </p>
-                <p className="mb-0 bg-white">
-                  <button className="menu-item btn p-1" value='Owner' onClick={(e) => handleLoginClick(e)}>
-                    Owner Login
-                  </button>
-                </p>
+              <div class="dropdown">
+                <button class="btn border-0 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Login/SignUp
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/signin">Guest Login</a></li>
+                  <li><a class="dropdown-item" href="/signin">Owner Login</a></li>
+                </ul>
               </div>
             </div>
           </div>
           <div className="menu-dropdown">
-            <i className="bi bi-list menu-toggle" onClick={menuHandler}></i>
+            {/* <i className="bi bi-list menu-toggle" onClick={menuHandler}></i> */}
+            <div class="hamburger" onClick={menuHandler}>
+              <span>
+
+              </span>
+              <span>
+
+              </span>
+              <span>
+
+              </span>
+            </div>
           </div>
         </div>
         <div className="menu-collapse">
@@ -139,20 +155,20 @@ const Header = () => {
                 <span></span>
               </li>
             </a>
-            <div className="menu-profile">
+            <div className="menu-profile d-flex">
               <img className="menu-profile-icon" src="/images/user.svg" alt="user" />
-              <button className="border-0 bg-white mbl-auth-menu-main" onClick={() => handleMobiledisplayclick()}>
-                <span className="menu-item auth-item">Login/SignUp</span>
-              </button>
-              {(toggle) && (<div className="position-relative border rounded-2 mt-1 ps-3 pe-5 py-2 overflow-hidden bg-white shadow" >
-                <p className="mb-1"><button className="btn fw-semibold w-100" onClick={() => setshowSigninModal(!showSigninModal)}>Guest Login</button></p>
-                <p className="mb-0"><button className="btn fw-semibold w-100" onClick={() => setShowSignupModal(!showSignupModal)}>Owner Login</button></p>
-              </div>)}
+              <div class="dropdown">
+                <button class="btn border-0 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Login/SignUp
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/signin">Guest Login</a></li>
+                  <li><a class="dropdown-item" href="/signin">Owner Login</a></li>
+                </ul>
+              </div>
             </div>
           </ul>
         </div>
-        <SignIn showSigninModal={showSigninModal} setshowSigninModal={setshowSigninModal}  loginValue={loginValue}/>
-        <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal} loginValue={loginValue}/>
       </div>
     </>
   );

@@ -68,6 +68,13 @@ input[type=number] {
     font-size: 36px !important;
 }
 
+/* ******************************** signIn signUp card css ************************************ */
+.card-display-style{
+    margin-right: -50px;
+    background: hsla(0, 0%, 100%, 0.55);
+    backdrop-filter: blur(30px);
+}
+
 /* ************************ homepage css ************* */
 
 
@@ -106,13 +113,9 @@ input[type=number] {
 }
 
 
-.signin-input-container input {
+.signin-input-container-input {
     background-color: #CBF2FC !important;
     margin-bottom: 25px;
-
-}
-.signin-background{
-    background-color: rgba(0,0,0,.5)
 }
 .signin-input-container .select{
     background-color: #B4EBF9;
@@ -135,18 +138,8 @@ input[type=number] {
     padding: 6px;
 }
 
-.react-tel-input{
-    width: 75% !important
-}
-
 .react-tel-input input, .flag-dropdown{
-    background-color: #B4EBF9 !important;
-    border: none;
-}
-
-.react-tel-input input, .flag-dropdown{
-    border: none !important;
-    box-shadow: none !important;
+    border: 1px solid !important;
 } 
 
 .react-tel-input .form-control{
@@ -154,7 +147,7 @@ input[type=number] {
 }
 
 .css-13cymwt-control{
-    background-color: #B4EBF9 !important;
+    /* background-color: #B4EBF9 !important; */
     border-radius: 6px !important;
     border: none !important;
 }
@@ -2652,6 +2645,55 @@ color:white
     width: 200px;
  }
 
+ .hamburger {
+    position: relative;
+    width: 29px;
+    height: 24px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    position: absolute;
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #000;
+    transform: scaleY(1.2);
+  }
+  
+  .hamburger span:nth-child(1) {
+    margin-top: -19px;
+    transform-origin: left;
+    transition: transform 400ms ease;
+  }
+  
+  .hamburger span:nth-child(2) {
+    transition: opacity 300ms ease;
+  }
+  
+  .hamburger span:nth-child(3) {
+    margin-top: 19px;
+    transform-origin: left;
+    transition: transform 400ms ease;
+  }
+  
+  .ham-burger-active span:nth-child(1) {
+    transform: rotate(42deg);
+  }
+  
+  .ham-burger-active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .ham-burger-active span:nth-child(3) {
+    transform: rotate(-42deg);
+  }
+  
+
 @media(min-width: 775px) {
     .daterange-display {
         display: none !important;
@@ -3260,7 +3302,11 @@ color:white
     }
 }
 
-@media screen and (max-width: 500px) {}
+@media screen and (max-width: 650px) {
+    .card-display-style{
+        margin-right: 0px !important;
+    }
+}
 
 @media(max-width:475px) {
     .review-main-section .owl-carousel .owl-nav .owl-prev {
