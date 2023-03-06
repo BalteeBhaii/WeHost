@@ -23,6 +23,8 @@ import SignInPage from './pages/signInPage';
 import SingUpPage from './pages/signUpPage';
 import OtpPage from './pages/otpPage';
 import SignupCompletePage from './pages/signupCompletePage';
+import CodeModel from './components/signIn/codeModel';
+import FinishUpLoging from './components/signIn/finishingUpLoging';
 
 function App() {
   return (
@@ -52,6 +54,8 @@ function App() {
         <Route exact path="/signup" element={<SingUpPage/>} />
         <Route exact path="/otp" element={<OtpPage/>} />
         <Route exact path="/sign-complete" element={<SignupCompletePage/>} />
+        <Route exact path="/register/email/confirmation" element={<CodeModel/>} />
+        <Route exact path="/complete/registration" element={<FinishUpLoging/>} />
         
         
         <Route exact path = '/' element = {<HomePage/>}/>
