@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from '../../features/user/userSlice';
 import { userInfo } from '../../features/user/userInfoSlice';
+
 import axios from 'axios';
 const SingIn = () => {
     const [showSignupModal, setShowSignupModal] = useState(false);

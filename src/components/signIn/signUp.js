@@ -4,6 +4,7 @@ import Select from "react-select";
 import countryList from "react-select-country-list";
 import CodeModel from './codeModel';
 import FinishUpLoging from './finishingUpLoging';
+import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 
 const SingUp = () => {
@@ -35,6 +36,7 @@ const SingUp = () => {
           .then((response) => {
             if (response.data.success) {
               setError('');
+              return (<Navigate  to={'/register/email-confirmation/'+email} />)
             }
           })
           .catch((error) => {
