@@ -17,35 +17,36 @@ const SingIn = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const url = 'https://dev.wehosttravel.com/api/';
+
+  //const url = 'http://localhost:8000/api/';
+
+  var signupButton = document.getElementsByClassName("submit-button")[0];
+  var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
+
   const handleLoginClick = (event) => {
     event.preventDefault();
+
+    signupButton.innerHTML = spinner;
+
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (email !== '' && password !== '') {
       if (email.match(validRegex)) {
-        console.log('valid email');
         getData(email, password);
         // setshowSigninModal(!showSigninModal)
         console.log(password)
       } else {
-        setErrorMessage('"Email is not Correct!"')
+        signupButton.innerHTML = 'Login';
+        setErrorMessage('"Email is not Correct!"');
       }
 
 
       if (document.getElementById('CheckBox').checked) {
-        console.log('checked')
       } else {
-        console.log('not Checked')
       }
 
     } else {
-      setErrorMessage('"Email is not Correct!"')
-    }
-
-
-    if (document.getElementById('CheckBox').checked) {
-      console.log('checked')
-    } else {
-      console.log('not Checked')
+      setErrorMessage('"Email is not Correct!"');
+      signupButton.innerHTML = 'Login';
     }
   }
 
@@ -58,6 +59,7 @@ const SingIn = () => {
     const getData = async (email, password) => {
       await axios.post(`${url}login`, { email: email, password: password }, { headers: { "Accept": "application/json" } })
         .then(res => {
+          signupButton.innerHTML = 'Login';
           // return console.log(res.data);
           if (res.data.success) {
             setData(res.data.data);
@@ -71,6 +73,7 @@ const SingIn = () => {
           console.log(res.data);
         })
         .catch(err => {
+          signupButton.innerHTML = 'Login';
           // setErrorMessage(err.response)
           console.log(err.response.data.message);
           if (err.response.data.error) {
@@ -122,7 +125,7 @@ const SingIn = () => {
                       <p className=''>Forgot Password</p>
                     </div>
                     <div className='mb-3'>
-                      <button className='btn w-100 text-white fw-semibold fs-5' style={{ backgroundColor: '#0D7BC4' }}>
+                      <button className='submit-button btn w-100 text-white fw-semibold fs-5' style={{ backgroundColor: '#0D7BC4' }}>
                         Login
                       </button>
                     </div>

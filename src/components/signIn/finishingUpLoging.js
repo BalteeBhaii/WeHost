@@ -3,6 +3,7 @@ import axios from 'axios';
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useNavigate } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
 const FinishUpLoging = (props) => {
   const [number, setNumber] = useState('');
@@ -15,20 +16,33 @@ const FinishUpLoging = (props) => {
   const [email, setEmail] = useState('abc@gmail.com');
   const navigate = useNavigate();
   const url = 'https://dev.wehosttravel.com/api/'
+
+  //const url = 'http://localhost:8000/api/';
+  const { id } = useParams();
+
+  var signupButton = document.getElementsByClassName("submit-button")[0];
+  var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
+
   const handleAgreeAndContinue = (event) => {
     event.preventDefault();
+
+    signupButton.innerHTML = spinner;
+
     if (number !== '' && fName !== '' && lName !== '' && dob !== '' && password !== '' && confirmP !== '') {
       if (password === confirmP) {
         if (document.getElementById('checkbox').checked) {
-          postData()
+          postData();
         } else {
-          setError('"Please accept terms of services"')
+          setError('"Please accept terms of services"');
+          signupButton.innerHTML = 'Agree and Continue';
         }
       } else {
-        setError('"password is not the same!"')
+        setError('"Password confirmation does not match!"');
+        signupButton.innerHTML = 'Agree and Continue';
       }
     } else {
-      setError('"provide correct data."')
+      setError('"Please provide correct data!"');
+      signupButton.innerHTML = 'Agree and Continue';
       console.log(number, 'p', password,)
     }
 
@@ -36,20 +50,24 @@ const FinishUpLoging = (props) => {
 
   const apibody = {
     name: fName,
-    email: props.email,
+    id: id,
     password: password,
     password_confirmation: confirmP
   }
 
   const postData = async () => {
-    await axios.post(`${url}complete/verification`, apibody, { headers: { "Accept": "application/json" } })
+    await axios.post(`${url}register/complete`, apibody, { headers: { "Accept": "application/json" } })
       .then(res => {
+        signupButton.innerHTML = 'Agree and Continue';
+
         if (res.data.success) {
           navigate('/signin');
         }
         console.log(res.data);
       })
       .catch(err => {
+        signupButton.innerHTML = 'Agree and Continue';
+
         if (err.response.status === 422) {
           console.log(err.response.status)
           setError(err.response.data.message)
@@ -89,8 +107,8 @@ const FinishUpLoging = (props) => {
                         </label>
                       </div>
                       <div>
-                        <button className='btn text-white fw-semibold w-100 border-1' style={{ backgroundColor: '#0D7BC4' }}>
-                          agree and Continue
+                        <button className='btn text-white fw-semibold w-100 border-1 submit-button' style={{ backgroundColor: '#0D7BC4' }}>
+                          Agree and Continue
                         </button>
                       </div>
                     </div>

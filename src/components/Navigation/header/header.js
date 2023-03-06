@@ -114,7 +114,6 @@ const Header = () => {
             </div>
           </div>
           <div className="menu-dropdown">
-            {/* <i className="bi bi-list menu-toggle" onClick={menuHandler}></i> */}
             <div class="hamburger" onClick={menuHandler}>
               <span>
 
