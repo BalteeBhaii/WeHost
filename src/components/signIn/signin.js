@@ -84,11 +84,9 @@ const SingIn = () => {
         <div className="container py-5">
           <div className="row g-0 align-items-center justify-content-center">
             <div className="col-md-6 col-lg-5 col-xl-4 mb-5 mb-lg-0">
-              <div className="card cascading-right" style={{
-                marginRight: '-50px', background: 'hsla(0, 0%, 100%, 0.55)', backdropFilter: 'blur(30px)'
-              }}
+              <div className="card cascading-right card-display-style"
               >
-                <div className="card-body p-5 shadow-5 text-center">
+                <div className="card-body px-4 py-5 shadow-5 text-center">
                   <h2 className="fw-bold mb-3">Sign In</h2>
                   <h5>Welcome to Guest account</h5>
                   <form onSubmit={handleLoginClick}>
@@ -113,7 +111,7 @@ const SingIn = () => {
                       />
                       {/* <label className="form-label" for="form3Example3">Email address</label> */}
                     </div>
-                    <div className='d-flex justify-content-between '>
+                    <div className='d-flex flex-wrap justify-content-between '>
                       <div className="form-check">
                         <input className="form-check-input shadow-none" type="checkbox" value="" id="CheckBox" />
                         <label className="form-check-label">

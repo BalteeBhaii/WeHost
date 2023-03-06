@@ -1,5 +1,100 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import { DateRangePicker } from 'react-date-range';
+import { DateRange } from 'react-date-range';
+import format from 'date-fns/format'
+import { addDays } from 'date-fns';
+import GuestModal from '../../GuestModal/GuestModal';
 const SpecificHotel = () => {
+  const [checkinPlaceholder, setcheckinPlaceholder] = useState(`Check-In`);
+  const [checkoutPlaceholder, setcheckoutPlaceholder] = useState(`Check-Out`);
+  const [guestCount, setGuestCount] = useState(0);
+  const [adultCount, setAdultCount] = useState(0);
+  const [childrenCount, setChildrenCount] = useState(0);
+  const [infantCount, setInfantCount] = useState(0);
+  const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: 'selection'
+    }
+  ]);
+  const handleDateChange = (item) => {
+    setRange([item.selection]);
+    setcheckinPlaceholder(`${format(range[0].startDate, "MM/dd/yyyy")}`);
+    setcheckoutPlaceholder(`${format(range[0].endDate, "MM/dd/yyyy")}`);
+  }
+  var previousDropdown = '';
+  var currentDropdown = '';
+  const dropdownsHandler = (event) => {
+    var dropdowns = document.querySelectorAll(".search-dropdown");
+    let index = event.target.dataset.index;
+    
+    if(window.screen.width < 775){
+      if(index == 0){
+        index = 1;
+      } else if(index == 1) {
+        index = 2;
+      }
+    }
+
+    if(window.screen.width >= 775){
+      if(index == 1){
+        index = 2;
+      }
+    }
+
+    if (previousDropdown === '') {
+      for (let i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].classList.contains("dropdown-active")) {
+          dropdowns[i].classList.add("dropdown-inactive")
+          dropdowns[i].classList.remove("dropdown-active")
+        }
+      }
+    }
+    console.log('index',index);
+
+    if (index !== '1') {
+      if (dropdowns['1'].classList.contains("dropdown-active")) {
+        dropdowns['1'].classList.add("dropdown-inactive")
+        dropdowns['1'].classList.remove("dropdown-active")
+      }
+    }
+
+    previousDropdown = currentDropdown;
+    currentDropdown = index;
+
+    if (typeof (dropdowns[previousDropdown]) !== "undefined") {
+      dropdowns[previousDropdown].classList.add("dropdown-inactive");
+      dropdowns[previousDropdown].classList.remove("dropdown-active");
+    }
+    console.log(currentDropdown)
+    dropdowns[currentDropdown].classList.add("dropdown-active");
+    if (dropdowns[currentDropdown].classList.contains("dropdown-inactive")) {
+      dropdowns[currentDropdown].classList.remove("dropdown-inactive");
+    }
+
+    if (currentDropdown === previousDropdown && dropdowns[previousDropdown].classList.contains("dropdown-active")) {
+      dropdowns[previousDropdown].classList.remove("dropdown-active");
+      dropdowns[previousDropdown].classList.add("dropdown-inactive");
+      previousDropdown = currentDropdown;
+      currentDropdown = '';
+    }
+  };
+
+  const datePickerClose = (event) => {
+    var dropdowns = document.querySelectorAll(".search-dropdown");
+    let index = event.target.dataset.index;
+
+    dropdowns[index].classList.add('dropdown-inactive');
+    dropdowns[index].classList.remove('dropdown-active');
+
+    previousDropdown = currentDropdown;
+    currentDropdown = '';
+  }
+  useEffect(() => {
+    console.log(currentDropdown);
+    setGuestCount(adultCount + childrenCount + infantCount);
+  }, [adultCount, childrenCount, infantCount]);
   return (
     <>
       <div className='container specific-hotel-container'>
@@ -57,20 +152,54 @@ const SpecificHotel = () => {
                   <h5 className="card-title">34 reviews</h5>
                 </div>
                 <div className='input-group-design'>
-                  <div className='d-flex input-bottom-border'>
-                    <div className="input-group  input-group-boder-check-in">
-                      <span className="input-group-text  border-0" ><i className="bi bi-calendar-event"></i></span>
-                      <input className='form-control  border-0 shadow-none' type="text" placeholder='Check In' />
-                    </div>
-                    <div className="input-group  input-group-boder-check-out">
-                      <span className="input-group-text  border-0" ><i className="bi bi-calendar-event"></i></span>
-                      <input className='form-control  border-0 shadow-none' type="text" placeholder='Check Out' />
+                  <div className=''>
+                    <div className="input-group mb-3 border border border-secondary rounded destination-input border-color ">
+                      <span className="input-group-text border-0" id="basic-addon1">
+                        <i className="bi bi-calendar-date"></i>
+                      </span>
+                      <input type="text" className="form-control border-0 shadow-none p-1 searchfeildtxt datapicker-input-field" placeholder={checkinPlaceholder} data-index={0} onClick={dropdownsHandler} />
+                      <span className='destination-arrow-icon'></span>
+                      <input type="text" className="form-control border-0 shadow-none ps-2 searchfeildtxt datapicker-input-field" placeholder={checkoutPlaceholder} data-index={0} onClick={dropdownsHandler} />
                     </div>
                   </div>
-                  <div className="input-group estination-input" >
-                    <span className="input-group-text  border-0" style={{ backgroundColor: 'white' }}><i className="bi bi-search"></i></span>
-                    <input className='form-control  border-0 shadow-none' type="text" placeholder='Guest' />
+                  <div className='datepicker-display'>
+                  <div className='position-absolute d-flex flex-column date-range-picker search-dropdown'>
+                    <DateRange
+                      onChange={item => handleDateChange(item)}
+                      editableDateInputs={true}
+                      moveRangeOnFirstSelection={false}
+                      ranges={range}
+                    />
+                    <a className='btn date-range-btn my-1' data-index={0} onClick={datePickerClose}>close</a>
                   </div>
+                </div>
+                <div className='daterange-display'>
+                  <div className='position-absolute d-flex flex-column date-range-picker search-dropdown'>
+                    <DateRange
+                      onChange={item => handleDateChange(item)}
+                      editableDateInputs={true}
+                      moveRangeOnFirstSelection={false}
+                      ranges={range}
+                    />
+                    <a className='btn date-range-btn my-1' data-index={0} onClick={datePickerClose}>close</a>
+                  </div>
+                </div>
+                <div className="input-group mb-3 border border border-secondary rounded destination-input border-color">
+                  <span className="input-group-text border-0" id="basic-addon1">
+                    <i className="bi bi-person-circle"></i>
+                  </span>
+                  {/* <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-count={1} onClick={() => {setPreviousDropdown(currentDropdown); setCurrentDropdown(1); setDropdownStateToggle(Math.random())}}/> */}
+                  <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-index={2} onClick={dropdownsHandler} readOnly />
+                  <span className='guest-count'>{guestCount > 0 ? `(${guestCount})` : ''}</span>
+                  <GuestModal 
+                    adultCount={adultCount} 
+                    setAdultCount={setAdultCount} 
+                    childrenCount={childrenCount} 
+                    setChildrenCount={setChildrenCount} 
+                    infantCount={infantCount}
+                    setInfantCount={setInfantCount}
+                  />
+                </div>
                 </div>
                 <div className='my-3'>
                   <button className='btn btn-primary btn-sm w-100 p-0'>Reserve</button>

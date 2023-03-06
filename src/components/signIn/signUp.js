@@ -64,8 +64,8 @@ const SingUp = () => {
         <div className="row g-0 align-items-center justify-content-center">
           <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
             <div className="card cascading-right card-display-style">
-              <div className="card-body p-5 shadow-5 text-center">
-                <h2 className="fw-bold mb-5">Sign up now</h2>
+              <div className="card-body px-4 py-5 shadow-5 text-center">
+                <h2 className="fw-bold fs-2 mb-3">Sign up now</h2>
                 <form onSubmit={handleContinueClick}>
                   <label className='text-danger fw-semibold'>{error}</label>
                   <div className="row">
@@ -73,7 +73,6 @@ const SingUp = () => {
                       <Select className='form-control p-0 text-start' placeholder='Select Country' options={options} value={country} onChange={changeHandler}/>
                     </div>
                   </div>
-
                   <div className="form-outline mb-4">
                     <input type="email" id="form3Example3" className="form-control shadow-none" placeholder='Email' required onChange={(e)=>{setEmail(e.target.value)}} />
                   </div>

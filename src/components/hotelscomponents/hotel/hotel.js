@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GuestModal from '../../GuestModal/GuestModal';
 // React Date Range import
 import { DateRangePicker } from 'react-date-range';
@@ -111,7 +111,10 @@ const Hotel = () => {
       element.classList.add("search-bottom-outline-active")
     }
   }
-
+  useEffect(() => {
+    console.log(currentDropdown);
+    setGuestCount(adultCount + childrenCount + infantCount);
+  }, [adultCount, childrenCount, infantCount]);
   return (
     <div className='divBackgroundImage text-light z-0'>
       <div className='center'>
@@ -162,13 +165,13 @@ const Hotel = () => {
                   <input type="text" className="form-control border-0 shadow-none searchfeildtxt" placeholder="Guests" data-index={1} onClick={dropdownsHandler}/>
                   <span className='guest-count'>{guestCount > 0 ? `(${guestCount})` : ''}</span>
                   <GuestModal 
-                      adultCount={adultCount} 
-                      setAdultCount={setAdultCount} 
-                      childrenCount={childrenCount} 
-                      setChildrenCount={setChildrenCount} 
-                      infantCount={infantCount}
-                      setInfantCount={setInfantCount}
-                    />
+                    adultCount={adultCount} 
+                    setAdultCount={setAdultCount} 
+                    childrenCount={childrenCount} 
+                    setChildrenCount={setChildrenCount} 
+                    infantCount={infantCount}
+                    setInfantCount={setInfantCount}
+                  />
                 </div>
               </div>
             </div>

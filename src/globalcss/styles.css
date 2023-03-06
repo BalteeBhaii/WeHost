@@ -188,11 +188,6 @@ input[type=number] {
     border: 2px solid #393053 !important;
 }
 
-.input-group-design {
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
 .input-group-boder-check-in {
     border-right: 1px solid;
 }
@@ -1029,12 +1024,6 @@ li.list-group-item.guesthouse {
 .imgSizeStyle {
     object-fit: cover;
     /* border-radius: 6px !important; */
-}
-
-.card {
-    border-radius: 15px !important;
-    overflow: hidden;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .main-text-size-style h1 {
@@ -2369,7 +2358,7 @@ span.riceranger {
 
 .date-range-btn:hover {
     color: white !important;
-    background-color: var(--theme-color) !important;
+    background-color: var(--bulue-color) !important;
 }
 
 .destination-searchbar-holder {
