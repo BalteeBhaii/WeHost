@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -12,7 +12,7 @@ const FinishUpLoging = (props) => {
   const [password, setPassword] = useState('');
   const [confirmP, setConfirmP] = useState('');
   const [error, setError] = useState('');
-  const [email, setEmail]  = useState('abc@gmail.com');
+  const [email, setEmail] = useState('abc@gmail.com');
   const navigate = useNavigate();
   const url = 'http://localhost:8000/api/'
   const handleAgreeAndContinue = (event) => {
@@ -21,9 +21,6 @@ const FinishUpLoging = (props) => {
       if (password === confirmP) {
         if (document.getElementById('checkbox').checked) {
           postData()
-          // setShowLoginModal(!showLoginModel);
-          // setShowSignupModal(!showSignupModal);
-          // setShowCodeModel(!showCodeModel);
         } else {
           setError('"Please accept terms of services"')
         }
