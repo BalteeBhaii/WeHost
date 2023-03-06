@@ -1,0 +1,72 @@
+[
+    {
+        "id": "1",
+        "title": "test, property title #1",
+        "address": "abc, xyz",
+        "beds": "2",
+        "availability": "Mar 1 - Mar 9",
+        "price": "12",
+        "price_type": "night",
+        "image": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        "id": "2",
+        "title": "test, property title #2",
+        "address": "abc, xyz",
+        "beds": "2",
+        "availability": "Mar 1 - Mar 9",
+        "price": "12",
+        "price_type": "night",
+        "image": "https://images.pexels.com/photos/463996/pexels-photo-463996.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        "id": "3",
+        "title": "test, property title #3",
+        "address": "abc, xyz",
+        "beds": "2",
+        "availability": "Mar 1 - Mar 9",
+        "price": "12",
+        "price_type": "night",
+        "image": "https://images.pexels.com/photos/314937/pexels-photo-314937.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        "id": "4",
+        "title": "test, property title #4",
+        "address": "abc, xyz",
+        "beds": "2",
+        "availability": "Mar 1 - Mar 9",
+        "price": "12",
+        "price_type": "night",
+        "image": "https://images.pexels.com/photos/2440024/pexels-photo-2440024.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        "id": "5",
+        "title": "test, property title #5",
+        "address": "abc, xyz",
+        "beds": "2",
+        "availability": "Mar 1 - Mar 9",
+        "price": "12",
+        "price_type": "night",
+        "image": "https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        "id": "6",
+        "title": "test, property title #6",
+        "address": "abc, xyz",
+        "beds": "2",
+        "availability": "Mar 1 - Mar 9",
+        "price": "12",
+        "price_type": "night",
+        "image": "https://images.pexels.com/photos/1433052/pexels-photo-1433052.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        "id": "7",
+        "title": "test, property title #7",
+        "address": "abc, xyz",
+        "beds": "2",
+        "availability": "Mar 1 - Mar 9",
+        "price": "12",
+        "price_type": "night",
+        "image": "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    }
+]
