@@ -1,5 +1,5 @@
 import React from 'react';
-const SeventhStep = () => {
+const SeventhStep = ({id, setId}) => {
     const setCategory = (event) => {
         const parentEl = event.nativeEvent.target.closest('.feature-box');
         if (!parentEl) return;
@@ -7,6 +7,7 @@ const SeventhStep = () => {
         const categoryEls = document.querySelectorAll('.feature-box');
         // categoryEls.forEach((el) => el.classList.remove('active-category'));
         parentEl.classList.toggle('active-category');
+        setId(true);
     }
     return (
         <>
