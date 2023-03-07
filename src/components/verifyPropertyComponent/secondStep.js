@@ -16,7 +16,7 @@ const SecondStep = ({id, setId}) => {
 
     const categoryEls = document.querySelectorAll('.category-box');
     categoryEls.forEach((el) => el.classList.remove('active-category'));
-    parentEl.classList.toggle('active-category');
+    parentEl.classList.add('active-category');
     setId(true);
     console.log(id)
   }
