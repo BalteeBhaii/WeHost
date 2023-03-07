@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-const FourTenStep = () => {
-    const [counter, setCounter] = useState(56)
+const FourTenStep = ({id, setId}) => {
+    const [counter, setCounter] = useState(0);
     return ( 
         <div className='container my-5'>
             <div className='row'>
@@ -12,9 +12,9 @@ const FourTenStep = () => {
                     <div className='border border-2 mb-3'>
                         <div className='pt-3 pb-5'>
                             <div className='d-flex justify-content-center align-items-center fourteen-step-text'>
-                                <button className='btn me-3' onClick={()=>{setCounter(counter-1)}}><i className="bi bi-dash-circle fs-4"></i></button>
-                                <input type='text' className='w-50 text-center text-white py-2' value={`$${counter}`} style={{backgroundColor: '#0579C1'}}/>
-                                <button className='btn ms-3' onClick={()=>{setCounter(counter+1)}}><i className="bi bi-plus-circle fs-4"></i></button>
+                                <button className='btn me-3' onClick={()=>{setCounter(counter-1); setId(true);}}><i className="bi bi-dash-circle fs-4"></i></button>
+                                <input type='number' className='w-50 input-placeholder-style text-center text-white py-2' value={counter} onChange={(event)=>{setCounter(parseInt(event.target.value)); console.log(counter)}} style={{backgroundColor: '#0579C1'}}/>
+                                <button className='btn ms-3' onClick={()=>{setCounter(counter+1); setId(true);}}><i className="bi bi-plus-circle fs-4"></i></button>
                             </div>
                             <div className='text-center fourteen-step-text mt-2'>
                                 <h6>Places near you ranges of $48 to $400</h6>
@@ -25,7 +25,7 @@ const FourTenStep = () => {
                         <div className='px-3 py-2'>
                             <div className='d-flex justify-content-between'>
                                 <label className="form-check-label fw-semibold">Want to draw more attention?</label>
-                                <input className="form-check-input border border-secondary shadow-none" type="checkbox" value="" id="flexCheckDefault"/>
+                                <input className="form-check-input border border-secondary shadow-none" onChange={()=> setId(true)} type="checkbox" value="" id="flexCheckDefault"/>
                             </div>
                             <div>
                                 <h4>Why not offer them 20% on first 3 bookings?</h4>

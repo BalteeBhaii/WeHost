@@ -43,11 +43,11 @@ const VerifyPropertyPage = () => {
                     {(page === 8) && <SeventhStep id={id} setId={setId}/>}
                     {(page === 9) && <EightStep id={id} setId={setId}/>}
                     {(page === 10) && <NinethStep />}
-                    {(page === 11) && <TenthStep />}
-                    {(page === 13) && <FourTenStep />}
+                    {(page === 11) && <TenthStep id={id} setId={setId}/>}
                     {(page === 12) && <StepThree />}
-                    {(page === 14) && <FiveTenStep />}
-                    {(page === 15) && <SixTenStep />}
+                    {(page === 13) && <FourTenStep id={id} setId={setId}/>}
+                    {(page === 14) && <FiveTenStep id={id} setId={setId}/>}
+                    {(page === 15) && <SixTenStep id={id} setId={setId}/>}
                     
                    
                     <div className='position-relative container'>
@@ -64,7 +64,7 @@ const VerifyPropertyPage = () => {
                         {(page >= 1) && (
                             <div className='d-flex justify-content-between'>
                                 <button className='btn property-footer-button' onClick={() => { setPage(page - 1); setWidth((page-1)*6.66);console.log(page, width)}}><i className="bi bi-arrow-left me-1"></i>Back</button>
-                                {(page < 15) && (id) || (page===1) || (page===4) || (page===5) || (page===7)? (
+                                {(page < 15) && (id) || (page===1) || (page===4) || (page===5) || (page===7) || (page===8) || (page===10) || (page===12)? (
                                     <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66); setId(false) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
                                 ):''}
                                 {(page === 15) && (<button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66) }}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
