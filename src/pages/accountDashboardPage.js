@@ -3,7 +3,7 @@ import Footer from "../components/Navigation/footer/footer";
 import ManageAccountHeader from "../components/Accounts/manageAccountHeader";
 import ManageAccount from "../components/Accounts/manageAccount";
 
-const AccountDashboardPage = ()=>{
+const  AccountDashboardPage = ()=>{
     return(
         <>
         <ManageAccountHeader/>

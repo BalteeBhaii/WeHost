@@ -35,10 +35,10 @@ const VerifyPropertyPage = () => {
                     {(page === 0) && <Welcome />}
                     {(page === 1) && <FirstStep />}
                     {(page === 2) && <SecondStep id={id} setId={setId} />}
-                    {(page === 3) && <ThirdStep />}
+                    {(page === 3) && <ThirdStep id={id} setId={setId}/>}
                     {(page === 4) && <ForthStep />}
                     {(page === 5) && <FifthStep />}
-                    {(page === 6) && <SixthStep />}
+                    {(page === 6) && <SixthStep id={id} setId={setId} />}
                     {(page === 7) && <StepTwo />}
                     {(page === 8) && <SeventhStep />}
                     {(page === 9) && <EightStep />}
@@ -64,8 +64,8 @@ const VerifyPropertyPage = () => {
                         {(page >= 1) && (
                             <div className='d-flex justify-content-between'>
                                 <button className='btn property-footer-button' onClick={() => { setPage(page - 1); setWidth((page-1)*6.66);console.log(page, width)}}><i className="bi bi-arrow-left me-1"></i>Back</button>
-                                {(page < 15) && (id) || (page===1)? (
-                                    <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
+                                {(page < 15) && (id) || (page===1) || (page===4) || (page===5) || (page===7)? (
+                                    <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66); setId(false) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
                                 ):''}
                                 {(page === 15) && (<button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66) }}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
                             </div>

@@ -1,5 +1,13 @@
 import React from 'react';
 const SeventhStep = () => {
+    const setCategory = (event) => {
+        const parentEl = event.nativeEvent.target.closest('.feature-box');
+        if (!parentEl) return;
+      
+        const categoryEls = document.querySelectorAll('.feature-box');
+        // categoryEls.forEach((el) => el.classList.remove('active-category'));
+        parentEl.classList.toggle('active-category');
+    }
     return (
         <>
             <div className='container'>
@@ -7,58 +15,66 @@ const SeventhStep = () => {
                 <div className='verify-2nd-list-items row mt-4'>
                     <div className='verify-2nd-list-items-1st-column col-md-7 col-sm-12 row'>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border px-2 text-center py-3 mb-3'>
+                            <div onClick={setCategory}  className='feature-box verify-2nd-list-item border px-2 text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <i className="verify-2nd-list-item-main-icon bi bi-wifi"></i> Wifi
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'Wifi'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box  verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <i className="verify-2nd-list-item-main-icon bi bi-tv"></i> Tv
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'Tv'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/kitchen.png' /> Kitchen
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'Tv'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/washer.png' /> Washer
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'Tv'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/garage.png' />  Free Parking
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'Tv'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="anenities-icon" src='/images/parking1.png' /> Paid Parking
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'Tv'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/office-space.png' />Workspace
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'Tv'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/air-conditioner.png' /> Ac
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'Tv'}/>
                                 </span>
                             </div>
                         </div>
@@ -74,102 +90,115 @@ const SeventhStep = () => {
                 <div className='verify-2nd-list-items row mt-4'>
                     <div className='verify-2nd-list-items-1st-column col-md-7 col-sm-12 row'>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border px-2 text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border px-2 text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/swimming-pool.png' /> Pool
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'Tv'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/bath.png' /> Tv
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'Tv'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="verify-2nd-list-item-main-icon" src='/images/patio.png' /> Patio
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'patio'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/grill.png' /> BBQ grill
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'bbq grill'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/outdoor.png' />  Outdoor
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'outdoor'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/firepit.png' /> Firepit
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'firepit'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/pool-table.png' />Pool
                                     Table
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'pool'}/>
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="verify-2nd-list-item-main-icon" src='/images/chimney.png' />Indoor
                                     Fire
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'indoor fire'}/>
                                 </span>
                             </div>
 
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/piano.png' />Paino
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'paino'}/>
                                 </span>
                             </div>
 
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/gym.png' />Exercise
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'exercise'}/>
                                 </span>
                             </div>
 
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/lake .png' />Lake
                                     access
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'lake'}/>
                                 </span>
                             </div>
 
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/beach.png' />Beach
                                     access
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'beach'}/>
                                 </span>
                             </div>
 
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/skating.png' />Sk-in/out
+                                    <input type={'checkbox'} name= 'feature' className='d-none' value={'sk-in/out'}/>
                                 </span>
                             </div>
 
@@ -183,7 +212,7 @@ const SeventhStep = () => {
                 <div className='verify-2nd-list-items row mt-4'>
                     <div className='verify-2nd-list-items-1st-column col-md-7 col-sm-12 row'>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border px-2 text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border px-2 text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                 <img className="amenities-icon" src='/images/alarm.png' />Fire
                                     Alarm
@@ -191,14 +220,14 @@ const SeventhStep = () => {
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                 <img className="amenities-icon" src='/images/first-aid.png' /> First aid
                                 </span>
                             </div>
                         </div>
                         <div className='col-lg-3 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
-                            <div className='verify-2nd-list-item border text-center py-3 mb-3'>
+                            <div onClick={setCategory} className='feature-box verify-2nd-list-item border text-center py-3 mb-3'>
                                 <span className='verify-2nd-list-item-main'>
                                     <img className="amenities-icon" src='/images/fire-extinguisher.png' /> Fire
                                     extinguisher
