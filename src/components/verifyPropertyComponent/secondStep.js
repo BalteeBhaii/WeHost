@@ -1,17 +1,22 @@
 import React from 'react';
 const SecondStep = () => {
     const setCategory = (event) => {
-        console.log(event.nativeEvent)
-        console.log(document.querySelector('div'))
+        // console.log(event.nativeEvent)
+        // console.log(document.querySelector('div'))
 
-        const parentEl= event.nativeEvent.target;
-        // parentEl.classList.add('active-category');
-        if (parentEl.classList.contains('category-box')){
-            parentEl.classList.add('active-category');
-        }else{
-            parentEl.closest('.category-box').classList.add('active-category');
-        }
-        
+        // const parentEl= event.nativeEvent.target;
+        // // parentEl.classList.add('active-category');
+        // if (parentEl.classList.contains('category-box')){
+        //     parentEl.classList.add('active-category');
+        // }else{
+        //     parentEl.closest('.category-box').classList.add('active-category');
+        // }
+        const parentEl = event.nativeEvent.target.closest('.category-box');
+        if (!parentEl) return;
+      
+        const categoryEls = document.querySelectorAll('.category-box');
+        categoryEls.forEach((el) => el.classList.remove('active-category'));
+        parentEl.classList.add('active-category');
     }
     return (
         <>
