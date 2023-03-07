@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-const SixthStep = () => {
+const SixthStep = ({id, setId}) => {
     const [count, setCount] = useState(0);
     const [counttwo, setCounttwo] = useState(0);
     const [countthree, setCountthree] = useState(0);
@@ -14,9 +14,9 @@ const SixthStep = () => {
                                     <span className="counter-header-text d-block ">Guest</span>
                                    
                                 <div className="counter-buttons">
-                                    {(count>0)&&(<button className="counter-button" onClick={() => setCount(count - 1)}>-</button>)}
+                                    {(count>0)&&(<button className="counter-button" onClick={() =>{ setCount(count - 1); }}>-</button>)}
                                     <span className="counter-header-count">{count}</span>
-                                    <button className="counter-button" onClick={() => setCount(count + 1)}>+</button>
+                                    <button className="counter-button" onClick={() => {setCount(count + 1); setId(true)}}>+</button>
 
                                 </div>                                
                                 </div>
@@ -27,7 +27,7 @@ const SixthStep = () => {
                                 <div className="counter-buttons">
                                     {(counttwo>0)&&(<button className="counter-button" onClick={() => setCounttwo(counttwo - 1)}>-</button>)}
                                     <span className="counter-header-count">{counttwo}</span>
-                                    <button className="counter-button" onClick={() => setCounttwo(counttwo + 1)}>+</button>
+                                    <button className="counter-button" onClick={() => {setCounttwo(counttwo + 1); setId(true)}}>+</button>
                                 </div>
                                 </div>
                                 <div className="counter-header d-flex justify-content-between mt-2">
@@ -36,7 +36,7 @@ const SixthStep = () => {
                                 <div className="counter-buttons">
                                     {(countthree>0)&&(<button className="counter-button" onClick={() => setCountthree(countthree - 1)}>-</button>)}
                                     <span className="counter-header-count">{countthree}</span>
-                                    <button className="counter-button" onClick={() => setCountthree(countthree + 1)}>+</button>
+                                    <button className="counter-button" onClick={() => {setCountthree(countthree + 1); setId(true)}}>+</button>
                                 </div>
                                 </div>
                                 <div className="counter-header d-flex justify-content-between mt-2">
@@ -45,7 +45,7 @@ const SixthStep = () => {
                                 <div className="counter-buttons">
                                     {(countforth>0)&&(<button className="counter-button" onClick={() => setCountforth(countforth - 1)}>-</button>)}
                                     <span className="counter-header-count">{countforth}</span>
-                                    <button className="counter-button" onClick={() => setCountforth(countforth + 1)}>+</button>
+                                    <button className="counter-button" onClick={() => {setCountforth(countforth + 1); setId(true)}}>+</button>
                                 </div>
                                 </div>
             </div>
