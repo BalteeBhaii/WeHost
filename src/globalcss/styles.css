@@ -2285,6 +2285,7 @@ span.riceranger {
 
 .verify-2nd-list-item {
     cursor: pointer;
+    background-color: white;
     transition: all ease 0.3s;
 }
 

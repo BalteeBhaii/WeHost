@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Welcome from '../components/verifyPropertyComponent/welcome';
 import FirstStep from '../components/verifyPropertyComponent/firstStep';
@@ -23,6 +23,10 @@ import StepThree from '../components/verifyPropertyComponent/stepThree';
 const VerifyPropertyPage = () => {
     const [page, setPage] = useState(0);
     const [width, setWidth] = useState(0);
+    const [id, setId] = useState(false);
+    useEffect(()=>{
+        setId(id)
+    }, [id])
     return (
         <>
             <PropertyHeader />
@@ -30,7 +34,7 @@ const VerifyPropertyPage = () => {
                 <div>
                     {(page === 0) && <Welcome />}
                     {(page === 1) && <FirstStep />}
-                    {(page === 2) && <SecondStep />}
+                    {(page === 2) && <SecondStep id={id} setId={setId} />}
                     {(page === 3) && <ThirdStep />}
                     {(page === 4) && <ForthStep />}
                     {(page === 5) && <FifthStep />}
@@ -39,11 +43,11 @@ const VerifyPropertyPage = () => {
                     {(page === 8) && <SeventhStep />}
                     {(page === 9) && <EightStep />}
                     {(page === 10) && <NinethStep />}
+                    {(page === 11) && <TenthStep />}
                     {(page === 13) && <FourTenStep />}
+                    {(page === 12) && <StepThree />}
                     {(page === 14) && <FiveTenStep />}
                     {(page === 15) && <SixTenStep />}
-                    {(page === 11) && <TenthStep />}
-                    {(page === 12) && <StepThree />}
                     
                    
                     <div className='position-relative container'>
@@ -60,10 +64,10 @@ const VerifyPropertyPage = () => {
                         {(page >= 1) && (
                             <div className='d-flex justify-content-between'>
                                 <button className='btn property-footer-button' onClick={() => { setPage(page - 1); setWidth((page-1)*6.66);console.log(page, width)}}><i className="bi bi-arrow-left me-1"></i>Back</button>
-                                {(page < 15)&&(
+                                {(page < 15) && (id) || (page===1)? (
                                     <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
-                                )}
-                                {(page === 15) && ('')}
+                                ):''}
+                                {(page === 15) && (<button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66) }}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
                             </div>
                         )}
                     </div>
