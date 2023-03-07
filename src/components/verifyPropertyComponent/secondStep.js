@@ -1,16 +1,13 @@
-import React from 'react';
-const SecondStep = ({id, setId}) => {
-  const setCategory = (event) => {
-    // console.log(event.nativeEvent)
-    // console.log(document.querySelector('div'))
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-    // const parentEl= event.nativeEvent.target;
-    // // parentEl.classList.add('active-category');
-    // if (parentEl.classList.contains('category-box')){
-    //     parentEl.classList.add('active-category');
-    // }else{
-    //     parentEl.closest('.category-box').classList.add('active-category');
-    // }
+const SecondStep = ({ id, setId }) => {
+  var url = process.env.REACT_APP_APIURL;
+  var [placeTypes, setPlaceTypes] = useState([]);
+  var [selectedPlaceTypes, setSelectedPlaceTypes] = useState('');
+
+  const setCategory = (event) => {
+
     const parentEl = event.nativeEvent.target.closest('.category-box');
     if (!parentEl) return;
 
@@ -18,23 +15,49 @@ const SecondStep = ({id, setId}) => {
     categoryEls.forEach((el) => el.classList.remove('active-category'));
     parentEl.classList.add('active-category');
     setId(true);
-    console.log(id)
   }
+
+  useEffect(() => {
+    fetchPlaceTypes()
+  }, []);
+
+  const fetchPlaceTypes = async () => {
+    var config = {
+      headers: {
+        Accept: 'application/json'
+      }
+    }
+
+    let request = axios.get(`${url}api/place_types`, { config })
+    await request.then((response) => {
+      if (response.data.success) {
+        setPlaceTypes(response.data.data);
+      }
+    });
+    await request.catch((error) => {
+      console.log(error);
+    });
+  }
+
   return (
     <>
       <div className='container'>
         <h3 className='verify-2nd-title mb-0 mt-5'>What Kind of Property Do You Own ?</h3>
         <div className='verify-2nd-list-items row  mt-4'>
           <div className='verify-2nd-list-items-1st-column col-md-6 col-sm-12 col-12 row'>
-            <div className='col-lg-4 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
+            {/* Place Types */}
+            {placeTypes.map((item, index) => {
+            return (<div key={index} className='col-lg-4 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder' onClick={() => {setSelectedPlaceTypes(index)}}>
               <div onClick={setCategory} className='category-box verify-2nd-list-item border px-2 text-center py-3 mb-3'>
                 <span className='verify-2nd-list-item-main'>
-                  <i className="verify-2nd-list-item-main-icon bi bi-house"></i> House
-                  <input type={'radio'} name='category' className='d-none' value={'house'} />
+                  {/*<i className="verify-2nd-list-item-main-icon bi bi-house"></i>*/} {item.name}
+                  <input type={'radio'} name='category' className='d-none' value={item.id} />
                 </span>
               </div>
-            </div>
-            <div className='col-lg-4 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
+            </div>)})}
+            {/* Place Types End */}
+
+            {/* <div className='col-lg-4 col-md-6 col-sm-6 col-6 verify-2nd-list-item-holder'>
               <div onClick={setCategory} className='category-box verify-2nd-list-item border text-center py-3 mb-3'>
                 <span className='verify-2nd-list-item-main'>
                   <i className="verify-2nd-list-item-main-icon bi bi-building"></i> Apartment
@@ -74,7 +97,7 @@ const SecondStep = ({id, setId}) => {
                 </span>
               </div>
             </div>
-
+ */}
 
           </div>
           <div className='col-12 col-md-5 col-lg-6'>

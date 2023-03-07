@@ -1,7 +1,8 @@
 import React from 'react';
-const EightStep= () => {
+const EightStep= ({id, setId}) => {
     const handleImgClick = ()=>{
         document.getElementById('imgUpload').click()
+        setId(true);
     }
     return (
         <>
