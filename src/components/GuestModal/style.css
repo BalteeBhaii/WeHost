@@ -17,6 +17,10 @@
     width: 500px;
     max-width: 90%;
 }
+.active-category{
+    background-color: aqua !important
+    ;
+}
 
 .modal-footer {
     display: flex;

@@ -864,7 +864,9 @@ input {
     background-size: contain;
     background-position: center;
 }
-
+.active-category{
+    background-color: #787777 !important;
+}
 /* .imageTextColor:hover{
     background: #0d7bc411;
 
