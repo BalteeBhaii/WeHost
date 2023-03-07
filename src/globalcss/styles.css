@@ -319,6 +319,10 @@ span {
     font-size: 16px;
 }
 
+.catagory-select{
+    background-color: red;
+}
+
 /* ****************************** WEHOST CSS *************************** */
 .wehost-main-container {
     padding-left: 40px;
@@ -2252,11 +2256,9 @@ span.riceranger {
     width: 100%;
     word-wrap: break-word;
     cursor: pointer;
-}
-
-.verify-2nd-list-item-main {
     font-size: 16px;
 }
+
 
 .verify-2nd-list-items-1st-column {
     height: fit-content;
