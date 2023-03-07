@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import process from 'react'
 
 const SecondStep = ({ id, setId }) => {
-  var url = process.env.REACT_APP_APIURL;
+  // var url = process.env.REACT_APP_APIURL;
+  var url = 'http://localhost:8000/';
   var [placeTypes, setPlaceTypes] = useState([]);
   var [selectedPlaceTypes, setSelectedPlaceTypes] = useState('');
 
@@ -28,8 +30,9 @@ const SecondStep = ({ id, setId }) => {
       }
     }
 
-    let request = axios.get(`${url}api/place_types`, { config })
+    let request = axios.get(`http://localhost:8000/api/place_types`, { config })
     await request.then((response) => {
+      console.log(response.data)
       if (response.data.success) {
         setPlaceTypes(response.data.data);
       }
