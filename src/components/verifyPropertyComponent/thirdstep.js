@@ -47,7 +47,6 @@ const ThirdStep = ({id, setId}) => {
                         <div onClick={setCategory} className='type-box verify-2nd-list-item border  py-3 mb-3'>
                         <div className="verify-2nd-list-item-main gap-4 d-flex">
                             <img className="verify-3rd-list-item-main-icon"   src='/images/sharedroom.png' /> 
-
                             <div className='row'>
                                 <p className='mb-0'>Shared Room</p>
                                 <p className="entire-place-text">Offer them to share room</p>
