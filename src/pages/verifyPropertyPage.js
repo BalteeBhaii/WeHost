@@ -18,6 +18,7 @@ import FourTenStep from '../components/verifyPropertyComponent/fourTenStep';
 import '../globalcss/styles.css';
 import TenthStep from '../components/verifyPropertyComponent/tenthStep';
 import StepThree from '../components/verifyPropertyComponent/stepThree';
+import process from 'react';
 
 
 const VerifyPropertyPage = () => {
@@ -27,6 +28,7 @@ const VerifyPropertyPage = () => {
     useEffect(()=>{
         setId(id)
     }, [id])
+
     return (
         <>
             <PropertyHeader />

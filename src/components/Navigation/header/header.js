@@ -4,6 +4,7 @@ import SignUp from "../../signIn/signUp";
 import SignInModel from "../../signIn/signInModel";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -48,8 +49,8 @@ const Header = () => {
       dorpdownMenu.classList.add("menu-inactive");
       dorpdownMenu.classList.remove("menu-active");
       document.getElementsByTagName("body")[0].style.overflow = "visible";
-      
-      if(hamburger.classList.contains("ham-burger-active")){
+
+      if (hamburger.classList.contains("ham-burger-active")) {
         hamburger.classList.remove("ham-burger-active");
       }
     } else {
@@ -57,7 +58,7 @@ const Header = () => {
       dorpdownMenu.classList.add("menu-active");
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
 
-      if(!hamburger.classList.contains("ham-burger-active")){
+      if (!hamburger.classList.contains("ham-burger-active")) {
         hamburger.classList.add("ham-burger-active");
       }
     }
@@ -107,8 +108,8 @@ const Header = () => {
                   Login/SignUp
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/signin">Guest Login</a></li>
-                  <li><a class="dropdown-item" href="/signin">Owner Login</a></li>
+                  <li><Link class="dropdown-item" to="/signin">Guest Login</Link></li>
+                  <li><Link class="dropdown-item" to="/signin">Owner Login</Link></li>
                 </ul>
               </div>
             </div>
@@ -161,8 +162,8 @@ const Header = () => {
                   Login/SignUp
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/signin">Guest Login</a></li>
-                  <li><a class="dropdown-item" href="/signin">Owner Login</a></li>
+                  <li><Link class="dropdown-item" to="/signin">Guest Login</Link></li>
+                  <li><Link class="dropdown-item" to="/signin">Owner Login</Link></li>
                 </ul>
               </div>
             </div>

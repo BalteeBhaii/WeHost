@@ -115,6 +115,13 @@ const Hotel = () => {
     console.log(currentDropdown);
     setGuestCount(adultCount + childrenCount + infantCount);
   }, [adultCount, childrenCount, infantCount]);
+
+  useEffect(() => {
+    document.getElementsByClassName("center")[0].addEventListener("beforeunload", () => {
+      console.log('aa');
+    })
+  }, [])
+
   return (
     <div className='divBackgroundImage text-light z-0'>
       <div className='center'>
