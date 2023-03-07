@@ -16,7 +16,7 @@ const SeventhStep = ({ id, setId }) => {
         setId(true);
     }
 
-    const url = process.env.REACT_APP_APIURL;
+    const url = 'http://localhost:8000';
 
     const fetch_features = async () => {
         var config = {
@@ -25,7 +25,7 @@ const SeventhStep = ({ id, setId }) => {
             }
         }
 
-        let request = axios.get(`${url}api/features`, { config });
+        let request = axios.get(`${url}/api/features`, { config });
         await request.then((response) => {
             if (response.data.success) {
                 console.log(response.data);

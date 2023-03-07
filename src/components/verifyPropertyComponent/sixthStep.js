@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
+import { json } from 'react-router-dom';
 const SixthStep = ({id, setId}) => {
     const [count, setCount] = useState(0);
     const [counttwo, setCounttwo] = useState(0);
@@ -14,7 +15,7 @@ const SixthStep = ({id, setId}) => {
                                     <span className="counter-header-text d-block ">Guest</span>
                                    
                                 <div className="counter-buttons">
-                                    {(count>0)&&(<button className="counter-button" onClick={() =>{ setCount(count - 1); }}>-</button>)}
+                                    {(count>0)&&(<button className="counter-button" onClick={() =>{ setCount(count - 1);  }}>-</button>)}
                                     <span className="counter-header-count">{count}</span>
                                     <button className="counter-button" onClick={() => {setCount(count + 1); setId(true)}}>+</button>
 
