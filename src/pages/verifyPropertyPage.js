@@ -18,6 +18,7 @@ import FourTenStep from '../components/verifyPropertyComponent/fourTenStep';
 import '../globalcss/styles.css';
 import TenthStep from '../components/verifyPropertyComponent/tenthStep';
 import StepThree from '../components/verifyPropertyComponent/stepThree';
+import axios from 'axios';
 import process from 'react';
 
 
@@ -25,7 +26,51 @@ const VerifyPropertyPage = () => {
     const [page, setPage] = useState(0);
     const [width, setWidth] = useState(0);
     const [id, setId] = useState(false);
+    const [listingCompleteData, setListingCompleteData] = useState([])
+    const listingData = {
+        "title": 'tes',
+        'description': 'test',
+        'place_type_id': 1,
+        'category_id':1,
+        'no_of_guests': 1,
+        'no_of_bedrooms': 1,
+        'no_of_beds': 1,
+        'no_of_bathrooms': 1,
+        'guest_type': 'all-guests',
+        'price': 0.0,
+        'currency_code': 'USD',
+        'currency_symbol': '$',
+        'has_security_cameras': 1,
+        'has_weapons': 1,
+        'has_animals': 0,
+        'street': 'street # 5',
+        'apartment': 'apartment # 2',
+        'city': 'NY',
+        'country': "USA",
+        'features': [1],
+        'state': 'USA',
+        'zip_code': '1234',
+        'country_code': '+1'
+    }
+    const getStartedHandle = () =>{
+        localStorage.setItem('listing_data', JSON.stringify(listingData))
+        setPage(page + 1);
+        setWidth(page*6.66);
+        console.log(page);
+    }
+    const finishHandler = async () => [
+        await axios.post(`http://localhost:8000/api/listings`, listingData, { headers: {Accept: 'application/json'} })
+     .then((response) => {
+      console.log(response.data)
+      
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+
+    ]
     useEffect(()=>{
+        setListingCompleteData(localStorage.getItem('listing_data'))
         setId(id)
     }, [id])
 
@@ -45,11 +90,11 @@ const VerifyPropertyPage = () => {
                     {(page === 8) && <SeventhStep id={id} setId={setId}/>}
                     {(page === 9) && <EightStep id={id} setId={setId}/>}
                     {(page === 10) && <NinethStep />}
-                    {(page === 11) && <TenthStep />}
-                    {(page === 13) && <FourTenStep />}
+                    {(page === 11) && <TenthStep id={id} setId={setId}/>}
                     {(page === 12) && <StepThree />}
-                    {(page === 14) && <FiveTenStep />}
-                    {(page === 15) && <SixTenStep />}
+                    {(page === 13) && <FourTenStep id={id} setId={setId}/>}
+                    {(page === 14) && <FiveTenStep id={id} setId={setId}/>}
+                    {(page === 15) && <SixTenStep id={id} setId={setId}/>}
                     
                    
                     <div className='position-relative container'>
@@ -58,7 +103,7 @@ const VerifyPropertyPage = () => {
                         </div>
                         {(page === 0) && (
                             <div className='text-end'>
-                                <button className='btn fw-semibold property-footer-button' style={{ width: 115 }} onClick={() => { setPage(page + 1);setWidth(page*6.66); console.log(page) }}>
+                                <button className='btn fw-semibold property-footer-button' style={{ width: 115 }} onClick={getStartedHandle}>
                                     Get Started
                                 </button>
                             </div>
@@ -66,10 +111,10 @@ const VerifyPropertyPage = () => {
                         {(page >= 1) && (
                             <div className='d-flex justify-content-between'>
                                 <button className='btn property-footer-button' onClick={() => { setPage(page - 1); setWidth((page-1)*6.66);console.log(page, width)}}><i className="bi bi-arrow-left me-1"></i>Back</button>
-                                {(page < 15) && (id) || (page===1) || (page===4) || (page===5) || (page===7)? (
+                                {(page < 15) && (id) || (page===1) || (page===4) || (page===5) || (page===7) || (page===8) || (page===10) || (page===12)? (
                                     <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66); setId(false) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
                                 ):''}
-                                {(page === 15) && (<button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page+1)*6.66) }}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
+                                {(page === 15) && (<button className='btn property-footer-button' onClick={finishHandler }>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
                             </div>
                         )}
                     </div>

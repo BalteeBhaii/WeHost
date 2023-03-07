@@ -1,5 +1,5 @@
 import React from 'react';
-const FiveTenStep = () => {
+const FiveTenStep = ({id, setId}) => {
     return ( 
         <div className='container my-5'>
             <div className='row'>
@@ -10,15 +10,15 @@ const FiveTenStep = () => {
                     </div>
                     <div className='d-flex justify-content-between mb-3 fw-semibold'>
                         <label className="form-check-label">Security camera</label>
-                        <input className="form-check-input border border-secondary shadow-none" type="checkbox" value="" id="flexCheckDefault"/>
+                        <input className="form-check-input border border-secondary shadow-none" onChange={()=> setId(true)} type="checkbox" value="" id="flexCheckDefault"/>
                     </div>
                     <div className='d-flex justify-content-between mb-3 fw-semibold'>
                         <label className="form-check-label">Weapons</label>
-                        <input className="form-check-input border border-secondary shadow-none" type="checkbox" value="" id="flexCheckDefault"/>
+                        <input className="form-check-input border border-secondary shadow-none" onChange={()=> setId(true)} type="checkbox" value="" id="flexCheckDefault"/>
                     </div>
                     <div className='d-flex justify-content-between mb-3 fw-semibold'>
-                        <label className="form-check-label">Dangerous Animals</label>
-                        <input className="form-check-input border border-secondary shadow-none" type="checkbox" value="" id="flexCheckDefault"/>
+                        <label className="form-check-label">Animals</label>
+                        <input className="form-check-input border border-secondary shadow-none" onChange={()=> setId(true)} type="checkbox" value="" id="flexCheckDefault"/>
                     </div>
                     <hr/>
                     <p className='mb-1 fw-semibold'>Note: </p>

@@ -1,6 +1,9 @@
-import React from 'react';
-        
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
 const ThirdStep = ({id, setId}) => {
+    const [placeCatagoryId, setPlaceCatagoryId] = useState(null);
+    const [placeCatagory, setPlaceCatagory] = useState([])
     const setCategory = (event) => {
         const parentEl = event.nativeEvent.target.closest('.type-box');
         if (!parentEl) return;
@@ -10,6 +13,30 @@ const ThirdStep = ({id, setId}) => {
         parentEl.classList.add('active-category');
         setId(true);
     }
+
+    const fetchPlaceTypes = async () => {
+        var config = {
+          headers: {
+            Accept: 'application/json'
+          }
+        }
+    
+        let request = axios.get(`http://localhost:8000/api/place_types`, { config })
+        await request.then((response) => {
+          console.log(response.data)
+          if (response.data.success) {
+            setPlaceCatagory(response.data.data);
+          }
+        });
+        await request.catch((error) => {
+          console.log(error);
+        });
+      }
+
+    useEffect(()=>{
+        setPlaceCatagoryId(localStorage.getItem('place_type_id'));
+        console.log(placeCatagoryId)
+    })
     return (
         <>
             <div className='container'>

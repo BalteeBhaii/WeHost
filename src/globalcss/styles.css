@@ -16,6 +16,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.input-placeholder-style::placeholder{
+    color: white;
+    font-weight: 600;
+}
 .figure-text-sizing h2 {
     font-size: 20px;
 }
