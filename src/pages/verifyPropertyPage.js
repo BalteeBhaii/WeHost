@@ -40,8 +40,8 @@ const VerifyPropertyPage = () => {
                     {(page === 5) && <FifthStep />}
                     {(page === 6) && <SixthStep id={id} setId={setId} />}
                     {(page === 7) && <StepTwo />}
-                    {(page === 8) && <SeventhStep />}
-                    {(page === 9) && <EightStep />}
+                    {(page === 8) && <SeventhStep id={id} setId={setId}/>}
+                    {(page === 9) && <EightStep id={id} setId={setId}/>}
                     {(page === 10) && <NinethStep />}
                     {(page === 11) && <TenthStep />}
                     {(page === 13) && <FourTenStep />}
