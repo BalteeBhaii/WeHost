@@ -20,7 +20,7 @@ const SingUp = () => {
   var signupButton = document.getElementsByClassName("submit-button")[0];
   var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
 
-  const url = 'https://dev.wehosttravel.com';
+  const url = 'http://localhost:8000';
 
   const handleContinueClick = (event) => {
     event.preventDefault();
@@ -49,8 +49,8 @@ const SingUp = () => {
           .catch((error) => {
             if (error) {
               signupButton.innerHTML = 'Sign up';
-              console.log(error.response.data.message);
-              setError(error.response.data.message);
+              console.log(error);
+              setError(error);
             }
           })
 

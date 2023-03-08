@@ -1,6 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 const FourTenStep = ({id, setId}) => {
     const [counter, setCounter] = useState(0);
+    var listingData = JSON.parse(localStorage.getItem("listing_data"));
+
+    useEffect(() => {
+        listingData.price = counter;
+        localStorage.setItem("listing_data", JSON.stringify(listingData));
+    }, [counter]);
     return ( 
         <div className='container my-5'>
             <div className='row'>
