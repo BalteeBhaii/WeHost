@@ -7,7 +7,7 @@ const SecondStep = ({ id, setId, listingCompleteData, setListingCompleteData, se
   const [placeTypes, setPlaceTypes] = useState([]);
   const [selectedPlaceTypes, setSelectedPlaceTypes] = useState(null);
   // var url = process.env.REACT_APP_APIURL;
-  var url = 'http://localhost:8000/';
+  var url = 'https://dev.wehosttravel.com/';
 
   const setCategory = (event, id) => {
     const parentEl = event.nativeEvent.target.closest('.category-box');

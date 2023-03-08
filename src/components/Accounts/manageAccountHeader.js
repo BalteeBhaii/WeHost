@@ -123,8 +123,8 @@ const ManageAccountHeader = () => {
             </div>
           </ul>
         </div>
-        <SignIn showSigninModal={showSigninModal} setshowSigninModal={setshowSigninModal} />
-        <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal} />
+        {/* <SignIn showSigninModal={showSigninModal} setshowSigninModal={setshowSigninModal} />
+        <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal} /> */}
       </div>
     </>
   );

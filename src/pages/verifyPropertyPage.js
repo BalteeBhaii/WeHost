@@ -27,7 +27,10 @@ const VerifyPropertyPage = () => {
   const [width, setWidth] = useState(0);
   const [categories, setCategories] = useState([]);
   const [id, setId] = useState(false);
-  const [listingCompleteData, setListingCompleteData] = useState({})
+  const [listingCompleteData, setListingCompleteData] = useState({});
+  const [propertyTitle, setPropertyTitle] = useState('');
+  const [propertyDescription, setPropertyDescription] = useState('');
+  const [guestType, setGuestType] = useState('');
   const listingData = {
     "title": 'tes',
     'description': 'test',
@@ -62,9 +65,9 @@ const VerifyPropertyPage = () => {
     console.log(page);
   }
 
-  const nestHandler = () => {
-
-  }
+  const nextHandler = () => {
+    
+  } 
 
   const finishHandler = async () => {
     console.log(listingCompleteData);
@@ -124,15 +127,40 @@ const VerifyPropertyPage = () => {
               setCategories={setCategories}
             />
           }
+
           {(page === 4) && <ForthStep />}
-          {(page === 5) && <FifthStep />}
-          {(page === 6) && <SixthStep id={id} setId={setId} listingCompleteData={listingCompleteData}
-              setListingCompleteData={setListingCompleteData}/>}
+          {(page === 5) && 
+            <FifthStep 
+              setId={setId} 
+              listingCompleteData={listingCompleteData} 
+              setListingCompleteData={setListingCompleteData}
+            />
+          }
+
+          {
+            (page === 6) && 
+            <SixthStep 
+              id={id} 
+              setId={setId} 
+              listingCompleteData={listingCompleteData}
+              setListingCompleteData={setListingCompleteData}
+            />
+          }
+
           {(page === 7) && <StepTwo />}
           {(page === 8) && <SeventhStep id={id} setId={setId} />}
           {(page === 9) && <EightStep id={id} setId={setId} />}
           {(page === 10) && <NinethStep />}
-          {(page === 11) && <TenthStep id={id} setId={setId} />}
+          
+          {
+            (page === 11) && 
+            <TenthStep 
+              setId={setId} 
+              listingCompleteData={listingCompleteData}
+              setListingCompleteData={setListingCompleteData}
+            />
+          }
+
           {(page === 12) && <StepThree />}
           {(page === 13) && <FourTenStep id={id} setId={setId} />}
           {(page === 14) && <FiveTenStep id={id} setId={setId} />}
@@ -152,7 +180,7 @@ const VerifyPropertyPage = () => {
             {(page >= 1) && (
               <div className='d-flex justify-content-between'>
                 <button className='btn property-footer-button' onClick={() => { setPage(page - 1); setWidth((page - 1) * 6.66); console.log(page, width) }}><i className="bi bi-arrow-left me-1"></i>Back</button>
-                {(page < 15) && (id) || (page === 1) || (page === 4) || (page === 5) || (page === 7) || (page === 8) || (page === 10) || (page === 12) ? (
+                {(page < 15) && (id) || (page === 1) || (page === 4) || (page === 7) || (page === 8) || (page === 10) || (page === 12) || (page === 6) ? (
                   <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page + 1) * 6.66); setId(false) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
                 ) : ''}
                 {(page === 15) && (<button className='btn property-footer-button' onClick={finishHandler}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
