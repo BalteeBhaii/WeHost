@@ -18,7 +18,7 @@ const SingIn = () => {
   const navigate = useNavigate();
   const url = 'https://dev.wehosttravel.com/api/';
 
-  //const url = 'http://localhost:8000/api/';
+  //const url = 'https://dev.wehosttravel.com/api/';
 
   var signupButton = document.getElementsByClassName("submit-button")[0];
   var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';

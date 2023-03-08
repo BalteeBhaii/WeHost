@@ -16,7 +16,7 @@ const SeventhStep = ({ id, setId }) => {
         setId(true);
     }
 
-    const url = 'http://localhost:8000';
+    const url = 'https://dev.wehosttravel.com';
 
     const fetch_features = async () => {
         var config = {
