@@ -114,7 +114,13 @@ const VerifyPropertyPage = () => {
             />
           }
           {(page === 4) && <ForthStep />}
-          {(page === 5) && <FifthStep />}
+          {(page === 5) && 
+            <FifthStep 
+              setId={setId} 
+              listingCompleteData={listingCompleteData} 
+              setListingCompleteData={setListingCompleteData}
+              />
+            }
           {
             (page === 6) && 
             <SixthStep 
@@ -148,7 +154,7 @@ const VerifyPropertyPage = () => {
             {(page >= 1) && (
               <div className='d-flex justify-content-between'>
                 <button className='btn property-footer-button' onClick={() => { setPage(page - 1); setWidth((page - 1) * 6.66); console.log(page, width) }}><i className="bi bi-arrow-left me-1"></i>Back</button>
-                {(page < 15) && (id) || (page === 1) || (page === 4) || (page === 5) || (page === 7) || (page === 8) || (page === 10) || (page === 12) || (page === 6) ? (
+                {(page < 15) && (id) || (page === 1) || (page === 4) || (page === 7) || (page === 8) || (page === 10) || (page === 12) || (page === 6) ? (
                   <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page + 1) * 6.66); setId(false) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
                 ) : ''}
                 {(page === 15) && (<button className='btn property-footer-button' onClick={finishHandler}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
