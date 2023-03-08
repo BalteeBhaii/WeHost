@@ -20,6 +20,7 @@ import TenthStep from '../components/verifyPropertyComponent/tenthStep';
 import StepThree from '../components/verifyPropertyComponent/stepThree';
 import axios from 'axios';
 import process from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const VerifyPropertyPage = () => {
   const [page, setPage] = useState(0);
@@ -52,6 +53,7 @@ const VerifyPropertyPage = () => {
     'zip_code': '1234',
     'country_code': '+1'
   }
+  const navigate = useNavigate();
 
   const getStartedHandle = () => {
     localStorage.setItem('listing_data', JSON.stringify(listingData));
@@ -75,7 +77,8 @@ const VerifyPropertyPage = () => {
 
     await axios.post('http://localhost:8000/api/listings', listingCompleteData, config)
       .then((response) => {
-        console.log(response.data)
+        console.log(response.data);
+        navigate('/hosting/listings');
       })
       .catch((error) => {
         console.log(error);
