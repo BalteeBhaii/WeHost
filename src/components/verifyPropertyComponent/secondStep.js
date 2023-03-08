@@ -17,7 +17,7 @@ const SecondStep = ({ id, setId, listingCompleteData, setListingCompleteData, se
     parentEl.classList.add('active-category');
 
     setSelectedPlaceTypes(id); 
-    let data = listingCompleteData;
+    let data = JSON.parse(localStorage.getItem("listing_data"));
     data.place_type_id= id;
     setListingCompleteData(data);
     localStorage.setItem('listing_data', JSON.stringify(data));

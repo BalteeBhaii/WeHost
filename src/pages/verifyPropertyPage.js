@@ -65,7 +65,15 @@ const VerifyPropertyPage = () => {
   }
 
   const finishHandler = async () => {
-    await axios.post(`http://localhost:8000/api/listings`, listingData, { headers: { Accept: 'application/json' } })
+    console.log(listingCompleteData);
+    let config = {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'multipart/form-data',
+      }
+    }
+
+    await axios.post('http://localhost:8000/api/listings', listingCompleteData, config)
       .then((response) => {
         console.log(response.data)
       })
