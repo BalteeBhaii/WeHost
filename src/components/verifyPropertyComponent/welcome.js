@@ -1,6 +1,8 @@
-import React from 'react';
-const Welcome = () => {
-    
+import React, { useEffect } from 'react';
+const Welcome = ({setListingCompleteData}) => {
+    useEffect(()=>{
+        setListingCompleteData(JSON.parse(localStorage.getItem('listing_data')));
+    }, [])
     return ( 
         <div className='container'>
             <div className='row align-items-center mt-5'>
