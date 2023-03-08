@@ -17,7 +17,7 @@ const FinishUpLoging = (props) => {
   const navigate = useNavigate();
 
   const url = 'https://dev.wehosttravel.com/api/';
-  //const url = 'http://localhost:8000/api/';
+  //const url = 'https://dev.wehosttravel.com/api/';
   const { id } = useParams();
 
   var signupButton = document.getElementsByClassName("submit-button")[0];

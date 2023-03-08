@@ -26,7 +26,10 @@ const VerifyPropertyPage = () => {
   const [width, setWidth] = useState(0);
   const [categories, setCategories] = useState([]);
   const [id, setId] = useState(false);
-  const [listingCompleteData, setListingCompleteData] = useState({})
+  const [listingCompleteData, setListingCompleteData] = useState({});
+  const [propertyTitle, setPropertyTitle] = useState('');
+  const [propertyDescription, setPropertyDescription] = useState('');
+  const [guestType, setGuestType] = useState('');
   const listingData = {
     "title": 'tes',
     'description': 'test',
@@ -60,12 +63,12 @@ const VerifyPropertyPage = () => {
     console.log(page);
   }
 
-  const nestHandler = () => {
-
-  }
+  const nextHandler = () => {
+    
+  } 
 
   const finishHandler = async () => {
-    await axios.post(`http://localhost:8000/api/listings`, listingData, { headers: { Accept: 'application/json' } })
+    await axios.post(`https://dev.wehosttravel.com/api/listings`, listingData, { headers: { Accept: 'application/json' } })
       .then((response) => {
         console.log(response.data)
       })
@@ -113,14 +116,16 @@ const VerifyPropertyPage = () => {
               setCategories={setCategories}
             />
           }
+
           {(page === 4) && <ForthStep />}
           {(page === 5) && 
             <FifthStep 
               setId={setId} 
               listingCompleteData={listingCompleteData} 
               setListingCompleteData={setListingCompleteData}
-              />
-            }
+            />
+          }
+
           {
             (page === 6) && 
             <SixthStep 
@@ -130,11 +135,21 @@ const VerifyPropertyPage = () => {
               setListingCompleteData={setListingCompleteData}
             />
           }
+
           {(page === 7) && <StepTwo />}
           {(page === 8) && <SeventhStep id={id} setId={setId} />}
           {(page === 9) && <EightStep id={id} setId={setId} />}
           {(page === 10) && <NinethStep />}
-          {(page === 11) && <TenthStep id={id} setId={setId} />}
+          
+          {
+            (page === 11) && 
+            <TenthStep 
+              setId={setId} 
+              listingCompleteData={listingCompleteData}
+              setListingCompleteData={setListingCompleteData}
+            />
+          }
+
           {(page === 12) && <StepThree />}
           {(page === 13) && <FourTenStep id={id} setId={setId} />}
           {(page === 14) && <FiveTenStep id={id} setId={setId} />}
