@@ -1,6 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import { Collapse } from 'react-bootstrap';
 const Explore = () => {
-    return ( 
+    const [open, setOpen] = useState(false);
+    const [exploreBtnTxt,setExploreBtnTxt]=useState('Explore More');
+    const [exploreIcon,setExploreIcon]=useState('bi bi-chevron-down button-icon');
+
+    useEffect(() => {
+        if(open){
+            setExploreBtnTxt('Explore Less');
+            setExploreIcon('bi bi-chevron-up button-icon')
+            
+        }else{
+            setExploreBtnTxt('Explore More');
+            setExploreIcon('bi bi-chevron-down button-icon')
+        }
+    },[open])
+    return (
         <>
 
             <div className='container mt-5 section'>
@@ -23,8 +39,31 @@ const Explore = () => {
                             </div>
                         </div>
                     </div>
+                    <Collapse in={open}>
+                    <div  id="example-collapse-text" >
+                        <div className='explore-images gap-3 mt-4'>
+                            <div className='images-section-2 mx-0 position-relative px-0 overflow-hidden'>
+                                <div className='inner-section-1 overflow-hidden h-50 mb-2'>
+                                    <img className='explore-images explore-image-2 h-100' src="/images/outdoor-space.png" alt="" />
+                                    <div className='overly-2'>OutDoor Door</div>
+                                </div>
+                                <div className='inner-section-3 overflow-hidden h-50 mt-2'>
+                                    <img className='explore-images explore-image-3 h-100' src="/images/cabin-house.png" alt="" />
+                                    <div className='overly-3'>Cabin House</div>
+                                </div>
+                            </div>
+                            <div className='images-section-1 position-relative px-0'>
+                                <img className='explore-images explore-image-1' src="/images/pet-house.png" alt="" />
+                                <div className='overly-1'>Pets Welcome</div>
+                            </div>
+                        </div>
+                    </div>
+                    </Collapse>
+
                     <div className='d-flex justify-content-center mt-4 px-3'>
-                        <button className='explore-button bi'>Explore More  <i className="bi bi-arrow-right button-icon"></i></button>
+                        <button onClick={() => setOpen(!open)}
+                            aria-controls="example-collapse-text"
+                            aria-expanded={open} className='explore-button bi'> {exploreBtnTxt}  <i className={exploreIcon}></i></button>
                     </div>
                 </div>
             </div>
@@ -75,7 +114,7 @@ const Explore = () => {
                 </div>
             </div> */}
         </>
-     );
+    );
 }
- 
+
 export default Explore;
