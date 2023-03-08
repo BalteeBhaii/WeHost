@@ -16,7 +16,7 @@ const FinishUpLoging = (props) => {
   const [email, setEmail] = useState('abc@gmail.com');
   const navigate = useNavigate();
 
-  const url = 'https://dev.wehosttravel.com/api/';
+  const url = 'http://localhost:8000';
   //const url = 'http://localhost:8000/api/';
   const { id } = useParams();
 
@@ -56,7 +56,7 @@ const FinishUpLoging = (props) => {
   }
 
   const postData = async () => {
-    await axios.post(`${url}register/complete`, apibody, { headers: { "Accept": "application/json" } })
+    await axios.post(`${url}/api/register/complete`, apibody, { headers: { "Accept": "application/json" } })
       .then(res => {
         signupButton.innerHTML = 'Agree and Continue';
 

@@ -10,13 +10,13 @@ const CodeModel = (props) => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const url = 'https://dev.wehosttravel.com';
+  const url = 'http://localhost:8000';
   const { id } = useParams();
 
   var signupButton = document.getElementsByClassName("submit-button")[0];
   var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
 
-  //const url = 'http://localhost:8000/api/';
+  //const url = 'https://dev.wehosttravel.com/api/';
 
   const handleCodeclick = (event) => {
     event.preventDefault();
@@ -31,7 +31,7 @@ const CodeModel = (props) => {
         }
       };
 
-      axios.post(`${url}register/email/verification`, data, config)
+      axios.post(`${url}/api/register/email/verification`, data, config)
         .then((response) => {
           signupButton.innerHTML = "Verify";
 
@@ -44,8 +44,8 @@ const CodeModel = (props) => {
           signupButton.innerHTML = "Verify";
 
           if (error) {
-            console.log(error.response.data.message);
-            setError(error.response.data.message);
+            console.log(error);
+            setError(error);
           }
         })
 
