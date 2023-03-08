@@ -6,8 +6,10 @@ import { useEffect } from 'react';
 const Listings = () => {
     const [listings, setListings] = useState([]);
 
+    const user = JSON.parse(localStorage.user);
+
     const loadListings = async () => {
-        const res = await axios.get("http://127.0.0.1:8000/api/listings/?user_id=2");
+        const res = await axios.get("https://dev.wehosttravel.com/api/listings/?user_id=" + user.id);
         setListings(res.data.data);
     }
 
