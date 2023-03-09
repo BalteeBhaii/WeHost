@@ -4,6 +4,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useNavigate } from "react-router-dom";
 import { useParams } from 'react-router-dom';
+import { baseUrl as url } from '../../config';
 
 const FinishUpLoging = (props) => {
   const [number, setNumber] = useState('');
@@ -16,8 +17,6 @@ const FinishUpLoging = (props) => {
   const [email, setEmail] = useState('abc@gmail.com');
   const navigate = useNavigate();
 
-  const url = 'http://localhost:8000';
-  //const url = 'http://localhost:8000/api/';
   const { id } = useParams();
 
   var signupButton = document.getElementsByClassName("submit-button")[0];
@@ -56,7 +55,7 @@ const FinishUpLoging = (props) => {
   }
 
   const postData = async () => {
-    await axios.post(`${url}/api/register/complete`, apibody, { headers: { "Accept": "application/json" } })
+    await axios.post(`${url}register/complete`, apibody, { headers: { "Accept": "application/json" } })
       .then(res => {
         signupButton.innerHTML = 'Agree and Continue';
 
