@@ -25,6 +25,7 @@ import OtpPage from './pages/otpPage';
 import SignupCompletePage from './pages/signupCompletePage';
 import CodeModel from './components/signIn/codeModel';
 import FinishUpLoging from './components/signIn/finishingUpLoging';
+import UserListings from './pages/Hosting/Listings';
 
 function App() {
   return (
@@ -56,7 +57,7 @@ function App() {
         <Route exact path="/sign-complete" element={<SignupCompletePage/>} />
         <Route exact path="/register/email-confirmation/:id" element={<CodeModel/>} />
         <Route exact path="/register/complete/:id" element={<FinishUpLoging/>} />
-        
+        <Route exact path="/hosting/listings" element={<UserListings />} />
         
         <Route exact path = '/' element = {<HomePage/>}/>
       </Routes>

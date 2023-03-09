@@ -20,6 +20,8 @@ import TenthStep from '../components/verifyPropertyComponent/tenthStep';
 import StepThree from '../components/verifyPropertyComponent/stepThree';
 import axios from 'axios';
 import process from 'react';
+import { useNavigate } from 'react-router-dom';
+import { baseUrl } from '../config';
 
 const VerifyPropertyPage = () => {
   const [page, setPage] = useState(0);
@@ -55,6 +57,7 @@ const VerifyPropertyPage = () => {
     'zip_code': '1234',
     'country_code': '+1'
   }
+  const navigate = useNavigate();
 
   const getStartedHandle = () => {
     localStorage.setItem('listing_data', JSON.stringify(listingData));
@@ -68,9 +71,18 @@ const VerifyPropertyPage = () => {
   } 
 
   const finishHandler = async () => {
-    await axios.post(`https://dev.wehosttravel.com/api/listings`, listingData, { headers: { Accept: 'application/json' } })
+    console.log(listingCompleteData);
+    let config = {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'multipart/form-data',
+      }
+    }
+
+    await axios.post(baseUrl + 'listings', listingCompleteData, config)
       .then((response) => {
-        console.log(response.data)
+        console.log(response.data);
+        navigate('/hosting/listings');
       })
       .catch((error) => {
         console.log(error);
