@@ -28,7 +28,6 @@ const VerifyPropertyPage = () => {
   const [width, setWidth] = useState(0);
   const [categories, setCategories] = useState([]);
   const [id, setId] = useState(false);
-  const [listingCompleteData, setListingCompleteData] = useState({});
   const [propertyTitle, setPropertyTitle] = useState('');
   const [propertyDescription, setPropertyDescription] = useState('');
   const [guestType, setGuestType] = useState('');
@@ -45,19 +44,21 @@ const VerifyPropertyPage = () => {
     'price': 0.0,
     'currency_code': 'USD',
     'currency_symbol': '$',
-    'has_security_cameras': 1,
-    'has_weapons': 1,
+    'has_security_cameras': 0,
+    'has_weapons': 0,
     'has_animals': 0,
     'street': 'street # 5',
     'apartment': 'apartment # 2',
     'city': 'NY',
     'country': "USA",
-    'features': [1],
+    'features': [],
     'state': 'USA',
     'zip_code': '1234',
     'country_code': '+1'
   }
   const navigate = useNavigate();
+  const [listingCompleteData, setListingCompleteData] = useState(listingData);
+  const [isListingDataChanged, setIsListingDataChanged] = useState(0);
 
   const getStartedHandle = () => {
     localStorage.setItem('listing_data', JSON.stringify(listingData));
@@ -95,6 +96,10 @@ const VerifyPropertyPage = () => {
     setId(id)
   }, [id])
 
+  useEffect(() => {
+    localStorage.setItem("listing_data", JSON.stringify(listingCompleteData));
+  }, [isListingDataChanged]);
+
   return (
     <>
       <PropertyHeader />
@@ -115,6 +120,8 @@ const VerifyPropertyPage = () => {
               setListingCompleteData={setListingCompleteData} 
               setCategories={setCategories} 
               categories={categories}
+              url={baseUrl}
+              setIsListingDataChanged = {setIsListingDataChanged}
             />
           }
           {
@@ -126,6 +133,8 @@ const VerifyPropertyPage = () => {
               listingCompleteData={listingCompleteData}
               setListingCompleteData={setListingCompleteData} 
               setCategories={setCategories}
+              url={baseUrl}
+              setIsListingDataChanged = {setIsListingDataChanged}
             />
           }
 
@@ -135,6 +144,8 @@ const VerifyPropertyPage = () => {
               setId={setId} 
               listingCompleteData={listingCompleteData} 
               setListingCompleteData={setListingCompleteData}
+              url={baseUrl}
+              setIsListingDataChanged = {setIsListingDataChanged}
             />
           }
 
@@ -145,12 +156,14 @@ const VerifyPropertyPage = () => {
               setId={setId} 
               listingCompleteData={listingCompleteData}
               setListingCompleteData={setListingCompleteData}
+              url={baseUrl}
+              setIsListingDataChanged = {setIsListingDataChanged}
             />
           }
 
           {(page === 7) && <StepTwo />}
-          {(page === 8) && <SeventhStep id={id} setId={setId} />}
-          {(page === 9) && <EightStep id={id} setId={setId} />}
+          {(page === 8) && <SeventhStep id={id} setId={setId} listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 9) && <EightStep id={id} setId={setId} url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
           {(page === 10) && <NinethStep />}
           
           {
@@ -159,13 +172,15 @@ const VerifyPropertyPage = () => {
               setId={setId} 
               listingCompleteData={listingCompleteData}
               setListingCompleteData={setListingCompleteData}
+              url={baseUrl}
+              setIsListingDataChanged = {setIsListingDataChanged}
             />
           }
 
           {(page === 12) && <StepThree />}
-          {(page === 13) && <FourTenStep id={id} setId={setId} />}
-          {(page === 14) && <FiveTenStep id={id} setId={setId} />}
-          {(page === 15) && <SixTenStep id={id} setId={setId} />}
+          {(page === 13) && <FourTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 14) && <FiveTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 15) && <SixTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
 
           <div className='position-relative container'>
             <div className="progress my-5" style={{ background: '#0079c2bf' }}>

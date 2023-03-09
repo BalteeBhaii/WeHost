@@ -4,13 +4,11 @@ import axios, { formToJSON } from 'axios';
 import { useState, useEffect } from 'react';
 import { json } from 'react-router-dom';
 
-const SeventhStep = ({ id, setId }) => {
-    const [features, setFeatures] = useState([]);
-    // const [selectedFeatures, setSelectedFeatures] = useState([]);
+var selectedFeatures = [];
 
-    const url = process.env.REACT_APP_APIURL;
-    var selectedFeatures = [];
-    var listingData = JSON.parse(localStorage.getItem("listing_data"));
+const SeventhStep = ({ id, setId, url, listingCompleteData, setListingCompleteData, setIsListingDataChanged }) => {
+    const [features, setFeatures] = useState([]);
+
 
     const fetch_features = async () => {
         var config = {
@@ -19,13 +17,14 @@ const SeventhStep = ({ id, setId }) => {
             }
         }
 
-        let request = axios.get(`${url}/api/features`, { config });
+        let request = axios.get(`${url}features`, { config });
+
         await request.then((response) => {
             if (response.data.success) {
-                console.log(response.data);
                 setFeatures(response.data.data);
             }
         });
+
         await request.catch((error) => {
             console.log(error);
         });
@@ -44,8 +43,7 @@ const SeventhStep = ({ id, setId }) => {
         selectedFeature = event.target.closest(".verify-2nd-list-item-holder");
         selectedBox = selectedFeature.getElementsByClassName("feature-box")[0];
         id = selectedFeature.dataset.id;
-        console.log(id);
-        
+
         if(selectedFeatures.indexOf(parseInt(id)) !== -1){
           selectedFeatures.splice(selectedFeatures.indexOf(parseInt(id)), 1);
         } else {
@@ -58,17 +56,14 @@ const SeventhStep = ({ id, setId }) => {
           selectedBox.classList.add("active-category");
         }
 
-        listingData.features = selectedFeatures;
-        localStorage.setItem("listing_data", JSON.stringify(listingData));
+        console.log(selectedFeatures);
 
-        // console.log(selectedFeatures);
+        listingCompleteData.features = selectedFeatures;
+        setListingCompleteData(listingCompleteData);
+        setIsListingDataChanged(Math.random());
       }
     }
     
-  //   useEffect(() => {
-  //     console.log(selectedFeatures);
-  // }, [selectedFeatures]);
-
     return (
         <>
             <div className='container'>

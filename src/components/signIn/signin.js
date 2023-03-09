@@ -73,8 +73,8 @@ const SingIn = () => {
         })
         .catch(err => {
           signupButton.innerHTML = 'Login';
-          // setErrorMessage(err.response)
-          console.log(err.response.data.message);
+          console.log(err);
+          
           if (err.response.data.error) {
             setErrorMessage(err.response.data.message, "email or password dosen't match");
           }

@@ -36,7 +36,7 @@ const SingUp = () => {
           }
         };
 
-        axios.post(`${url}/api/register`, data, config)
+        axios.post(`${url}register`, data, config)
           .then((response) => {
             if (response.data.success) {
               console.log(response.data);
@@ -49,7 +49,10 @@ const SingUp = () => {
             if (error) {
               signupButton.innerHTML = 'Sign up';
               console.log(error);
-              setError(error);
+
+              if(error.response.data.message){
+                setError(error.response.data.message);
+              }
             }
           })
 

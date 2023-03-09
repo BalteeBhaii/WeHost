@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import FinishUpLoging from './finishingUpLoging';
 import { useParams } from 'react-router-dom';
+import { baseUrl as url } from '../../config';
 import axios from 'axios';
 
 const CodeModel = (props) => {
@@ -10,13 +11,11 @@ const CodeModel = (props) => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const url = 'http://localhost:8000';
   const { id } = useParams();
 
   var signupButton = document.getElementsByClassName("submit-button")[0];
   var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
 
-  //const url = 'https://dev.wehosttravel.com/api/';
 
   const handleCodeclick = (event) => {
     event.preventDefault();
@@ -31,7 +30,7 @@ const CodeModel = (props) => {
         }
       };
 
-      axios.post(`${url}/api/register/email/verification`, data, config)
+      axios.post(`${url}register/email/verification`, data, config)
         .then((response) => {
           signupButton.innerHTML = "Verify";
 
@@ -45,7 +44,10 @@ const CodeModel = (props) => {
 
           if (error) {
             console.log(error);
-            setError(error);
+            
+            if(error.response.data.message){
+              setError(error.response.data.message);
+            }
           }
         })
 

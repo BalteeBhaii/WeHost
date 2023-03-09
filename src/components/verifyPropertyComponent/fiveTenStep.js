@@ -1,19 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-const FiveTenStep = ({id, setId}) => {
+const FiveTenStep = ({id, setId, listingCompleteData, setListingCompleteData, setIsListingDataChanged}) => {
     const [hasCameras, setHasCameras] = useState(0);
     const [hasWeapons, setHasWeapons] = useState(0);
     const [hasAnimals, setAnimals] = useState(0);
 
-    var listingData = JSON.parse(localStorage.getItem("listing_data"));
 
     useEffect(() => {
-        hasAnimals == true ? listingData.has_animals = 1 : listingData.has_animals = 0;;
-        hasCameras == true ? listingData.has_security_cameras = 1 : listingData.has_security_cameras = 0;
-        hasWeapons == true ? listingData.has_weapons = 1 : listingData.has_weapons = 0;
+        hasAnimals == true ? listingCompleteData.has_animals = 1 : listingCompleteData.has_animals = 0;;
+        hasCameras == true ? listingCompleteData.has_security_cameras = 1 : listingCompleteData.has_security_cameras = 0;
+        hasWeapons == true ? listingCompleteData.has_weapons = 1 : listingCompleteData.has_weapons = 0;
 
-        localStorage.setItem("listing_data", JSON.stringify(listingData));
+        setListingCompleteData(listingCompleteData);
+        setIsListingDataChanged(Math.random());
     }, [hasCameras, hasWeapons, hasAnimals]);
     
     return ( 
