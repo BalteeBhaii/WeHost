@@ -21,6 +21,7 @@ import StepThree from '../components/verifyPropertyComponent/stepThree';
 import axios from 'axios';
 import process from 'react';
 import { useNavigate } from 'react-router-dom';
+import { baseUrl } from '../config';
 
 const VerifyPropertyPage = () => {
   const [page, setPage] = useState(0);
@@ -78,7 +79,7 @@ const VerifyPropertyPage = () => {
       }
     }
 
-    await axios.post('http://localhost:8000/api/listings', listingCompleteData, config)
+    await axios.post(baseUrl + 'listings', listingCompleteData, config)
       .then((response) => {
         console.log(response.data);
         navigate('/hosting/listings');

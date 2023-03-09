@@ -5,6 +5,7 @@ import countryList from "react-select-country-list";
 import CodeModel from './codeModel';
 import FinishUpLoging from './finishingUpLoging';
 import axios from 'axios';
+import { baseUrl as url } from '../../config';
 
 const SingUp = () => {
   const [country, setCountry] = useState('');
@@ -19,8 +20,6 @@ const SingUp = () => {
   const navigate = useNavigate();
   var signupButton = document.getElementsByClassName("submit-button")[0];
   var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
-
-  const url = 'http://localhost:8000';
 
   const handleContinueClick = (event) => {
     event.preventDefault();
