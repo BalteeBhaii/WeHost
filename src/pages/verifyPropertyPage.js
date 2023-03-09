@@ -179,7 +179,7 @@ const VerifyPropertyPage = () => {
 
           {(page === 12) && <StepThree />}
           {(page === 13) && <FourTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
-          {(page === 14) && <FiveTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 14) && <FiveTenStep id={id} setId={setId}  url={baseUrl}    listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData} setIsListingDataChanged = {setIsListingDataChanged} />}
           {(page === 15) && <SixTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
 
           <div className='position-relative container'>
