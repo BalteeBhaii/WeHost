@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from '../../features/user/userSlice';
 import { userInfo } from '../../features/user/userInfoSlice';
+import { baseUrl as url } from '../../config';
 
 import axios from 'axios';
 const SingIn = () => {
@@ -16,9 +17,6 @@ const SingIn = () => {
   const { isLoggedIn } = useSelector(state => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const url = 'https://dev.wehosttravel.com/api/';
-
-  const url = 'http://localhost:8000/api/';
 
   var signupButton = document.getElementsByClassName("submit-button")[0];
   var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
