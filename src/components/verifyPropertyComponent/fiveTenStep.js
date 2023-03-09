@@ -2,13 +2,13 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 const FiveTenStep = ({id, setId, listingCompleteData, setListingCompleteData, setIsListingDataChanged}) => {
-    const [hasCameras, setHasCameras] = useState(0);
-    const [hasWeapons, setHasWeapons] = useState(0);
-    const [hasAnimals, setAnimals] = useState(0);
+    const [hasCameras, setHasCameras] = useState(false);
+    const [hasWeapons, setHasWeapons] = useState(false);
+    const [hasAnimals, setHasAnimals] = useState(false);
 
 
     useEffect(() => {
-        hasAnimals == true ? listingCompleteData.has_animals = 1 : listingCompleteData.has_animals = 0;;
+        hasAnimals == true ? listingCompleteData.has_animals = 1 : listingCompleteData.has_animals = 0;
         hasCameras == true ? listingCompleteData.has_security_cameras = 1 : listingCompleteData.has_security_cameras = 0;
         hasWeapons == true ? listingCompleteData.has_weapons = 1 : listingCompleteData.has_weapons = 0;
 
@@ -34,7 +34,7 @@ const FiveTenStep = ({id, setId, listingCompleteData, setListingCompleteData, se
                     </div>
                     <div className='d-flex justify-content-between mb-3 fw-semibold'>
                         <label className="form-check-label">Animals</label>
-                        <input className="form-check-input border border-secondary shadow-none" onChange={()=> {setId(true); setAnimals(!hasAnimals)}} type="checkbox" value="" id="flexCheckDefault"/>
+                        <input className="form-check-input border border-secondary shadow-none" onChange={()=> {setId(true); setHasAnimals(!hasAnimals)}} type="checkbox" value="" id="flexCheckDefault"/>
                     </div>
                     <hr/>
                     <p className='mb-1 fw-semibold'>Note: </p>

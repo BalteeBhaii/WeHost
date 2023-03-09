@@ -31,6 +31,8 @@ const VerifyPropertyPage = () => {
   const [propertyTitle, setPropertyTitle] = useState('');
   const [propertyDescription, setPropertyDescription] = useState('');
   const [guestType, setGuestType] = useState('');
+  const [images, setImages] = React.useState([]);
+
   const listingData = {
     "title": 'tes',
     'description': 'test',
@@ -44,9 +46,9 @@ const VerifyPropertyPage = () => {
     'price': 0.0,
     'currency_code': 'USD',
     'currency_symbol': '$',
-    'has_security_cameras': 0,
-    'has_weapons': 0,
-    'has_animals': 0,
+    'has_security_cameras': 2,
+    'has_weapons': 2,
+    'has_animals': 2,
     'street': 'street # 5',
     'apartment': 'apartment # 2',
     'city': 'NY',
@@ -54,8 +56,11 @@ const VerifyPropertyPage = () => {
     'features': [],
     'state': 'USA',
     'zip_code': '1234',
-    'country_code': '+1'
+    'country_code': '+1',
+    'cover_image': '',
+    'images': []
   }
+
   const navigate = useNavigate();
   const [listingCompleteData, setListingCompleteData] = useState(listingData);
   const [isListingDataChanged, setIsListingDataChanged] = useState(0);
@@ -68,8 +73,52 @@ const VerifyPropertyPage = () => {
   }
 
   const nextHandler = () => {
-    
+    if(images.length === 5){
+      postImages()
+    }
+    setPage(page + 1); 
+    setWidth((page + 1) * 6.66); 
+    setId(false) 
   } 
+
+  const postImages = async ()=> {
+    let i = 0;
+    for(const image of images){
+      // const dataurl =  dataURLtoBlob(image.data_url);
+      console.log('hello testing', image);
+      const formData = new FormData();
+      formData.append('file', image);
+      formData.append('type', 'image');
+      await axios.post('http://localhost:8000/api/media', formData, { headers: { Accept: 'application/json'}})
+      .then(res => {
+        if (i === 0) {
+          listingCompleteData.cover_image = res.data.data.path;
+          setListingCompleteData(listingCompleteData);
+          setIsListingDataChanged(Math.random());
+        } else {
+          listingCompleteData.images.push(res.data.data.id);
+          setListingCompleteData(listingCompleteData);
+          setIsListingDataChanged(Math.random());
+        }
+      })
+      .catch(err => {
+        console.log(err)
+      })
+      i++;
+    }
+  }
+
+  const dataURLtoBlob = (dataurl) => {
+    var arr = dataurl.split(',');
+    var mime= arr[0].match(/:(.*?);/)[1];
+    var bstr = atob(arr[1])
+    var n = bstr.length;
+    let u8arr = new Uint8Array(n);
+    while(n--){
+      u8arr[n] = bstr.charCodeAt(n);
+    }
+    return new Blob([u8arr], {type: mime});
+  }
 
   const finishHandler = async () => {
     console.log(listingCompleteData);
@@ -165,7 +214,7 @@ const VerifyPropertyPage = () => {
 
           {(page === 7) && <StepTwo />}
           {(page === 8) && <SeventhStep id={id} setId={setId} listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
-          {(page === 9) && <EightStep id={id} setId={setId} url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 9) && <EightStep id={id} setId={setId} url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} images={images} setImages={setImages} />}
           {(page === 10) && <NinethStep />}
           
           {
@@ -181,11 +230,11 @@ const VerifyPropertyPage = () => {
 
           {(page === 12) && <StepThree />}
           {(page === 13) && <FourTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
-          {(page === 14) && <FiveTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 14) && <FiveTenStep id={id} setId={setId} listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData} setIsListingDataChanged = {setIsListingDataChanged}  url={baseUrl} />}
           {(page === 15) && <SixTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
 
           <div className='position-fixed bottom-0 left-0 bg-white w-100 px-4 pb-3'>
-            <div className="progress my-5" style={{ background: '#0079c2bf' }}>
+            <div className="progress mb-3" style={{ background: '#0079c2bf' }}>
               <div className="progress-bar" style={{ width: `${width}%`, background: '#81E2F1' }}></div>
             </div>
             {(page === 0) && (
@@ -198,8 +247,11 @@ const VerifyPropertyPage = () => {
             {(page >= 1) && (
               <div className='d-flex justify-content-between'>
                 <button className='btn property-footer-button ms-5' onClick={() => { setPage(page - 1); setWidth((page - 1) * 6.66); console.log(page, width) }}><i className="bi bi-arrow-left me-1"></i>Back</button>
+                
                 {(page < 15) && (id) || (page === 1) || (page === 4) || (page === 7) || (page === 8) || (page === 10) || (page === 12) || (page === 6) ? (
-                  <button className='btn property-footer-button me-5' onClick={() => { setPage(page + 1); setWidth((page + 1) * 6.66); setId(false) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
+
+                  <button className='btn property-footer-button me-5' onClick={nextHandler}>Next<i className="bi bi-arrow-right ms-1"></i></button>
+
                 ) : ''}
                 {(page === 15) && (<button className='btn property-footer-button' onClick={finishHandler}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
               </div>
