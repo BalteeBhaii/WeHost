@@ -80,6 +80,8 @@ const VerifyPropertyPage = () => {
 
   useEffect(() => {
     console.log(listingCompleteData);
+    console.log(process.env.REACT_APP_APIURL);
+    console.log(process.env.REACT_APP_CALLBACK_URL);
     setId(id)
   }, [id])
 
@@ -155,7 +157,7 @@ const VerifyPropertyPage = () => {
           {(page === 14) && <FiveTenStep id={id} setId={setId} />}
           {(page === 15) && <SixTenStep id={id} setId={setId} />}
 
-          <div className='position-relative container'>
+          <div className='position-fixed bottom-0 left-0 bg-white w-100 px-4 pb-3'>
             <div className="progress my-5" style={{ background: '#0079c2bf' }}>
               <div className="progress-bar" style={{ width: `${width}%`, background: '#81E2F1' }}></div>
             </div>
@@ -168,9 +170,9 @@ const VerifyPropertyPage = () => {
             )}
             {(page >= 1) && (
               <div className='d-flex justify-content-between'>
-                <button className='btn property-footer-button' onClick={() => { setPage(page - 1); setWidth((page - 1) * 6.66); console.log(page, width) }}><i className="bi bi-arrow-left me-1"></i>Back</button>
+                <button className='btn property-footer-button ms-5' onClick={() => { setPage(page - 1); setWidth((page - 1) * 6.66); console.log(page, width) }}><i className="bi bi-arrow-left me-1"></i>Back</button>
                 {(page < 15) && (id) || (page === 1) || (page === 4) || (page === 7) || (page === 8) || (page === 10) || (page === 12) || (page === 6) ? (
-                  <button className='btn property-footer-button' onClick={() => { setPage(page + 1); setWidth((page + 1) * 6.66); setId(false) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
+                  <button className='btn property-footer-button me-5' onClick={() => { setPage(page + 1); setWidth((page + 1) * 6.66); setId(false) }}>Next<i className="bi bi-arrow-right ms-1"></i></button>
                 ) : ''}
                 {(page === 15) && (<button className='btn property-footer-button' onClick={finishHandler}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
               </div>
