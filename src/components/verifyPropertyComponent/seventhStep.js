@@ -32,6 +32,8 @@ const SeventhStep = ({ id, setId, url, listingCompleteData, setListingCompleteDa
 
   useEffect(() => {
     fetch_features();
+    setId(true)
+    console.log(features);
   }, []);
 
   const featureHandler = (event) => {

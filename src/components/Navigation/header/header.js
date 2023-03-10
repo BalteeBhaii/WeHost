@@ -14,6 +14,7 @@ const Header = () => {
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [display, setDisplay] = useState('none');
   const [loginValue, setLoginValue] = useState('');
+  const [user, setUser] = useState([]);
   const navigate = useNavigate();
   const handleToggleClick = () => {
     setToggle(!toggle)
@@ -63,7 +64,10 @@ const Header = () => {
       }
     }
   }
-
+  useEffect(()=>{
+    setUser(JSON.parse(localStorage.getItem('user')));
+    console.log(user)
+  }, []);
   return (
     <>
       <div className="container-fluid bg-light header-main">
@@ -101,21 +105,39 @@ const Header = () => {
                 </li>
               </a>
             </ul>
-            <div className="menu-profile d-flex">
-              <img className="menu-profile-icon" src="/images/user.svg" alt="user" />
-              <div class="dropdown">
-                <button class="btn border-0 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Login/SignUp
+            <div className="btn border border-dark-subtle rounded-5 menu-profile d-flex">
+              <div className="dropdown">
+              <div className="" data-bs-toggle="dropdown" aria-expanded="false">
+                <button className="btn border-0 " href="#" role="button" >
+                  {(user)? user.name: 'Login/SignUp' }
                 </button>
-                <ul class="dropdown-menu">
-                  <li><Link class="dropdown-item" to="/signin">Guest Login</Link></li>
-                  <li><Link class="dropdown-item" to="/signin">Owner Login</Link></li>
+                <img className="menu-profile-icon" src="/images/user_pic-50x50.png" alt="user" width={'28px'} height={'28px'}/>
+              </div>
+                {(user)?
+                  <ul className="dropdown-menu sign-in-dropdown" style={{transform: 'translate(-20px, 38px) !important', width: 225, fontSize: '14px', letterSpacing: 1}}>
+                  <li><Link className="dropdown-item fw-semibold text-muted mb-1 " to="">Messages</Link></li>
+                  <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Trips</Link></li>
+                  <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Wish Lists</Link></li>
+                  <li><hr className="my-2"/></li>
+                  <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Manage listings</Link></li>
+                  <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Manage experiences</Link></li>
+                  <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Refer a Host</Link></li>
+                  <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Account</Link></li>
+                  <li><hr className="my-2"/></li>
+                  <li><Link className="dropdown-item  mb-1" to="">Help</Link></li>
+                  <li><Link className="dropdown-item  mb-1" to="">Log out</Link></li>
                 </ul>
+                :
+                <ul className="dropdown-menu sign-in-dropdown" style={{transform: 'translate(-20px, 38px) !important', width: 225}}>
+                  <li><Link className="dropdown-item" to="/signin">Guest Login</Link></li>
+                  <li><Link className="dropdown-item" to="/signin">Owner Login</Link></li>
+                </ul>
+                }
               </div>
             </div>
           </div>
           <div className="menu-dropdown">
-            <div class="hamburger" onClick={menuHandler}>
+            <div className="hamburger" onClick={menuHandler}>
               <span>
 
               </span>
@@ -157,13 +179,13 @@ const Header = () => {
             </a>
             <div className="menu-profile d-flex">
               <img className="menu-profile-icon" src="/images/user.svg" alt="user" />
-              <div class="dropdown">
-                <button class="btn border-0 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div className="dropdown">
+                <button className="btn border-0 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Login/SignUp
                 </button>
-                <ul class="dropdown-menu">
-                  <li><Link class="dropdown-item" to="/signin">Guest Login</Link></li>
-                  <li><Link class="dropdown-item" to="/signin">Owner Login</Link></li>
+                <ul className="dropdown-menu">
+                  <li><Link className="dropdown-item" to="/signin">Guest Login</Link></li>
+                  <li><Link className="dropdown-item" to="/signin">Owner Login</Link></li>
                 </ul>
               </div>
             </div>

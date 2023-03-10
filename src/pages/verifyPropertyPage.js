@@ -73,8 +73,14 @@ const VerifyPropertyPage = () => {
   }
 
   const nextHandler = () => {
-    if(images.length === 5){
+    if(images.length >= 5){
       postImages()
+      if(listingCompleteData.images.length > 0){
+        listingCompleteData.images = [];
+        console.log(listingCompleteData.images.length);
+      }
+    } else{
+
     }
     setPage(page + 1); 
     setWidth((page + 1) * 6.66); 
@@ -83,11 +89,12 @@ const VerifyPropertyPage = () => {
 
   const postImages = async ()=> {
     let i = 0;
+
     for(const image of images){
       // const dataurl =  dataURLtoBlob(image.data_url);
       console.log('hello testing', image);
       const formData = new FormData();
-      formData.append('file', image);
+      formData.append('file', image.file);
       formData.append('type', 'image');
       await axios.post('http://localhost:8000/api/media', formData, { headers: { Accept: 'application/json'}})
       .then(res => {
@@ -141,6 +148,11 @@ const VerifyPropertyPage = () => {
   }
 
   useEffect(() => {
+    console.log(listingCompleteData);
+    setId(id)
+  }, [id])
+
+  useEffect(() => {
     localStorage.setItem("listing_data", JSON.stringify(listingCompleteData));
   }, [isListingDataChanged]);
 
@@ -153,8 +165,12 @@ const VerifyPropertyPage = () => {
             (page === 0) && 
             <Welcome 
               setListingCompleteData={setListingCompleteData}
-            />}
-          {(page === 1) && <FirstStep />}
+            />
+          }
+          {
+            (page === 1) && 
+            <FirstStep setId={setId}/>
+          }
           {
             (page === 2) && 
             <SecondStep 
@@ -182,7 +198,11 @@ const VerifyPropertyPage = () => {
             />
           }
 
-          {(page === 4) && <ForthStep />}
+          {
+            (page === 4) && 
+            <ForthStep setId={setId}
+            />
+          }
           {(page === 5) && 
             <FifthStep 
               setId={setId} 
@@ -205,13 +225,13 @@ const VerifyPropertyPage = () => {
             />
           }
 
-          {(page === 7) && <StepTwo />}
+          {(page === 7) && <StepTwo setId={setId}/>}
           {(page === 8) && <SeventhStep id={id} setId={setId} listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
           {(page === 9) && <EightStep id={id} setId={setId} url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} images={images} setImages={setImages} />}
-          {(page === 10) && <NinethStep />}
+          {/* {(page === 10) && <NinethStep />} */}
           
           {
-            (page === 11) && 
+            (page === 10) && 
             <TenthStep 
               setId={setId} 
               listingCompleteData={listingCompleteData}
@@ -221,10 +241,10 @@ const VerifyPropertyPage = () => {
             />
           }
 
-          {(page === 12) && <StepThree />}
-          {(page === 13) && <FourTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
-          {(page === 14) && <FiveTenStep id={id} setId={setId}  url={baseUrl}    listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData} setIsListingDataChanged = {setIsListingDataChanged} />}
-          {(page === 15) && <SixTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 11) && <StepThree setId={setId}/>}
+          {(page === 12) && <FourTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 13) && <FiveTenStep id={id} setId={setId}  url={baseUrl}    listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 14) && <SixTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
 
           <div className='position-fixed bottom-0 left-0 bg-white w-100 px-4 pb-3'>
             <div className="progress mb-3" style={{ background: '#0079c2bf' }}>
@@ -241,12 +261,12 @@ const VerifyPropertyPage = () => {
               <div className='d-flex justify-content-between'>
                 <button className='btn property-footer-button ms-5' onClick={() => { setPage(page - 1); setWidth((page - 1) * 6.66); console.log(page, width) }}><i className="bi bi-arrow-left me-1"></i>Back</button>
                 
-                {(page < 15) && (id) || (page === 1) || (page === 4) || (page === 7) || (page === 8) || (page === 10) || (page === 12) || (page === 6) ? (
+                {((page < 14) && (id)) ? (
 
                   <button className='btn property-footer-button me-5' onClick={nextHandler}>Next<i className="bi bi-arrow-right ms-1"></i></button>
 
                 ) : ''}
-                {(page === 15) && (<button className='btn property-footer-button' onClick={finishHandler}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
+                {(page === 14) && (<button className='btn property-footer-button' onClick={finishHandler}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
               </div>
             )}
           </div>
