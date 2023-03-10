@@ -1,5 +1,8 @@
-import React from 'react';
-const ForthStep = () => {
+import React, { useEffect } from 'react';
+const ForthStep = ({setId}) => {
+    useEffect(()=>{
+        setId(true);
+    })
     return (
         <>
             <div className='container'>

@@ -86,7 +86,7 @@ const DesiredHotels = () => {
               <div className=''>
                 <Carousel showThumbs={false} showArrows={false} swipeable={true}>
                   <div className='image-div'>
-                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} />
+                      <img alt="" src="https://images.pexels.com/photos/70441/pexels-photo-70441.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} />
                   </div>
                   <div className='image-div'>
                       <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>
@@ -129,7 +129,7 @@ const DesiredHotels = () => {
               <div className=''>
                 <Carousel showThumbs={false} showArrows={false} swipeable={true}>
                   <div className='image-div'>
-                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} />
+                      <img alt="" src="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} />
                   </div>
                   <div className='image-div'>
                       <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>
@@ -172,7 +172,7 @@ const DesiredHotels = () => {
               <div className=''>
                 <Carousel showThumbs={false} showArrows={false} swipeable={true}>
                   <div className='image-div'>
-                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} />
+                      <img alt="" src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} />
                   </div>
                   <div className='image-div'>
                       <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>
@@ -215,7 +215,7 @@ const DesiredHotels = () => {
               <div className=''>
                 <Carousel showThumbs={false} showArrows={false} swipeable={true}>
                   <div className='image-div'>
-                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} />
+                      <img alt="" src="https://images.pexels.com/photos/2096983/pexels-photo-2096983.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} />
                   </div>
                   <div className='image-div'>
                       <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>

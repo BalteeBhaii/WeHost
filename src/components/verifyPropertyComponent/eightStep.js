@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
 import ImageUploading from "react-images-uploading";
 
-
 const EightStep = ({ id, setId, images, setImages }) => {
   // const [images, setImages] = React.useState([]);
   const maxNumber = 10;
 
-  const onChange = (event) => {
+  const onChange = (imageList) => {
     // data for submit
-    console.log(event.target.files);
-    setImages(event.target.files);
+    console.log(imageList[0].file);
+    setImages(imageList);
   };
 
   const confirmHandleClick = () => {
@@ -21,12 +20,12 @@ const EightStep = ({ id, setId, images, setImages }) => {
     setId(true);
   }
 
-  useEffect(()=>{
-    if(images.length === 5){
+  useEffect(() => {
+    if (images.length === 5) {
 
       setId(true);
-      console.log('images: ' ,images)
-    } else{
+      console.log('images: ', images)
+    } else {
       setId(false)
     }
     console.log(images.length)
@@ -37,7 +36,7 @@ const EightStep = ({ id, setId, images, setImages }) => {
       <div className='container mb-5 pb-5'>
         <h3 className='verify-2nd-title mb-0 mt-5 text-center'>Insert photos of your property </h3>
         <h4 className='text-center'>You need to add minimum of 4 photos in it </h4>
-        {/* <ImageUploading
+        <ImageUploading
           multiple
           value={images}
           onChange={onChange}
@@ -126,24 +125,23 @@ const EightStep = ({ id, setId, images, setImages }) => {
                     )
                   }
                   )}
-                  <div className='col-12 col-md-4'>
+                  {/* <div className='col-12 col-md-4'>
                     <button className='btn mb-5 fw-semibold fs-5 text-decoration-underline w-100' onClick={confirmHandleClick}>Confirm</button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
           )}
-        </ImageUploading> */}
-
-        <div className='col-md-5 col-sm-12 mt-5  drag-files-wrapper'>
-                    <div className="fileDropBox">
-                        <i className="bi bi-images drag-file-image "></i>
-                        <h3 className='drag-file-header mt-4'>Drag Your Photos Here</h3>
-                        <p className='drag-file-text'>Choose atleast 5 photos</p>
-                        <span className='text-decoration-underline text-dark mt-5 drag-file-here' onClick={handleImgClick}>Upload your file here</span>
-                        <input type='file' className='d-none' id='imgUpload' multiple onChange={(event)=>onChange(event)} />
-                    </div>
-                </div>
+        </ImageUploading>
+        {/* <div className='col-md-5 col-sm-12 mt-5  drag-files-wrapper'>
+          <div className="fileDropBox">
+            <i className="bi bi-images drag-file-image "></i>
+            <h3 className='drag-file-header mt-4'>Drag Your Photos Here</h3>
+            <p className='drag-file-text'>Choose atleast 5 photos</p>
+            <span className='text-decoration-underline text-dark mt-5 drag-file-here' onClick={handleImgClick}>Upload your file here</span>
+            <input type='file' className='d-none' id='imgUpload' multiple onChange={(event) => onChange(event)} />
+          </div>
+        </div> */}
       </div>
     </>
   );
