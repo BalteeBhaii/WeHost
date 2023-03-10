@@ -14,7 +14,7 @@ const Services = () => {
                 <div className='row g-3'>
                     <div className='col-sm-6 col-md-6 col-lg-3'>
                         <div className='card service-card mx-1'>
-                        <div className='card-img-top'><i className="bi bi-ticket-perforated fs-1 p-3 " style={{color: '#32DF8F'}}></i></div>
+                        <div className=''><i className="bi bi-ticket-perforated fs-1 p-3 " style={{color: '#32DF8F'}}></i></div>
                             <div className="card-body">
                                 <h5 className="card-title">Rent House</h5>
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

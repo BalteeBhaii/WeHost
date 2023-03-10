@@ -79,6 +79,10 @@ input[type=number] {
     backdrop-filter: blur(30px);
 }
 
+.sign-in-dropdown{
+    transform: translate(-38px, 38px) !important;
+}
+
 /* ************************ homepage css ************* */
 
 
@@ -1760,6 +1764,11 @@ span.riceranger {
 
 .service-card {
     border: 0 !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.service-card:hover {
+    box-shadow: 3px 4px 10px #888888 !important;
 }
 
 .rental-main {
