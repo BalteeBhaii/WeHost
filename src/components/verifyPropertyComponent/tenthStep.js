@@ -23,6 +23,16 @@ const TenthStep = ({ setId, listingCompleteData, setListingCompleteData, setIsLi
         setId(true);
     }
 
+    useEffect(()=>{
+        setId(false);
+    }, [])
+    useEffect(()=>{
+        if(!propertyTitle || !propertyDescription || !guestType){
+        setError('Please provide the below information.');
+        setId(false);
+        }
+    }, [propertyTitle, propertyDescription, guestType])
+
     return (
         <>
             <div className='container'>

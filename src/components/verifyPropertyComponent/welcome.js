@@ -1,7 +1,18 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 const Welcome = ({setListingCompleteData}) => {
+
+    const navigate = useNavigate();
     useEffect(()=>{
         setListingCompleteData(JSON.parse(localStorage.getItem('listing_data')));
+    }, [])
+
+    useEffect(()=>{
+        const auth = JSON.parse(localStorage.getItem('dataKey'));
+        console.log(auth)
+        if(!auth){
+            navigate('/signin');
+        }
     }, [])
     return ( 
         <div className='container'>

@@ -1,5 +1,8 @@
-import React from 'react';
-const StepTwo = () => {
+import React, { useEffect } from 'react';
+const StepTwo = ({setId}) => {
+    useEffect(()=>{
+        setId(true);
+    })
     return (
         <div className='container'>
             <div className='row align-items-end mt-5'>

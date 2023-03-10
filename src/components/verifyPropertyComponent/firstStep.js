@@ -1,5 +1,8 @@
-import React from 'react';
-const FirstStep = () => {
+import React, { useEffect } from 'react';
+const FirstStep = ({setId}) => {
+    useEffect(()=>{
+        setId(true);
+    })
     return ( 
         <div className='container'>
             <div className='row align-items-end mt-5'>
