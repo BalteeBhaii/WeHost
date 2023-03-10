@@ -141,13 +141,6 @@ const VerifyPropertyPage = () => {
   }
 
   useEffect(() => {
-    console.log(listingCompleteData);
-    console.log(process.env.REACT_APP_APIURL);
-    console.log(process.env.REACT_APP_CALLBACK_URL);
-    setId(id)
-  }, [id])
-
-  useEffect(() => {
     localStorage.setItem("listing_data", JSON.stringify(listingCompleteData));
   }, [isListingDataChanged]);
 
