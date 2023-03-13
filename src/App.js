@@ -29,6 +29,8 @@ import UserListings from './pages/Hosting/Listings';
 import { useEffect, useState } from 'react';
 import WorkTogether from './pages/FooterPages/workTogether';
 import NewVacation from './pages/FooterPages/newVaction';
+import RealStateService from './pages/FooterPages/realstateService';
+import RestEasy from './pages/FooterPages/restEasy';
 
 function App() {
   const [userAuth, setUserAuth] = useState(null);
@@ -88,6 +90,8 @@ function App() {
           <Route exact path='/' element={<HomePage />} />
           <Route exact path='/worktogether' element={<WorkTogether />} />
           <Route exact path='/newvacation' element={<NewVacation />} />
+          <Route exact path='/realstateservice' element={<RealStateService />} />
+          <Route exact path='/resteasypromise' element={<RestEasy />} />
           </>
         </Routes>
       </BrowserRouter>

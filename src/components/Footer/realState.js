@@ -1,33 +1,31 @@
 import React from 'react';
 
 
-const VactionalRental = () => {
+const RealState = () => {
 
     return (
         <div>
 
             <div className='p-0 '>
                 <div className='launch-property'>
-                    <h3 className='launch-property-title text-center '>Launch Your property Now</h3>
+                    <h3 className='launch-property-title text-center '>Wehost buy and sell</h3>
                 </div>
 
             </div>
             <div className='container launch-property-img'>
                 <div className='d-flex flex-column justify-content-center align-items-center'>
-                    <div className=''>
+                    <div className='real-state-host'>
 
-                        <img className='w-100 h-100' src='/images/launch-property.png' alt="" />
+                        <img className='w-100 h-100' src='/images/realstate.png' alt="" />
                     </div>
-                    <p>WeHost will help you host your property and will help you out in reaching guest and
-                        we are here to protect your property list your property now. </p>
-                    <button type="button" class="btn btn-primary">List Property Now</button>
+                    <p className='realstate-text'>WeHost will help you host your property and will help you out in reaching guest and
+                        we are here to protect your property list your property now.  </p>
+                    <button type="button" class="btn btn-check-home">List Property Now</button>
                 </div>
 
             </div>
             <div >
-                <div className='wehost-bg-img'>
-                    <div className='text-center wehost-bg-img-text'>
-                    </div>
+                <div className='bg-realstate'>
                     <div className='container'>
                         <div className='row ' style={{ marginTop: '-10px' }}>
                             <div className='col-12 col-md-6 col-lg-4 mb-3'>
@@ -75,16 +73,33 @@ const VactionalRental = () => {
                 <div className='container mt-5'>
                     <div className='row'>
                         <div className='col-12 col-md-6 d-flex justify-content-center flex-column'>
-                            <h2 className='work-together-title'>How can I Earn?  </h2>
-                            <p className='mx-2'>We've applied our knowledge to create an
-                                income plan that increases new listings
-                                and allows you to book more nights.</p>
+                            <h2 className='work-together-title'>Sell Your Property Now  </h2>
+                            <p className='mx-2'>When you're ready to sell, make it simple for potential buyers. Let Evolve to give everything you need
+                                to establish your rental's success while keeping it booked throughout the sale process.</p>
                         </div>
                         <div className='col-12 col-md-6'>
                             <img className='work-together-img' src='/images/Earning.png' alt="" />
 
                         </div>
                     </div>
+                </div>
+                <div className='container mt-5'>
+                    <div className='row'>
+                        <div className='col-12 col-md-6'>
+                            <img className='' src='/images/salehouse.png' alt="" />
+
+                        </div>
+                        <div className='col-12 col-md-6 d-flex justify-content-center flex-column'>
+                            <h2 className='work-together-title mt-2'>WeHost For Sale Property  </h2>
+                            <p className='mx-2'>Checkout our listed weHost Listed property
+                                Buy and WeHost property Now..</p>
+                            <button type="button " class="btn btn-check-home d-flex inline-block">Checkout Home</button>
+                        </div>
+
+                    </div>
+
+
+
                 </div>
             </div>
 
@@ -95,4 +110,4 @@ const VactionalRental = () => {
     );
 }
 
-export default VactionalRental;
+export default RealState;
