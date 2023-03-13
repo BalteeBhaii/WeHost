@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, timeout } from 'react';
 import GuestModal from '../../GuestModal/GuestModal';
 // React Date Range import
 import { DateRangePicker } from 'react-date-range';
 import { DateRange } from 'react-date-range';
 
 // date-fns format imports
-import format from 'date-fns/format'
-import { addDays } from 'date-fns'
+import format from 'date-fns/format';
+import { addDays } from 'date-fns';
+import hotel from './hotel.svg';
 
-const Hotel = () => {
+const Hotel = ({loadedHandler}) => {
   const [showModal, setShowModal] = useState(false);
   const [filterModal, setFilterModal] = useState(false);
   const [open, setOpen] = useState(false);
@@ -111,19 +112,15 @@ const Hotel = () => {
       element.classList.add("search-bottom-outline-active")
     }
   }
+
   useEffect(() => {
     console.log(currentDropdown);
     setGuestCount(adultCount + childrenCount + infantCount);
   }, [adultCount, childrenCount, infantCount]);
 
-  useEffect(() => {
-    document.getElementsByClassName("center")[0].addEventListener("beforeunload", () => {
-      console.log('aa');
-    })
-  }, [])
-
   return (
-    <div className='divBackgroundImage text-light z-0'>
+    <div className='divBackgroundImage text-light z-0 not-loaded'>
+      <img className='hotel-background-image' src={hotel} alt="" onLoad={loadedHandler} />
       <div className='center'>
         <div className='container-xxl container-xl container-lg position-relative pt-5' >
           <h1 className='fw-bold text-center destination-main-title'>Choose the best hotels</h1>

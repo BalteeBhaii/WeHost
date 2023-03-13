@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Collapse } from 'react-bootstrap';
-const Explore = () => {
+const Explore = ({loadedHandler}) => {
     const [open, setOpen] = useState(false);
     const [exploreBtnTxt,setExploreBtnTxt]=useState('Explore More');
     const [exploreIcon,setExploreIcon]=useState('bi bi-chevron-down button-icon');
@@ -24,17 +24,17 @@ const Explore = () => {
                     <h1 className='explore-title mb-0 section-titles'>Where to explore, right now</h1>
                     <span className='explore-description'>Rent houses with amenities, spaciousness, and comfort.</span>
                     <div className='explore-images mt-4'>
-                        <div className='images-section-1 position-relative px-0'>
-                            <img className='explore-images explore-image-1' src="/images/explore-1.jpg" alt="" />
+                        <div className='images-section-1 position-relative px-0 not-loaded'>
+                            <img className='explore-images explore-image-1' src="/images/explore-1.jpg" alt="" onLoad={loadedHandler} />
                             <div className='overly-1'>Fascinating View</div>
                         </div>
                         <div className='images-section-2 position-relative px-0 overflow-hidden'>
-                            <div className='inner-section-1 overflow-hidden h-50 mb-2'>
-                                <img className='explore-images explore-image-2 h-100' src="/images/explore-2.jpg" alt="" />
+                            <div className='inner-section-1 overflow-hidden h-50 mb-2 not-loaded'>
+                                <img className='explore-images explore-image-2 h-100' src="/images/explore-2.jpg" alt="" onLoad={loadedHandler} />
                                 <div className='overly-2'>Beach House</div>
                             </div>
-                            <div className='inner-section-3 overflow-hidden h-50 mt-2'>
-                                <img className='explore-images explore-image-3 h-100' src="/images/explore-3.jpg" alt="" />
+                            <div className='inner-section-3 overflow-hidden h-50 mt-2 not-loaded'>
+                                <img className='explore-images explore-image-3 h-100' src="/images/explore-3.jpg" alt="" onLoad={loadedHandler} />
                                 <div className='overly-3'>Swiming Pool</div>
                             </div>
                         </div>
