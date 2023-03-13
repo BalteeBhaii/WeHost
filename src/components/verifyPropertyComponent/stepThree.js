@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 const StepThree = ({setId}) => {
     useEffect(()=>{
-        setId(true)
-    })
+        setId(true);
+        console.log('hello fucker')
+    },[])
     return (
         <div className='container'>
             <div className='row align-items-end mt-5'>
@@ -23,7 +24,6 @@ const StepThree = ({setId}) => {
                         <img src='/images/stepthree.png' />
                     </div>
                 </div>
-
             </div>
         </div>
     );

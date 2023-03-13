@@ -73,9 +73,9 @@ const FilterModal = ({ show, setShowModal }) => {
               <div className="Ranger">
                 <Form.Range />
                 <div className="input-group mb-3">
-                  <input type="text" className="form-control " placeholder="$50" aria-label="Username" />
+                  <input type="number" className="form-control shadow-none" placeholder="$50" aria-label="Username" />
                   <span className="riceranger">to</span>
-                  <input type="text" className="form-control" placeholder="$500" aria-label="Server">
+                  <input type="number" className="form-control shadow-none" placeholder="$500" aria-label="Server">
                   </input>
                 </div>
               </div>
@@ -91,24 +91,23 @@ const FilterModal = ({ show, setShowModal }) => {
                   <li className="list-group-item">
                     <button>
                       <i className="bi bi-house-door"></i>
-                      <p>Houses</p>
+                      <p className='mb-0'>Houses</p>
                     </button>
 
                   </li>
                   <li className="list-group-item">
                     <button><i className="bi bi-buildings-fill"></i>
-                      <p>Apartment</p></button>
+                      <p className='mb-0'>Apartment</p></button>
 
                   </li>
                   <li className="list-group-item">
-                    <button><i className="bi bi-building-fill"></i>
-                      <p>Hotel</p></button>
+                    <button><i className="bi bi-building-fill"></i><p className='mb-0'>Hotel</p></button>
 
                   </li>
                   <li className="list-group-item">
                     <button>
                       <img className='list-btn-guesthouse' src={img1} />
-                      <p>Guest House</p>
+                      <p className='mb-0'>Guest House</p>
                     </button>
 
                   </li>
