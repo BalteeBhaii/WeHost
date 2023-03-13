@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Select from "react-select";
 import countryList from "react-select-country-list";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import { userInfo } from '../../features/user/userInfoSlice';
 import { baseUrl as url } from '../../config';
 
 import axios from 'axios';
-const SingIn = () => {
+const SingIn = (props) => {
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,6 +20,14 @@ const SingIn = () => {
 
   var signupButton = document.getElementsByClassName("submit-button")[0];
   var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
+
+  useEffect(() => {
+  var token = localStorage.getItem("dataKey");
+  
+    if(!token){
+      navigate('/signin');
+    }
+  }, []);
 
   const handleLoginClick = (event) => {
     event.preventDefault();

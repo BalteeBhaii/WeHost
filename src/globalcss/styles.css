@@ -2203,7 +2203,7 @@ span.riceranger {
     width: 1px;
     height: 61%;
     background-color: #97C1C6;
-    z-index: 100;
+    z-index: 1;
     transform: rotate(-35deg);
 }
 
@@ -2214,7 +2214,7 @@ span.riceranger {
     width: 1px;
     height: 61%;
     background-color: #97C1C6;
-    z-index: 100;
+    z-index: 1;
     transform: rotate(35deg);
 }
 
@@ -2786,6 +2786,45 @@ color:white
   .ham-burger-active span:nth-child(3) {
     transform: rotate(-42deg);
   }
+
+  .control-dots, .carousel-status {
+    z-index: -1 !important;
+  }
+
+  .not-loaded{
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: notLoaded 2s linear infinite;
+  }
+
+.not-loaded::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #efefef;
+    z-index: 1;
+    opacity: 1;
+}
+
+@keyframes notLoaded {
+    0% {
+        opacity: 0.5;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    31% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
   
 
 @media(min-width: 775px) {
