@@ -22,8 +22,6 @@ const ThirdStep = ({ id, setId, categories, listingCompleteData, setListingCompl
     }
 
     useEffect(() => {
-        setPlaceCatagoryId(localStorage.getItem('place_type_id'));
-
         for(const category of categories){
             if(category.id === JSON.parse(localStorage.listing_data).place_type_id){
                 setPlaceTypes(() => category.place_types)

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
 import data from './data.json';
 const WhatYouWant = () => {
   console.log(data);
@@ -45,7 +46,18 @@ const WhatYouWant = () => {
           <div className='col-12 col-md-6 col-lg-4 col-xl-3'>
             <figure className='figure-text-sizing'>
               <div className='' style={{ height: 250 }}>
-                <img className='figure-image' src='https://images.pexels.com/photos/1647972/pexels-photo-1647972.jpeg?auto=compress&cs=tinysrgb&w=1600' />
+              <Carousel showThumbs={false} showArrows={false} swipeable={true}>
+                  <div className='' style={{ height: 250 }}>
+                      <img className='figure-image' alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} />
+                  </div>
+                  <div className='' style={{ height: 250 }}>
+                      <img className='figure-image' alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600"/>
+
+                  </div>
+                  <div className='' style={{ height: 250 }}>
+                    <img className='figure-image' src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="..." />
+                  </div>
+                </Carousel>
               </div>
               <div className='whatyouwant-texts mt-2 d-flex flex-column'>
                 <span className='whatyouwant-location'>Ko Samui, Thailand</span>

@@ -271,46 +271,6 @@ const Destination = () => {
                       infantCount={infantCount}
                       setInfantCount={setInfantCount}
                     />
-                    {/* <div className='search-dropdown'>
-                      <div className='search-dropdown-main pt-2 pb-3'>
-                        <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-2'>
-                          <span className='destination-main-search-item mt-2'>Adults</span>
-                          <div className='guest-dropdown-counter'>
-                            <i className="bi bi-dash-circle guest-dropdown-counter-minus" onClick={() => {
-                              if (adultCount > 0) {
-                                setAdultCount(adultCount - 1);
-                              }
-                            }}></i>
-                            <span className='guest-dropdown-counter-text'>{adultCount}</span>
-                            <i className="bi bi-plus-circle guest-dropdown-counter-plus" onClick={(event) => { event.preventDefault(); setAdultCount(adultCount + 1); }}></i>
-                          </div>
-                        </div>
-                        <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-4'>
-                          <span className='destination-main-search-item mt-2'>Children</span>
-                          <div className='guest-dropdown-counter'>
-                            <i className="bi bi-dash-circle guest-dropdown-counter-minus" onClick={() => {
-                              if (childrenCount > 0) {
-                                setChildrenCount(childrenCount - 1);
-                              }
-                            }}></i>
-                            <span className='guest-dropdown-counter-text'>{childrenCount}</span>
-                            <i className="bi bi-plus-circle guest-dropdown-counter-plus" onClick={() => { setChildrenCount(childrenCount + 1); }}></i>
-                          </div>
-                        </div>
-                        <div className='guest-dropdown-main d-flex justify-content-between align-items-center mx-3 mt-4'>
-                          <span className='destination-main-search-item mt-2'>Infants</span>
-                          <div className='guest-dropdown-counter'>
-                            <i className="bi bi-dash-circle guest-dropdown-counter-minus" onClick={() => {
-                              if (infantCount > 0) {
-                                setInfantCount(infantCount - 1);
-                              }
-                            }}></i>
-                            <span className='guest-dropdown-counter-text'>{infantCount}</span>
-                            <i className="bi bi-plus-circle guest-dropdown-counter-plus" onClick={() => { setInfantCount(infantCount + 1); }}></i>
-                          </div>
-                        </div>                         
-                      </div>
-                    </div> */}
                   </div>
                 </div>
                 <div className='col-xl-3 col-lg-6 col-md-6'>
@@ -321,11 +281,7 @@ const Destination = () => {
                     </a>
                   </div>
                 </div>
-
               </div>
-              {/* <div className="mt-3"> <h3 className='fw-bold text destination-main-title text-center'><span >
-                Our Formula = More Money in Your Pocket and a Better Overall Experience for Everyone!
-              </span></h3></div> */}
             </div>
           </div>
         </div>

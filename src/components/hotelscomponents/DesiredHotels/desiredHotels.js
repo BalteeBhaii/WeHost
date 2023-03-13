@@ -213,7 +213,7 @@ const DesiredHotels = () => {
           <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
             <div className="card hotel-card-style border-0" >
               <div className=''>
-                <Carousel showThumbs={false} showArrows={false} swipeable={true}>
+                <Carousel showThumbs={false} showArrows={true} swipeable={true} >
                   <div className='image-div'>
                       <img alt="" src="https://images.pexels.com/photos/2096983/pexels-photo-2096983.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} />
                   </div>
