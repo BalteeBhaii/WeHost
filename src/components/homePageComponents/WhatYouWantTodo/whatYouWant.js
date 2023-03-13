@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
 import data from './data.json';
 
 const WhatYouWant = ({postLoadedHandler}) => {

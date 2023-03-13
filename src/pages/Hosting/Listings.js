@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {baseUrl} from '../../config.js';
 
 
@@ -10,7 +11,7 @@ const Listings = () => {
     //const user = JSON.parse(localStorage.user);
 
     const loadListings = async () => {
-        const res = await axios.get(baseUrl + "listings/?user_id=" + 2);
+        const res = await axios.get(baseUrl + "listings/?user_id=" + JSON.parse(localStorage.getItem('user')).id);
         setListings(res.data.data);
     }
 
@@ -26,7 +27,8 @@ const Listings = () => {
                     <div className=''>
                         
                         <button className="btn btn-search-listing add-listing" type="button" id="dropdownMenuButton"  >
-                            <i className="bi bi-plus-lg"></i> <span className='d-none d-md-block'>Add listing</span>
+                            <i className="bi bi-plus-lg"></i><Link className='text-white' to='/property'><span className='d-none d-md-block'>Add listing</span>
+                            </Link>
                         </button>
                     </div>
                 </div>
@@ -93,7 +95,7 @@ const Listings = () => {
                                     </div></th>
                                     <td>
                                     <div className='d-flex gap-2 '>                                
-                                    <img className='image-listing' src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..."/>
+                                    <img className='image-listing' src={baseUrl+'../storage/'+listing.cover_image} width={'100%'} height={'100%'} alt="..."/>
                                     <div>
                                     <h3 className='listing-property-text mt-3'>{listing.title}</h3>
                                     <div className='d-flex '>
