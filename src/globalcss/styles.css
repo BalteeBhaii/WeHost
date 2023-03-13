@@ -1143,14 +1143,7 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
     height: 100%;
     width: 100%;
 }
-.divBackgroundImageWork {
-    background-image: url('../../public/images/bgWork.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-}
+
 
 .center {
     padding-top: 180px;
@@ -2741,7 +2734,100 @@ text-transform: uppercase;
 color: #FFFFFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+/* Work together styling */
+.divBackgroundImageWork {
+    background-image: url('../../public/images/bgWork.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+.work-together-title{
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 41px;
+color: #0D7BC4;
+}
+.work-together-img{
+width: 100%;
+height: auto;
+}
+.work-together-host-property{
+    background: #0D7BC4;
+}
+.work-together-host-property-txt{    
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 34px;
+text-align: center;
 
+color: #FFFFFF;
+}
+.work-together-host-property-title{
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 35px;
+line-height: 48px;
+color: #FFFFFF;
+}
+.btn-list-property{
+    background: #8AE8FE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.btn-list-property:hover{
+    background: #75c9dc;
+}
+.frequent-question{
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 48px;
+/* identical to box height */
+
+
+color: #0D7BC4;
+}
+.question-title{
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 37px;
+color: #000000;
+cursor: pointer;
+}
+.help-img{
+    width: inherit;
+}
+/* New to vacation Rental  */
+.launch-property{
+    background: #D1EFF6;
+}
+.launch-property-title{
+    font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 41px;
+text-transform: uppercase;
+padding-top: 5%;
+padding-bottom: 10%;
+}
+.launch-property-img{
+    transform: translateY(-64%);
+    /* width: 50%; */
+    width: 100%;
+    /* height: auto; */
+    max-width: 468px;
+}
  /* style listing start */
  .btn-search-listing{
 background-color: #0579C1;
@@ -2894,11 +2980,17 @@ color:white
         font-size: 20px;
         margin-bottom: 40px;
     }
+    .launch-property-img{
+        transform: translateY(-44%) !important;
+    }
 }
 
 @media screen and (max-width: 775px) {
     .filter-button-size-style {
         padding: 4px !important;
+    }
+    .launch-property-img{
+        transform: translateY(-35%) !important;
     }
 
     .image-div {
@@ -2971,6 +3063,9 @@ color:white
 
     .main-text-size-style h1 {
         font-size: 20px !important;
+    }
+    .launch-property-img{
+        transform: translateY(-35%) !important;
     }
 
     .figure-text-sizing h2 {

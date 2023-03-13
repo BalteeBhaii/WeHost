@@ -27,6 +27,8 @@ import CodeModel from './components/signIn/codeModel';
 import FinishUpLoging from './components/signIn/finishingUpLoging';
 import UserListings from './pages/Hosting/Listings';
 import { useEffect, useState } from 'react';
+import WorkTogether from './pages/FooterPages/workTogether';
+import NewVacation from './pages/FooterPages/newVaction';
 
 function App() {
   const [userAuth, setUserAuth] = useState(null);
@@ -84,6 +86,8 @@ function App() {
           <Route exact path="/register/complete/:id" element={<FinishUpLoging />} />
           <Route exact path="/hosting/listings" element={<UserListings />} />
           <Route exact path='/' element={<HomePage />} />
+          <Route exact path='/worktogether' element={<WorkTogether />} />
+          <Route exact path='/newvacation' element={<NewVacation />} />
           </>
         </Routes>
       </BrowserRouter>
