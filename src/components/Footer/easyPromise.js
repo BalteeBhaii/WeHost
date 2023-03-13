@@ -37,7 +37,6 @@ const EasyPromise = () => {
             <h2 className='work-together-title mt-2'>As Soon as You Book, You Can Relax </h2>
             <p className='mx-2'>When we put our name on a house, we personally inspect it to ensure that it is ready for visitors — and every owner we partner with has passed a background check. This means you'll arrive at a location that's clean, safe, convenient, and true to what you saw online.</p>
           </div>
-
         </div>
       </div>
      

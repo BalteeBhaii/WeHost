@@ -24,7 +24,7 @@ const VactionalRental = () => {
                 </div>
 
             </div>
-            <div >
+            <div className='vacation-rent-div'>
                 <div className='wehost-bg-img'>
                     <div className='text-center wehost-bg-img-text'>
                     </div>
