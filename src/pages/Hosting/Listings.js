@@ -95,7 +95,7 @@ const Listings = () => {
                                     </div></th>
                                     <td>
                                     <div className='d-flex gap-2 '>                                
-                                    <img className='image-listing' src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..."/>
+                                    <img className='image-listing' src={baseUrl+'../storage/'+listing.cover_image} width={'100%'} height={'100%'} alt="..."/>
                                     <div>
                                     <h3 className='listing-property-text mt-3'>{listing.title}</h3>
                                     <div className='d-flex '>
