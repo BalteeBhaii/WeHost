@@ -21,14 +21,6 @@ const SingIn = (props) => {
   var signupButton = document.getElementsByClassName("submit-button")[0];
   var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
 
-  useEffect(() => {
-  var token = localStorage.getItem("dataKey");
-  
-    if(!token){
-      navigate('/signin');
-    }
-  }, []);
-
   const handleLoginClick = (event) => {
     event.preventDefault();
 

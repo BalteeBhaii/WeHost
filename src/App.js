@@ -33,35 +33,15 @@ function App() {
   useEffect(()=>{
     setUserAuth(JSON.parse(localStorage.getItem('dataKey')))
   }, [])
-
-  const [authToken, setAuthToken] = useState('');
-
-  useEffect(() => {
-    setAuthToken(localStorage.getItem("dataKey"));
-  }, []);
-
   return (
     <div >
       <BrowserRouter>
         <Routes>
-          <>
           <Route path="/" element={<HomePage />} />
           <Route path="/hotel" element={<HotelsPage />} />
           <Route exact path="/host" element={<WeHostPage />} />
           <Route path="/hotel/:id" element={<SpecificHotelPage />} />
-          </>
-
-          {authToken ?
-          <>
-            <Route path="/property" element={<VerifyPropertyPage />} />
-          </>
-          :
-          <>
-            <Route path="/property" element={<SignInPage />} />
-          </>
-          }
-          
-          <>
+          <Route path="/property" element={<VerifyPropertyPage />} />
           <Route exact path="/account" element={<AccountDashboardPage />} />
           <Route exact path="/profile" element={<ProfilePage />} />
           <Route exact path="/pinfo" element={<PersonalInfoPage />} />
@@ -76,7 +56,7 @@ function App() {
           <Route exact path="/Notification" element={<NotificationPage />} />
           <Route exact path="/Publish" element={<PublishPage />} />
           <Route exact path="/Listing" element={<ListingPage />} />
-          <Route exact path="/signin" element={<SignInPage setAuthToken={setAuthToken} />} />
+          <Route exact path="/signin" element={<SignInPage />} />
           <Route exact path="/signup" element={<SingUpPage />} />
           <Route exact path="/otp" element={<OtpPage />} />
           <Route exact path="/sign-complete" element={<SignupCompletePage />} />
@@ -84,7 +64,6 @@ function App() {
           <Route exact path="/register/complete/:id" element={<FinishUpLoging />} />
           <Route exact path="/hosting/listings" element={<UserListings />} />
           <Route exact path='/' element={<HomePage />} />
-          </>
         </Routes>
       </BrowserRouter>
     </div>
