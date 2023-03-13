@@ -26,6 +26,7 @@ import SignupCompletePage from './pages/signupCompletePage';
 import CodeModel from './components/signIn/codeModel';
 import FinishUpLoging from './components/signIn/finishingUpLoging';
 import UserListings from './pages/Hosting/Listings';
+import WorkTogether from './pages/FooterPages/workTogether';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
         <Route exact path="/register/email-confirmation/:id" element={<CodeModel/>} />
         <Route exact path="/register/complete/:id" element={<FinishUpLoging/>} />
         <Route exact path="/hosting/listings" element={<UserListings />} />
+        <Route exact path="/WorkTogether" element={<WorkTogether />} />
         
         <Route exact path = '/' element = {<HomePage/>}/>
       </Routes>
