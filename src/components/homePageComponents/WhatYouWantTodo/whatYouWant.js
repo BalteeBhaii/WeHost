@@ -29,9 +29,9 @@ const WhatYouWant = () => {
                     <div className='whatyouwant-texts mt-2 d-flex flex-column'>
                       <span className='whatyouwant-location'>{a.title}</span>
                       <span className='whatyouwant-description'>{a.address}</span>
-                      <span className='whatyouwant-date mb-1'>{a.beds}</span>
+                      <span className='whatyouwant-date mb-1'>beds {a.beds}</span>
                       <span className='whatyouwant-date mb-1'>{a.availability}</span>
-                      <span className='whatyouwant-price'>{a.price} <span className='whatyouwant-time'>{a.price_type}</span></span>
+                      <span className='whatyouwant-price'>${a.price} <span className='whatyouwant-time'>{a.price_type}</span></span>
                     </div>
                   </figure>
                 </div>
