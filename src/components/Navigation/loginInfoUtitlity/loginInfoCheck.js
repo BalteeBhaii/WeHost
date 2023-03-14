@@ -4,7 +4,6 @@ const LoginInfoCheck = () => {
     const [user, setUser] = useState([]);
     useEffect(() => {
         setUser(JSON.parse(localStorage.getItem('user')));
-        console.log(user)
     }, []);
     return (
         <>

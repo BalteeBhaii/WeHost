@@ -21,7 +21,7 @@ const PublishStep = () => {
                                         <p className='mb-1'>$800/Person</p>
                                     </div>
                                     <div className='d-flex justify-content-between w-100' style={{ fontSize: '0.8rem' }}>
-                                        <p className='fw-semibold'><i class="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                                        <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
                                     </div>
                                     <div className='d-flex justify-content-between w-100' style={{ fontSize: '0.8rem' }}>
                                         <p className='fw-semibold'><img className='me-1 fw-semibold' src='/images/successfull.png' alt="" />Published Successfully</p>
@@ -38,29 +38,29 @@ const PublishStep = () => {
 
                 <div className='additonal-step-section overflow-hidden d-flex justify-content-center gap-2 flex-wrap'>
                     <div className="card  additional-step-card ">
-                        <div class="card-body">
-                            <h5 class="card-title">Instant Book</h5>
-                            <p class="card-text">This will boost up your post and
+                        <div className="card-body">
+                            <h5 className="card-title">Instant Book</h5>
+                            <p className="card-text">This will boost up your post and
                                 choose how will your guest book</p>
                         </div>
                     </div>
                     <div className="card additional-step-card " >
-                        <div class="card-body">
-                            <h5 class="card-title">Reservation Dates</h5>
-                            <p class="card-text">Setup dates  on Calendar on bases of
+                        <div className="card-body">
+                            <h5 className="card-title">Reservation Dates</h5>
+                            <p className="card-text">Setup dates  on Calendar on bases of
                                 availability of your house  </p>
                         </div>
                     </div>
                     <div className="card  additional-step-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Policies</h5>
-                            <p class="card-text">Setup your cancellation policies</p>
+                        <div className="card-body">
+                            <h5 className="card-title">Policies</h5>
+                            <p className="card-text">Setup your cancellation policies</p>
                         </div>
                     </div>
                     <div className="card additional-step-card " >
-                        <div class="card-body">
-                            <h5 class="card-title">Rules and Promotion </h5>
-                            <p class="card-text">Setup your house rule and setup offers
+                        <div className="card-body">
+                            <h5 className="card-title">Rules and Promotion </h5>
+                            <p className="card-text">Setup your house rule and setup offers
                                 to attract guests</p>
                         </div>
                     </div>
@@ -73,21 +73,21 @@ const PublishStep = () => {
                 </div>
                 <div className='d-flex gap-3 flex-column flex-md-row  justify-content-start align-items-center'>
                     
-                    <div class="card card-width " >
-                        <img class="card-img-top img-fluid tip-card" src="/images/pricing.jpg"  />
-                        <h5 class="card-title text-center">How to get paid?</h5>   
+                    <div className="card card-width " >
+                        <img className="card-img-top img-fluid tip-card" src="/images/pricing.jpg"  />
+                        <h5 className="card-title text-center">How to get paid?</h5>   
                                 
                            
                     </div>
-                    <div class="card card-width" >
-                        <img class="card-img-top img-fluid tip-card" src="/images/setprice.jpg"  />
-                        <h5 class="card-title text-center">How to setup pricing strategy</h5>   
+                    <div className="card card-width" >
+                        <img className="card-img-top img-fluid tip-card" src="/images/setprice.jpg"  />
+                        <h5 className="card-title text-center">How to setup pricing strategy</h5>   
                                 
                            
                     </div>
-                    <div class="card card-width" >
-                        <img class="card-img-top img-fluid tip-card" src="/images/housing.jpg"  />
-                        <h5 class="card-title text-center">How to Prepare House?</h5>   
+                    <div className="card card-width" >
+                        <img className="card-img-top img-fluid tip-card" src="/images/housing.jpg"  />
+                        <h5 className="card-title text-center">How to Prepare House?</h5>   
                                 
                            
                     </div>
