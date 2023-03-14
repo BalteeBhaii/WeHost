@@ -4,6 +4,7 @@ const Welcome = ({setListingCompleteData}) => {
 
     const navigate = useNavigate();
     useEffect(()=>{
+        localStorage.setItem('page', JSON.stringify(0));
         setListingCompleteData(JSON.parse(localStorage.getItem('listing_data')));
     }, [])
 

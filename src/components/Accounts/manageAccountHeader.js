@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import LoginInfoCheck from "../Navigation/loginInfoUtitlity/loginInfoCheck";
 import SignIn from "../signIn/signin";
 import SignUp from "../signIn/signUp";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
@@ -62,22 +63,7 @@ const ManageAccountHeader = () => {
           </div>
           <div className="items-section d-flex align-items-center justify-content-end w-100">
             <div className="menu-profile">
-              <img className="menu-profile-icon" src="/images/user.svg" alt="user" />
-              <button style={{ border: 'none', background: 'none' }} onClick={() => handleDisplayClick()}>
-                <span className="menu-item auth-item">Login/SignUp</span>
-              </button>
-              <div className="position-absolute shadow border rounded-2 mt-1 ps-3 pe-5 py-2 overflow-hidden bg-white " style={{ display: display }}>
-                <p className="mb-0 bg-white">
-                  <button className="menu-item btn p-1" value='Guest' onClick={(e) => handleLoginClick(e)}>
-                    Guest Login
-                  </button>
-                </p>
-                <p className="mb-0 bg-white">
-                  <button className="menu-item btn p-1" value='Owner' onClick={(e) => handleLoginClick(e)}>
-                    Owner Login
-                  </button>
-                </p>
-              </div>
+              <LoginInfoCheck/>
             </div>
           </div>
           <div className="menu-dropdown">
@@ -112,19 +98,10 @@ const ManageAccountHeader = () => {
               </li>
             </a>
             <div className="menu-profile">
-              <img className="menu-profile-icon" src="/images/user.svg" alt="user" />
-              <button className="border-0 bg-white mbl-auth-menu-main" onClick={() => handleMobiledisplayclick()}>
-                <span className="menu-item auth-item">Login/SignUp</span>
-              </button>
-              {(toggle) && (<div className="position-relative border rounded-2 mt-1 ps-3 pe-5 py-2 overflow-hidden bg-white shadow" >
-                <p className="mb-1"><button className="btn fw-semibold w-100" onClick={() => setshowSigninModal(!showSigninModal)}>Guest Login</button></p>
-                <p className="mb-0"><button className="btn fw-semibold w-100" onClick={() => setShowSignupModal(!showSignupModal)}>Owner Login</button></p>
-              </div>)}
+              <LoginInfoCheck/>
             </div>
           </ul>
         </div>
-        {/* <SignIn showSigninModal={showSigninModal} setshowSigninModal={setshowSigninModal} />
-        <SignUp showSignupModal={showSignupModal} setShowSignupModal={setShowSignupModal} /> */}
       </div>
     </>
   );

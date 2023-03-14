@@ -12,14 +12,45 @@ import Footer from '../components/Navigation/footer/footer';
 import Worldwide from '../components/homePageComponents/worldWide/Worldwide';
 import Reviews from '../components/homePageComponents/reviews/Reviews';
 import '../globalcss/styles.css';
+import { timeout } from 'react';
 
 const HomePage = () => {
+    const loadedHandler = (event) => {
+        setTimeout(() => {
+          let notLoaded1 = event.target.parentNode.parentNode.parentNode;
+          let notLoaded2 = event.target.parentNode;
+    
+          if(notLoaded1 && notLoaded1.classList.contains("not-loaded")){
+            notLoaded1.classList.remove("not-loaded")
+          }
+    
+          if(notLoaded2 && notLoaded2.classList.contains("not-loaded")){
+            notLoaded2.classList.remove("not-loaded")
+          }
+        }, 500);
+    }
+
+    const postLoadedHandler = (event) => {
+        setTimeout(() => {
+          let parent = event.target.parentNode.parentNode;
+          let notLoaded = parent.querySelectorAll(".not-loaded");
+
+          if(notLoaded){
+            for(const item of notLoaded){
+              if(item.classList.contains("not-loaded")){
+                item.classList.remove("not-loaded")
+              }
+            }
+          }
+        }, 500);
+    }
+
     return ( 
         <>
         <Header />
         <LocationModal />
-        <Destination />      
-        <Explore />    
+        <Destination loadedHandler={loadedHandler} />      
+        <Explore loadedHandler={loadedHandler} />    
         <Services />
         <BestPlace />
         <Worldwide />
@@ -30,7 +61,7 @@ const HomePage = () => {
         {/* <FilterModal /> */}
         <RentalIncome />
         <ThingsToExplore />
-        <WhatYouWant />
+        <WhatYouWant postLoadedHandler={postLoadedHandler} />
         <Reviews />
         <Footer />
         </>

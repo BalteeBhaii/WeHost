@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import ImageUploading from "react-images-uploading";
+import axios from 'axios';
 
-const EightStep = ({ id, setId, images, setImages }) => {
+const EightStep = ({ id, setId, images, setImages, setListingCompleteData, listingCompleteData, setIsListingDataChanged, url }) => {
   // const [images, setImages] = React.useState([]);
   const maxNumber = 10;
 
@@ -12,23 +13,51 @@ const EightStep = ({ id, setId, images, setImages }) => {
   };
 
   const confirmHandleClick = () => {
-    setId(true);
+    console.log('hello fucker');
+    console.log(url);
+    if(images.length >= 5){
+      postImages()
+      setId(true);
+    } 
   }
 
-  const handleImgClick = () => {
-    document.getElementById('imgUpload').click()
-    setId(true);
+  const postImages = async ()=> {
+    let i = 0;
+    if(listingCompleteData.images.length > 0){
+      listingCompleteData.images = [];
+    }
+    for(const image of images){
+      // const dataurl =  dataURLtoBlob(image.data_url);
+      const formData = new FormData();
+      formData.append('file', image.file);
+      formData.append('type', 'image');
+      await axios.post(`${url}media`, formData, { headers: { Accept: 'application/json',  Authorization: `Bearer ${JSON.parse(localStorage.getItem('dataKey'))}`}})
+      .then(res => {
+        if (i === 0) {
+          listingCompleteData.cover_image = res.data.data.path;
+          setListingCompleteData(listingCompleteData);
+          setIsListingDataChanged(Math.random());
+        } else {
+          listingCompleteData.images.push(res.data.data.id);
+          console.log(res.data.data.id);
+          setListingCompleteData(listingCompleteData);
+          setIsListingDataChanged(Math.random());
+        }
+      })
+      .catch(err => {
+        console.log(err)
+      })
+      i++;
+    }
   }
+
 
   useEffect(() => {
     if (images.length === 5) {
 
-      setId(true);
-      console.log('images: ', images)
     } else {
       setId(false)
     }
-    console.log(images.length)
   }, [images])
 
   return (
@@ -60,12 +89,6 @@ const EightStep = ({ id, setId, images, setImages }) => {
                   <i className="bi bi-images drag-file-image "></i>
                   <h3 className='drag-file-header mt-4'>Drag Your Photos Here</h3>
                   <p className='drag-file-text'>Choose atleast 5 photos</p>
-                  <button className='btn border-0 text-decoration-underline' style={isDragging ? { color: "red" } : null}
-                                    onClick={onImageUpload}
-                                    {...dragProps}
-                                >
-                                    Upload Cover Image
-                                </button>
                   <button className='btn border-0 text-decoration-underline' style={isDragging ? { color: "red" } : null}
                     onClick={onImageUpload}
                     {...dragProps}
@@ -125,9 +148,11 @@ const EightStep = ({ id, setId, images, setImages }) => {
                     )
                   }
                   )}
-                  {/* <div className='col-12 col-md-4'>
-                    <button className='btn mb-5 fw-semibold fs-5 text-decoration-underline w-100' onClick={confirmHandleClick}>Confirm</button>
-                  </div> */}
+                  {(images.length>=5)&&(
+                    <div className='col-12 col-md-6 col-lg-4 mb-3 d-flex align-items-center' style={{border: '1px dotted black'}}>
+                      <button className='btn mb-5 fw-semibold fs-5 text-decoration-underline w-100' onClick={confirmHandleClick}>Submit</button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
