@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import FilterModal from '../../Filter/filter';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import { useState, useTimeout } from 'react';
+import { useState, useEffect, useTimeout } from 'react';
 
-const DesiredHotels = () => {
+const DesiredHotels = ({textLoadedHandler}) => {
   const [showModal, setShowModal] = useState(false);
   const options = {
     margin: 5,
@@ -25,27 +25,21 @@ const DesiredHotels = () => {
     },
   };
 
-  const loaded = (event) => {
-    let parent = event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
-    let imgLoaded = event.target.parentNode;
-    let textsLoaded = parent.querySelectorAll(".not-loaded");
+  useEffect(() => {
+    setTimeout(() => {
+      let title = document.getElementsByClassName("desired-hotel-title")[0];
 
-    if(imgLoaded){
-      imgLoaded.classList.remove("not-loaded");
-    }
-
-    if(textsLoaded){
-      for(let item of textsLoaded){
-        item.classList.remove("not-loaded");
+      if(title.classList.contains("not-loaded")){
+        title.classList.remove("not-loaded");
       }
-    }
-  }
+    }, 1000);
+  }, []);
 
   return (
     <>
       <div className='container mt-5 mb-3 position-relative'>
         <div className='w-100 d-flex justify-content-between align-items-center main-text-size-style'>
-          <h1 className='mb-3'>Here are the desired hotels for you</h1>
+          <h1 className='mb-3 desired-hotel-title not-loaded'>Here are the desired hotels for you</h1>
           <button className='btn filter-button-size-style text-white btn-md px-3 position-fixed'
             onClick={(ev) => setShowModal(!showModal)}>
             <i className="bi bi-funnel me-1"></i>
@@ -61,7 +55,7 @@ const DesiredHotels = () => {
               <div className=''>
                 <Carousel showThumbs={false} showArrows={false} swipeable={true}>
                   <div className='image-div not-loaded'>
-                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={loaded} width={'100%'} height={'100%'} />
+                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={textLoadedHandler} width={'100%'} height={'100%'} />
                   </div>
                   <div className='image-div  not-loaded'>
                       <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>
@@ -104,7 +98,7 @@ const DesiredHotels = () => {
               <div className=''>
                 <Carousel showThumbs={false} showArrows={false} swipeable={true}>
                   <div className='image-div not-loaded'>
-                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={loaded} width={'100%'} height={'100%'} />
+                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={textLoadedHandler} width={'100%'} height={'100%'} />
                   </div>
                   <div className='image-div  not-loaded'>
                       <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>
@@ -147,7 +141,7 @@ const DesiredHotels = () => {
               <div className=''>
                 <Carousel showThumbs={false} showArrows={false} swipeable={true}>
                   <div className='image-div not-loaded'>
-                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={loaded} width={'100%'} height={'100%'} />
+                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={textLoadedHandler} width={'100%'} height={'100%'} />
                   </div>
                   <div className='image-div  not-loaded'>
                       <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>
@@ -190,7 +184,7 @@ const DesiredHotels = () => {
               <div className=''>
                 <Carousel showThumbs={false} showArrows={false} swipeable={true}>
                   <div className='image-div not-loaded'>
-                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={loaded} width={'100%'} height={'100%'} />
+                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={textLoadedHandler} width={'100%'} height={'100%'} />
                   </div>
                   <div className='image-div  not-loaded'>
                       <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>
@@ -233,7 +227,7 @@ const DesiredHotels = () => {
               <div className=''>
                 <Carousel showThumbs={false} showArrows={false} swipeable={true}>
                   <div className='image-div not-loaded'>
-                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={loaded} width={'100%'} height={'100%'} />
+                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={textLoadedHandler} width={'100%'} height={'100%'} />
                   </div>
                   <div className='image-div  not-loaded'>
                       <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>
@@ -276,7 +270,7 @@ const DesiredHotels = () => {
               <div className=''>
                 <Carousel showThumbs={false} showArrows={false} swipeable={true}>
                   <div className='image-div not-loaded'>
-                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={loaded} width={'100%'} height={'100%'} />
+                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={textLoadedHandler} width={'100%'} height={'100%'} />
                   </div>
                   <div className='image-div  not-loaded'>
                       <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>

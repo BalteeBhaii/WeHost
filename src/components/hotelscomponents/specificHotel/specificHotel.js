@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, timeout} from 'react';
 import { DateRangePicker } from 'react-date-range';
 import { DateRange } from 'react-date-range';
 import format from 'date-fns/format'
 import { addDays } from 'date-fns';
 import GuestModal from '../../GuestModal/GuestModal';
-const SpecificHotel = () => {
+const SpecificHotel = ({loadedHandler}) => {
   const [checkinPlaceholder, setcheckinPlaceholder] = useState(`Check-In`);
   const [checkoutPlaceholder, setcheckoutPlaceholder] = useState(`Check-Out`);
   const [guestCount, setGuestCount] = useState(0);
@@ -91,10 +91,12 @@ const SpecificHotel = () => {
     previousDropdown = currentDropdown;
     currentDropdown = '';
   }
+
   useEffect(() => {
     console.log(currentDropdown);
     setGuestCount(adultCount + childrenCount + infantCount);
   }, [adultCount, childrenCount, infantCount]);
+
   return (
     <>
       <div className='container specific-hotel-container'>
@@ -125,16 +127,22 @@ const SpecificHotel = () => {
         <div className='row'>
           <div className='col-12 col-lg-8'>
             <div>
-              <div className='mainImagesize mb-1'>
-                <img className='img-fluid' src='/images/hotelmainImage.svg' width={'100%'} alt='hotelImages' />
+              <div className='mainImagesize mb-1 not-loaded'>
+                <img className='img-fluid' src='/images/hotelmainImage.svg' width={'100%'} alt='hotelImages' onLoad={loadedHandler} />
               </div>
-              <div className='d-flex multipleImages'>
-                <img className='img-fluid' src='/images/image1.svg' alt='hotelImages' />
-                <img className='img-fluid' src='/images/image2.svg' alt='hotelImages' />
-                <img className='img-fluid' src='/images/image3.svg' alt='hotelImages' />
+              <div className='d-flex multipleImages gap-2 mt-2'>
+                <div className='multiple-images-image not-loaded gap-2'>
+                  <img className='img-fluid' src='/images/image1.svg' alt='hotelImages' onLoad={loadedHandler} />
+                </div>
+                <div className='multiple-images-image not-loaded'>
+                  <img className='img-fluid' src='/images/image2.svg' alt='hotelImages' onLoad={loadedHandler} />
+                </div>
+                <div className='multiple-images-image not-loaded'>
+                  <img className='img-fluid' src='/images/image3.svg' alt='hotelImages' onLoad={loadedHandler} />
+                </div>
               </div>
             </div>
-            <div className='text-justify'>
+            <div className='text-justify mt-3'>
               <h2>About</h2>
               <p className='mb-1 text-justify'>
                 Set in a bustling area near shops and restaurants,
@@ -257,7 +265,7 @@ const SpecificHotel = () => {
           <div className='col-12 col-lg-8'>
             <h2>Where you'll be</h2>
             <p>Calle Alcanfores 465, Mira 15074, Peru</p>
-            <div className='googlemapImage'>
+            <div className='googlemapImage not-loaded' onLoad={loadedHandler}>
               <img src='/images/googlemap.svg' className='img-fluid' width={'100%'} alt='hotelImages' />
             </div>
             <div className='my-4'>
