@@ -19,7 +19,7 @@ const SingUp = () => {
 
   const navigate = useNavigate();
   var signupButton = document.getElementsByClassName("submit-button")[0];
-  var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
+  var spinner = '<div className="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span className="visually-hidden">Loading...</span></div>';
 
   const handleContinueClick = (event) => {
     event.preventDefault();
@@ -92,10 +92,10 @@ const SingUp = () => {
                   <div className="text-center">
                     <p>or sign up with:</p>
                     <button type="button" className="btn btn-link btn-floating mx-1">
-                      <i class="bi bi-facebook"></i>
+                      <i className="bi bi-facebook"></i>
                     </button>
                     <button type="button" className="btn btn-link btn-floating mx-1">
-                      <i class="bi bi-google"></i>
+                      <i className="bi bi-google"></i>
                     </button>
                   </div>
                 </form>

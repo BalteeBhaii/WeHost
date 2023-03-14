@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-const FourTenStep = ({id, setId}) => {
+const FourTenStep = ({id, setId, listingCompleteData, setListingCompleteData, setIsListingDataChanged}) => {
     const [counter, setCounter] = useState(0);
-    var listingData = JSON.parse(localStorage.getItem("listing_data"));
-
     useEffect(() => {
-        listingData.price = counter;
-        localStorage.setItem("listing_data", JSON.stringify(listingData));
+        listingCompleteData.price = counter;
+        setListingCompleteData(listingCompleteData);
+        setIsListingDataChanged(Math.random());
     }, [counter]);
     return ( 
         <div className='container my-5'>

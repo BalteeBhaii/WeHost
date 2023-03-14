@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import data from './data.json';
 const WhatYouWant = () => {
-  console.log(data);
   const [apiData, setApiData] = useState([]);
   const getData = () => {
     setApiData(data);

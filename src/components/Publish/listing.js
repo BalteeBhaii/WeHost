@@ -10,34 +10,34 @@ const ListingStep = () => {
                     <h3 className=''>Listing</h3>
                     <div className=''>
                         
-                        <button class="btn btn-search-listing add-listing" type="button" id="dropdownMenuButton"  >
-                            <i class="bi bi-plus-lg"></i> <span className='d-none d-md-block'>Add listing</span>
+                        <button className="btn btn-search-listing add-listing" type="button" id="dropdownMenuButton"  >
+                            <i className="bi bi-plus-lg"></i> <span className='d-none d-md-block'>Add listing</span>
                         </button>
                     </div>
                 </div>
                 <div className='mt-3 d-flex gap-4 flex-wrap'>
-                    <div class="input-group w-auto">
-                        <div id="search-autocomplete" class="form-outline">
-                            <input type="search" id="form1" class="form-control" placeholder='Search listing' />
+                    <div className="input-group w-auto">
+                        <div id="search-autocomplete" className="form-outline">
+                            <input type="search" id="form1" className="form-control" placeholder='Search listing' />
                         </div>
-                        <button type="button" class="btn btn-search-listing  add-listing">
-                            <i class="bi bi-search"></i>
+                        <button type="button" className="btn btn-search-listing  add-listing">
+                            <i className="bi bi-search"></i>
                         </button>
                     </div>
 
                     <div className='d-flex gap-4 flex-wrap'>
-                        <div class="dropdown">
-                            <button class="btn btn-search-listing dropdown-toggle w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div className="dropdown">
+                            <button className="btn btn-search-listing dropdown-toggle w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Rooms and Bedroom
                             </button>
                         </div>
-                        <div class="dropdown">
-                            <button class="btn btn-search-listing dropdown-toggle w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div className="dropdown">
+                            <button className="btn btn-search-listing dropdown-toggle w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Amenities
                             </button>
                         </div>
-                        <div class="dropdown">
-                            <button class="btn btn-search-listing dropdown-toggle w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div className="dropdown">
+                            <button className="btn btn-search-listing dropdown-toggle w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Listing Status
                             </button>
                         </div>
@@ -51,12 +51,12 @@ const ListingStep = () => {
 
             <div className='container-fluid p-5'>
                 <div className='table-responsive'>
-                <table class="table table-hover">
+                <table className="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col"><div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label class="form-check-label" for="flexCheckDefault">
+                            <th scope="col"><div className="form-check">
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label className="form-check-label" for="flexCheckDefault">
                                     listing
                                 </label>
                             </div></th>
@@ -70,8 +70,8 @@ const ListingStep = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row" className='field-check-listing'><div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <th scope="row" className='field-check-listing'><div className="form-check">
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                 
                             </div></th>
                             <td>
@@ -80,7 +80,7 @@ const ListingStep = () => {
                             <div>
                             <h3 className='listing-property-text mt-3'>Washiston House</h3>
                             <div className='d-flex '>
-                            <i class="bi bi-geo-fill"></i>
+                            <i className="bi bi-geo-fill"></i>
                             <p className='m-0 listing-text'>Islamabad,Pakistan</p>
                             </div>
                             <p className='m-0 mt-1 listing-text'>$ 500</p>
@@ -92,13 +92,13 @@ const ListingStep = () => {
                             </td>
                             <td>
                                 <div className='d-flex gap-1'>
-                                <i class="listing-property-done bi bi-check-lg"></i>
+                                <i className="listing-property-done bi bi-check-lg"></i>
                                 <p>Published</p>
                                 </div>
                             </td>
                             <td>
                                 <div className='d-flex gap-1 instant-book-table'>
-                                <i class="listing-property-done bi bi-check-square-fill"></i>
+                                <i className="listing-property-done bi bi-check-square-fill"></i>
                                 <p>YES</p>
                                 </div>
                             </td>
@@ -118,7 +118,7 @@ const ListingStep = () => {
                             </td>
                             <td>
                                 <div className='d-flex gap-1 '>
-                                <i class="edit-listing-icon bi bi-gear-fill"></i>
+                                <i className="edit-listing-icon bi bi-gear-fill"></i>
                                 <p className='edit-listing-text'>Edit</p>
                                 </div>
                                 
