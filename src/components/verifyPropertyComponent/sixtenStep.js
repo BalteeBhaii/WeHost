@@ -1,17 +1,32 @@
 import React from 'react';
-const SixTenStep = ({id, setId}) => {
-    const handleSubmit = () => {
+const SixTenStep = ({ url, id, setId, listingCompleteData }) => {
 
-    }
-    return ( 
+    console.log(listingCompleteData)
+    return (
         <div className='container my-5'>
             <div className='row'>
-                <div className='col-12 col-md-8 col-lg-5'>
+                <div className='col-12 col-md-8 col-lg-6'>
                     <div className='mb-4'>
-                        <h5>We are almost done</h5>
-                        <p className='fs-6 text-muted'>Please provide us your details</p>
+                        <h5>We are almost done, this is time to publish property</h5>
+                        {/* <p className='fs-6 text-muted'>Please provide us your details</p> */}
                     </div>
-                    <form>
+                    <div className='my-5'>
+                        <h6>Your property Infromation</h6>
+                        <div className="card shadow overflow-hidden rounded-3" style={{ width: 'fit-content' }}>
+                            <div className='' style={{ width: 340, height: 300 }}>
+                                <img src={url + '../storage/' + listingCompleteData.cover_image} className="w-100 h-100" alt="..." />
+                            </div>
+                            <div className="card-body">
+                                <div className='d-flex justify-content-between'>
+                                    <h5 className="card-title">{listingCompleteData.title}</h5>
+                                    <span>New</span>
+                                </div>
+                                <p className="card-text">{listingCompleteData.description}</p>
+                                <p>${listingCompleteData.price} night</p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <form>
                         <div className='d-flex mb-2'>
                             <input className='form-control me-1 rounded-0 shadow-none' type='text' placeholder='First Name' required/>
                             <input className='form-control rounded-0 shadow-none' type='text' placeholder='Last Name' required/>
@@ -32,11 +47,11 @@ const SixTenStep = ({id, setId}) => {
                             <i className="bi bi-exclamation-circle pe-2"></i>
                             <div>Please provide us clear photo of your face</div>
                         </div>
-                    </form>
+                    </form> */}
                 </div>
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default SixTenStep;

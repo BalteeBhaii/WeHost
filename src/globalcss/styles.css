@@ -1,7 +1,12 @@
 :root {
     --theme-color: #0d7bc4;
     --button-hover-color: #03568a;
-    --bulue-color: #0079C2
+    --bulue-color: #0079C2;
+    --main-color: #ecf0f18a;
+    --first-point-color: #C9EEFF;
+    --second-point-color: #62CDFF;
+    --third-point-color: #4E31AA;
+    --size: 5px;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -16,7 +21,45 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-.input-placeholder-style::placeholder {
+/* ************************************** LOADING ANIMATION CSS *(****************** */
+
+.loader {
+    background-color: var(--main-color);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;  
+    z-index: 100000;
+  }
+  
+  .loader__element {
+    border-radius: 100%;
+    margin: calc(var(--size)*2);
+  }
+  
+  .loader__element:nth-child(1) {
+    animation: preloader .6s ease-in-out alternate infinite;
+    border: var(--size) solid var(--first-point-color);
+  }
+  .loader__element:nth-child(2) {
+    animation: preloader .6s ease-in-out alternate .2s infinite;
+    border: var(--size) solid var(--second-point-color);
+  }
+  
+  .loader__element:nth-child(3) {
+    animation: preloader .6s ease-in-out alternate .4s infinite;
+    border: var(--size) solid var(--third-point-color);
+  }
+
+/* ************************************** END LOADING ANIMATION CSS *(****************** */
+
+
+.input-placeholder-style::placeholder{
     color: white;
     font-weight: 600;
 }
@@ -3110,6 +3153,10 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
   
+
+@keyframes preloader {
+    100% { transform: scale(2); }
+  }
 
 @media(min-width: 775px) {
     .daterange-display {

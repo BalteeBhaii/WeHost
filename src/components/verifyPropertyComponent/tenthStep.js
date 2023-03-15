@@ -52,7 +52,7 @@ const TenthStep = ({ setId, listingCompleteData, setListingCompleteData, setIsLi
                         </div>
                         <h4 className='mt-2'>0/100</h4>
                         <h4 className='mt-4'>Which type of guest can book property?</h4>
-                        <select class="form-select shadow-none" aria-label="Default select example" onChange={(e) => setGuestType(e.target.value)}>
+                        <select className="form-select shadow-none" aria-label="Default select example" onChange={(e) => setGuestType(e.target.value)}>
                             <option value="all-guests" >all-guests</option>
                             <option value="experienced-guests">experienced-guests</option>
                         </select>

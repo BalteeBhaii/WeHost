@@ -4,13 +4,13 @@ const Welcome = ({setListingCompleteData}) => {
 
     const navigate = useNavigate();
     useEffect(()=>{
-        localStorage.setItem('page', JSON.stringify(0));
+        
         setListingCompleteData(JSON.parse(localStorage.getItem('listing_data')));
     }, [])
 
     useEffect(()=>{
         const auth = JSON.parse(localStorage.getItem('dataKey'));
-        console.log(auth)
+        console.log(auth);
         if(!auth){
             navigate('/signin');
         }

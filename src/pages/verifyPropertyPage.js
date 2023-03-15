@@ -34,28 +34,28 @@ const VerifyPropertyPage = () => {
   const [images, setImages] = React.useState([]);
 
   const listingData = JSON.parse(localStorage.getItem('listing_data'))?JSON.parse(localStorage.getItem('listing_data')):{
-    "title": 'tes',
-    'description': 'test',
+    "title": '',
+    'description': '',
     'place_type_id': 0,
     'category_id': 0,
     'no_of_guests': 0,
     'no_of_bedrooms': 0,
     'no_of_beds': 0,
     'no_of_bathrooms': 0,
-    'guest_type': 'all-guests',
-    'price': 0.0,
+    'guest_type': '',
+    'price': 0,
     'currency_code': 'USD',
     'currency_symbol': '$',
     'has_security_cameras': 2,
     'has_weapons': 2,
     'has_animals': 2,
-    'street': 'street # 5',
-    'apartment': 'apartment # 2',
-    'city': 'NY',
-    'country': "USA",
+    'street': '',
+    'apartment': '',
+    'city': '',
+    'country': "",
     'features': [],
-    'state': 'USA',
-    'zip_code': '1234',
+    'state': '',
+    'zip_code': '',
     'country_code': '+1',
     'cover_image': '',
     'images': []
@@ -114,12 +114,17 @@ const VerifyPropertyPage = () => {
   }
 
   useEffect(() => {
-    console.log(id);
-    setPage(JSON.parse(localStorage.getItem('page')));
-  }, [page])
+    const navigation = localStorage.getItem('page');
+    console.log(navigation)
+    if(!navigation){
+      localStorage.setItem('page', JSON.stringify(0));
+    }
+  }, [])
 
   useEffect(() => {
     localStorage.setItem("listing_data", JSON.stringify(listingCompleteData));
+    setPage(JSON.parse(localStorage.getItem('page')));
+    console.log(page)
   }, [isListingDataChanged]);
 
   return (
@@ -128,17 +133,17 @@ const VerifyPropertyPage = () => {
       <div className='my-5'>
         <div>
           {
-            (JSON.parse(localStorage.getItem('page')) === 0) && 
+            (page === 0) && 
             <Welcome 
               setListingCompleteData={setListingCompleteData}
             />
           }
           {
-            (JSON.parse(localStorage.getItem('page')) === 1) && 
+            (page === 1) && 
             <FirstStep setId={setId}/>
           }
           {
-            (JSON.parse(localStorage.getItem('page')) === 2) && 
+            (page === 2) && 
             <SecondStep 
               id={id} 
               setId={setId} 
@@ -151,7 +156,7 @@ const VerifyPropertyPage = () => {
             />
           }
           {
-            (JSON.parse(localStorage.getItem('page')) === 3) && 
+            (page === 3) && 
             <ThirdStep 
               id={id} 
               setId={setId} 
@@ -165,11 +170,11 @@ const VerifyPropertyPage = () => {
           }
 
           {
-            (JSON.parse(localStorage.getItem('page')) === 4) && 
+            (page === 4) && 
             <ForthStep setId={setId}
             />
           }
-          {(JSON.parse(localStorage.getItem('page')) === 5) && 
+          {(page === 5) && 
             <FifthStep 
               setId={setId} 
               listingCompleteData={listingCompleteData} 
@@ -180,7 +185,7 @@ const VerifyPropertyPage = () => {
           }
 
           {
-            (JSON.parse(localStorage.getItem('page')) === 6) && 
+            (page === 6) && 
             <SixthStep 
               id={id} 
               setId={setId} 
@@ -191,10 +196,10 @@ const VerifyPropertyPage = () => {
             />
           }
 
-          {(JSON.parse(localStorage.getItem('page')) === 7) && <StepTwo setId={setId}/>}
-          {(JSON.parse(localStorage.getItem('page')) === 8) && <SeventhStep id={id} setId={setId} listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 7) && <StepTwo setId={setId}/>}
+          {(page === 8) && <SeventhStep id={id} setId={setId} listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
           {
-            (JSON.parse(localStorage.getItem('page')) === 9) && 
+            (page === 9) && 
             <EightStep 
               id={id} 
               setId={setId} 
@@ -209,7 +214,7 @@ const VerifyPropertyPage = () => {
           {/* {(page === 10) && <NinethStep />} */}
           
           {
-            (JSON.parse(localStorage.getItem('page')) === 10) && 
+            (page === 10) && 
             <TenthStep 
               setId={setId} 
               listingCompleteData={listingCompleteData}
@@ -219,32 +224,32 @@ const VerifyPropertyPage = () => {
             />
           }
 
-          {(JSON.parse(localStorage.getItem('page')) === 11) && <StepThree setId={setId}/>}
-          {(JSON.parse(localStorage.getItem('page')) === 12) && <FourTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
-          {(JSON.parse(localStorage.getItem('page')) === 13) && <FiveTenStep id={id} setId={setId}  url={baseUrl}    listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData} setIsListingDataChanged = {setIsListingDataChanged} />}
-          {(JSON.parse(localStorage.getItem('page')) === 14) && <SixTenStep id={id} setId={setId}  url={baseUrl} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 11) && <StepThree setId={setId}/>}
+          {(page === 12) && <FourTenStep id={id} setId={setId}  url={baseUrl} listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 13) && <FiveTenStep id={id} setId={setId}  url={baseUrl} listingCompleteData={listingCompleteData} setListingCompleteData={setListingCompleteData} setIsListingDataChanged = {setIsListingDataChanged} />}
+          {(page === 14) && <SixTenStep id={id} setId={setId}  url={baseUrl} listingCompleteData={listingCompleteData} setIsListingDataChanged = {setIsListingDataChanged} />}
 
           <div className='position-fixed bottom-0 left-0 bg-white w-100 px-4 pb-3'>
             <div className="progress mb-3" style={{ background: '#0079c2bf' }}>
               <div className="progress-bar" style={{ width: `${width}%`, background: '#81E2F1' }}></div>
             </div>
-            {(JSON.parse(localStorage.getItem('page')) === 0) && (
+            {(page === 0) && (
               <div className='text-end'>
                 <button className='btn fw-semibold property-footer-button' style={{ width: 115 }} onClick={getStartedHandle}>
                   Get Started
                 </button>
               </div>
             )}
-            {(JSON.parse(localStorage.getItem('page')) >= 1) && (
+            {(page >= 1) && (
               <div className='d-flex justify-content-between'>
                 <button className='btn property-footer-button ms-5' onClick={() => { setPage(page - 1); setWidth((page - 1) * 6.66); console.log(page, width); localStorage.setItem("page", JSON.stringify(page-1)); }}><i className="bi bi-arrow-left me-1"></i>Back</button>
                 
-                {((JSON.parse(localStorage.getItem('page')) < 14) && (id)) ? (
+                {((page < 14) && (id)) ? (
 
                   <button className='btn property-footer-button me-5' onClick={nextHandler}>Next<i className="bi bi-arrow-right ms-1"></i></button>
 
                 ) : ''}
-                {(JSON.parse(localStorage.getItem('page')) === 14) && (<button className='btn property-footer-button' onClick={finishHandler}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
+                {(page === 14) && (<button className='btn property-footer-button' onClick={finishHandler}>finish<i className="bi bi-arrow-right ms-1"></i></button>)}
               </div>
             )}
           </div>

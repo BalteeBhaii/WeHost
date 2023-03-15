@@ -14,7 +14,7 @@ const CodeModel = (props) => {
   const { id } = useParams();
 
   var signupButton = document.getElementsByClassName("submit-button")[0];
-  var spinner = '<div class="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span class="visually-hidden">Loading...</span></div>';
+  var spinner = '<div className="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span className="visually-hidden">Loading...</span></div>';
 
 
   const handleCodeclick = (event) => {
