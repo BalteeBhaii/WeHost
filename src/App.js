@@ -25,9 +25,14 @@ import OtpPage from './pages/otpPage';
 import SignupCompletePage from './pages/signupCompletePage';
 import CodeModel from './components/Auth/Register/codeModel';
 import FinishUpLoging from './components/Auth/Register/finishingUpLoging';
-import UserListings from './pages/host/listing/viewListings';
+import ViewListings from './pages/host/listing/viewListings';
+import Page404 from './pages/page404';
 import { useEffect, useState } from 'react';
-
+import WorkTogether from './pages/FooterPages/workTogether';
+import NewVacation from './pages/FooterPages/newVaction';
+import RealStateService from './pages/FooterPages/realstateService';
+import RestEasy from './pages/FooterPages/restEasy';
+import MoreOption from './pages/moreOption';
 function App() {
   const [authToken, setAuthToken] = useState(null);
 
@@ -56,6 +61,7 @@ function App() {
           <Route exact path="/sign-complete" element={<SignupCompletePage />} />
           <Route exact path="/register/email-confirmation/:id" element={<CodeModel />} />
           <Route exact path="/register/complete/:id" element={<FinishUpLoging />} />
+          <Route exact path='/More' element={<MoreOption />} />
 
           {/* Host Routes */}
           <Route path='/host'>
@@ -64,9 +70,9 @@ function App() {
 
             <>
 
-              <Route exact index element={<UserListings />} />
+              <Route exact index element={<ViewListings />} />
               <Route exact path='create/listing' element={<CreateListing />} />
-              <Route exact path='listings' element={<UserListings />} />
+              <Route exact path='listings' element={<ViewListings />} />
 
               {/* Host Account Routes */}
               <Route path='account'>
@@ -98,9 +104,12 @@ function App() {
           </Route>
           {/* -------- */}
 
+          <Route exact path="*" element={<Page404 />} />
+
         </Routes>
       </BrowserRouter>
     </div>
+    
   );
 }
 

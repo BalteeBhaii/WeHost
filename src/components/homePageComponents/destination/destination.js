@@ -11,6 +11,7 @@ import { DateRangePicker } from 'react-date-range';
 import { DateRange } from 'react-date-range';
 import { event } from 'jquery';
 import bgimage1 from './bgimage1.svg';
+import More from '../../MoreOption/More';
 
 const Destination = ({loadedHandler}) => {
   const [showModal, setShowModal] = useState(false);
@@ -369,7 +370,10 @@ const Destination = ({loadedHandler}) => {
                   </th>
                   <th className="border-0">
                     <div className='button-column'>
+                      <Link to='/More'>
                       <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
+                      
+                      </Link>
                     </div>
                   </th>
                   <th className="border-0">
