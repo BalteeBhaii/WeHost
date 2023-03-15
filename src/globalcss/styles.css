@@ -1444,8 +1444,29 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
     margin: 0 -8px;
     margin-top: 0px !important;
 }
+.owl-carousel .owl-nav button.owl-next{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    z-index: 2;
+}
+.owl-carousel .owl-nav button.owl-prev{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    z-index: 2;
+}
+.owl-carousel .owl-nav button.owl-prev:hover{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 3px;
+}
+.owl-carousel .owl-nav button.owl-next:hover{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 3px;
+}
 .owl-carousel.owl-theme.owl-loaded.owl-drag{
     position: relative;
+    border-bottom: none !important;
 }
 .owl-carousel .owl-stage-outer {
     padding: 0 !important;
@@ -1454,6 +1475,19 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
     height: 80px;
     border-bottom: 0.5px solid #e0e0e0;
     border-top: 0.5px solid #e0e0e0 ;
+}
+
+.owl-stage-outer{
+    z-index: 1;
+}
+
+.owl-item{
+    cursor: pointer;
+}
+
+.category-list:hover{
+    border-bottom: 2px solid black;
+    color: black !important
 }
 
 .destinationtxt {
