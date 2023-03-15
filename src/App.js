@@ -31,7 +31,7 @@ import WorkTogether from './pages/FooterPages/workTogether';
 import NewVacation from './pages/FooterPages/newVaction';
 import RealStateService from './pages/FooterPages/realstateService';
 import RestEasy from './pages/FooterPages/restEasy';
-
+import MoreOption from './pages/moreOption';
 function App() {
   const [userAuth, setUserAuth] = useState(null);
   useEffect(()=>{
@@ -72,10 +72,11 @@ function App() {
           <Route exact path='/newvacation' element={<NewVacation />} />
           <Route exact path='/realstateservice' element={<RealStateService />} />
           <Route exact path='/resteasypromise' element={<RestEasy />} />
-          </>
+          <Route exact path='/More' element={<MoreOption />} />
         </Routes>
       </BrowserRouter>
     </div>
+    
   );
 }
 

@@ -1363,6 +1363,26 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
 .Nearbytxt {
     margin-left: 2%;
 }
+/* More Option menu slider */
+.menu-slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.menu-item {
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.menu-item.active {
+  color: #fff;
+  background-color: #333;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
 
 /* .bi.bi-geo-alt-fill {
   border: 1px solid;
@@ -1372,6 +1392,27 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
   padding: 2px;
   padding-left: 6px;
 } */
+.owl-theme .owl-nav {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between !important;
+    margin: 0 -8px;
+    margin-top: 0px !important;
+}
+.owl-carousel.owl-theme.owl-loaded.owl-drag{
+    position: relative;
+}
+.owl-carousel .owl-stage-outer {
+    padding: 0 !important;
+}
+.owl-carousel.owl-theme.owl-loaded.owl-drag{
+    height: 80px;
+    border-bottom: 0.5px solid #e0e0e0;
+    border-top: 0.5px solid #e0e0e0 ;
+}
+
 .destinationtxt {
     font-family: 'Open Sans';
     font-style: normal;
@@ -1388,6 +1429,7 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
 .owl-nav {
     display: flex !important;
     justify-content: center !important;
+    
 }
 
 .owl-nav .owl-prev {
