@@ -102,26 +102,25 @@ const EightStep = ({ id, setId, images, setImages, setListingCompleteData, listi
                     <i className="bi bi-images drag-file-image "></i>
                     <h3 className='drag-file-header mt-4'>Drag Your Photos Here</h3>
                     <p className='drag-file-text'>Choose atleast 5 photos</p>
-                    <button className='btn border-0 text-decoration-underline' style={isDragging ? { color: "red" } : null}
+                    <button className='btn border-0 w-100 mb-2 text-decoration-underline' style={isDragging ? { color: "red" } : null}
                       onClick={onImageUpload}
                       {...dragProps}
                     >
                       Click or Drop here
                     </button>
-                    &nbsp;
-                    <button className='btn border-0 text-decoration-underline' onClick={onImageRemoveAll}>Remove all images</button>
+                    <button className='btn border-0 w-100 text-decoration-underline' onClick={onImageRemoveAll}>Remove all images</button>
                   </div>
                 </div>
-                <div className='container'>
-                  <div className='row my-3'>
+                <div className='d-flex justify-content-center'>
+                  <div className='row my-3 ' style={{maxWidth: '900px'}}>
                     {imageList.map((image, index) => {
                       return (
                         (index === 0) ? (
                           <div className='col-12 mb-3'>
-                            <div key={index} className="image-item bg-warning" style={{ height: 500, position: 'relative' }}>
+                            <div key={index} className="image-item" style={{ height: 500, position: 'relative' }}>
                               <div className='d-flex h-100 justify-content-center'>
-                                <img src={image.data_url} alt="" width={'100%'} height={'100%'} />
-                                <span className='bg-white p-1 rounded' style={{ position: 'absolute', left: '10px', top: '0.5rem' }}>Cover Image</span>
+                                  <img src={image.data_url} alt="" width={'100%'} height={'100%'}/>
+                                  <span className='bg-white p-1 rounded' style={{ position: 'absolute', left: '10px', top: '0.5rem' }}>Cover Image</span>
                                 <div className="btn-group pt-2" style={{ position: 'absolute', right: '5px', top: '0.5rem' }}>
                                   <button type="button" className="btn border rounded-circle shadow p-1" data-bs-toggle="dropdown" aria-expanded="false"
                                     style={{ width: 30, height: 30, backgroundColor: '#ffffff9c' }}
@@ -139,10 +138,10 @@ const EightStep = ({ id, setId, images, setImages, setListingCompleteData, listi
                         )
                           :
                           (
-                            <div className='col-12 col-md-6 col-lg-4 mb-3'>
-                              <div key={index} className="image-item bg-warning" style={{ height: 300, overflow: 'hidden', backgroundSize: 'contain', position: 'relative' }}>
-                                <div className='d-flex h-100 justify-content-center'>
-                                  <img src={image.data_url} alt="" width={'100%'} height={'100%'} />
+                            <div className='col-12 col-md-6 mb-3'>
+                              <div key={index} className="image-item" style={{ height: 300, overflow: 'hidden', backgroundSize: 'contain', position: 'relative' }}>
+                                <div className='d-flex h-100 justify-content-center '>
+                                  <img src={image.data_url} alt="" width={'auto'} height={'100%'} />
                                   <div className="btn-group pt-2" style={{ position: 'absolute', right: '5px', top: '0.5rem' }}>
                                     <button type="button" className="btn border rounded-circle shadow p-1" data-bs-toggle="dropdown" aria-expanded="false"
                                       style={{ width: 30, height: 30, backgroundColor: '#ffffff9c' }}
@@ -162,8 +161,8 @@ const EightStep = ({ id, setId, images, setImages, setListingCompleteData, listi
                     }
                     )}
                     {(images.length >= 5) && (
-                      <div className='col-12 col-md-6 col-lg-4 mb-3 d-flex align-items-center' style={{ border: '1px dotted black' }}>
-                        <button className='btn mb-5 fw-semibold fs-5 text-decoration-underline w-100' onClick={confirmHandleClick}>Submit</button>
+                      <div className='col-12 col-md-6  mb-3 ' style={{ border: '1px dotted black' }}>
+                        <button className='btn my-5 fw-semibold fs-5 text-decoration-underline w-100' onClick={confirmHandleClick}>Submit</button>
                       </div>
                     )}
                   </div>
