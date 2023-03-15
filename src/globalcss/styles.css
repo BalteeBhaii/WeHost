@@ -789,7 +789,7 @@ a {
     top: 49%;
     left: 10%;
     transform: translate(-4%, -50%); */
-    overflow: hidden;
+    /* overflow: hidden; */
     padding-top: 150px;
     padding-bottom: 140px;
     position: relative;

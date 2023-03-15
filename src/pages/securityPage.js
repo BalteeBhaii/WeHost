@@ -1,6 +1,6 @@
 import React from 'react';
-import ManageAccountHeader from '../components/Accounts/manageAccountHeader';
-import Security from '../components/Accounts/security';
+import ManageAccountHeader from '../components/Host/Account/manageAccountHeader';
+import Security from '../components/Host/Account/security';
 const SecurityPage = () => {
     return ( 
         <>

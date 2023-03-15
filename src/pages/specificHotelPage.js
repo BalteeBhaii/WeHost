@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Navigation/header/header';
-import Footer from '../components/Navigation/footer/footer';
+import Header from '../components/Partials/header/header';
+import Footer from '../components/Partials/footer/footer';
 import SpecificHotel from '../components/hotelscomponents/specificHotel/specificHotel';
 import '../globalcss/styles.css';
 import { timeout } from 'react';
