@@ -63,7 +63,7 @@ const WeHost = () => {
                                                 </p>
                                         </div>   
                                         <div className='wehost-button'>
-                                            <Link to='/host/create/listing'>
+                                            <Link to='/host/create-listing'>
                                                 <button className='btn'><i className="bi bi-house-add pe-1"></i>Start Now</button>
                                             </Link>
                                         </div>

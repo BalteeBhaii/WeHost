@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 
 
-const PublishStep = () => {
+const AdditionalSteps = () => {
     return (
         <>
             <div className='container'>
@@ -87,9 +87,7 @@ const PublishStep = () => {
                     </div>
                     <div className="card card-width" >
                         <img className="card-img-top img-fluid tip-card" src="/images/housing.jpg"  />
-                        <h5 className="card-title text-center">How to Prepare House?</h5>   
-                                
-                           
+                        <h5 className="card-title text-center">How to Prepare House?</h5>      
                     </div>
                 </div>
             </div>
@@ -98,4 +96,4 @@ const PublishStep = () => {
     );
 }
 
-export default PublishStep;
+export default AdditionalSteps;

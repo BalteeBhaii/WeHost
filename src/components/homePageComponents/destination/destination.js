@@ -346,7 +346,7 @@ const Destination = ({loadedHandler}) => {
                 <tr className='border-0'>
                   <th className="border-0">
                     <div className='button-column'>
-                      <Link to='/hotel'>
+                      <Link to='/listing/hotels'>
                         <button className='btn btn-primary bottom-button bi' id='hotels'>Hotels</button>
                       </Link>
                     </div>
