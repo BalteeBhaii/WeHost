@@ -32,6 +32,8 @@ import RealStateService from './pages/FooterPages/realstateService';
 import RestEasy from './pages/FooterPages/restEasy';
 import MoreOption from './pages/listing/moreOption';
 import AdditionalStepsPage from './pages/host/listing/additionalStepsPage';
+import VacationalRentalPage from './pages/vacationalRental/vacationalRentalPage';
+import HelpPage from './pages/help/helpPage';
 
 function App() {
   const [authToken, setAuthToken] = useState(null);
@@ -51,6 +53,9 @@ function App() {
         <Routes>
           <Route exact path='/' element={<HomePage />} />
           <Route exact path="/wehost" element={<WeHostPage />} />
+          <Route exact path="/property-management" element={<WeHostPage />} />
+          <Route exact path="/vacational-rental" element={<VacationalRentalPage />} />
+          <Route exact path="/help" element={<HelpPage />} />
 
           <Route path='/listing'>
             <Route path="hotels" element={<HotelsPage />} />

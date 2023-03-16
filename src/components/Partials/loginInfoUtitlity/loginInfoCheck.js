@@ -21,7 +21,7 @@ const LoginInfoCheck = () => {
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Trips</Link></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Wish Lists</Link></li>
                         <li><hr className="my-2" /></li>
-                        <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Manage listings</Link></li>
+                        <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="/host/listings">Manage listings</Link></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Manage experiences</Link></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Refer a Host</Link></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="/host/account">Account</Link></li>
