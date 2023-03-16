@@ -3,11 +3,12 @@ import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import LoginInfoCheck from "../loginInfoUtitlity/loginInfoCheck";
+import Languages from "../../Utilities/languages-currency/languages";
 
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
-  const [showSigninModal, setshowSigninModal] = useState(false);
+  const [loginModel, setLoginModel] = useState(false);
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [display, setDisplay] = useState('none');
   const [loginValue, setLoginValue] = useState('');
@@ -17,11 +18,9 @@ const Header = () => {
     setToggle(!toggle)
   }
 
-  const handleLoginClick = (event) => {
-    setshowSigninModal(!showSigninModal);
-    setLoginValue(event.target.value)
-    console.log(event.target.value);
-  }
+  // const handleLoginClick = (event) => {
+  //   setshowSigninModal(!showSigninModal);
+  // }
   const handleDisplayClick = () => {
     if (display === 'none') {
       setDisplay('block');
@@ -66,6 +65,7 @@ const Header = () => {
   }, []);
   return (
     <>
+                  
       <div className="container-fluid bg-light header-main">
         <div className="header d-flex justify-content-between">
           <div className="logo-section">
@@ -85,11 +85,10 @@ const Header = () => {
                   <span></span>
                 </li>
               </Link>
-              <Link to="">
-                <li className="mx-2 menu-item">Language
+                <li className="mx-2 menu-item" onClick={()=>setLoginModel(!loginModel)}>Language
                   <span></span>
+                  <Languages loginModel={loginModel} setLoginModel={setLoginModel}/>
                 </li>
-              </Link>
               <Link to="/host/account/payment">
                 <li className="mx-2 menu-item">Currency
                   <span></span>
@@ -131,11 +130,12 @@ const Header = () => {
                 <span></span>
               </li>
             </Link>
-            <Link to="">
-              <li className="mx-2 menu-item menu-mbl-item mb-3">Language
+            
+              <li className="mx-2 menu-item menu-mbl-item mb-3" onClick={()=>setLoginModel(!loginModel)}>Language
                 <span></span>
+                <Languages loginModel={loginModel} setLoginModel={setLoginModel}/>
               </li>
-            </Link>
+
             <Link to="/host/account/payment">
               <li className="mx-2 menu-item menu-mbl-item mb-3">Currency
                 <span></span>

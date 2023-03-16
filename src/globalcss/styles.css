@@ -1487,7 +1487,9 @@ input.form-control.border-0.shadow-none.searchfeildtxt {
 }
 
 .owl-stage-outer{
+    /* margin-left: 20px; */
     z-index: 1;
+    width: auto !important;
 }
 
 .owl-item{

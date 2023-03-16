@@ -19,7 +19,7 @@ const LoginInfoCheck = () => {
                     <ul className="dropdown-menu sign-in-dropdown" style={{ transform: 'translate(-20px, 38px) !important', width: 225, fontSize: '14px', letterSpacing: 1 }}>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1 " to="">Messages</Link></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Trips</Link></li>
-                        <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Wish Lists</Link></li>
+                        <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="/wishlists">Wish Lists</Link></li>
                         <li><hr className="my-2" /></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="/host/listings">Manage listings</Link></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Manage experiences</Link></li>
