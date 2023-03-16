@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import LocationModal from '../../LocationModal/LocationModal';
 import GuestModal from '../../GuestModal/GuestModal';
-import FilterModal from '../../Filter/filter';
+import FilterModal from '../../Utilities/Filter/filter';
 import { Link } from "react-router-dom";
 // date-fns format imports
 import format from 'date-fns/format';
