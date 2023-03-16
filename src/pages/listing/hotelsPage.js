@@ -1,9 +1,8 @@
 import React from 'react';
-import Hotel from '../components/hotelscomponents/hotel/hotel';
-import Header from '../components/Partials/header/header';
-import DesiredHotels from '../components/hotelscomponents/DesiredHotels/desiredHotels';
-import Footer from '../components/Partials/footer/footer';
-import '../globalcss/styles.css';
+import Hotel from '../../components/hotelscomponents/hotel/hotel';
+import Header from '../../components/Partials/header/header';
+import DesiredHotels from '../../components/hotelscomponents/DesiredHotels/desiredHotels';
+import Footer from '../../components/Partials/footer/footer';
 import { timeout } from 'react';
 
 const HotelsPage = () => {

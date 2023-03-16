@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import CodeModel from '../components/Auth/Register/codeModel';
+import CodeModel from '../../components/Auth/Register/codeModel';
 const OtpPage = () => {
   const [showLoginModel, setShowLoginModal] = useState(false);
   const [code, setCode] = useState(null);

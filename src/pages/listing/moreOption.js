@@ -1,11 +1,10 @@
 import React from 'react';
-import Hotel from '../components/hotelscomponents/hotel/hotel';
-import Footer from '../components/Partials/footer/footer';
-import Header from '../components/Partials/header/header';
-import DesiredHotels from '../components/hotelscomponents/DesiredHotels/desiredHotels';
-import '../globalcss/styles.css';
+import Hotel from '../../components/hotelscomponents/hotel/hotel';
+import Footer from '../../components/Partials/footer/footer';
+import Header from '../../components/Partials/header/header';
+import DesiredHotels from '../../components/hotelscomponents/DesiredHotels/desiredHotels';
 import { timeout } from 'react';
-import More from '../components/MoreOption/More';
+import More from '../../components/MoreOption/More';
 
 const MoreOption = () => {
     const loadedHandler = (event) => {

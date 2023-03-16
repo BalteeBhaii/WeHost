@@ -1,5 +1,5 @@
 import React from 'react';
-import Notifications from '../components/Host/Account/notification';
+import Notifications from '../../../../components/Host/Account/notification';
 
 const NotificationPage = () => {
     return ( 

@@ -12,7 +12,17 @@ const ViewListings = () => {
     //const user = JSON.parse(localStorage.user);
 
     const loadListings = async () => {
-        const res = await axios.get(baseUrl + "listings/?user_id=" + JSON.parse(localStorage.getItem('user')).id);
+        let authToken = JSON.parse(localStorage.getItem("dataKey"));
+
+        let config = {
+            headers: {
+                'Authorization': "Bearer "+authToken,
+                'Accept': 'application/json'
+            }
+        };
+        console.log(config);
+
+        const res = await axios.get(baseUrl + "host/listings", config);
         setListings(res.data.data);
     }
 
@@ -28,7 +38,7 @@ const ViewListings = () => {
                     <div className=''>
 
                         <button className="btn btn-search-listing add-listing" type="button" id="dropdownMenuButton"  >
-                            <i className="bi bi-plus-lg"></i><Link className='text-white' to='/property'><span className='d-none d-md-block'>Add listing</span>
+                            <i className="bi bi-plus-lg"></i><Link className='text-white' to='/host/create-listing'><span className='d-none d-md-block'>Add listing</span>
                             </Link>
                         </button>
                     </div>
