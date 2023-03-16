@@ -1,7 +1,7 @@
 import React from 'react';
-import ManageAccountHeader from '../components/Accounts/manageAccountHeader';
+import ManageAccountHeader from '../components/Host/Account/manageAccountHeader';
 import PublishStep from '../components/Publish/published';
-import Footer from '../components/Navigation/footer/footer';
+import Footer from '../components/Partials/footer/footer';
 const PublishPage = () => {
     return ( 
         <div>

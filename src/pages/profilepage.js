@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../components/Navigation/footer/footer";
-import ManageAccountHeader from "../components/Accounts/manageAccountHeader";
-import ManageAccount from "../components/Accounts/manageAccount";
-import ProfileInfo from "../components/Accounts/profileInfo";
+import Footer from "../components/Partials/footer/footer";
+import ManageAccountHeader from '../components/Host/Account/manageAccountHeader';
+import ManageAccount from "../components/Host/Account/manageAccount";
+import ProfileInfo from "../components/Host/Account/profileInfo";
 
 const ProfilePage = ()=>{
     return(

@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginActivity from '../components/Accounts/LoginActivity';
+import LoginActivity from '../components/Host/Account/LoginActivity';
 const LoginActivityPage = () => {
     return ( 
         <>

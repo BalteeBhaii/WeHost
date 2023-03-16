@@ -1,5 +1,5 @@
 import React from 'react';
-import PerosnalInfo from '../components/Accounts/personalInfo';
+import PerosnalInfo from '../components/Host/Account/personalInfo';
 const PersonalInfoPage = () => {
     return ( 
         <div>

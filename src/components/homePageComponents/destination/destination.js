@@ -353,7 +353,7 @@ const Destination = ({loadedHandler}) => {
                   </th>
                   <th className="border-0">
                     <div className='button-column'>
-                      <Link to='/host'>
+                      <Link to='/wehost'>
                         <button className='btn btn-primary bottom-button bi' id='things'>Things to Do</button>
                       </Link>
                     </div>

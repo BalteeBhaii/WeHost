@@ -2,7 +2,7 @@ import './App.css';
 import HomePage from './pages/homePage';
 import HotelsPage from './pages/hotelsPage';
 import SpecificHotelPage from './pages/specificHotelPage';
-import VerifyPropertyPage from './pages/verifyPropertyPage';
+import CreateListing from './pages/host/listing/createListing';
 import WeHostPage from './pages/weHostPage';
 import PersonalInfoPage from './pages/personalInfoPage';
 import LoginActivityPage from './pages/loginActivityPage';
@@ -11,7 +11,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import PaymentPage from './pages/paymentPage';
 import ProfilePage from './pages/profilepage';
 import CouponPage from './pages/couponPage';
-import AccountDashboardPage from './pages/accountDashboardPage';
+import Account from './pages/host/account/account';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WorldWide from './pages/worldWide';
 import BusinessPage from './pages/businesstripPage';
@@ -19,13 +19,14 @@ import TaxPage from './pages/taxPage';
 import NotificationPage from './pages/notificationPage';
 import PublishPage from './pages/publishPage';
 import ListingPage from './pages/listingPage';
-import SignInPage from './pages/signInPage';
-import SingUpPage from './pages/signUpPage';
+import LoginPage from './pages/auth/loginPage';
+import RegisterPage from './pages/auth/registerPage';
 import OtpPage from './pages/otpPage';
 import SignupCompletePage from './pages/signupCompletePage';
-import CodeModel from './components/signIn/codeModel';
-import FinishUpLoging from './components/signIn/finishingUpLoging';
-import UserListings from './pages/Hosting/Listings';
+import CodeModel from './components/Auth/Register/codeModel';
+import FinishUpLoging from './components/Auth/Register/finishingUpLoging';
+import ViewListings from './pages/host/listing/viewListings';
+import Page404 from './pages/page404';
 import { useEffect, useState } from 'react';
 import WorkTogether from './pages/FooterPages/workTogether';
 import NewVacation from './pages/FooterPages/newVaction';
@@ -33,46 +34,78 @@ import RealStateService from './pages/FooterPages/realstateService';
 import RestEasy from './pages/FooterPages/restEasy';
 import MoreOption from './pages/moreOption';
 function App() {
-  const [userAuth, setUserAuth] = useState(null);
+  const [authToken, setAuthToken] = useState(null);
+
   useEffect(()=>{
-    setUserAuth(JSON.parse(localStorage.getItem('dataKey')))
+    setAuthToken(JSON.parse(localStorage.getItem('dataKey')));
   }, [])
+
+
+  const isLogin = () => {
+    setAuthToken(JSON.parse(localStorage.getItem('dataKey')));
+  }
+
   return (
     <div >
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route exact path='/' element={<HomePage />} />
           <Route path="/hotel" element={<HotelsPage />} />
-          <Route exact path="/host" element={<WeHostPage />} />
+          <Route exact path="/wehost" element={<WeHostPage />} />
           <Route path="/hotel/:id" element={<SpecificHotelPage />} />
-          <Route path="/property" element={<VerifyPropertyPage />} />
-          <Route exact path="/account" element={<AccountDashboardPage />} />
-          <Route exact path="/profile" element={<ProfilePage />} />
-          <Route exact path="/pinfo" element={<PersonalInfoPage />} />
-          <Route exact path="/loginfo" element={<LoginActivityPage />} />
-          <Route exact path="/security" element={<SecurityPage />} />
-          <Route exact path="/privacy" element={<PrivacyPage />} />
-          <Route exact path="/pay" element={<PaymentPage />} />
-          <Route exact path="/coup" element={<CouponPage />} />
-          <Route exact path="/worldwide" element={<WorldWide />} />
-          <Route exact path="/business" element={<BusinessPage />} />
-          <Route exact path="/taxinfo" element={<TaxPage />} />
-          <Route exact path="/Notification" element={<NotificationPage />} />
           <Route exact path="/Publish" element={<PublishPage />} />
           <Route exact path="/Listing" element={<ListingPage />} />
-          <Route exact path="/signin" element={<SignInPage />} />
-          <Route exact path="/signup" element={<SingUpPage />} />
+          <Route exact path="/login" element={<LoginPage isLogin={isLogin} />} />
+          <Route exact path="/register" element={<RegisterPage />} />
           <Route exact path="/otp" element={<OtpPage />} />
           <Route exact path="/sign-complete" element={<SignupCompletePage />} />
           <Route exact path="/register/email-confirmation/:id" element={<CodeModel />} />
           <Route exact path="/register/complete/:id" element={<FinishUpLoging />} />
-          <Route exact path="/hosting/listings" element={<UserListings />} />
-          <Route exact path='/' element={<HomePage />} />
-          <Route exact path='/worktogether' element={<WorkTogether />} />
-          <Route exact path='/newvacation' element={<NewVacation />} />
-          <Route exact path='/realstateservice' element={<RealStateService />} />
-          <Route exact path='/resteasypromise' element={<RestEasy />} />
           <Route exact path='/More' element={<MoreOption />} />
+
+          {/* Host Routes */}
+          <Route path='/host'>
+
+            {authToken !== null ?
+
+            <>
+
+              <Route exact index element={<ViewListings />} />
+              <Route exact path='create/listing' element={<CreateListing />} />
+              <Route exact path='listings' element={<ViewListings />} />
+
+              {/* Host Account Routes */}
+              <Route path='account'>
+                <Route exact index element={<Account />} />
+                <Route exact path="profile" element={<ProfilePage />} />
+                <Route exact path="personal-info" element={<PersonalInfoPage />} />
+                <Route exact path="login-activity" element={<LoginActivityPage />} />
+                <Route exact path="security" element={<SecurityPage />} />
+                <Route exact path="privacy" element={<PrivacyPage />} />
+                <Route exact path="payment" element={<PaymentPage />} />
+                <Route exact path="notifications" element={<NotificationPage />} />
+                <Route exact path="worldwide-interest" element={<WorldWide />} />
+                <Route exact path="business" element={<BusinessPage />} />
+                <Route exact path="tax" element={<TaxPage />} />
+                <Route exact path="coupon" element={<CouponPage />} />
+              </Route>
+              {/* -------- */}
+
+            </>
+
+            :
+            
+            <>
+              <Route index path='*' element={<LoginPage isLogin={isLogin} />} />
+            </>
+
+          }
+
+          </Route>
+          {/* -------- */}
+
+          <Route exact path="*" element={<Page404 />} />
+
         </Routes>
       </BrowserRouter>
     </div>
