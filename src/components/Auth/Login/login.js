@@ -18,10 +18,10 @@ const Login = (props) => {
   const { isLoggedIn } = useSelector(state => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  console.log(url);
 
   var signupButton = document.getElementsByClassName("submit-button")[0];
   var spinner = '<div className="auth-spinner mt-0 pt-0 spinner-border text-white" role="status"><span className="visually-hidden">Loading...</span></div>';
-
   const handleLoginClick = (event) => {
     event.preventDefault();
 

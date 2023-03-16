@@ -72,7 +72,7 @@ function App() {
 
               <Route exact index element={<ViewListings />} />
               <Route exact path='create/listing' element={<CreateListing />} />
-              <Route exact path='listings' element={<ViewListings />} />
+              <Route exact path='listings' element={<ListingPage />} />
 
               {/* Host Account Routes */}
               <Route path='account'>

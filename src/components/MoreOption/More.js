@@ -19,20 +19,26 @@ const More = ({ textLoadedHandler }) => {
   const [categoryListing, setCategoryListing] = useState([]);
 
   const options = {
-    items: 1,
-    margin: 0,
+    margin: 10,
     nav: true,
+    merge: true,
     responsive: {
       0: {
-        items: 1
-      },
-      600: {
-        items: 1
-      },
+        items: 4,
+    },
+    400: {
+        items: 4,
+    },
+    600: {
+        items: 6,
+    },
+    700: {
+        items: 7,
+    },
       1000: {
-        items: 1
+          items: 10,
       }
-    }
+  },
   };
 
   const getCategoryListing = async () => {
@@ -78,13 +84,13 @@ const More = ({ textLoadedHandler }) => {
     <>
       <div className='container mt-4 mb-3 position-relative'>
         <div>
-          <OwlCarousel className='owl-carousel owl-theme' margin={10} autoWidth={true} nav>
+          <OwlCarousel className='owl-carousel owl-theme' {...options}>
             {Categories.map(category => {
               return (
-                <div key={category.id} className='text-center category-list' onClick={e => setCategoryId(category.id)}>
-                  <div className='m-3' style={{ cursor: 'pointer' }}>
+                <div key={category.id} className='category-list' onClick={e => setCategoryId(category.id)}>
+                  <div className='text-center' style={{ cursor: 'pointer'}}>
                     <i className="bi bi-house-door"></i>
-                    <h4 style={{}}>{category.name}</h4>
+                    <h4 className='text-center fs-6' style={{}}>{category.name}</h4>
                   </div>
                 </div>
               )
