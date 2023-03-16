@@ -68,6 +68,112 @@ const PublishStep = () => {
 
             </div>
             <div className='container'>
+            <h2 className='welcome-title mt-4 mb-5'>Your Reservation:</h2>
+            <div className='mt-3 d-flex gap-4 flex-wrap'>
+                    <div className='d-flex gap-4 flex-wrap'>
+                        <div className="dropdown">
+                            <button className="btn btn-search-listing  w-auto add-listing" type="button" aria-haspopup="true" aria-expanded="false">
+                               Checking Out
+                            </button>
+                        </div>
+                        <div className="dropdown">
+                            <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Current Hosting
+                            </button>
+                        </div>
+                        <div className="dropdown">
+                            <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                               Arriving Soon
+                            </button>
+                        </div>
+                        <div className="dropdown">
+                            <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                              Upcoming
+                            </button>
+                        </div>
+                        <div className="dropdown">
+                            <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+                               Pending Review
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div className='container-fluid p-5'>
+                <div className='table-responsive'>
+                <table className="table table-hover">
+                    <thead>
+                        <tr>
+                            
+                            <th scope="col">Status</th>
+                            <th scope="col">Guests</th>
+                            <th scope="col">Dates</th>
+                            <th scope="col">Booked</th>
+                            <th scope="col">Earning</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                            <div className='d-flex gap-2 '>                              
+                            <div>
+                            <h3 className='listing-property-text mt-3'>Confirmed</h3>
+                            
+                            
+
+
+                            </div>
+                             </div>
+
+                            </td>
+                            <td>
+                                <div className='d-flex gap-1'>
+                                <p>Ali khan</p>
+                                <p>2 Adults <br/> 1 child</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div className='d-flex gap-1 instant-book-table'>
+                                <i className="listing-property-done bi bi-check-square-fill"></i>
+                                <p>YES</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div className='d-flex gap-1'>
+                               <p>2 bedroom</p>
+                               <p>1 bedroom</p>
+                                <p>2 baths</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div className='instant-book-table'>
+                                <p>2 days ago</p>
+                                </div>
+                                
+                                
+                            </td>
+                            <td>
+                                <div className='d-flex gap-1 '>
+                                <i className="edit-listing-icon bi bi-gear-fill"></i>
+                                <p className='edit-listing-text'>Edit</p>
+                                </div>
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                       
+                    </tbody>
+                </table>
+                </div>
+                
+            </div>
+              
+            </div>
+            <div className='container'>
                 <div>
                     <h2 className='welcome-title mt-4 mb-5'>Tips:</h2>
                 </div>
