@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 // import LocationModal from '../../LocationModal/LocationModal';
 // import './desiredHotels.css'
-import FilterModal from '../../Filter/filter';
+import FilterModal from '../../Utilities/Filter/filter';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { useState, useEffect, useTimeout } from 'react';

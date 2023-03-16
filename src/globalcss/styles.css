@@ -957,9 +957,18 @@ input {
     background: gray;
 }
 
+.menu-profile-icon-hamburger::before {
+    transform: scaleX(1.3);
+}
 
+.header-menu-hamburger-icon {
+    border-color: #878787 !important;
+    transition: all 0.3s ease;
+}
 
-
+.header-menu-hamburger-icon:hover {
+    box-shadow: #878787 0px 2px 3px;
+}
 
 .imgText {
     position: relative;
