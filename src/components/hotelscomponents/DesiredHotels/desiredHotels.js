@@ -87,7 +87,7 @@ const DesiredHotels = ({textLoadedHandler}) => {
                   </div>
                   <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
                     <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
+                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const DesiredHotels = ({textLoadedHandler}) => {
                   </div>
                   <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
                     <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
+                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>
@@ -173,7 +173,7 @@ const DesiredHotels = ({textLoadedHandler}) => {
                   </div>
                   <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
                     <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
+                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>
@@ -216,7 +216,7 @@ const DesiredHotels = ({textLoadedHandler}) => {
                   </div>
                   <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
                     <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
+                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>
@@ -259,7 +259,7 @@ const DesiredHotels = ({textLoadedHandler}) => {
                   </div>
                   <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
                     <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
+                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>
@@ -302,7 +302,7 @@ const DesiredHotels = ({textLoadedHandler}) => {
                   </div>
                   <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
                     <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/hotel/12'><ins>Know More</ins></Link></p>
+                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>

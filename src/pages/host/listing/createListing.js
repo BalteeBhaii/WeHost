@@ -103,7 +103,7 @@ const CreateListing = () => {
     await axios.post(baseUrl + 'listings', listingCompleteData, config)
       .then((response) => {
         console.log(response.data);
-        navigate('/host/listings');
+        navigate('/host/additional-steps/20');
         localStorage.setItem('page', JSON.stringify(0));
       })
       .catch((error) => {
