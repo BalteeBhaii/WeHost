@@ -360,7 +360,7 @@ const Destination = ({loadedHandler}) => {
                   </th>
                   <th className="border-0">
                     <div className='button-column'>
-                      <button className='btn btn-primary bottom-button bi' id='vacations'>Vacations Rental</button>
+                      <Link to='/vacational-rental' className='btn btn-primary bottom-button bi' id='vacations'>Vacations Rental</Link>
                     </div>
                   </th>
                   <th className="border-0">
@@ -370,7 +370,7 @@ const Destination = ({loadedHandler}) => {
                   </th>
                   <th className="border-0">
                     <div className='button-column'>
-                      <Link to='/More'>
+                      <Link to='/listing/all'>
                       <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
                       
                       </Link>

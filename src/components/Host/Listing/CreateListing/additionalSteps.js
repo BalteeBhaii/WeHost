@@ -1,27 +1,39 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { Link } from 'react-router-dom';
 
 const AdditionalSteps = () => {
+    const [user, setUser] = useState('');
+    const [listingData, setListingData] = useState('');
+
+    useEffect(() => {
+        let user = JSON.parse(localStorage.getItem("user"));
+        let data = JSON.parse(localStorage.getItem("listing_data"));
+
+        setListingData(data);
+        setUser(user);
+    }, []);
+
     return (
         <>
             <div className='container'>
-                <h2 className='welcome-title mt-3'>Welcome Ali</h2>
+                <h2 className='welcome-title mt-3'>Welcome {user.name}</h2>
                 <p className='welcome-text'>Your place can be viewed by guests after this post have been published for 24 hours.</p>
                 <div className='row'>
                     <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
                         <div className="card hotel-card-style border-0" >
                             <div className='image-div'>
-                                <img className='imgSizeStyle' src="https://images.pexels.com/photos/1458457/pexels-photo-1458457.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..." />
+                                <img className='imgSizeStyle' src={"/storage/"+listingData.cover_image} width={'100%'} height={'100%'} alt="..." />
                             </div>
                             <div className='container'>
                                 <div className="card-body p-1">
                                     <div className='d-flex justify-content-between w-100' style={{ fontSize: '0.8rem' }}>
                                         <p className='mb-1'>2-September</p>
-                                        <p className='mb-1'>$800/Person</p>
+                                        <p className='mb-1'>${listingData.price}/Person</p>
                                     </div>
                                     <div className='d-flex justify-content-between w-100' style={{ fontSize: '0.8rem' }}>
-                                        <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                                        <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>{listingData.city}</p>
                                     </div>
                                     <div className='d-flex justify-content-between w-100' style={{ fontSize: '0.8rem' }}>
                                         <p className='fw-semibold'><img className='me-1 fw-semibold' src='/images/successfull.png' alt="" />Published Successfully</p>
@@ -31,7 +43,10 @@ const AdditionalSteps = () => {
                         </div>
                     </div>
                 </div>
-                <h2 className='welcome-title mt-4 mb-5'>Additional Steps :</h2>
+                <div className='d-flex justify-content-between align-items-center'>
+                    <h2 className='welcome-title mt-4 mb-5'>Additional Steps :</h2>
+                    <Link to='/host/listings' className='btn btn-primary h-50 px-4'>Next</Link>
+                </div>
             </div>
 
             <div className='container-fluid p-0'>
@@ -204,6 +219,7 @@ const AdditionalSteps = () => {
                     </div>
                 </div>
             </div>
+            
 
         </>
     );

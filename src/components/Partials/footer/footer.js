@@ -80,7 +80,7 @@ const Footer = () => {
                     <Link to='/property-management' className="footer-bottom-item mb-3">Property Management</Link>
                     <Link className="footer-bottom-item mb-3">How We Work Together</Link>
                     <Link className="footer-bottom-item mb-3">Lower Fees</Link>
-                    <Link to='/listing/white' className="footer-bottom-item mb-3">White Glove Concierge</Link>
+                    <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">White Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">New to Vacation Rental?</Link>
                     <Link className="footer-bottom-item mb-3">Real Estate Services</Link>
                     <Link className="footer-bottom-item mb-3">Owner Login</Link>
@@ -95,7 +95,7 @@ const Footer = () => {
                         <Link className="footer-bottom-item mb-2">Lower Fees</Link>
                         <Link className="footer-bottom-item mb-2">How We Work Together</Link>
                         <Link className="footer-bottom-item mb-2">Lower Fees</Link>
-                        <Link to='/listing/white' className="footer-bottom-item mb-2">White Glove Concierge</Link>
+                        <Link to='/whiteglove-conierge' className="footer-bottom-item mb-2">White Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-2">New to Vacation Rental?</Link>
                         <Link className="footer-bottom-item mb-2">Real Estate Services</Link>
                         <Link className="footer-bottom-item mb-2">Owner Login</Link>
@@ -110,7 +110,7 @@ const Footer = () => {
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Explore Vacation Rentals</Link>
                     <Link className="footer-bottom-item mb-3">Our Rest Easy Promise</Link>
-                    <Link to='/listing/white' className="footer-bottom-item mb-3">White Glove Concierge</Link>
+                    <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">White Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">Guest Login</Link>
                   </div>
                   {/*  */}
@@ -121,7 +121,7 @@ const Footer = () => {
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-2">Explore Vacation Rentals</Link>
                         <Link className="footer-bottom-item mb-2">Our Rest Easy Promise</Link>
-                        <Link to='/listing/white' className="footer-bottom-item mb-2">White Glove Concierge</Link>
+                        <Link to='/whiteglove-conierge' className="footer-bottom-item mb-2">White Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-2">Guest Login</Link>
                       </div>
                     </div>
@@ -134,7 +134,7 @@ const Footer = () => {
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Try Hosting</Link>
                     <Link className="footer-bottom-item mb-3">Lower Fees</Link>
-                    <Link to='/listing/white' className="footer-bottom-item mb-3">White Glove Concierge</Link>
+                    <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">White Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">weCover fot Hosts</Link>
                     <Link className="footer-bottom-item mb-3">Explore Hosting Resources</Link>
                     <Link className="footer-bottom-item mb-3">Visit Our Community Forum</Link>
@@ -186,7 +186,7 @@ const Footer = () => {
                     <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#supportCollapse">SUPPORT<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                     <div className="collapse" id="supportCollapse">
                       <div className="d-flex flex-column mt-3">
-                        <Link className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
+                        <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-3">Support and Contact</Link>
                         <Link className="footer-bottom-item mb-3">Help Center</Link>
                         <Link className="footer-bottom-item mb-3">weCover</Link>
@@ -249,7 +249,7 @@ const Footer = () => {
                 <div className="footer-bottom-2nd-icons d-flex flex-column col-md-4 footer-bottom-2nd-mbl-hide">
                   <h3 className="footer-item-header-2nd mb-0">SUPPORT</h3>
                   <div className="footer-bottom-2nd-items d-flex flex-column mt-4">
-                    <Link className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
+                    <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">Support and Contact</Link>
                     <Link className="footer-bottom-item mb-3">Help Center</Link>
                     <Link className="footer-bottom-item mb-3">weCover</Link>

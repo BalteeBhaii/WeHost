@@ -93,10 +93,12 @@ const CreateListing = () => {
 
   const finishHandler = async () => {
     console.log(listingCompleteData);
+    let authToken = JSON.parse(localStorage.getItem("dataKey"));
     let config = {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'multipart/form-data',
+        'Authorization': 'Bearer '+authToken
       }
     }
 
