@@ -80,7 +80,7 @@ const Header = () => {
                   <span></span>
                 </li>
               </Link>
-              <Link to="">
+              <Link to="/whiteglove-conierge">
                 <li className="mx-2 menu-item">White Glove Concierge
                   <span></span>
                 </li>
@@ -126,7 +126,7 @@ const Header = () => {
                 <span></span>
               </li>
             </Link>
-            <Link to="">
+            <Link to="/whiteglove-conierge">
               <li className="mx-2 menu-item menu-mbl-item mb-3">White Glove Concierge
                 <span></span>
               </li>

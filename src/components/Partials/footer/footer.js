@@ -80,7 +80,7 @@ const Footer = () => {
                     <Link to='/property-management' className="footer-bottom-item mb-3">Property Management</Link>
                     <Link className="footer-bottom-item mb-3">How We Work Together</Link>
                     <Link className="footer-bottom-item mb-3">Lower Fees</Link>
-                    <Link className="footer-bottom-item mb-3">White Glove Concierge</Link>
+                    <Link to='/listing/white' className="footer-bottom-item mb-3">White Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">New to Vacation Rental?</Link>
                     <Link className="footer-bottom-item mb-3">Real Estate Services</Link>
                     <Link className="footer-bottom-item mb-3">Owner Login</Link>
@@ -95,7 +95,7 @@ const Footer = () => {
                         <Link className="footer-bottom-item mb-2">Lower Fees</Link>
                         <Link className="footer-bottom-item mb-2">How We Work Together</Link>
                         <Link className="footer-bottom-item mb-2">Lower Fees</Link>
-                        <Link className="footer-bottom-item mb-2">White Glove Concierge</Link>
+                        <Link to='/listing/white' className="footer-bottom-item mb-2">White Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-2">New to Vacation Rental?</Link>
                         <Link className="footer-bottom-item mb-2">Real Estate Services</Link>
                         <Link className="footer-bottom-item mb-2">Owner Login</Link>
@@ -110,7 +110,7 @@ const Footer = () => {
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Explore Vacation Rentals</Link>
                     <Link className="footer-bottom-item mb-3">Our Rest Easy Promise</Link>
-                    <Link className="footer-bottom-item mb-3">White Glove Concierge</Link>
+                    <Link to='/listing/white' className="footer-bottom-item mb-3">White Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">Guest Login</Link>
                   </div>
                   {/*  */}
@@ -121,7 +121,7 @@ const Footer = () => {
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-2">Explore Vacation Rentals</Link>
                         <Link className="footer-bottom-item mb-2">Our Rest Easy Promise</Link>
-                        <Link className="footer-bottom-item mb-2">White Glove Concierge</Link>
+                        <Link to='/listing/white' className="footer-bottom-item mb-2">White Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-2">Guest Login</Link>
                       </div>
                     </div>
@@ -134,7 +134,7 @@ const Footer = () => {
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Try Hosting</Link>
                     <Link className="footer-bottom-item mb-3">Lower Fees</Link>
-                    <Link className="footer-bottom-item mb-3">White Glove Concierge</Link>
+                    <Link to='/listing/white' className="footer-bottom-item mb-3">White Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">weCover fot Hosts</Link>
                     <Link className="footer-bottom-item mb-3">Explore Hosting Resources</Link>
                     <Link className="footer-bottom-item mb-3">Visit Our Community Forum</Link>
@@ -149,7 +149,7 @@ const Footer = () => {
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-2">Try Hosting</Link>
                         <Link className="footer-bottom-item mb-2">Lower Fees</Link>
-                        <Link className="footer-bottom-item mb-2">White Glove Concierge</Link>
+                        <Link to='/listing/white' className="footer-bottom-item mb-2">White Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-2">weCover fot Hosts</Link>
                         <Link className="footer-bottom-item mb-2">Explore Hosting Resources</Link>
                         <Link className="footer-bottom-item mb-2">Visit Our Community Forum</Link>
