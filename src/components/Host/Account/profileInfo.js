@@ -20,7 +20,7 @@ const ProfileInfo = () => {
                             prove to others that you are who you
                             say you are.</p>
                             <div className='get-badge-button text-center  pt-3'>
-                                <span className=' text-white d-flex gap-2 justify-content-center '><img src='/images/gem.png' />Get badge</span>
+                                <span className=' text-white d-flex gap-2 justify-content-center '><img className='get-badge-icon' src='/images/gem.png' />Get badge</span>
                             
                                
                             </div>

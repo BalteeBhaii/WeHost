@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
-
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const AdditionalSteps = () => {
     return (
@@ -68,32 +68,32 @@ const AdditionalSteps = () => {
 
             </div>
             <div className='container'>
-            <h2 className='welcome-title mt-4 mb-5'>Your Reservation:</h2>
-            <div className='mt-3 d-flex gap-4 flex-wrap'>
+                <h2 className='welcome-title mt-4 mb-5'>Your Reservation:</h2>
+                <div className='mt-3 d-flex gap-4 flex-wrap'>
                     <div className='d-flex gap-4 flex-wrap'>
                         <div className="dropdown">
                             <button className="btn btn-search-listing  w-auto add-listing" type="button" aria-haspopup="true" aria-expanded="false">
-                               Checking Out
+                                Checking Out
                             </button>
                         </div>
                         <div className="dropdown">
                             <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                             Current Hosting
+                                Current Hosting
                             </button>
                         </div>
                         <div className="dropdown">
-                            <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
-                               Arriving Soon
+                            <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                                Arriving Soon
                             </button>
                         </div>
                         <div className="dropdown">
-                            <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
-                              Upcoming
+                            <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                                Upcoming
                             </button>
                         </div>
                         <div className="dropdown">
-                            <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
-                               Pending Review
+                            <button className="btn btn-search-listing  w-auto add-listing" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                                Pending Review
                             </button>
                         </div>
                     </div>
@@ -102,98 +102,105 @@ const AdditionalSteps = () => {
 
                 </div>
                 <div className='container-fluid p-5'>
-                <div className='table-responsive'>
-                <table className="table table-hover">
-                    <thead>
-                        <tr>
-                            
-                            <th scope="col">Status</th>
-                            <th scope="col">Guests</th>
-                            <th scope="col">Dates</th>
-                            <th scope="col">Booked</th>
-                            <th scope="col">Earning</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                            <div className='d-flex gap-2 '>                              
-                            <div>
-                            <h3 className='listing-property-text mt-3'>Confirmed</h3>
-                            
-                            
+                    <div className='table-responsive'>
+                        <table className="table table-hover">
+                            <thead>
+                                <tr>
+
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Guests</th>
+                                    <th scope="col">Dates</th>
+                                    <th scope="col">Booked</th>
+                                    <th scope="col">Earning</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div className='d-flex gap-2 '>
+                                            <div>
+                                                <h3 className='listing-property-text mt-3'>Confirmed</h3>
 
 
-                            </div>
-                             </div>
 
-                            </td>
-                            <td>
-                                <div className='d-flex gap-1'>
-                                <p>Ali khan</p>
-                                <p>2 Adults <br/> 1 child</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div className='d-flex gap-1 instant-book-table'>
-                                <i className="listing-property-done bi bi-check-square-fill"></i>
-                                <p>YES</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div className='d-flex gap-1'>
-                               <p>2 bedroom</p>
-                               <p>1 bedroom</p>
-                                <p>2 baths</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div className='instant-book-table'>
-                                <p>2 days ago</p>
-                                </div>
-                                
-                                
-                            </td>
-                            <td>
-                                <div className='d-flex gap-1 '>
-                                <i className="edit-listing-icon bi bi-gear-fill"></i>
-                                <p className='edit-listing-text'>Edit</p>
-                                </div>
-                                
-                                
-                            </td>
-                        </tr>
-                        
-                       
-                    </tbody>
-                </table>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div className='d-flex gap-1 flex-column'>
+                                            <p className='mb-0 publish-guest-name'>Ali khan</p>
+                                            <p className='publish-guest-number'>2 Adults <br /> 1 child</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div className='d-flex gap-1 instant-book-table'>
+                                            <p>2 -5 nov,2023</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div className='d-flex gap-1'>
+                                            <p> 23 Oct,2023</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div className='instant-book-table'>
+                                            <p>$ 300</p>
+                                        </div>
+
+
+                                    </td>
+                                    <td>
+                                        <div className='d-flex gap-1 '>
+                                            <Dropdown>
+                                                <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                                                   Details
+                                                </Dropdown.Toggle>
+                                                <Dropdown.Menu>
+                                                    <Dropdown.Item href="#/action-1">Call</Dropdown.Item>
+                                                    <Dropdown.Item href="#/action-2">Send message</Dropdown.Item>
+                                                    <Dropdown.Item href="#/action-3">Email</Dropdown.Item>
+                                                    <Dropdown.Item href="#/action-3">Send or request money</Dropdown.Item>
+                                                    <Dropdown.Item href="#/action-3">Canel</Dropdown.Item>
+                                                </Dropdown.Menu>
+                                            </Dropdown>
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
-                
-            </div>
-              
+
             </div>
             <div className='container'>
                 <div>
                     <h2 className='welcome-title mt-4 mb-5'>Tips:</h2>
                 </div>
                 <div className='d-flex gap-3 flex-column flex-md-row  justify-content-start align-items-center'>
-                    
+
                     <div className="card card-width " >
-                        <img className="card-img-top img-fluid tip-card" src="/images/pricing.jpg"  />
-                        <h5 className="card-title text-center">How to get paid?</h5>   
-                                
-                           
+                        <img className="card-img-top img-fluid tip-card" src="/images/pricing.jpg" />
+                        <h5 className="card-title text-center">How to get paid?</h5>
+
+
                     </div>
                     <div className="card card-width" >
-                        <img className="card-img-top img-fluid tip-card" src="/images/setprice.jpg"  />
-                        <h5 className="card-title text-center">How to setup pricing strategy</h5>   
-                                
-                           
+                        <img className="card-img-top img-fluid tip-card" src="/images/setprice.jpg" />
+                        <h5 className="card-title text-center">How to setup pricing strategy</h5>
+
+
                     </div>
                     <div className="card card-width" >
-                        <img className="card-img-top img-fluid tip-card" src="/images/housing.jpg"  />
-                        <h5 className="card-title text-center">How to Prepare House?</h5>      
+                        <img className="card-img-top img-fluid tip-card" src="/images/housing.jpg" />
+                        <h5 className="card-title text-center">How to Prepare House?</h5>
                     </div>
                 </div>
             </div>
