@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 const PropertyFinish = ({setId}) => {
     useEffect(()=>{
         setId(true);
-        console.log('hello fucker')
     },[])
     return (
         <div className='container'>

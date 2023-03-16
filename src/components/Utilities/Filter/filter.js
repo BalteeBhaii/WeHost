@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import '../../globalcss/styles.css';
+import '../../../globalcss/styles.css';
 import { Form, FormCheck } from 'react-bootstrap';
-import img1 from '../../Assets/img1.png'
-import img2 from '../../Assets/img2.png'
-import img3 from '../../Assets/img3.png'
-import img4 from '../../Assets/img4.png'
+import img1 from '../../../Assets/img1.png'
+import img2 from '../../../Assets/img2.png'
+import img3 from '../../../Assets/img3.png'
+import img4 from '../../../Assets/img4.png'
 // import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 const FilterModal = ({ show, setShowModal }) => {

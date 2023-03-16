@@ -13,7 +13,6 @@ const PropertyMedia = ({ id, setId, images, setImages, setListingCompleteData, l
   };
 
   const confirmHandleClick = () => {
-    console.log('hello fucker');
     console.log(url);
     if (images.length >= 5) {
       postImages();

@@ -25,6 +25,7 @@ import CodeModel from './components/Auth/Register/codeModel';
 import FinishUpLoging from './components/Auth/Register/finishingUpLoging';
 import ViewListings from './pages/host/listing/viewListings';
 import Page404 from './pages/page404';
+import WishListPage from './pages/wishList/wishListPage';
 import { useEffect, useState } from 'react';
 import WorkTogether from './pages/FooterPages/workTogether';
 import NewVacation from './pages/FooterPages/newVaction';
@@ -65,6 +66,8 @@ function App() {
           <Route exact path="/register/email-confirmation/:id" element={<CodeModel />} />
           <Route exact path="/register/complete/:id" element={<FinishUpLoging />} />
           <Route exact path="/otp" element={<OtpPage />} />
+          <Route exact path='/wishlists' element={<WishListPage/>}/>
+
           {/* ------------------ */}
 
 
@@ -81,6 +84,7 @@ function App() {
                 <Route exact path='create-listing' element={<CreateListing />} />
                 <Route exact path='listings' element={<ViewListings />} />
                 <Route path='additional-steps/:id' element={<AdditionalStepsPage />} />
+
 
                 {/* Host Account Routes */}
                 <Route path='account'>

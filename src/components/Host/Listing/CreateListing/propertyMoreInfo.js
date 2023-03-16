@@ -7,7 +7,6 @@ const PropertyMoreInfo = ({ id, setId, listingCompleteData, setListingCompleteDa
   const [countthree, setCountthree] = useState(1);
   const [countforth, setCountforth] = useState(0);
   useEffect(()=>{
-    console.log('hello ali');
     let data = listingCompleteData;
     data.no_of_guests = count;
     data.no_of_bedrooms = counttwo;
