@@ -12,6 +12,7 @@ const LoginInfoCheck = () => {
                     <button className="btn border-0 " href="#" role="button" style={{minWidth:'max-content'}}>
                         {(user) ? user.name : 'Login/SignUp'}
                     </button>
+                    
                     <img className="menu-profile-icon" src="/images/user_pic-50x50.png" alt="user" width={'28px'} height={'28px'} />
                 </div>
                 {(user) ?
