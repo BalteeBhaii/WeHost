@@ -370,7 +370,7 @@ const Destination = ({loadedHandler}) => {
                   </th>
                   <th className="border-0">
                     <div className='button-column'>
-                      <Link to='/More'>
+                      <Link to='/listing/all'>
                       <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
                       
                       </Link>

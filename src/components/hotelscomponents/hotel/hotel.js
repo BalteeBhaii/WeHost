@@ -9,7 +9,7 @@ import format from 'date-fns/format';
 import { addDays } from 'date-fns';
 import hotel from './hotel.svg';
 
-const Hotel = ({loadedHandler}) => {
+const Hotel = ({loadedHandler, Categories, categoryId}) => {
   const [showModal, setShowModal] = useState(false);
   const [filterModal, setFilterModal] = useState(false);
   const [open, setOpen] = useState(false);
@@ -112,9 +112,8 @@ const Hotel = ({loadedHandler}) => {
       element.classList.add("search-bottom-outline-active")
     }
   }
-
+  console.log('from hotels',categoryId)
   useEffect(() => {
-    console.log(currentDropdown);
     setGuestCount(adultCount + childrenCount + infantCount);
   }, [adultCount, childrenCount, infantCount]);
 
@@ -123,7 +122,7 @@ const Hotel = ({loadedHandler}) => {
       <img className='hotel-background-image' src={hotel} alt="" onLoad={loadedHandler} />
       <div className='center'>
         <div className='container-xxl container-xl container-lg position-relative pt-5' >
-          <h1 className='fw-bold text-center destination-main-title'>Choose the best hotels</h1>
+          <h1 className='fw-bold text-center destination-main-title'>{Categories?`Choose the best`: ''}</h1>
           <div className='container'>
             <div className='row justify-content-center'>
               <div className='col-12 col-lg-5  p-0 m-1'>
