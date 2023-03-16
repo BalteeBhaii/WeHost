@@ -81,9 +81,11 @@ const Header = () => {
                 </li>
               </a>
               <a href="">
+                <Link to='/listing/white'>
                 <li className="mx-2 menu-item">White Glove Concierge
                   <span></span>
                 </li>
+                </Link>
               </a>
               <a href="">
                 <li className="mx-2 menu-item">Language

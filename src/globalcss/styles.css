@@ -2972,6 +2972,14 @@ span.riceranger {
     height: 100%;
     width: 100%;
 }
+.divBackgroundImageWhiteGlove {
+    background-image: url('../../public/images/whiteglove.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
 .rest-easy-text{
     font-family: 'Open Sans';
 font-style: normal;

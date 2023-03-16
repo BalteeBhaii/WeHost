@@ -32,6 +32,7 @@ import RealStateService from './pages/FooterPages/realstateService';
 import RestEasy from './pages/FooterPages/restEasy';
 import MoreOption from './pages/listing/moreOption';
 import AdditionalStepsPage from './pages/host/listing/additionalStepsPage';
+import WhiteGlovePage from './pages/listing/whiteGlovePage';
 
 function App() {
   const [authToken, setAuthToken] = useState(null);
@@ -55,6 +56,7 @@ function App() {
           <Route path='/listing'>
             <Route path="hotels" element={<HotelsPage />} />
             <Route exact path='all' element={<MoreOption />} />
+            <Route exact path='white' element={<WhiteGlovePage />} />
             <Route path="detail/:id" element={<SpecificHotelPage />} />
           </Route>
 
