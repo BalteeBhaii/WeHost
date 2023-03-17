@@ -9,7 +9,7 @@ const WeHostPage = () => {
     return ( 
         <>
             <WeHostHeader/>
-            <div className=''>
+            <div className='overflow-hidden'>
                 <WeHost/>
             </div>
             <Footer/>

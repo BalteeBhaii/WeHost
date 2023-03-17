@@ -12,7 +12,7 @@ const LoginInfoCheck = () => {
                 <div className='btn border border-dark-subtle rounded-5 header-menu-hamburger-icon' data-bs-toggle="dropdown" aria-expanded="false">
                     <div className='d-flex align-items-center'>
                         <img className="menu-profile-icon" src="/images/user_pic-50x50.png" alt="user" width={'28px'} height={'28px'} />
-                        <i class="bi bi-list menu-profile-icon-hamburger"></i>
+                        <i className="bi bi-list menu-profile-icon-hamburger"></i>
                     </div>
                 </div>
                 {(user) ?

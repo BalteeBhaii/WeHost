@@ -3,8 +3,8 @@ import Select from "react-select";
 import countryList from "react-select-country-list";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { logIn } from '../../../features/user/userSlice';
-import { userInfo } from '../../../features/user/userInfoSlice';
+import { logIn } from '../../Utilities/user/userSlice';
+import { userInfo } from '../../Utilities/user/userInfoSlice';
 import { baseUrl as url } from '../../../config';
 import { Link } from 'react-router-dom';
 
