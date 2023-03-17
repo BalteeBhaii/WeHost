@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import LocationModal from '../../LocationModal/LocationModal';
 import GuestModal from '../../GuestModal/GuestModal';
-import FilterModal from '../../Filter/filter';
+import FilterModal from '../../Utilities/Filter/filter';
 import { Link } from "react-router-dom";
 // date-fns format imports
 import format from 'date-fns/format';
@@ -346,7 +346,7 @@ const Destination = ({loadedHandler}) => {
                 <tr className='border-0'>
                   <th className="border-0">
                     <div className='button-column'>
-                      <Link to='/hotel'>
+                      <Link to='/listing/hotels'>
                         <button className='btn btn-primary bottom-button bi' id='hotels'>Hotels</button>
                       </Link>
                     </div>
@@ -360,7 +360,7 @@ const Destination = ({loadedHandler}) => {
                   </th>
                   <th className="border-0">
                     <div className='button-column'>
-                      <button className='btn btn-primary bottom-button bi' id='vacations'>Vacations Rental</button>
+                      <Link to='/vacational-rental' className='btn btn-primary bottom-button bi' id='vacations'>Vacations Rental</Link>
                     </div>
                   </th>
                   <th className="border-0">
@@ -370,7 +370,7 @@ const Destination = ({loadedHandler}) => {
                   </th>
                   <th className="border-0">
                     <div className='button-column'>
-                      <Link to='/More'>
+                      <Link to='/listing/all'>
                       <button className='btn btn-primary bottom-button bi px-5' id='more'>More</button>
                       
                       </Link>

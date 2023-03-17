@@ -9,11 +9,11 @@ const LoginInfoCheck = () => {
     return (
         <>
             <div className="dropdown">
-                <div className='btn border border-dark-subtle rounded-5' data-bs-toggle="dropdown" aria-expanded="false">
-                    <button className="btn border-0 " href="#" role="button" style={{minWidth:'max-content'}}>
-                        {(user) ? user.name : 'Login/SignUp'}
-                    </button>
-                    <img className="menu-profile-icon" src="/images/user_pic-50x50.png" alt="user" width={'28px'} height={'28px'} />
+                <div className='btn border border-dark-subtle rounded-5 header-menu-hamburger-icon' data-bs-toggle="dropdown" aria-expanded="false">
+                    <div className='d-flex align-items-center'>
+                        <img className="menu-profile-icon" src="/images/user_pic-50x50.png" alt="user" width={'28px'} height={'28px'} />
+                        <i class="bi bi-list menu-profile-icon-hamburger"></i>
+                    </div>
                 </div>
                 {(user) ?
                     <ul className="dropdown-menu sign-in-dropdown" style={{ transform: 'translate(-20px, 38px) !important', width: 225, fontSize: '14px', letterSpacing: 1 }}>
@@ -21,7 +21,7 @@ const LoginInfoCheck = () => {
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Trips</Link></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Wish Lists</Link></li>
                         <li><hr className="my-2" /></li>
-                        <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Manage listings</Link></li>
+                        <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="/host/listings">Manage listings</Link></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Manage experiences</Link></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="">Refer a Host</Link></li>
                         <li><Link className="dropdown-item fw-semibold text-muted mb-1" to="/host/account">Account</Link></li>

@@ -77,10 +77,10 @@ const Footer = () => {
                   {/* For Pc */}
                   <h3 className="footer-item-header mb-0">FOR OWNERS<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                   <div className="footer-bottom-items d-flex flex-column mt-4">
-                    <Link className="footer-bottom-item mb-3">Property Management</Link>
+                    <Link to='/property-management' className="footer-bottom-item mb-3">Property Management</Link>
                     <Link className="footer-bottom-item mb-3">How We Work Together</Link>
                     <Link className="footer-bottom-item mb-3">Lower Fees</Link>
-                    <Link className="footer-bottom-item mb-3">White Glove Concierge</Link>
+                    <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">White Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">New to Vacation Rental?</Link>
                     <Link className="footer-bottom-item mb-3">Real Estate Services</Link>
                     <Link className="footer-bottom-item mb-3">Owner Login</Link>
@@ -91,11 +91,11 @@ const Footer = () => {
                     <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#ownersCollpase">FOR OWNERS<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                     <div className="collapse" id="ownersCollpase">
                       <div className="d-flex flex-column mt-3">
-                        <Link className="footer-bottom-item mb-2">Property Management</Link>
+                        <Link to='/property-management' className="footer-bottom-item mb-2">Property Management</Link>
                         <Link className="footer-bottom-item mb-2">Lower Fees</Link>
                         <Link className="footer-bottom-item mb-2">How We Work Together</Link>
                         <Link className="footer-bottom-item mb-2">Lower Fees</Link>
-                        <Link className="footer-bottom-item mb-2">White Glove Concierge</Link>
+                        <Link to='/whiteglove-conierge' className="footer-bottom-item mb-2">White Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-2">New to Vacation Rental?</Link>
                         <Link className="footer-bottom-item mb-2">Real Estate Services</Link>
                         <Link className="footer-bottom-item mb-2">Owner Login</Link>
@@ -106,22 +106,22 @@ const Footer = () => {
                 </div>
                 <div className="footer-bottom-items-container col-lg-3 p-0">
                   {/* For Pc */}
-                  <h3 className="footer-item-header mb-0">For Guests<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                  <h3 className="footer-item-header mb-0">FOR GUESTS<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Explore Vacation Rentals</Link>
                     <Link className="footer-bottom-item mb-3">Our Rest Easy Promise</Link>
-                    <Link className="footer-bottom-item mb-3">White Glove Concierge</Link>
+                    <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">White Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">Guest Login</Link>
                   </div>
                   {/*  */}
                   {/* For Mobile */}
                   <div className="footer-bottom-mbl-dropdown py-2">
-                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#guestsCollapse">For Guests<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#guestsCollapse">FOR GUESTS<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                     <div className="collapse" id="guestsCollapse">
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-2">Explore Vacation Rentals</Link>
                         <Link className="footer-bottom-item mb-2">Our Rest Easy Promise</Link>
-                        <Link className="footer-bottom-item mb-2">White Glove Concierge</Link>
+                        <Link to='/whiteglove-conierge' className="footer-bottom-item mb-2">White Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-2">Guest Login</Link>
                       </div>
                     </div>
@@ -134,7 +134,7 @@ const Footer = () => {
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Try Hosting</Link>
                     <Link className="footer-bottom-item mb-3">Lower Fees</Link>
-                    <Link className="footer-bottom-item mb-3">White Glove Concierge</Link>
+                    <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">White Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">weCover fot Hosts</Link>
                     <Link className="footer-bottom-item mb-3">Explore Hosting Resources</Link>
                     <Link className="footer-bottom-item mb-3">Visit Our Community Forum</Link>
@@ -149,7 +149,7 @@ const Footer = () => {
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-2">Try Hosting</Link>
                         <Link className="footer-bottom-item mb-2">Lower Fees</Link>
-                        <Link className="footer-bottom-item mb-2">White Glove Concierge</Link>
+                        <Link to='/listing/white' className="footer-bottom-item mb-2">White Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-2">weCover fot Hosts</Link>
                         <Link className="footer-bottom-item mb-2">Explore Hosting Resources</Link>
                         <Link className="footer-bottom-item mb-2">Visit Our Community Forum</Link>
@@ -162,7 +162,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-bottom-items-container col-lg-3 p-0">
                   {/* For Pc */}
-                  <h3 className="footer-item-header mb-0">Community<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                  <h3 className="footer-item-header mb-0">COMMUNITY<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                   <div className="footer-bottom-items d-flex flex-column mt-4">
                     <Link className="footer-bottom-item mb-3">Support Ukraine Refugees</Link>
                     <Link className="footer-bottom-item mb-3">Combating Discrimination</Link>
@@ -170,7 +170,7 @@ const Footer = () => {
                   {/*  */}
                   {/* For Mobile */}
                   <div className="footer-bottom-mbl-dropdown py-2">
-                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#communityCollapse">Community<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
+                    <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#communityCollapse">COMMUNITY<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                     <div className="collapse" id="communityCollapse">
                       <div className="d-flex flex-column mt-3">
                         <Link className="footer-bottom-item mb-2">Support Ukraine Refugees</Link>
@@ -186,7 +186,7 @@ const Footer = () => {
                     <h3 className="footer-item-header-mbl d-flex justify-content-between mb-0" onClick={mblDropdownHandler} data-bs-toggle="collapse" data-bs-target="#supportCollapse">SUPPORT<i className="bi bi-chevron-down footer-item-header-mbl-icon"></i></h3>
                     <div className="collapse" id="supportCollapse">
                       <div className="d-flex flex-column mt-3">
-                        <Link className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
+                        <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
                         <Link className="footer-bottom-item mb-3">Support and Contact</Link>
                         <Link className="footer-bottom-item mb-3">Help Center</Link>
                         <Link className="footer-bottom-item mb-3">weCover</Link>
@@ -249,7 +249,7 @@ const Footer = () => {
                 <div className="footer-bottom-2nd-icons d-flex flex-column col-md-4 footer-bottom-2nd-mbl-hide">
                   <h3 className="footer-item-header-2nd mb-0">SUPPORT</h3>
                   <div className="footer-bottom-2nd-items d-flex flex-column mt-4">
-                    <Link className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
+                    <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">Support and Contact</Link>
                     <Link className="footer-bottom-item mb-3">Help Center</Link>
                     <Link className="footer-bottom-item mb-3">weCover</Link>

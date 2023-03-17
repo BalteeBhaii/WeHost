@@ -69,37 +69,37 @@ const Header = () => {
       <div className="container-fluid bg-light header-main">
         <div className="header d-flex justify-content-between">
           <div className="logo-section">
-            <a href="/">
+            <Link to="/">
               <img className="header-logo" src="/images/logo.png" alt="logo" />
-            </a>
+            </Link>
           </div>
           <div className="items-section d-flex align-items-center justify-content-end w-100">
             <ul className="header-main-menu mb-0 d-flex align-items-center h-100 mb-0">
-              <a href="">
+              <Link to="/vacational-rental">
                 <li className="mx-2 menu-item">Vacational Rental Management
                   <span></span>
                 </li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="/whiteglove-conierge">
                 <li className="mx-2 menu-item">White Glove Concierge
                   <span></span>
                 </li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li className="mx-2 menu-item">Language
                   <span></span>
                 </li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="/host/account/payment">
                 <li className="mx-2 menu-item">Currency
                   <span></span>
                 </li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="/help">
                 <li className="mx-2 menu-item">Help
                   <span></span>
                 </li>
-              </a>
+              </Link>
             </ul>
             <div className="menu-profile d-flex">
               <LoginInfoCheck/>
@@ -121,31 +121,31 @@ const Header = () => {
         </div>
         <div className="menu-collapse">
           <ul className="header-main-menu mb-0 d-flex flex-column h-100 mb-0 pb-3">
-            <a href="">
+            <Link to="/vacational-rental">
               <li className="mx-2 menu-item menu-mbl-item mb-3">Vacational Rental Management
                 <span></span>
               </li>
-            </a>
-            <a href="">
+            </Link>
+            <Link to="/whiteglove-conierge">
               <li className="mx-2 menu-item menu-mbl-item mb-3">White Glove Concierge
                 <span></span>
               </li>
-            </a>
-            <a href="">
+            </Link>
+            <Link to="">
               <li className="mx-2 menu-item menu-mbl-item mb-3">Language
                 <span></span>
               </li>
-            </a>
-            <a href="">
+            </Link>
+            <Link to="/host/account/payment">
               <li className="mx-2 menu-item menu-mbl-item mb-3">Currency
                 <span></span>
               </li>
-            </a>
-            <a href="">
+            </Link>
+            <Link to="/help">
               <li className="mx-2 menu-item menu-mbl-item mb-3">Help
                 <span></span>
               </li>
-            </a>
+            </Link>
             <div className="menu-profile d-flex">
               <LoginInfoCheck/>
             </div>

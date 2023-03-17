@@ -93,17 +93,19 @@ const CreateListing = () => {
 
   const finishHandler = async () => {
     console.log(listingCompleteData);
+    let authToken = JSON.parse(localStorage.getItem("dataKey"));
     let config = {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'multipart/form-data',
+        'Authorization': 'Bearer '+authToken
       }
     }
 
     await axios.post(baseUrl + 'listings', listingCompleteData, config)
       .then((response) => {
         console.log(response.data);
-        navigate('/host/listings');
+        navigate('/host/additional-steps/20');
         localStorage.setItem('page', JSON.stringify(0));
       })
       .catch((error) => {
