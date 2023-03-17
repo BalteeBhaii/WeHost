@@ -12,7 +12,7 @@ import PaymentPage from './pages/host/account/payment/paymentPage';
 import ProfilePage from './pages/host/account/profile/profilepage';
 import CouponPage from './pages/host/account/coupon/couponPage';
 import Account from './pages/host/account/account';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import WorldWide from './pages/host/account/worldwideInterest/worldWide';
 import BusinessPage from './pages/host/account/bussiness/businesstripPage';
 import TaxPage from './pages/host/account/tax/taxPage';
@@ -38,6 +38,7 @@ import WhiteGlovePage from './pages/listing/whiteGlovePage';
 
 function App() {
   const [authToken, setAuthToken] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
     setAuthToken(JSON.parse(localStorage.getItem('dataKey')));
@@ -48,83 +49,88 @@ function App() {
     setAuthToken(JSON.parse(localStorage.getItem('dataKey')));
   }
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
+  }, [location]);
+
   return (
     <div >
-      <BrowserRouter>
-        <Routes>
-          <Route exact path='/' element={<HomePage />} />
-          <Route exact path="/wehost" element={<WeHostPage />} />
-          <Route exact path="/property-management" element={<WeHostPage />} />
-          <Route exact path="/vacational-rental" element={<VacationalRentalPage />} />
-          <Route exact path='/whiteglove-conierge' element={<WhiteGlovePage />} />
-          <Route exact path="/help" element={<HelpPage />} />
+      <Routes>
+        <Route exact path='/' element={<HomePage />} />
+        <Route exact path="/wehost" element={<WeHostPage />} />
+        <Route exact path="/property-management" element={<WeHostPage />} />
+        <Route exact path="/vacational-rental" element={<VacationalRentalPage />} />
+        <Route exact path='/whiteglove-conierge' element={<WhiteGlovePage />} />
+        <Route exact path="/help" element={<HelpPage />} />
 
-          <Route path='/listing'>
-            <Route path="hotels" element={<HotelsPage />} />
-            <Route exact path='all' element={<MoreOption />} />
-            <Route path="detail/:id" element={<SpecificHotelPage />} />
-          </Route>
+        <Route path='/listing'>
+          <Route path="hotels" element={<HotelsPage />} />
+          <Route exact path='all' element={<MoreOption />} />
+          <Route path="detail/:id" element={<SpecificHotelPage />} />
+        </Route>
 
-          {/* ----- Authentication Routes ---- */}
-          <Route exact path="/login" element={<LoginPage isLogin={isLogin} />} />
-          <Route exact path="/register" element={<RegisterPage />} />
-          <Route exact path="/sign-complete" element={<SignupCompletePage />} />
-          <Route exact path="/register/email-confirmation/:id" element={<CodeModel />} />
-          <Route exact path="/register/complete/:id" element={<FinishUpLoging />} />
-          <Route exact path="/otp" element={<OtpPage />} />
-          {/* ------------------ */}
+        {/* ----- Authentication Routes ---- */}
+        <Route exact path="/login" element={<LoginPage isLogin={isLogin} />} />
+        <Route exact path="/register" element={<RegisterPage />} />
+        <Route exact path="/sign-complete" element={<SignupCompletePage />} />
+        <Route exact path="/register/email-confirmation/:id" element={<CodeModel />} />
+        <Route exact path="/register/complete/:id" element={<FinishUpLoging />} />
+        <Route exact path="/otp" element={<OtpPage />} />
+        {/* ------------------ */}
 
 
-          {/* ----- Authenticated Routes ---- */}
+        {/* ----- Authenticated Routes ---- */}
 
-          {/* Host Routes */}
-          <Route path='/host'>
+        {/* Host Routes */}
+        <Route path='/host'>
 
-            {authToken !== null ?
+          {authToken !== null ?
 
-              <>
+            <>
 
-                <Route exact index element={<ViewListings />} />
-                <Route exact path='create-listing' element={<CreateListing />} />
-                <Route exact path='listings' element={<ViewListings />} />
-                <Route path='additional-steps/:id' element={<AdditionalStepsPage />} />
+              <Route exact index element={<ViewListings />} />
+              <Route exact path='create-listing' element={<CreateListing />} />
+              <Route exact path='listings' element={<ViewListings />} />
+              <Route path='additional-steps/:id' element={<AdditionalStepsPage />} />
 
-                {/* Host Account Routes */}
-                <Route path='account'>
-                  <Route exact index element={<Account />} />
-                  <Route exact path="profile" element={<ProfilePage />} />
-                  <Route exact path="personal-info" element={<PersonalInfoPage />} />
-                  <Route exact path="login-activity" element={<LoginActivityPage />} />
-                  <Route exact path="security" element={<SecurityPage />} />
-                  <Route exact path="privacy" element={<PrivacyPage />} />
-                  <Route exact path="payment" element={<PaymentPage />} />
-                  <Route exact path="notifications" element={<NotificationPage />} />
-                  <Route exact path="worldwide-interest" element={<WorldWide />} />
-                  <Route exact path="business" element={<BusinessPage />} />
-                  <Route exact path="tax" element={<TaxPage />} />
-                  <Route exact path="coupon" element={<CouponPage />} />
-                </Route>
-                {/* -------- */}
+              {/* Host Account Routes */}
+              <Route path='account'>
+                <Route exact index element={<Account />} />
+                <Route exact path="profile" element={<ProfilePage />} />
+                <Route exact path="personal-info" element={<PersonalInfoPage />} />
+                <Route exact path="login-activity" element={<LoginActivityPage />} />
+                <Route exact path="security" element={<SecurityPage />} />
+                <Route exact path="privacy" element={<PrivacyPage />} />
+                <Route exact path="payment" element={<PaymentPage />} />
+                <Route exact path="notifications" element={<NotificationPage />} />
+                <Route exact path="worldwide-interest" element={<WorldWide />} />
+                <Route exact path="business" element={<BusinessPage />} />
+                <Route exact path="tax" element={<TaxPage />} />
+                <Route exact path="coupon" element={<CouponPage />} />
+              </Route>
+              {/* -------- */}
 
-              </>
+            </>
 
-              :
+            :
 
-              <>
-                <Route index path='*' element={<LoginPage isLogin={isLogin} />} />
-              </>
+            <>
+              <Route index path='*' element={<LoginPage isLogin={isLogin} />} />
+            </>
 
-            }
+          }
 
-          </Route>
-          {/* -------- */}
+        </Route>
+        {/* -------- */}
 
-          {/* ------------------ */}
+        {/* ------------------ */}
 
-          <Route exact path="*" element={<Page404 />} />
+        <Route exact path="*" element={<Page404 />} />
 
-        </Routes>
-      </BrowserRouter>
+      </Routes>
     </div>
 
   );

@@ -32,7 +32,7 @@ const DesiredHotels = ({textLoadedHandler}) => {
       if(title.classList.contains("not-loaded")){
         title.classList.remove("not-loaded");
       }
-    }, 1000);
+    }, 500);
   }, []);
 
   return (
@@ -77,17 +77,17 @@ const DesiredHotels = ({textLoadedHandler}) => {
                     <i className="bi bi-star-half"></i>
                   </p> */}
                   <div className='mt-2 d-flex flex-column'>
-                    <div className='d-flex justify-content-between w-100 not-loaded'>
-                      <p className='fw-bold hatyouwant-description mb-1'>Ko Samui, Thailand</p>
-                      <p className='mb-1'><i className="bi bi-star-fill"></i> 4.5</p>
+                    <div className='d-flex justify-content-between w-100'>
+                      <p className='fw-bold hatyouwant-description mb-1 not-loaded not-loaded-text'>Ko Samui, Thailand</p>
+                      <p className='mb-1 not-loaded not-loaded-text'><i className="bi bi-star-fill"></i> 4.5</p>
                     </div>
-                    <span className='fw-light not-loaded mt-1'>1,786 kilometers away</span>
-                    <span className='fw-light mb-1 not-loaded mt-1'>March 1 - 6</span>
-                    <span className='fw-light not-loaded'>$1,876 <span className='fw-light mx-2'>night</span></span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text mt-1'>1,786 kilometers away</span>
+                    <span className='fw-light hotel-listing-card-text mb-1 not-loaded not-loaded-text mt-1'>March 1 - 6</span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text'>$1,876 <span className='fw-light mx-2'>night</span></span>
                   </div>
-                  <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
-                    <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
+                  <div className='d-flex justify-content-between w-100 mt-1' style={{ fontSize: '0.8rem' }}>
+                    <p className='fw-semibold not-loaded not-loaded-text hotel-listing-card-text'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                    <p className='not-loaded not-loaded-text hotel-listing-card-text'><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>
@@ -120,17 +120,17 @@ const DesiredHotels = ({textLoadedHandler}) => {
                     <i className="bi bi-star-half"></i>
                   </p> */}
                   <div className='mt-2 d-flex flex-column'>
-                    <div className='d-flex justify-content-between w-100 not-loaded'>
-                      <p className='fw-bold hatyouwant-description mb-1'>Ko Samui, Thailand</p>
-                      <p className='mb-1'><i className="bi bi-star-fill"></i> 4.5</p>
+                    <div className='d-flex justify-content-between w-100'>
+                      <p className='fw-bold hatyouwant-description mb-1 not-loaded not-loaded-text'>Ko Samui, Thailand</p>
+                      <p className='mb-1 not-loaded not-loaded-text'><i className="bi bi-star-fill"></i> 4.5</p>
                     </div>
-                    <span className='fw-light not-loaded mt-1'>1,786 kilometers away</span>
-                    <span className='fw-light mb-1 not-loaded mt-1'>March 1 - 6</span>
-                    <span className='fw-light not-loaded'>$1,876 <span className='fw-light mx-2'>night</span></span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text mt-1'>1,786 kilometers away</span>
+                    <span className='fw-light hotel-listing-card-text mb-1 not-loaded not-loaded-text mt-1'>March 1 - 6</span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text'>$1,876 <span className='fw-light mx-2'>night</span></span>
                   </div>
-                  <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
-                    <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
+                  <div className='d-flex justify-content-between w-100 mt-1' style={{ fontSize: '0.8rem' }}>
+                    <p className='fw-semibold not-loaded not-loaded-text hotel-listing-card-text'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                    <p className='not-loaded not-loaded-text hotel-listing-card-text'><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>
@@ -163,17 +163,17 @@ const DesiredHotels = ({textLoadedHandler}) => {
                     <i className="bi bi-star-half"></i>
                   </p> */}
                   <div className='mt-2 d-flex flex-column'>
-                    <div className='d-flex justify-content-between w-100 not-loaded'>
-                      <p className='fw-bold hatyouwant-description mb-1'>Ko Samui, Thailand</p>
-                      <p className='mb-1'><i className="bi bi-star-fill"></i> 4.5</p>
+                    <div className='d-flex justify-content-between w-100'>
+                      <p className='fw-bold hatyouwant-description mb-1 not-loaded not-loaded-text'>Ko Samui, Thailand</p>
+                      <p className='mb-1 not-loaded not-loaded-text'><i className="bi bi-star-fill"></i> 4.5</p>
                     </div>
-                    <span className='fw-light not-loaded mt-1'>1,786 kilometers away</span>
-                    <span className='fw-light mb-1 not-loaded mt-1'>March 1 - 6</span>
-                    <span className='fw-light not-loaded'>$1,876 <span className='fw-light mx-2'>night</span></span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text mt-1'>1,786 kilometers away</span>
+                    <span className='fw-light hotel-listing-card-text mb-1 not-loaded not-loaded-text mt-1'>March 1 - 6</span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text'>$1,876 <span className='fw-light mx-2'>night</span></span>
                   </div>
-                  <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
-                    <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
+                  <div className='d-flex justify-content-between w-100 mt-1' style={{ fontSize: '0.8rem' }}>
+                    <p className='fw-semibold not-loaded not-loaded-text hotel-listing-card-text'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                    <p className='not-loaded not-loaded-text hotel-listing-card-text'><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>
@@ -206,17 +206,17 @@ const DesiredHotels = ({textLoadedHandler}) => {
                     <i className="bi bi-star-half"></i>
                   </p> */}
                   <div className='mt-2 d-flex flex-column'>
-                    <div className='d-flex justify-content-between w-100 not-loaded'>
-                      <p className='fw-bold hatyouwant-description mb-1'>Ko Samui, Thailand</p>
-                      <p className='mb-1'><i className="bi bi-star-fill"></i> 4.5</p>
+                    <div className='d-flex justify-content-between w-100'>
+                      <p className='fw-bold hatyouwant-description mb-1 not-loaded not-loaded-text'>Ko Samui, Thailand</p>
+                      <p className='mb-1 not-loaded not-loaded-text'><i className="bi bi-star-fill"></i> 4.5</p>
                     </div>
-                    <span className='fw-light not-loaded mt-1'>1,786 kilometers away</span>
-                    <span className='fw-light mb-1 not-loaded mt-1'>March 1 - 6</span>
-                    <span className='fw-light not-loaded'>$1,876 <span className='fw-light mx-2'>night</span></span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text mt-1'>1,786 kilometers away</span>
+                    <span className='fw-light hotel-listing-card-text mb-1 not-loaded not-loaded-text mt-1'>March 1 - 6</span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text'>$1,876 <span className='fw-light mx-2'>night</span></span>
                   </div>
-                  <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
-                    <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
+                  <div className='d-flex justify-content-between w-100 mt-1' style={{ fontSize: '0.8rem' }}>
+                    <p className='fw-semibold not-loaded not-loaded-text hotel-listing-card-text'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                    <p className='not-loaded not-loaded-text hotel-listing-card-text'><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>
@@ -249,17 +249,17 @@ const DesiredHotels = ({textLoadedHandler}) => {
                     <i className="bi bi-star-half"></i>
                   </p> */}
                   <div className='mt-2 d-flex flex-column'>
-                    <div className='d-flex justify-content-between w-100 not-loaded'>
-                      <p className='fw-bold hatyouwant-description mb-1'>Ko Samui, Thailand</p>
-                      <p className='mb-1'><i className="bi bi-star-fill"></i> 4.5</p>
+                    <div className='d-flex justify-content-between w-100'>
+                      <p className='fw-bold hatyouwant-description mb-1 not-loaded not-loaded-text'>Ko Samui, Thailand</p>
+                      <p className='mb-1 not-loaded not-loaded-text'><i className="bi bi-star-fill"></i> 4.5</p>
                     </div>
-                    <span className='fw-light not-loaded mt-1'>1,786 kilometers away</span>
-                    <span className='fw-light mb-1 not-loaded mt-1'>March 1 - 6</span>
-                    <span className='fw-light not-loaded'>$1,876 <span className='fw-light mx-2'>night</span></span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text mt-1'>1,786 kilometers away</span>
+                    <span className='fw-light hotel-listing-card-text mb-1 not-loaded not-loaded-text mt-1'>March 1 - 6</span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text'>$1,876 <span className='fw-light mx-2'>night</span></span>
                   </div>
-                  <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
-                    <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
+                  <div className='d-flex justify-content-between w-100 mt-1' style={{ fontSize: '0.8rem' }}>
+                    <p className='fw-semibold not-loaded not-loaded-text hotel-listing-card-text'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                    <p className='not-loaded not-loaded-text hotel-listing-card-text'><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>
@@ -292,17 +292,103 @@ const DesiredHotels = ({textLoadedHandler}) => {
                     <i className="bi bi-star-half"></i>
                   </p> */}
                   <div className='mt-2 d-flex flex-column'>
-                    <div className='d-flex justify-content-between w-100 not-loaded'>
-                      <p className='fw-bold hatyouwant-description mb-1'>Ko Samui, Thailand</p>
-                      <p className='mb-1'><i className="bi bi-star-fill"></i> 4.5</p>
+                    <div className='d-flex justify-content-between w-100'>
+                      <p className='fw-bold hatyouwant-description mb-1 not-loaded not-loaded-text'>Ko Samui, Thailand</p>
+                      <p className='mb-1 not-loaded not-loaded-text'><i className="bi bi-star-fill"></i> 4.5</p>
                     </div>
-                    <span className='fw-light not-loaded mt-1'>1,786 kilometers away</span>
-                    <span className='fw-light mb-1 not-loaded mt-1'>March 1 - 6</span>
-                    <span className='fw-light not-loaded'>$1,876 <span className='fw-light mx-2'>night</span></span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text mt-1'>1,786 kilometers away</span>
+                    <span className='fw-light hotel-listing-card-text mb-1 not-loaded not-loaded-text mt-1'>March 1 - 6</span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text'>$1,876 <span className='fw-light mx-2'>night</span></span>
                   </div>
-                  <div className='d-flex justify-content-between w-100 not-loaded mt-1' style={{ fontSize: '0.8rem' }}>
-                    <p className='fw-semibold'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
-                    <p><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
+                  <div className='d-flex justify-content-between w-100 mt-1' style={{ fontSize: '0.8rem' }}>
+                    <p className='fw-semibold not-loaded not-loaded-text hotel-listing-card-text'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                    <p className='not-loaded not-loaded-text hotel-listing-card-text'><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
+            <div className="card hotel-card-style border-0" >
+              <div className=''>
+                <Carousel showThumbs={false} showArrows={false} swipeable={true}>
+                  <div className='image-div not-loaded'>
+                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={textLoadedHandler} width={'100%'} height={'100%'} />
+                  </div>
+                  <div className='image-div  not-loaded'>
+                      <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>
+
+                  </div>
+                  <div className='image-div  not-loaded'>
+                    <img className='imgSizeStyle' src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..." />
+                  </div>
+                </Carousel>
+              </div>
+              <div className=''>
+                <div className="card-body p-1">
+                  
+                  {/* <p className='mb-1'>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-half"></i>
+                  </p> */}
+                  <div className='mt-2 d-flex flex-column'>
+                    <div className='d-flex justify-content-between w-100'>
+                      <p className='fw-bold hatyouwant-description mb-1 not-loaded not-loaded-text'>Ko Samui, Thailand</p>
+                      <p className='mb-1 not-loaded not-loaded-text'><i className="bi bi-star-fill"></i> 4.5</p>
+                    </div>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text mt-1'>1,786 kilometers away</span>
+                    <span className='fw-light hotel-listing-card-text mb-1 not-loaded not-loaded-text mt-1'>March 1 - 6</span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text'>$1,876 <span className='fw-light mx-2'>night</span></span>
+                  </div>
+                  <div className='d-flex justify-content-between w-100 mt-1' style={{ fontSize: '0.8rem' }}>
+                    <p className='fw-semibold not-loaded not-loaded-text hotel-listing-card-text'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                    <p className='not-loaded not-loaded-text hotel-listing-card-text'><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='col-sm-11 col-md-6 col-lg-4 col-xl-3 mb-3'>
+            <div className="card hotel-card-style border-0" >
+              <div className=''>
+                <Carousel showThumbs={false} showArrows={false} swipeable={true}>
+                  <div className='image-div not-loaded'>
+                      <img alt="" src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1600" onLoad={textLoadedHandler} width={'100%'} height={'100%'} />
+                  </div>
+                  <div className='image-div  not-loaded'>
+                      <img alt="" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'}/>
+
+                  </div>
+                  <div className='image-div  not-loaded'>
+                    <img className='imgSizeStyle' src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1600" width={'100%'} height={'100%'} alt="..." />
+                  </div>
+                </Carousel>
+              </div>
+              <div className=''>
+                <div className="card-body p-1">
+                  
+                  {/* <p className='mb-1'>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-half"></i>
+                  </p> */}
+                  <div className='mt-2 d-flex flex-column'>
+                    <div className='d-flex justify-content-between w-100'>
+                      <p className='fw-bold hatyouwant-description mb-1 not-loaded not-loaded-text'>Ko Samui, Thailand</p>
+                      <p className='mb-1 not-loaded not-loaded-text'><i className="bi bi-star-fill"></i> 4.5</p>
+                    </div>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text mt-1'>1,786 kilometers away</span>
+                    <span className='fw-light hotel-listing-card-text mb-1 not-loaded not-loaded-text mt-1'>March 1 - 6</span>
+                    <span className='fw-light hotel-listing-card-text not-loaded not-loaded-text'>$1,876 <span className='fw-light mx-2'>night</span></span>
+                  </div>
+                  <div className='d-flex justify-content-between w-100 mt-1' style={{ fontSize: '0.8rem' }}>
+                    <p className='fw-semibold not-loaded not-loaded-text hotel-listing-card-text'><i className="bi bi-geo-alt me-1 fw-semibold"></i>Lima City</p>
+                    <p className='not-loaded not-loaded-text hotel-listing-card-text'><Link className='link-text-color' to='/listing/detail/12'><ins>Know More</ins></Link></p>
                   </div>
                 </div>
               </div>

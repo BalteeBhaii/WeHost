@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const VactionalRental = () => {
@@ -20,7 +21,7 @@ const VactionalRental = () => {
                     </div>
                     <p>WeHost will help you host your property and will help you out in reaching guest and
                         we are here to protect your property list your property now. </p>
-                    <button type="button" class="btn btn-primary">List Property Now</button>
+                    <Link to='/host/create-listing' type="button" class="vacational-rental-listing-button btn">List Property Now</Link>
                 </div>
 
             </div>
