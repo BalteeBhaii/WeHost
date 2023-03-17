@@ -5,6 +5,7 @@ import Header from '../../components/Partials/header/header';
 import DesiredHotels from '../../components/hotelscomponents/DesiredHotels/desiredHotels';
 import { timeout } from 'react';
 import More from '../../components/MoreOption/More';
+import MoreBackground from '../../components/MoreOption/moreBackground';
 
 const MoreOption = () => {
     const loadedHandler = (event) => {
@@ -38,7 +39,7 @@ const MoreOption = () => {
     return ( 
         <>
             <Header />
-            <Hotel loadedHandler={loadedHandler} />
+            <MoreBackground loadedHandler={loadedHandler} />
             <More />
             <Footer />
         </> 
