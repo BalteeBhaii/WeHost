@@ -241,7 +241,7 @@ const Footer = () => {
                   <h3 className="footer-item-header-2nd mt-2">Disclaimer</h3>
                     <span className="footer-bottom-item footer-bottom-item-disclaimer mb-3 ">All the weHost Homes and Travel Experiences referenced on the weHost Newsroom and weHost Platform are intended solely to encourage, inspire and illustrate. weHost doesn’t recommend or endorse any specific Home(s) and/or Experience(s) listings on the weHost platform.</span>
                     <Link className="footer-bottom-item mb-3">Terms of Use</Link>
-                    <Link className="footer-bottom-item mb-3">Privacy Policy</Link>
+                    <Link to='/policy' className="footer-bottom-item mb-3">Privacy Policy</Link>
                     <Link className="footer-bottom-item mb-3">Do Not Sell my Personal Information</Link>
                     <Link className="footer-bottom-item mb-3">Cookie Settings</Link>
                   </div>

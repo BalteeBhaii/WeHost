@@ -35,6 +35,7 @@ import AdditionalStepsPage from './pages/host/listing/additionalStepsPage';
 import VacationalRentalPage from './pages/vacationalRental/vacationalRentalPage';
 import HelpPage from './pages/help/helpPage';
 import WhiteGlovePage from './pages/listing/whiteGlovePage';
+import Policy from './pages/FooterPages/policy';
 
 function App() {
   const [authToken, setAuthToken] = useState(null);
@@ -58,6 +59,7 @@ function App() {
           <Route exact path="/vacational-rental" element={<VacationalRentalPage />} />
           <Route exact path='/whiteglove-conierge' element={<WhiteGlovePage />} />
           <Route exact path="/help" element={<HelpPage />} />
+          <Route exact path="/policy" element={<Policy />} />
 
           <Route path='/listing'>
             <Route path="hotels" element={<HotelsPage />} />
