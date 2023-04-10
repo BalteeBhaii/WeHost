@@ -4250,3 +4250,21 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         opacity: 0.5;
     }
 }
+
+/* Career styling start ehre */
+
+.career__image{
+    width: 100vw;
+    height: 85vh;
+}
+.career_image__overlay__text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+  
+}
+.career_image__overlay__text h1{
+    color: #fff;
+    font-size: 30px;
+}

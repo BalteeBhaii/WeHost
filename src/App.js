@@ -36,6 +36,9 @@ import VacationalRentalPage from './pages/vacationalRental/vacationalRentalPage'
 import HelpPage from './pages/help/helpPage';
 import WhiteGlovePage from './pages/listing/whiteGlovePage';
 import Policy from './pages/FooterPages/policy';
+import Cancellation from './pages/FooterPages/cancellation';
+import WeCover from './pages/FooterPages/wecover';
+import Career from './pages/FooterPages/career';
 
 function App() {
   const [authToken, setAuthToken] = useState(null);
@@ -60,6 +63,9 @@ function App() {
           <Route exact path='/whiteglove-conierge' element={<WhiteGlovePage />} />
           <Route exact path="/help" element={<HelpPage />} />
           <Route exact path="/policy" element={<Policy />} />
+          <Route exact path="/cancellation" element={<Cancellation />} />
+          <Route exact path="/wecover" element={<WeCover />} />
+          <Route exact path="/career" element={<Career />} />
 
           <Route path='/listing'>
             <Route path="hotels" element={<HotelsPage />} />

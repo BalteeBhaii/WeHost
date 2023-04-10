@@ -252,9 +252,9 @@ const Footer = () => {
                     <Link to='/whiteglove-conierge' className="footer-bottom-item mb-3">Whie Glove Concierge</Link>
                     <Link className="footer-bottom-item mb-3">Support and Contact</Link>
                     <Link className="footer-bottom-item mb-3">Help Center</Link>
-                    <Link className="footer-bottom-item mb-3">weCover</Link>
+                    <Link to="/wecover" className="footer-bottom-item mb-3">weCover</Link>
                     <Link className="footer-bottom-item mb-3">Safety Information</Link>
-                    <Link className="footer-bottom-item mb-3">Cancellation options</Link>
+                    <Link  to='/cancellation' className="footer-bottom-item mb-3">Cancellation options</Link>
                     <Link className="footer-bottom-item mb-3">Our COVID-19 Response</Link>
                     <Link className="footer-bottom-item mb-3">Supporting people with disabilities</Link>
                     <Link className="footer-bottom-item mb-3">Tips & Articles</Link>
@@ -268,7 +268,7 @@ const Footer = () => {
                     <Link className="footer-bottom-item mb-3">Social Responsibility</Link>
                     <Link className="footer-bottom-item mb-3">Our People</Link>
                     <Link className="footer-bottom-item mb-3">Newsroom</Link>
-                    <Link className="footer-bottom-item mb-3">Careers</Link>
+                    <Link to='/career' className="footer-bottom-item mb-3">Careers</Link>
                     <Link className="footer-bottom-item mb-3">Partner With Us</Link>
                     <Link className="footer-bottom-item mb-3">Partner Login</Link>
                     <Link className="footer-bottom-item mb-3">New features</Link>
